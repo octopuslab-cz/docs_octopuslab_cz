@@ -1,0 +1,41 @@
+# This is a basic workflow to help you get started with Actions
+
+name: DEPLOYMENT
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    # Runs a set of commands using the runners shell
+    - name: Run a multi-line script
+      run: |
+        cd $GITHUB_WORKSPACE
+        pip install -r requirements.txt
+        pip install --upgrade pip
+        ~/.local/bin/mkdocs build
+        mv ./site ./docs_prod
+
+      # scp -r ./site/. '${{ secrets.SCP_USER }}:${{ secrets.SCP_PASSWORD }}@docs.octopuslab.cz:${{ secrets.SCP_PATH }}'
+    - name: copy file via ssh password
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.SCP_HOST }}
+        username: ${{ secrets.SCP_USER }}
+        password: '${{ secrets.SCP_PASSWORD }}'
+        port: 22
+        source: "./docs_prod"
+        target: "~/"

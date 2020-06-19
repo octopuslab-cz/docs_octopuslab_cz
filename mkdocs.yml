@@ -3,6 +3,6 @@ nav:
   - Úvod: index.md
   - 'Projekty': 
       - 'Projekt 1': projects.md
-      - 'Projekt 2': projects.md
+      - 'Projekt 2': project2.md
 
 theme: readthedocs

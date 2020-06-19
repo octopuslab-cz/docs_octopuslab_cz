@@ -25,5 +25,5 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE
         pip install -r requirements.txt
-        mkdocs build
+        ./local/bin/mkdocs build
         scp -r ./site/. "$SCP_USER:$SCP_PASSWORD@$SCP_HOST:$SCP_PATH"

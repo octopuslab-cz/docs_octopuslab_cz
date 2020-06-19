@@ -38,3 +38,5 @@ jobs:
         port: 22
         source: "./site"
         target: "~/docs_prod"
+        rm: true
+        

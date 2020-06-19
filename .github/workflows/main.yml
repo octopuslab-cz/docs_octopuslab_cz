@@ -27,6 +27,4 @@ jobs:
         pip install -r requirements.txt
         pip install --upgrade pip
         ~/.local/bin/mkdocs build
-        export SCP_PASSWORD='${{ secrets.SCP_PASSWORD }}'
-        echo '${{ secrets.SCP_USER }}:$SCP_PASSWORD@${{ secrets.SCP_HOST }}:${{ secrets.SCP_PATH }}'
-        scp -r ./site/. ${{ secrets.SCP_USER }}:$SCP_PASSWORD@${{ secrets.SCP_HOST }}:${{ secrets.SCP_PATH }}
+        scp -r ./site/. '${{ secrets.SCP_USER }}:${{ secrets.SCP_PASSWORD }}@docs.octopuslab.cz:${{ secrets.SCP_PATH }}'

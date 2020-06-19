@@ -27,4 +27,5 @@ jobs:
         pip install -r requirements.txt
         pip install --upgrade pip
         ~/.local/bin/mkdocs build
-        scp -r ./site/. '${{ secrets.SCP_USER }}:${{ secrets.SCP_PASSWORD }}@${{ secrets.SCP_HOST }}:${{ secrets.SCP_PATH }}'
+        export SCP_PASSWORD='${{ secrets.SCP_PASSWORD }}'
+        scp -r ./site/. ${{ secrets.SCP_USER }}:$SCP_PASSWORD@${{ secrets.SCP_HOST }}:${{ secrets.SCP_PATH }}

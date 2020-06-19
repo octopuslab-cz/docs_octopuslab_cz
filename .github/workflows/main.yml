@@ -26,7 +26,5 @@ jobs:
         cd $GITHUB_WORKSPACE
         pip install -r requirements.txt
         pip install --upgrade pip
-        pip list -v
-        ls -la ~/.local/bin
         ~/.local/bin/mkdocs build
-        scp -r ./site/. "$SCP_USER:$SCP_PASSWORD@$SCP_HOST:$SCP_PATH"
+        scp -r ./site/. "${{ secrets.SCP_USER }}:${{ secrets.SCP_PASSWORD }}@${{ secrets.SCP_HOST }}:${{ secrets.SCP_PATH }}"

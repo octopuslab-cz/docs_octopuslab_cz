@@ -24,7 +24,6 @@ jobs:
     - name: Run a multi-line script
       run: |
         cd $GITHUB_WORKSPACE
-        apt-get install python3-venv
         pip install -r requirements
         mkdocs build
         scp -r ./site/. "$SCP_USER:$SCP_PASSWORD@$SCP_HOST:$SCP_PATH"

@@ -1,0 +1,6 @@
+site_name: OctopusLab
+nav:
+  - Úvod: index.md
+  - Projekty: projects.md
+
+theme: readthedocs

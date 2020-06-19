@@ -1,6 +1,10 @@
 site_name: OctopusLab
 nav:
   - Úvod: index.md
+  - 'Dokumentace':
+      - 'Dok 1': dok1.md
+  - 'Tutoriály':
+      - 'Tut 1': tut1.md
   - 'Projekty': 
       - 'Projekt 1': projects.md
       - 'Projekt 2': project2.md

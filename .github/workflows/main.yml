@@ -25,8 +25,6 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE
         apt-get install python3-venv
-        python3 -m venv venv
-        source ./venv/bin/activate
         pip install -r requirements
         mkdocs build
         scp -r ./site/. "$SCP_USER:$SCP_PASSWORD@$SCP_HOST:$SCP_PATH"

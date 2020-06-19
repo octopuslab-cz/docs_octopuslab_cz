@@ -36,7 +36,6 @@ jobs:
         username: ${{ secrets.SCP_USER }}
         password: '${{ secrets.SCP_PASSWORD }}'
         port: 22
-        source: "./site"
+        source: "./site/."
         target: "~/docs_prod"
         rm: true
-        

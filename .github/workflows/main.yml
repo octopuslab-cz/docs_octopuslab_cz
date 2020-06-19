@@ -27,4 +27,14 @@ jobs:
         pip install -r requirements.txt
         pip install --upgrade pip
         ~/.local/bin/mkdocs build
-        scp -r ./site/. '${{ secrets.SCP_USER }}:${{ secrets.SCP_PASSWORD }}@docs.octopuslab.cz:${{ secrets.SCP_PATH }}'
+
+      # scp -r ./site/. '${{ secrets.SCP_USER }}:${{ secrets.SCP_PASSWORD }}@docs.octopuslab.cz:${{ secrets.SCP_PATH }}'
+    - name: copy file via ssh password
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.SCP_HOST }}
+        username: ${{ secrets.SCP_USER }}
+        password: '${{ secrets.SCP_PASSWORD }}'
+        port: 22
+        source: "./site/."
+        target: "${{ secrets.SCP_PATH }}"

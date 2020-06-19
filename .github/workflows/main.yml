@@ -38,4 +38,4 @@ jobs:
         password: '${{ secrets.SCP_PASSWORD }}'
         port: 22
         source: "./docs_prod"
-        target: "~/docs_prod"
+        target: "~/"

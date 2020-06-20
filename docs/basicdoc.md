@@ -15,24 +15,24 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do dvou zá
 ---
 ## Jednotlivé moduly a třídy
 
-Všechno v Pythonu je **objekt**. Základní vlastnost objektů je to, že obsahují jak data (informace), tak předpis chování – instrukce nebo metody, které s těmito daty pracují. U diody budou data (vlastnosti / property) *1* nebo *0* - podle toho, jestli svítí nebo nesvítí. A metoda bude třeba `blikni` nebo v případě `sviť` je to přesněji změň hodnotu na *1* `value(1)`
+Letmý úvod do objektového programování si naznačíme na tradičním *hello world* projektu: **blikání ledky**. Svítivá dioda (LED) je malá součástka,kterou snad nemusíme představovat. Takže jak je to s těmi "objekty"?
+
+Všechno v Pythonu je **objekt**. Základní vlastnost objektů (v programu) je to, že obsahují jak data (informace), tak předpis chování – instrukce nebo metody, které s těmito daty pracují. U svítivé diody budou *data* (vlastnosti / property) *1* nebo *0* - podle toho, jestli svítí nebo nesvítí. A metoda bude třeba `blikni` nebo v případě `sviť` je to přesněji: změň hodnotu na *1* `value(1)`.
 
 **Předpis objektu je ve třídě** `class()`. Podle tohoto předpisu vytvoříme takzvanou instanci, do závorky se dávají vstupní parametry. Na PINU 2 máme připojenu LED a chceme s ní pracovat pomocí dostupných metod pro třídu Led? Mikrokontroléru to řekneme takto:
 
-`led = Led(2)` () Je vhodné dodržet nepsané pravilo, že **třída začíná vždy velkým písmenem**. Abychom odlišili `led` od `Led`.
-`led.value(1)` > instance objektu "tečka" metoda "( parametry )"
+`led = Led(2)` Je vhodné dodržet nepsané pravilo, že **třída začíná vždy velkým písmenem**. Abychom odlišili `led` od `Led`.
 
-chceme jinou Led? Na jiném pinu? Třeba 33? Vytvoříme instanci objektu:
+`led.value(1)` Syntaxe je pak: instance objektu `led` "tečka" metoda `value` "( parametry )" `(1)`, ze pouze *1*, možno i *True*.
+
+Chceme jinou Led? Na jiném pinu? Třeba druhou na PINu 33? Vytvoříme instanci stejného objektu:
 `led2 = Led(33)` > a pak jí používáme "stejně": `led2.value(1)`
 
 
-na rozdíl od proměnné:
+Na rozdíl od proměnné: `a = 123` *Medotoda nebo funkce data získá nebo na základě parametrů zpracuje, proměnná je obsahuje*.
 
-`a = 123`
 
-*Medotoda nebo funkce data získá nebo na základě parametrů zpracuje, proměnná je obsahuje*.
-
-**Třída** je jako formička na vánoční cukroví. Kolečko, hvězdička, prasátko - to je určení tvaru. A **instance** jsou jednotlivé kousky cukroví touto formičkou vyrobená. Můžeme si vytvořit tucet hvězdiček, podobně tak si můžeme připojit více LEDek (každou na jiném PINu)
+**Třída** je jako formička na vánoční cukroví. `Kolečko, Hvězdička, Prasátko` - to je určení tvaru. A **instance** jsou jednotlivé kousky cukroví touto formičkou vyrobená. Můžeme si vytvořit tucet hvězdiček, podobně tak si můžeme připojit více LEDek (každou na jiném PINu)
 
 - `led1 = Led(20)`
 - `led2 = Led(2)`

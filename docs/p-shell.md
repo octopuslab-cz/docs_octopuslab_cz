@@ -47,4 +47,16 @@ Popis:
 
 ### editor
 
+---
+
 ### spouštění procesů
+
+V shellu napíšeme pro spuštění programu:
+`$ run examples/blink.led`
+a by měla blikat Ledka. Běh programu se přeruší CTRL+C, program blink se zastaví, ledka přestane blikat, ale zůstáváme pořád v shellu.
+
+*V tomto popisu dominantně použijeme tradiční „projekt“ blikání ledkou. Je to takový „hello-word“ – základní a nejjednodušší případ, který se dá obvykle aplikovat na většinu další složitějších úloh. Takže když někde uvidíte slovní spojení „blikání ledky“, nemusíte hned nasazovat posměšný úšklebek. Představit si pod tím lze „můj program“ nebo třeba konkrétní „ovládání robotického vozítka“.*
+
+**Odbočka:**
+Jak docílíme toho, aby se blikání Ledky samo spouštělo hned po startu? Program main.py v kořenovém adresáři, je po boot.py přesně ten, který se po startu spustí. Takže si můžeme v shellu jednoduše blikání zkopírovat:
+`$ cp examples/blink.py main.py`

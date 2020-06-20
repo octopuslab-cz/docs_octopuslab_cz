@@ -1,12 +1,13 @@
 site_name: OctopusLab
 nav:
   - Úvod: index.md
-  - 'Dokumentace':
-      - 'Dok 1': dok1.md
-  - 'Tutoriály':
-      - 'Tut 1': tut1.md
-  - 'Projekty': 
-      - 'Projekt 1': projects.md
+  - Základní dokumentace: basicdoc.md
+  - Projekty: projects.md
+  - 'Vybrané projekty': 
+      - 'Projekt 1': project1.md
       - 'Projekt 2': project2.md
+  - 'Workshopy / tutoriály':
+      - 'Tut 1': tut1.md
+      - 'Tut 1': tut1.md
 
 theme: readthedocs

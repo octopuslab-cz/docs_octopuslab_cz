@@ -299,11 +299,11 @@ Používáme **Bluefruit connect** od společnosti Adafruit
 ---
 ### ![hwsoc](img/database.png){: style="width:28px" } Config
 
-Micropython má elegantně propacovanou práci se soubory (nahrávání a čtení) a i s `json` formátem, proto jsem toho využili pro externí konfigurační soubory. V adresáři `/config` jsou nahrány jednotlivé "jsony", které v sobě obsahují nějaké konstanty, nastavení a podobně. Proto můžeme daný projekt dynamicky konfigurovat.
+Micropython má elegantně propacovanou práci se soubory (nahrávání a čtení) a i s `json` formátem, proto jsem toho využili pro externí konfigurační soubory. V adresáři `/config` jsou nahrány jednotlivé "jsony", které v sobě obsahují nějaké konstanty, nastavení a podobně. Proto můžeme daný projekt dynamicky konfigurovat. Využíváme to i vnastavneí PINů jednotivých zařízení `device.json` nebo pro uložení přístupů k WiFi `wifi.json`.
 
 Zdrojový kód knihovny: [./config/__init__.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/config/__init__.py) 
 
-Mějme ukázkový projekt **termostat**, který na základě změřené teploty pustí buď topení nebo chlazení (ventilátor). Volitelně si můžeme v programu definovat `keys`, kde máme uloženy názvy podstatných konstant. Instanci pak vytvážíme `conf = Config("your_file", keys)`, kde "your_file" je název - nejčastěji shodný s názvem projektu. Například "termostat". Se souborem se pak dá pracovat několika metodami, například:  `create_from_query()`, `set()`, `save()` ... 
+Mějme ukázkový projekt **termostat**, který na základě změřené teploty pustí buď topení, nebo chlazení (ventilátor). Volitelně si můžeme v programu definovat `keys`, kde máme uloženy názvy podstatných konstant. Instanci pak vytvážíme `conf = Config("your_file", keys)`, kde "your_file" je název - nejčastěji shodný s názvem projektu. Například "termostat". Se souborem se pak dá pracovat několika metodami, například: `setup()` (interaktivní mód - používáme nejčastěji), `create_from_query()`, `set()`, `save()` ... 
 
 ```
 from config import Config
@@ -311,8 +311,10 @@ from config import Config
 keys = ["tempMax","tempMin"]
 conf = Config("your_file", keys) > config/your_file.json
 conf.setup()
+
 conf.create_from_query("a=1&b=2")
 conf.set("c",3)
+
 conf.save()
 
 ```

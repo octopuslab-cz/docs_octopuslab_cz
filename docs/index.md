@@ -81,6 +81,21 @@ Co vlastně děláme? Vymýšlíme různé hardwarové moduly (zaměření na ES
 ---
 ## Micropython
 
+Toto není výuka Micropythonu – ale jen ukázky a experimenty s přihlédnutím na interakci s vybraným HW
+- pro podrobnější proniknutí do tajů programování v Pythonu doporučujeme: [naucse.python.cz](https://naucse.python.cz/)
+- [naucse.python.cz/course/mi-pyt/intro/micropython](https://naucse.python.cz/course/mi-pyt/intro/micropython/)
+- [howto.py.cz](http://howto.py.cz/index.htm)
+
+Velmi stručně o Pythonu (syntaxe):
+
+- logické členění se provádí pomocí striktního odsazování bloků
+- pozor na závorky u metod a funkcí > print(„řetězec“) a uvozovky pro takzvané řetězce (shluky písmen, co nejsou číslo)
+- pozor na dvojtečku za deklarací funkce, cyklu nebo podmínky:
+```
+def fce(parametr):
+… co se má dělat
+```
+
 ---
 ## Instalace systému
 

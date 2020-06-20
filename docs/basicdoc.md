@@ -1,18 +1,46 @@
 # ![logo](img/logo_small.png) Dokumentace
 
 Toto je hlavní část dokumentace, popisující **co a jak**.
+V dalších částech, především pak oddíle WORKSHOPY a TUTORIÁLY se pak dozvíte **jak na to**.
 
 ## Knihovny (util | lib)
 
 Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do dvou základních adresářů:
 
-- `lib/`, kde jsou převážně knihovny třetích stran, a malé fragmenty, které mají výhodu, že se při importu v adresáři lib hledají
-- `util/`, (utility) moduly octopusLAB, a třídy pro práci s periferiemi.
+- `./lib`, kde jsou převážně knihovny třetích stran, a malé fragmenty, které mají výhodu, že se při importu v adresáři lib hledají, **Micropython** je nalezne bez udání cesty k nim.
+- `./util`, (utility) moduly octopusLAB, a třídy pro práci s periferiemi.
 
 *Uživatele vlastně nemusí zajímat, kde to je uloženo, a tak na to důraz neklademe, jen je vhodné si to pohlídat při sestavování větších projektů.*
 
 ---
 ## Jednotlivé moduly a třídy
+
+Všechno v Pythonu je **objekt**. Základní vlastnost objektů je to, že obsahují jak data (informace), tak předpis chování – instrukce nebo metody, které s těmito daty pracují. U diody budou data (vlastnosti / property) *1* nebo *0* - podle toho, jestli svítí nebo nesvítí. A metoda bude třeba `blikni` nebo v případě `sviť` je to přesněji změň hodnotu na *1* `value(1)`
+
+**Předpis objektu je ve třídě** `class()`. Podle tohoto předpisu vytvoříme takzvanou instanci, do závorky se dávají vstupní parametry. Na PINU 2 máme připojenu LED a chceme s ní pracovat pomocí dostupných metod pro třídu Led? Mikrokontroléru to řekneme takto:
+
+`led = Led(2)` () Je vhodné dodržet nepsané pravilo, že **třída začíná vždy velkým písmenem**. Abychom odlišili `led` od `Led`.
+`led.value(1)` > instance objektu "tečka" metoda "( parametry )"
+
+chceme jinou Led? Na jiném pinu? Třeba 33? Vytvoříme instanci objektu:
+`led2 = Led(33)` > a pak jí používáme "stejně": `led2.value(1)`
+
+
+na rozdíl od proměnné:
+
+`a = 123`
+
+*Medotoda nebo funkce data získá nebo na základě parametrů zpracuje, proměnná je obsahuje*.
+
+**Třída** je jako formička na vánoční cukroví. Kolečko, hvězdička, prasátko - to je určení tvaru. A **instance** jsou jednotlivé kousky cukroví touto formičkou vyrobená. Můžeme si vytvořit tucet hvězdiček, podobně tak si můžeme připojit více LEDek (každou na jiném PINu)
+
+- `led1 = Led(20)`
+- `led2 = Led(2)`
+- `led3 = Led(33)`
+
+rozsvícení druhé ledky je: `led2.value(1)` no a zhasnutí třetí je `led3.value(0)`
+
+---
 
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Led
 Třída `Led` je vlastně jen jednoduchým rozšířením třídy `Pin`.
@@ -23,7 +51,16 @@ Přidali k základní metodě `value()` dalších pár: `toggle()`, `blink()`
 Zdrojový kód knihovny:
 [./util/led](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/led/__init__.py)
 
-Základní ukázka z examples:
+Nejkratší varianta použití:
+```
+from util.octopus import led
+led = Led(2)
+
+while True:
+    led.blink()
+```
+
+Číslo PINu v ukázce je 2, to je svítivá dioda vestavěná v **DoIt** modulech i v našem ESP32boardu. Ale pro práci s obecným modulem, kde máme možnost si nastavit, kde se Led dioda nachází, použijeme pak variantu základní ukázky z examples, kde `BUILT_IN_LED` je konstanta, ve které je číslo PINu uloženo:
 ```
 from util.led import Led
 from util.pinout import set_pinout
@@ -33,15 +70,6 @@ led = Led(pinout.BUILT_IN_LED)  # BUILT_IN_LED = 2
 
 print("---examples/blink.py---")
 # start main loop
-
-while True:
-    led.blink()
-```
-
-Nejkratší varianta:
-```
-from util.octopus import led
-led = Led(2)
 
 while True:
     led.blink()
@@ -69,6 +97,7 @@ print("---examples/rgb_blink.py---")
 ws.simpleTest()
 ```
 Zdrojový kód ukázky: [examples/rgb_blink.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/rgb_blink.py)
+
 
 ---
 
@@ -161,6 +190,7 @@ from util.octopus import oled_init
 oled = oled_init()
 ...
 ```
+
 ---
 ### ![hwsoc](img/mchtr.png){: style="width:28px" } Servo
 Modul pro práci se servem, opět vytvořením instance na daném PINu (musí být PWM).
@@ -220,7 +250,7 @@ db.listAll()
 ---
 
 ### ![hwsoc](img/bt.png){: style="width:28px" } BLE
-Jelikož obecná problematika BLE (Bluetooth low energy) je poměrně obsáhlá, tak i modul BLE je dost robustní. Zahrnuje několik částí: `blesync`, `blesync_client`, `blesync_server` a samostatný modul `blesync_uart`. Každopádně funguje velmi dobře a snahou bylo, aby práce s ním byla srozumitelná a přitom umožnila všechny možné výhody, které BLE obecně přináší.
+Jelikož obecná problematika BLE (Bluetooth low energy) je poměrně obsáhlá, tak i modul BLE je dost robustní. Zahrnuje několik částí: `blesync`, `blesync_client`, `blesync_server` a samostatný modul `blesync_uart`. Každopádně funguje velmi dobře a snahou bylo, aby práce s ním byla srozumitelná a přitom umožnila využít všechny možné výhody, které BLE obecně přináší.
 
 Následující příklad umožní z mobilní aplikace nalézt ESP zařízení jako `octopus-led-UID`, kdee UID je čás unikátního ID, které má každé ESP.
 Pomocí mobilní aplikace šipkami nahoru (Up) a dolů (DOWN) pak ovládáme vestavěnou Led diodu.
@@ -261,7 +291,6 @@ server = blesync_server.Server(devName, blesync_uart.server.UARTService)
 server.start()
 
 ```
-
 
 
 #### ![hwsoc](img/mobplg.png){: style="width:28px" } Mobilní aplikace pro BLE

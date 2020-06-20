@@ -4,7 +4,11 @@ Toto je hlavní část dokumentace, popisující **co a jak**.
 
 ## Knihovny (util | lib)
 
-na esp je to takto...
+Jednotlivé moduly - knihovny (podprogramy, třídy) jsme ve **verzi 1** rozdělili do dvou základních adresářů:
+**lib/** kde jsou převážně knihovny třetích stran, a malé fragmenty, které mají výhodu, že se při importu v adresáři lib hledají
+***util/** (utility) moduly octopusLAB, a třídy pro práci s periferiemi.
+
+*Uživatele vlastně nemusí zajímat, kde to je uloženo, a tak na to důraz neklademe, jen je vhodné si to pohlídat při sestavování větších projektů.*
 
 ---
 ## Jednotlivé moduly a třídy
@@ -47,17 +51,30 @@ while True:
 
 ### RGB
 
+### Analog
+Pro práci s analogovým vstupem pomocí DAC převodníku
+
+### Bits
+Pro práci s jednotlivými **bity**
+
+### Button
+Pro práci s tlačítky
+
 ### Oled
 
 ### Disp7
 
 ### Servo
 
-### DCnotors
+### DC Motors
 
 ### Echo
 
 ### IoT
+
+### Database
+
+### MQTT
 
 ### BLE
 ---

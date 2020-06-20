@@ -4,8 +4,8 @@ nav:
   - Základní dokumentace: basicdoc.md
   - Projekty: projects.md
   - 'Vybrané projekty': 
-      - 'Projekt 1': project1.md
-      - 'Projekt 2': project2.md
+      - 'EDU-KIT1': p-edukit1.md
+      - 'uPyshell': p-shell.md
   - 'Workshopy / tutoriály':
       - 'Tut 1': tut1.md
       - 'Tut 1': tut1.md

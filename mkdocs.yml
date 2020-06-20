@@ -6,9 +6,13 @@ nav:
   - 'Vybrané projekty': 
       - 'EDU-KIT1': p-edukit1.md
       - 'uPyshell': p-shell.md
+      - 'Robot 01': p-robot01.md
   - 'Workshopy / tutoriály':
-      - 'Tut 1': tut1.md
-      - 'Tut 1': tut1.md
+      - 'Tutorial 1 ': tutorial1.md
+      - 'Micropython workshop 1': ws1.md
+      - 'Micropython workshop IoT': ws-iot.md
+      - 'Tutorial 2 ': tutorial2.md
+      - 'Upyshell workshop ': ws-upyshell.md
 
 theme: readthedocs
 

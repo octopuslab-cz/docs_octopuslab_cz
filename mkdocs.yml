@@ -11,3 +11,6 @@ nav:
       - 'Tut 1': tut1.md
 
 theme: readthedocs
+
+markdown_extensions:
+  - attr_list

@@ -1,6 +1,23 @@
 # ![logo](img/logo_small.png) OctopusLab
 
-Tohle je ... "dokumentace, ukázky, návody, turotiály části workshopů, projektů, ukázek použití
+Tohle je základní dokumentace, kde se prolínají popisy knihoven, příklady, návody, tutoriály, části workshopů, projektů a ukázek použití.
+Celý zdrojový kód tohoto "manuálu" je na githubu: [octopusengine/docs_octopuslab_cz](https://github.com/octopusengine/docs_octopuslab_cz).
+
+*Každý může navrhovat doplnění, hlásit chyby, a libovolným způsobem přispívat. Vždy když se navrhovaná změna schválí (commit)do hlavní větve (master branch), okamžitě se publikuje na těchto stránkách (docs.octopuslab.cz). Budeme rádi, když nám dáte vědět, jak se Vám s naším dokumentem pracuje. Vypadá to jenom jako taková blost, ale fakt to dalo dost práce.*
+
+Za tým octopusLABu: *Honza Čopák, Petr Kracík, Vašek Chalupníček, Vladimír Jiříček, Jan Češpivo, a další*
+
+---
+
+```
+      ,'''`.
+     /      \
+     |(@)(@)|
+     )      (
+    /,'))((`.\
+   (( ((  )) ))
+   )  \ `)(' / (
+```
 
 ---
 **Jednotlivé ukázky se v mezích možností snažíme dělit na:**
@@ -27,6 +44,7 @@ Pokud se toho bojíte, ani na to nekoukejte. Další programátorská teorie: po
 ![ufo-gr](img/ufo-ora.gif){: style="width:33px" } ![ufo-gr](img/ufo-ora.gif){: style="width:33px" } ![ufo-gr](img/ufo-ora.gif){: style="width:33px" }
 **Náročné**
 
+
 Nic podobného Vám v tomto bloku neukážeme :-P
 
 
@@ -50,12 +68,13 @@ Nechceme nikoho stresovat, proto to moc nevyužijeme :-P
 ---
 ## Vývojové a výukové moduly
 
-co vlastně děláme
+Co vlastně děláme? Vymýšlíme různé hardwarové moduly (zaměření na ESP32 a Micropython). Vyrábíme desky plošných spojů, které se dají podle potřeby proměnit v celou řadu zajímavých projektů.
+**Námi navržené vývojové a experimentální desky, slouží i jako finálně zapojitelné moduly pro projekty nebo jejich části. Jednoduché (nebo částečně zapojené) projekty výborně pomáhají i při výuce.**
 
 ---
 ## ESP32
 
-stučný popis
+
 
 ![hwsoc](img/hwsoc.png)
 
@@ -64,6 +83,8 @@ stučný popis
 
 ---
 ## Instalace systému
+
+Připravujeme, zatím na: [octopuslab.cz/micropython-octopus](https://www.octopuslab.cz/micropython-octopus/)
 
 ### Linux
 ### Win

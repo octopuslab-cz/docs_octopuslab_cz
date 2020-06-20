@@ -1,4 +1,4 @@
-# Vybrané projekty
+# ![logo](img/logo_small.png) Vybrané projekty
 
 ## ROBOTboard
 ...

@@ -1,3 +1,3 @@
-# Tutorial 1
+# ![logo](img/logo_small.png) Tutorial 1
 
 ---

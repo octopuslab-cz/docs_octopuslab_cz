@@ -1,4 +1,4 @@
-## uPyShell
+# ![logo](img/logo_small.png) uPyShell
 
 Emulátor Linuxového shellu:
 

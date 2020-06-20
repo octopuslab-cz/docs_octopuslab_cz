@@ -294,7 +294,28 @@ server.start()
 
 
 #### ![hwsoc](img/mobplg.png){: style="width:28px" } Mobilní aplikace pro BLE
-Používáme **Bluefruit connect** od společnosti Adafruit
+Používáme **Bluefruit connect** od společnosti Adafruit. Jeden z odkazů na [play.google.com/store/apps](https://play.google.com/store/apps/details?id=com.adafruit.bluefruit.le.connect&hl=cs)
+
+Vytvořili jsme si pomocnou knihovnu pro "překládání" jimi definovaných kódů, která je zatím zde `./util/ble/blefruit.py`:
+
+```
+UP =   b'!B516'
+DOWN = b'!B615'
+LEFT = b'!B714'
+RIGHT = b'!B813'
+...
+```
+
+S touto knihovnou pak pracujeme takto:
+```
+import util.ble.bluefruit as bf
+...
+    if message == bf.UP:
+        led.value(1)
+    if message == bf.DOWN:
+        led.value(0)
+```
+
 
 ---
 ### ![hwsoc](img/database.png){: style="width:28px" } Config

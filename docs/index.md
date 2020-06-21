@@ -1,7 +1,9 @@
 # ![logo](img/logo_small.png) OctopusLab
 
 Tohle je základní dokumentace, kde se prolínají popisy knihoven, příklady, návody, tutoriály, části workshopů, projektů a ukázek použití.
-Celý zdrojový kód tohoto "manuálu" je na githubu: [octopusengine/docs_octopuslab_cz](https://github.com/octopusengine/docs_octopuslab_cz).
+Celý zdrojový kód tohoto "manuálu" je na githubu:
+
+![github](img/github.jpg){: style="width:90px" } [octopusengine/docs_octopuslab_cz](https://github.com/octopusengine/docs_octopuslab_cz)
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #31708f; background-color: #d9edf7; border-color: #bce8f1;">
 Každý může navrhovat doplnění, hlásit chyby a libovolným způsobem přispívat. Vždy, když se navrhovaná změna schválí (commit) do hlavní větve (master branch), automaticky se publikuje na těchto stránkách. Budeme rádi, když nám dáte vědět, jak se Vám s naším dokumentem pracuje. Vypadá to jenom jako taková blost, ale fakt to dalo dost práce.
@@ -9,7 +11,6 @@ Každý může navrhovat doplnění, hlásit chyby a libovolným způsobem přis
 
 Za tým octopusLABu: *Honza Čopák, Petr Kracík, Vašek Chalupníček, Vladimír Jiříček, Jan Češpivo, a další*
 
----
 
 ```
       ,'''`.
@@ -21,8 +22,7 @@ Za tým octopusLABu: *Honza Čopák, Petr Kracík, Vašek Chalupníček, Vladim�
    )  \ `)(' / (
 ```
 
----
-**Jednotlivé ukázky se v mezích možností snažíme dělit na:**
+**Jednotlivé ukázky (v tutoriálech a workshopech) se v mezích možností budeme snažit dělit na:**
 
 ![ufo-gr](img/ufo-gre.gif){: style="width:23px" } 
  **Jednoduché základy**
@@ -76,7 +76,7 @@ Co vlastně děláme? Vymýšlíme různé hardwarové moduly (zaměření na ES
 ---
 ## ESP32
 
-Na destičce o velikosti poštovní známky je mikrokontrolér spolu s několika klíčovými komponenty včetně krystalu, leptané antény pro WiFi a Bluetooth modul. Tím usnadňují použití ESP32 a jsou okamžitě připraveny k integraci do koncových produktů. ESP32 má:
+![hwsoc](img/hwsoc.png){: style="margin:15px;float:left;" }  Na destičce o velikosti poštovní známky je mikrokontrolér spolu s několika klíčovými komponenty včetně krystalu, antény pro WiFi a Bluetooth. ESP32 je tak okamžitě připraveno k integraci do koncových produktů. ESP32 má:
 
 - dvě CPU jádra s nastavitelnou taktovací frekvencí do 240 MHz
 - klasické Bluetooth i podporu Bluetooth Low Energy (BLE)
@@ -87,12 +87,10 @@ Na destičce o velikosti poštovní známky je mikrokontrolér spolu s několika
 *Takže má dostatečný výkon, aby na něm mohl běžet i robustnější systém, jako je Micropython.*
 
 
-![hwsoc](img/hwsoc.png)
-
 ---
 ## Micropython
 
-Micropython je "odlehčená" verze populárního programovacího jazyka Python. *Je to přesněji softwarová implementace vyššího programovacího jazkyka kompatibilního s Python 3.x. Je napsaný v C a optimalizovaný pro použití v mikrokontrolétech.*
+![uPy](img/upy.jpg){: style="width:90px;float:left;" } Micropython je "odlehčená" verze populárního programovacího jazyka Python. *Je to přesněji softwarová implementace vyššího programovacího jazkyka kompatibilního s Python 3.x. Je napsaný v C a optimalizovaný pro použití v mikrokontrolétech.*
 
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #8a6d3b;; background-color: #fcf8e3; border-color: #faebcc;">
@@ -106,7 +104,7 @@ Pro podrobnější proniknutí do tajů programování v Pythonu doporučujeme:
 - [naucse.python.cz/course/mi-pyt/intro/micropython](https://naucse.python.cz/course/mi-pyt/intro/micropython/)
 - [howto.py.cz](http://howto.py.cz/index.htm)
 
-Python je ale velmi jednoduchý, proto se alespoň zmíníme velmi stručně o syntaxy Pythonu (**syntaxe** = forma, jak se "to" píše*):
+Python je ale velmi jednoduchý, proto se alespoň zmíníme velmi stručně o syntaxi Pythonu (**syntaxe** = forma, jak se "to" píše*):
 
 - logické členění se provádí pomocí striktního odsazování bloků
 - pozor na závorky u metod a funkcí `print(„řetězec“)` a uvozovky pro takzvané řetězce (shluky písmen, co nejsou číslo)

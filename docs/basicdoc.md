@@ -342,6 +342,28 @@ conf.save()
 
 ---
 
+### ![hwsoc](img/database.png){: style="width:28px" } pinout
+
+Práci s PINy nám ulehčuje přednastanený pinout v configu. Podle toho, jakou máme HW platformu máme přesně svázány konstanty (názvy PINů) s jejich číselnou reprezentací:
+
+
+```
+from util.led import Led
+from util.pinout import set_pinout
+
+pinout = set_pinout()           # set board pinout
+led = Led(pinout.BUILT_IN_LED)  # BUILT_IN_LED = 2
+
+print("---examples/blink.py---")
+# start main loop
+
+while True:
+    led.blink()
+```
+
+---
+
+
 ### ![hwsoc](img/database.png){: style="width:28px" } pubsub
 
 Toto je geniální nástroj pro předávání parametrů v rámci projektu a to i v samostatně běžících vláknech. Pracuje na principu **publish and subscribe**.
@@ -349,7 +371,7 @@ Toto je geniální nástroj pro předávání parametrů v rámci projektu a to 
 Zdrojový kód knihovny: [./lib/pubsub.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/lib/pubsub.py)
 
 Základ práce - jedno vlákno (nebo část programu) publikuje získané hodnoty metodou `publish` kde parametrem je "topic" a hodnota.
-`pubsub.publish('value', value)`. V jedoduché ukázce jednou za vteřinu generujeme náhodná čísla, která "publikujeme".
+`pubsub.publish('value', value)`. V jednoduché ukázce jednou za vteřinu generujeme náhodná čísla, která "publikujeme".
 
 ```
 from time import sleep

@@ -75,6 +75,7 @@ while True:
     led.blink()
 ```
 
+► [pinout](#pinout)
 
 ---
 
@@ -98,6 +99,7 @@ ws.simpleTest()
 ```
 Zdrojový kód ukázky: [examples/rgb_blink.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/rgb_blink.py)
 
+► [pinout](#pinout)
 
 ---
 
@@ -158,6 +160,8 @@ def on_press_top_button():
     built_in_led.off()
 ```
 
+► [Led](#led) | [@Dekorátor](#dekorator)
+
 ---
 
 
@@ -217,6 +221,7 @@ while True:
         sleep(1)
 ```
 
+► [pinout](#pinout)
 
 ---
 
@@ -360,6 +365,8 @@ print("---examples/blink.py---")
 while True:
     led.blink()
 ```
+
+► [Led](#led)
 
 ---
 

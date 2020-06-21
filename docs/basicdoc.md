@@ -3,15 +3,6 @@
 Toto je hlavní část dokumentace, popisující **co a jak**.
 V dalších částech, především pak oddíle WORKSHOPY a TUTORIÁLY se pak dozvíte **jak na to**.
 
-## Knihovny (util | lib)
-
-Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do dvou základních adresářů:
-
-- `./lib`, kde jsou převážně knihovny třetích stran, a malé fragmenty, které mají výhodu, že se při importu v adresáři lib hledají, **Micropython** je nalezne bez udání cesty k nim.
-- `./util`, (utility) moduly octopusLAB, a třídy pro práci s periferiemi.
-
-*Uživatele vlastně nemusí zajímat, kde to je uloženo, a tak na to důraz neklademe, jen je vhodné si to pohlídat při sestavování větších projektů.*
-
 ---
 ## Jednotlivé moduly a třídy
 
@@ -41,6 +32,58 @@ Na rozdíl od proměnné: `a = 123` *Medotoda nebo funkce data získá nebo na z
 rozsvícení druhé ledky je: `led2.value(1)` no a zhasnutí třetí je `led3.value(0)`
 
 ---
+
+### Knihovny (util | lib)
+
+Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do dvou základních adresářů:
+
+- `./lib`, kde jsou převážně knihovny třetích stran, a malé fragmenty, které mají výhodu, že se při importu v adresáři lib hledají, **Micropython** je nalezne bez udání cesty k nim.
+- `./util`, (utility) moduly octopusLAB, a třídy pro práci s periferiemi.
+
+*Uživatele vlastně nemusí zajímat, kde to je uloženo, a tak na to důraz neklademe, jen je vhodné si to pohlídat při sestavování větších projektů.*
+
+---
+
+### Adresářová strukrura na ESP32
+<pre>
+|-- boot.py
+|-- main.py
+|-- lib
+|      |-- pubsub
+|      |-- blesync_uart
+|      |-- ...
+|      |-- bmp280
+|      |-- ...
+|
+|-- util
+|      |-- [led](#led)
+|      |-- [rgb](#rgb)
+|      |-- [analog](#analog)
+|      |-- [bits](#bits)
+|      |-- [display7](#display7)
+|      |-- [oled_](#oled)
+|      |-- [servo](#servo)
+|      |-- [dcmotors](#dcmotors)
+|      |-- [database](#database)
+|      |-- [mqtt](#mqtt)
+|      |-- ...
+|      |-- [pinout](#pinout)
+|
+|-- assets
+|-- pinouts
+|-- examples
+|      |-- ...
+|      |-- ...
+|
+|-- [shell](/p-shell)
+|      |-- [shell](/p-shell)
+|      |-- [editor](/p-shell/#editor)
+|-- ...
+</pre>
+
+---
+
+## Knihovny
 
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Led
 Třída `Led` je vlastně jen jednoduchým rozšířením třídy `Pin`.
@@ -79,8 +122,8 @@ while True:
 
 ---
 
-### ![hwsoc](img/hwsoc.png){: style="width:28px" } RGB Led
-Modul RGB je vytvořen především pro práci s ***RGB svítivými dioadmi*** typu *WS*.
+### ![hwsoc](img/hwsoc.png){: style="width:28px" } rgb
+Modul pro **RGB led** je vytvořen především pro práci s ***RGB svítivými dioadmi*** typu *WS*.
 Zdrojový kód knihovny: [util/rgb](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/rgb/__init__.py)
 
 
@@ -165,7 +208,7 @@ def on_press_top_button():
 ---
 
 
-### ![hwsoc](img/hwsoc.png){: style="width:28px" } Disp7
+### ![hwsoc](img/hwsoc.png){: style="width:28px" } Display7
 Osm sedmisegmentovek s obvodem MAX na sběrnici SPI je do začátku ideální displej pro základy práce s mikrokontrolérem, sedm segmentů pro zobrazení čísel - proto `disp7`. Obdobný modul se stejným ovládáním je matice 8x8 svítivých diod, ten jsme pojmenovali `disp8`.
 
 ```
@@ -225,9 +268,9 @@ while True:
 
 ---
 
-### ![hwsoc](img/mchtr.png){: style="width:28px" } DC Motors
+### ![hwsoc](img/mchtr.png){: style="width:28px" } DCmotors
 
-### ![hwsoc](img/hwsoc.png){: style="width:28px" } Echo
+### ![hwsoc](img/hwsoc.png){: style="width:28px" } Buzzer
 
 ### ![hwsoc](img/wsetup.png){: style="width:28px" } IoT
 

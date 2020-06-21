@@ -32,7 +32,7 @@ Chceme jinou Led? Na jiném pinu? Třeba druhou na PINu 33? Vytvoříme instanci
 Na rozdíl od proměnné: `a = 123` *Medotoda nebo funkce data získá nebo na základě parametrů zpracuje, proměnná je obsahuje*.
 
 
-**Třída** je jako formička na vánoční cukroví. `Kolečko, Hvězdička, Prasátko` - to je určení tvaru. A **instance** jsou jednotlivé kousky cukroví touto formičkou vyrobená. Můžeme si vytvořit tucet hvězdiček, podobně tak si můžeme připojit více LEDek (každou na jiném PINu)
+**Třída** je jako formička na vánoční cukroví. `Kolečko, Hvězdička, Prasátko` - to je určení tvaru. A **instance** jsou jednotlivé kousky cukroví touto formičkou vyrobené. Můžeme si vytvořit tucet hvězdiček, podobně tak si můžeme připojit více LEDek (každou na jiném PINu)
 
 - `led1 = Led(20)`
 - `led2 = Led(2)`
@@ -410,7 +410,9 @@ def display_num(value):
     d7.show(value)
 ```
 
-Ukázky jsou z vybraných ukázek pro pubsub: 
+► [Disp7](#disp7)
+
+Ukázky jsou z vybraných příkladů pro pubsub: 
 [examples/pubsub](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/examples/pubsub)
 ---
 

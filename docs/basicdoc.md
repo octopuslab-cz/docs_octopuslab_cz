@@ -1,29 +1,29 @@
-# ![logo](img/logo_small.png) Dokumentace
+# ![logo](img/logo_small.png){: style="width:39px" } Dokumentace
 
 Toto je hlavní část dokumentace, popisující **co a jak**.
-V dalších částech, především pak oddíle WORKSHOPY a TUTORIÁLY se pak dozvíte **jak na to**.
+V dalších částech, především pak v oddíle **Workshopy / tutoriály** se pak dozvíte **jak na to**.
 
 ---
 ## Jednotlivé moduly a třídy
 
-Letmý úvod do objektového programování si naznačíme na tradičním *hello world* projektu: **blikání ledky**. Svítivá dioda (LED) je malá součástka,kterou snad nemusíme představovat. Takže jak je to s těmi "objekty"?
+Letmý úvod do objektového programování si naznačíme na tradičním *hello world* projektu: **blikání ledky**. Svítivá dioda (LED) je malá součástka, kterou snad nemusíme představovat. Takže jak je to s těmi "objekty"?
 
 Všechno v Pythonu je **objekt**. Základní vlastnost objektů (v programu) je to, že obsahují jak data (informace), tak předpis chování – instrukce nebo metody, které s těmito daty pracují. U svítivé diody budou *data* (vlastnosti / property) *1* nebo *0* - podle toho, jestli svítí nebo nesvítí. A metoda bude třeba `blikni` nebo v případě `sviť` je to přesněji: změň hodnotu na *1* `value(1)`.
 
 **Předpis objektu je ve třídě** `class()`. Podle tohoto předpisu vytvoříme takzvanou instanci, do závorky se dávají vstupní parametry. Na PINU 2 máme připojenu LED a chceme s ní pracovat pomocí dostupných metod pro třídu Led? Mikrokontroléru to řekneme takto:
 
-`led = Led(2)` Je vhodné dodržet nepsané pravilo, že **třída začíná vždy velkým písmenem**. Abychom odlišili `led` od `Led`.
+`led = Led(2)` Je vhodné dodržet nepsané pravilo, že **třída začíná vždy velkým písmenem**. Abychom odlišili `led` od `Led`
 
-`led.value(1)` Syntaxe je pak: instance objektu `led` "tečka" metoda `value` "( parametry )" `(1)`, ze pouze *1*, možno i *True*.
+`led.value(1)` Syntaxe je pak: instance objektu `led` "tečka" metoda `value` "( parametry )" `(1)`, ze pouze *1*, možno i *True*
 
 Chceme jinou Led? Na jiném pinu? Třeba druhou na PINu 33? Vytvoříme instanci stejného objektu:
 `led2 = Led(33)` > a pak jí používáme "stejně": `led2.value(1)`
 
 
-Na rozdíl od proměnné: `a = 123` *Medotoda nebo funkce data získá nebo na základě parametrů zpracuje, proměnná je obsahuje*.
+Na rozdíl od proměnné: `a = 123` *Metoda nebo funkce data získá nebo na základě parametrů zpracuje, proměnná je obsahuje*.
 
 
-**Třída** je jako formička na vánoční cukroví. `Kolečko, Hvězdička, Prasátko` - to je určení tvaru. A **instance** jsou jednotlivé kousky cukroví touto formičkou vyrobené. Můžeme si vytvořit tucet hvězdiček, podobně tak si můžeme připojit více LEDek (každou na jiném PINu)
+**Třída** je jako formička na vánoční cukroví. `Kolečko, Hvězdička, Prasátko` - to je určení tvaru. A **instance** jsou jednotlivé kousky cukroví touto formičkou vyrobené. Můžeme si vytvořit tucet hvězdiček, podobným způsobem si můžeme připojit více LEDek (každou na jiném PINu)
 
 - `led1 = Led(20)`
 - `led2 = Led(2)`
@@ -169,17 +169,17 @@ while True:
 Pro práci s jednotlivými **bity**. `B1 = 0b11111001`. Bitové operace jsme si museli do Pythonu trochu doladit, aby se s nimi pracovalo lépe a intuitivně. **Používané metody:**
 
 - `neg(B1)` pro negaci - vrací *0b00000110*
-- `reverse()` obrácení poředí bitů - vrací *0b1001111*
+- `reverse()` obrácení pořadí bitů - vrací *0b1001111*
 - `get_bit(B1,1)` pro získání stavu jednoho bitu > 0
 - `set_bit(B1,1)` pro nastavení stavu jednoho bitu
-- `int2bin()` pomocná funkce pro převod čísla na bibární
+- `int2bin()` pomocná funkce pro převod čísla na binární
 
 Zdrojový kód knihovny: [util/bits](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/bits/__init__.py)
 
 
 
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Button
-Pro základní práci s tlačítky. Původně jsme používali samostatný blok s přerušením, ale knihovna pak byla přepsána tak, že využívá dekorátor `@led_button.on_press`, kterým uvedeme (odekorujeme) vlastní funkci `on_press_top_button()`, která se vyvolá vždy, když se zmáčkne tlačítko. Celá funkce pak běží na pozadí, je nablokující, a snadno i spolehlivě se dá použít i pro více tlačítek.
+Pro základní práci s tlačítky. Původně jsme používali samostatný blok s přerušením, ale knihovna pak byla přepsána tak, že využívá dekorátor `@led_button.on_press`, kterým uvedeme (odekorujeme) vlastní funkci `on_press_top_button()`, která se vyvolá vždy, když se zmáčkne tlačítko. Celá funkce pak běží na pozadí, je neblokující, a snadno i spolehlivě se dá použít i pro více tlačítek.
 
 Zdrojový kód knihovny: [util/button](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/button/__init__.py)
 
@@ -241,7 +241,7 @@ oled = oled_init()
 ---
 ### ![hwsoc](img/mchtr.png){: style="width:28px" } Servo
 Modul pro práci se servem, opět vytvořením instance na daném PINu (musí být PWM).
-Hlavní metodou je pak pootočení na dadaný úhel:  `set_degree()`.
+Hlavní metodou je pak pootočení na daný úhel:  `set_degree()`.
 
 Zdrojový kód knihovny: [util/servo](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/servo/__init__.py)
 
@@ -276,10 +276,7 @@ while True:
 
 ### ![hwsoc](img/database.png){: style="width:28px" } Database
 ESP díky paměti umožňuje bez nadsázky i základní práci s databází.
-Zaměříme se na dvě základní:
-
-- lokální `btree`
-- a vzdálené `MySQL`, `Influx`
+Zaměříme se na dvě základní: lokální `btree` a vzdálené `MySQL`, `Influx`.
 
 ```
 from util.database.btreedb import BTreeDB
@@ -300,7 +297,7 @@ db.listAll()
 ### ![hwsoc](img/bt.png){: style="width:28px" } BLE
 Jelikož obecná problematika BLE (Bluetooth low energy) je poměrně obsáhlá, tak i modul BLE je dost robustní. Zahrnuje několik částí: `blesync`, `blesync_client`, `blesync_server` a samostatný modul `blesync_uart`. Každopádně funguje velmi dobře a snahou bylo, aby práce s ním byla srozumitelná a přitom umožnila využít všechny možné výhody, které BLE obecně přináší.
 
-Následující příklad umožní z mobilní aplikace nalézt ESP zařízení jako `octopus-led-UID`, kdee UID je čás unikátního ID, které má každé ESP.
+Následující příklad umožní z mobilní aplikace nalézt ESP zařízení jako `octopus-led-UID`, kde UID je čás unikátního ID, které má každé ESP.
 Pomocí mobilní aplikace šipkami nahoru (Up) a dolů (DOWN) pak ovládáme vestavěnou Led diodu.
 
 
@@ -368,11 +365,11 @@ import util.ble.bluefruit as bf
 ---
 ### ![hwsoc](img/database.png){: style="width:28px" } Config
 
-Micropython má elegantně propacovanou práci se soubory (nahrávání a čtení) a i s `json` formátem, proto jsem toho využili pro externí konfigurační soubory. V adresáři `/config` jsou nahrány jednotlivé "jsony", které v sobě obsahují nějaké konstanty, nastavení a podobně. Proto můžeme daný projekt dynamicky konfigurovat. Využíváme to i vnastavneí PINů jednotivých zařízení `device.json` nebo pro uložení přístupů k WiFi `wifi.json`.
+Micropython má elegantně propacovanou práci se soubory (nahrávání a čtení) a i s `json` formátem, proto jsme toho využili pro externí konfigurační soubory. V adresáři `/config` jsou nahrány jednotlivé "jsony", které v sobě obsahují nějaké konstanty, nastavení a podobně. Proto můžeme daný projekt dynamicky konfigurovat. Využíváme to i v nastavení PINů jednotivých zařízení `device.json` nebo pro uložení přístupů k WiFi `wifi.json`.
 
 Zdrojový kód knihovny: [./config/__init__.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/config/__init__.py) 
 
-Mějme ukázkový projekt **termostat**, který na základě změřené teploty pustí buď topení, nebo chlazení (ventilátor). Volitelně si můžeme v programu definovat `keys`, kde máme uloženy názvy podstatných konstant. Instanci pak vytvážíme `conf = Config("your_file", keys)`, kde "your_file" je název - nejčastěji shodný s názvem projektu. Například "termostat". Se souborem se pak dá pracovat několika metodami, například: `setup()` (interaktivní mód - používáme nejčastěji), `create_from_query()`, `set()`, `save()` ... 
+Mějme ukázkový projekt **termostat**, který na základě změřené teploty pustí buď topení, nebo chlazení (ventilátor). Volitelně si můžeme v programu definovat `keys`, kde máme uloženy názvy podstatných konstant. Instanci pak vytváříme `conf = Config("your_file", keys)`, kde "your_file" je název - nejčastěji shodný s názvem projektu. Například "termostat". Se souborem se pak dá pracovat několika metodami, například: `setup()` (interaktivní mód - používáme nejčastěji), `create_from_query()`, `set()`, `save()` ... 
 
 ```
 from config import Config

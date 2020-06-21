@@ -46,16 +46,16 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do dvou zá
 
 ### Adresářová strukrura na ESP32
 <pre>
-|-- boot.py
-|-- main.py
-|-- lib
+|-- boot.py       # inicializace po startu
+|-- main.py       # hlavní soubor programu
+|-- /lib
 |      |-- pubsub
-|      |-- blesync_uart
+|      |-- /blesync_uart
 |      |-- ...
-|      |-- bmp280
+|      |-- /bmp280
 |      |-- ...
 |
-|-- util
+|-- /util
 |      |-- [led](#led)
 |      |-- [rgb](#rgb)
 |      |-- [analog](#analog)
@@ -69,13 +69,13 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do dvou zá
 |      |-- ...
 |      |-- [pinout](#pinout)
 |
-|-- assets
-|-- pinouts
-|-- examples
+|-- /assets       # obrázky, zvuky, tabulky
+|-- /pinouts      # nastavení pinů
+|-- /examples     # ukázky
 |      |-- ...
 |      |-- ...
 |
-|-- [shell](/p-shell)
+|-- /[shell](/p-shell)
 |      |-- [shell](/p-shell)
 |      |-- [editor](/p-shell/#editor)
 |-- ...

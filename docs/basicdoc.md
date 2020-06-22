@@ -209,7 +209,35 @@ def on_press_top_button():
 
 
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Display7
-Osm sedmisegmentovek s obvodem MAX na sběrnici SPI je do začátku ideální displej pro základy práce s mikrokontrolérem, sedm segmentů pro zobrazení čísel - proto `disp7`. Obdobný modul se stejným ovládáním je matice 8x8 svítivých diod, ten jsme pojmenovali `disp8`.
+Osm sedmisegmentovek s obvodem MAX na sběrnici `SPI` je do začátku ideální displej pro základy práce s mikrokontrolérem. Má "retro" sedm segmentů pro zobrazení čísel - proto `disp7`. Obdobný modul se shodným ovladačem je matice 8x8 svítivých diod, ten jsme pojmenovali `disp8`.
+
+Zdrojový kód [util/display7](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/util/display7)
+
+Před inicializací se musí nejdříve připojit `SPI`.
+
+
+```
+from machine import Pin, SPI
+from util.pinout import set_pinout
+from util.display7 import Display7
+
+
+print("this is simple Micropython example | octopusLAB & ESP32")
+
+print("--- spi-init ---")
+pinout = set_pinout()
+spi = SPI(1, baudrate=10000000, polarity=1, phase=0, sck=Pin(pinout.SPI_CLK_PIN), mosi=Pin(pinout.SPI_MOSI_PIN))
+ss = Pin(pinout.SPI_CS0_PIN, Pin.OUT)
+#spi.deinit() #print("spi > close")
+
+print("--- display7-init ---")
+d7 = Display7(spi, ss) # 8 x 7segment display init
+d7.write_to_buffer('octopus')
+d7.display()
+
+```
+
+Kratší "octopus" verze:
 
 ```
 from time import sleep

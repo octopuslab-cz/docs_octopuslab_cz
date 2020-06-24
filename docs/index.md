@@ -114,23 +114,3 @@ Python je ale velmi jednoduchý, proto se alespoň zmíníme velmi stručně o s
 def funkce(parametr):
 … co se má dělat
 ```
-
----
-## Instalace systému
-
-### Linux
-
-
----
-
-### Win
-
-Připravujeme, zatím na: [octopuslab.cz/micropython-octopus](https://www.octopuslab.cz/micropython-octopus/)
-
----
-
-### Mac
-
-Připravujeme
-
----

@@ -1,7 +1,8 @@
 site_name: OctopusLab
 nav:
   - Úvod: index.md
-  - Základní dokumentace: basicdoc.md
+  - Instalace: install.md
+  - Referenční příručka: basicdoc.md
   - Projekty: projects.md
   - 'Vybrané projekty': 
       - 'EDU-KIT1': p-edukit1.md

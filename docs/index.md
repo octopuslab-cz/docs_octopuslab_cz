@@ -107,7 +107,7 @@ Pro podrobnější proniknutí do tajů programování v Pythonu doporučujeme:
 Python je ale velmi jednoduchý, proto se alespoň zmíníme velmi stručně o syntaxi Pythonu (**syntaxe** = forma, jak se "to" píše*):
 
 - logické členění se provádí pomocí striktního odsazování bloků
-- pozor na závorky u metod a funkcí `print(„řetězec“)` a uvozovky pro takzvané řetězce (shluky písmen, co nejsou číslo)
+- pozor na závorky u metod a funkcí `print("řetězec“)` a uvozovky pro takzvané řetězce (shluky písmen, co nejsou číslo)
 - pozor na dvojtečku za deklarací funkce, cyklu nebo podmínky:
 
 ```
@@ -118,10 +118,19 @@ def funkce(parametr):
 ---
 ## Instalace systému
 
+### Linux
+
+
+---
+
+### Win
+
 Připravujeme, zatím na: [octopuslab.cz/micropython-octopus](https://www.octopuslab.cz/micropython-octopus/)
 
-### Linux
-### Win
+---
+
 ### Mac
+
+Připravujeme
 
 ---

@@ -19,7 +19,7 @@ theme: readthedocs
 
 markdown_extensions:
   - markdown.extensions.admonition
-  - markdown.extensions.smarty
+  # - markdown.extensions.smarty
   - pymdownx.arithmatex
   - pymdownx.caret
   - pymdownx.critic

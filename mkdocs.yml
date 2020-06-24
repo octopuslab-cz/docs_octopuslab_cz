@@ -18,21 +18,28 @@ nav:
 theme: readthedocs
 
 markdown_extensions:
-  - admonition
-  - smarty
+  - markdown.extensions.admonition
+  - markdown.extensions.smarty
   - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji
-  - pymdownx.extra
+  # - pymdownx.extra
+  - markdown.extensions.abbr
+  - pymdownx.betterem:
+      smart_enable: all
+  - markdown.extensions.attr_list
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.tables
+  # - pymdownx.superfences
+  
+  - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tabbed

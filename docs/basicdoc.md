@@ -96,7 +96,7 @@ Zdrojový kód knihovny:
 
 Nejkratší varianta použití:
 ```
-from util.octopus import led
+from util.led import Led
 led = Led(2)
 
 while True:

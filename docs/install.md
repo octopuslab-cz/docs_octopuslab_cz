@@ -70,6 +70,19 @@ Pokud se na obrazovce nic nezobrazuje zmáčněte <kdb>ENTER</kdb> a měl by se 
 
 Připravujeme, zatím na: [octopuslab.cz/micropython-octopus](https://www.octopuslab.cz/micropython-octopus/)
 
+---
+
+
+Po připojení ESP modulu přes kabel USB (typicky microUSB) musíme zjistit, na kterém COM portu ho máme. Typicky `WIN+X` a v menu `Správce zařízení / Porty (COM a Lpt)`.
+
+Pokud chcete zkusit nejrychlejší verzi bez Pythonu v počítači – stačí pouze do vaší pracovní složky rozbalit exe soubor `esptool.exe`,  který si stáhnete zde: https://dl.espressif.com/dl/esptool-2.6.1-windows.zip
+Pak ho budete mít uložen například:
+```
+D:\vas-adresar\esptool.exe
+```
+
+
+
 #### Flashování Octopus MicroPython
 
 esptool.exe --chip esp32 -p COM6 erase_flash 

@@ -38,7 +38,6 @@ source venv/bin/activate
 pip install esptool
 ```
 
-
 #### Flashování Octopus MicroPython
 
 ```bash
@@ -85,19 +84,22 @@ Připravujeme, obšírněji zatím na: [octopuslab.cz/micropython-octopus](https
 
 Po připojení ESP modulu přes kabel USB (typicky microUSB) musíme zjistit, na kterém COM portu ho máme. Typicky `WIN + X` a v menu `Správce zařízení / Porty (COM a Lpt)` najdeme zařízení `Silicon Labs  CP210x USB to UART`.
 
-Pokud chcete zkusit nejrychlejší verzi bez Pythonu v počítači – stačí pouze do vaší pracovní složky rozbalit exe soubor `esptool.exe`,  který si stáhnete zde: https://dl.espressif.com/dl/esptool-2.6.1-windows.zip
-Pak ho budete mít uložen například takto (ano staré win rozlišují `/` a  `\`):
-```
-projects/esp32/esptool.exe
-```
-
-
 
 
 #### Flashování Octopus MicroPython
 
+Pokud chcete zkusit nejrychlejší verzi bez Pythonu v počítači – stačí pouze do vaší pracovní složky rozbalit exe soubor `esptool.exe`,  který si stáhnete zde: https://dl.espressif.com/dl/esptool-2.6.1-windows.zip
+Pak ho budete mít uložen například takto (ano staré win rozlišují `/` a  `\`):
+```
 esptool.exe --chip esp32 -p COM6 erase_flash 
 esptool.exe --chip esp32 -p COM6 write_flash -z 0x1000 ./download/micropython-octopus.bin
+```
+(stačí psát pouze `esptool`)
+
+
+Používáme program [putty.exe](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) a nastavením: `Serial, rychlost 115200, váš COMport`.
+
+Pokud se na obrazovce nic nezobrazuje zmáčněte <kdb>ENTER</kdb> a měl by se vám zobrazit prompt interaktivního Pythonu `>>>`. Gratulujeme, máte funkční MicroPython!
 
 ---
 

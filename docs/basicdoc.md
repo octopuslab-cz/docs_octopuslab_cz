@@ -95,7 +95,7 @@ Zdrojový kód knihovny:
 [./util/led](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/led/__init__.py)
 
 Nejkratší varianta použití:
-```
+```python
 from util.led import Led
 led = Led(2)
 
@@ -104,7 +104,7 @@ while True:
 ```
 
 Číslo PINu v ukázce je 2, to je svítivá dioda vestavěná v **DoIt** modulech i v našem ESP32boardu. Ale pro práci s obecným modulem, kde máme možnost si nastavit, kde se Led dioda nachází, použijeme pak variantu základní ukázky z examples, kde `BUILT_IN_LED` je konstanta, ve které je číslo PINu uloženo:
-```
+```python
 from util.led import Led
 from util.pinout import set_pinout
 
@@ -127,7 +127,7 @@ Modul pro **RGB led** je vytvořen především pro práci s ***RGB svítivými 
 Zdrojový kód knihovny: [util/rgb](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/rgb/__init__.py)
 
 
-```
+```python
 from util.rgb import Rgb
 
 from util.pinout import set_pinout
@@ -152,7 +152,7 @@ Tento modul je pro práci s analogovým vstupem pomocí DAC převodníku. Opět 
 
 Zdrojový kód knihovny: [util/analog](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/analog/__init__.py)
 
-```
+```python
 from time import sleep
 from util.analog import Analog
 an2 = Analog(33)
@@ -183,7 +183,7 @@ Pro základní práci s tlačítky. Původně jsme používali samostatný blok 
 
 Zdrojový kód knihovny: [util/button](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/button/__init__.py)
 
-```
+```python
 from time import sleep
 from machine import Pin
 from util.button import Button
@@ -216,7 +216,7 @@ Zdrojový kód [util/display7](https://github.com/octopusengine/octopuslab/tree/
 Před inicializací se musí nejdříve připojit `SPI`.
 
 
-```
+```python
 from machine import Pin, SPI
 from util.pinout import set_pinout
 from util.display7 import Display7
@@ -239,7 +239,7 @@ d7.display()
 
 Kratší "octopus" verze:
 
-```
+```python
 from time import sleep
 from util.octopus import disp7_init
 
@@ -260,7 +260,7 @@ Ale ukázalo se, že pro vlastní projekty je lepší umět spouštět displej i
 [examples/oled_test.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/oled_test.py)
 
 Zjednodušené ovládání je pak tradičně:
-```
+```python
 from util.octopus import oled_init
 oled = oled_init()
 ...
@@ -273,7 +273,7 @@ Hlavní metodou je pak pootočení na daný úhel:  `set_degree()`.
 
 Zdrojový kód knihovny: [util/servo](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/servo/__init__.py)
 
-```
+```python
 from time import sleep
 from util.pinout import set_pinout
 
@@ -298,15 +298,62 @@ while True:
 
 ### ![hwsoc](img/mchtr.png){: style="width:28px" } DCmotors
 
+Zdrojový kód knihovny: [util/dcmotors](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/dcmotors/__init__.py)
+
+---
+
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Buzzer
 
+Pasivní piezo "pípák" slouží pro akustická upozornění, ale umí přehrát i velmi jednoduché "retro" melodie.
+
+Zdrojový kód knihovny: [util/buzzer](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/util/buzzer)
+
+Základ práce:
+```python
+from util.buzzer import Buzzer
+piezzo = Buzzer(33)
+piezzo.beep()
+```
+
+Doplňující třída `melody` jako přidání další části kódu:
+```python
+from util.buzzer.melody import jingle1
+piezzo.play_melody[jingle1]
+```
+
+
+---
+
 ### ![hwsoc](img/wsetup.png){: style="width:28px" } IoT
+
+Třída, která původně sloužila jako modul pro IoTboard, ale samostatná zahrnuje relé a PWM MOS-FET řízení.
+
+Zdrojový kód knihovny: [util/iot](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/util/iot)
+
+Ukázka: 
+```python
+from util.iot import Relay
+re1 = Relay() # default IoTboard pin 
+re1.value(1)
+re2 = Relay(26)
+
+from util.iot import Pwm
+pwm_led = Pwm(33)
+pwm_led.duty(300)
+
+from util.iot import Thermometer
+tt = Thermometer(32)
+tx = tt.ds.scan()
+tt.get_temp() # default index 0 > first sensor
+tt.get_temp(tx[0])
+```
+---
 
 ### ![hwsoc](img/database.png){: style="width:28px" } Database
 ESP díky paměti umožňuje bez nadsázky i základní práci s databází.
 Zaměříme se na dvě základní: lokální `btree` a vzdálené `MySQL`, `Influx`.
 
-```
+```python
 from util.database.btreedb import BTreeDB
 db = BTreeDB("test")
 db.addOne("one","1")
@@ -329,7 +376,7 @@ Následující příklad umožní z mobilní aplikace nalézt ESP zařízení ja
 Pomocí mobilní aplikace šipkami nahoru (Up) a dolů (DOWN) pak ovládáme vestavěnou Led diodu.
 
 
-```
+```python
 import blesync_server
 import blesync_uart.server
 import util.ble.bluefruit as bf
@@ -371,7 +418,7 @@ Používáme **Bluefruit connect** od společnosti Adafruit. Jeden z odkazů na 
 
 Vytvořili jsme si pomocnou knihovnu pro "překládání" jimi definovaných kódů, která je zatím zde `./util/ble/blefruit.py`:
 
-```
+```python
 UP =   b'!B516'
 DOWN = b'!B615'
 LEFT = b'!B714'
@@ -380,7 +427,7 @@ RIGHT = b'!B813'
 ```
 
 S touto knihovnou pak pracujeme takto:
-```
+```python
 import util.ble.bluefruit as bf
 ...
     if message == bf.UP:
@@ -399,7 +446,7 @@ Zdrojový kód knihovny: [./config/__init__.py](https://github.com/octopusengine
 
 Mějme ukázkový projekt **termostat**, který na základě změřené teploty pustí buď topení, nebo chlazení (ventilátor). Volitelně si můžeme v programu definovat `keys`, kde máme uloženy názvy podstatných konstant. Instanci pak vytváříme `conf = Config("your_file", keys)`, kde "your_file" je název - nejčastěji shodný s názvem projektu. Například "termostat". Se souborem se pak dá pracovat několika metodami, například: `setup()` (interaktivní mód - používáme nejčastěji), `create_from_query()`, `set()`, `save()` ... 
 
-```
+```python
 from config import Config
 
 keys = ["tempMax","tempMin"]
@@ -420,7 +467,7 @@ conf.save()
 Práci s PINy nám ulehčuje přednastanený pinout v configu. Podle toho, jakou máme HW platformu máme přesně svázány konstanty (názvy PINů) s jejich číselnou reprezentací:
 
 
-```
+```python
 from util.led import Led
 from util.pinout import set_pinout
 
@@ -441,14 +488,14 @@ while True:
 
 ### ![hwsoc](img/database.png){: style="width:28px" } pubsub
 
-Toto je geniální nástroj pro předávání parametrů v rámci projektu a to i v samostatně běžících vláknech. Pracuje na principu **publish and subscribe**.
+Nástroj pro předávání hodnot mezi nezávislými komponenty v rámci projektu a to i v samostatně běžících vláknech. Pracuje na principu **publish and subscribe**.
 
 Zdrojový kód knihovny: [./lib/pubsub.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/lib/pubsub.py)
 
-Základ práce - jedno vlákno (nebo část programu) publikuje získané hodnoty metodou `publish` kde parametrem je "topic" a hodnota.
-`pubsub.publish('value', value)`. V jednoduché ukázce jednou za vteřinu generujeme náhodná čísla, která "publikujeme".
+Základ práce: jedno vlákno (nebo část programu) publikuje získané hodnoty metodou `publish` kde parametrem je `topic` a hodnota `value`. Například`pubsub.publish('topic', value)`. (value může být libovolný objekt). V jednoduché ukázce  jednou za vteřinu generujeme náhodná čísla, která "publikujeme". (pozor, používáme `while True:` - je to blokující, lepší je použít `timer`)
 
-```
+
+```python
 from time import sleep
 from os import urandom
 import pubsub

@@ -59,6 +59,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do dvou zá
 |      |-- [led](#led)
 |      |-- [rgb](#rgb)
 |      |-- [analog](#analog)
+|      |-- [button](#button)
 |      |-- [bits](#bits)
 |      |-- [display7](#display7)
 |      |-- [oled_](#oled)
@@ -165,18 +166,6 @@ while True:
 
 ---
 
-### ![hwsoc](img/bits.png){: style="width:28px" } Bits
-Pro práci s jednotlivými **bity**. `B1 = 0b11111001`. Bitové operace jsme si museli do Pythonu trochu doladit, aby se s nimi pracovalo lépe a intuitivně. **Používané metody:**
-
-- `neg(B1)` pro negaci - vrací *0b00000110*
-- `reverse()` obrácení pořadí bitů - vrací *0b1001111*
-- `get_bit(B1,1)` pro získání stavu jednoho bitu > 0
-- `set_bit(B1,1)` pro nastavení stavu jednoho bitu
-- `int2bin()` pomocná funkce pro převod čísla na binární
-
-Zdrojový kód knihovny: [util/bits](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/bits/__init__.py)
-
-
 
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Button
 Pro základní práci s tlačítky. Původně jsme používali samostatný blok s přerušením, ale knihovna pak byla přepsána tak, že využívá dekorátor `@led_button.on_press`, kterým uvedeme (odekorujeme) vlastní funkci `on_press_top_button()`, která se vyvolá vždy, když se zmáčkne tlačítko. Celá funkce pak běží na pozadí, je neblokující, a snadno i spolehlivě se dá použít i pro více tlačítek.
@@ -204,6 +193,26 @@ def on_press_top_button():
 ```
 
 ► [Led](#led) | [@Dekorátor](#dekorator)
+
+---
+
+### ![hwsoc](img/bits.png){: style="width:28px" } Bits
+Pro práci s jednotlivými **bity**. `B1 = 0b11111001`. Bitové operace jsme si museli do Pythonu trochu doladit, aby se s nimi pracovalo lépe a intuitivně. **Používané metody:**
+
+- `neg(B1)` pro negaci - vrací *0b00000110*
+- `reverse()` obrácení pořadí bitů - vrací *0b1001111*
+- `get_bit(B1,1)` pro získání stavu jednoho bitu > 0
+- `set_bit(B1,1)` pro nastavení stavu jednoho bitu
+- `int2bin()` pomocná funkce pro převod čísla na binární
+
+Zdrojový kód knihovny: [util/bits](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/bits/__init__.py)
+
+```python
+from util.bits import neg
+B1 = 0b11111001
+neg(B1) # > 0b00000110
+
+```
 
 ---
 
@@ -299,6 +308,20 @@ while True:
 ### ![hwsoc](img/mchtr.png){: style="width:28px" } DCmotors
 
 Zdrojový kód knihovny: [util/dcmotors](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/dcmotors/__init__.py)
+
+```python
+from util.pinout import set_pinout
+pinout = set_pinout()
+from util.dcmotors import Motor, Steering
+motor_r = Motor(pinout.MOTOR_1A, pinout.MOTOR_2A, pinout.MOTOR_12EN)
+motor_l = Motor(pinout.MOTOR_3A, pinout.MOTOR_4A, pinout.MOTOR_34EN)
+steering = Steering(motor_l, motor_r)
+speed = 800
+steering.center(0)
+steering.center(-speed)
+steering.right(speed)
+steering.left(speed)
+```
 
 ---
 
@@ -450,7 +473,7 @@ Mějme ukázkový projekt **termostat**, který na základě změřené teploty 
 from config import Config
 
 keys = ["tempMax","tempMin"]
-conf = Config("your_file", keys) > config/your_file.json
+conf = Config("your_file", keys) # > config/your_file.json
 conf.setup()
 
 conf.create_from_query("a=1&b=2")

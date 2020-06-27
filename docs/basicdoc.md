@@ -482,10 +482,22 @@ keys = ["tempMax","tempMin"]
 conf = Config("your_file", keys) # > config/your_file.json
 conf.setup()
 
+
+# vytvoření konfigu: a = 1, b = 2
+conf = Config("your_config")
 conf.create_from_query("a=1&b=2")
 conf.set("c",3)
 
 conf.save()
+
+```
+
+Ve svém programu pak `config` použijeme následovně:
+```python
+from config import Config
+conf = Config("your_config")
+a =  conf.get("a") # 1
+b =  conf.get("b") # 2
 
 ```
 
@@ -495,7 +507,7 @@ conf.save()
 
 ### ![hwsoc](img/database.png){: style="width:28px" } pinout
 
-Práci s PINy nám ulehčuje přednastanený pinout v configu. Podle toho, jakou máme HW platformu máme přesně svázány konstanty (názvy PINů) s jejich číselnou reprezentací:
+Práci s PINy nám ulehčuje přednastanený `pinout` v configu. Konfigurační soubory pro jednotlivé hw moduly jsou v samostatném adresáři `/pinouts`. Podle toho, jakou máme HW platformu máme přesně svázány konstanty (názvy PINů) s jejich číselnou reprezentací:
 
 Zdrojový kód knihovny: [util/pinout](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/pinout.py)
 

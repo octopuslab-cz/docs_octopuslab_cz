@@ -33,7 +33,7 @@ rozsvícení druhé ledky je: `led2.value(1)` no a zhasnutí třetí je `led3.va
 
 ---
 
-### Knihovny (util | lib)
+### Knihovny (components | util | lib)
 
 Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do dvou základních adresářů:
 
@@ -56,6 +56,8 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do dvou zá
 |      |-- ...
 |      |-- /bmp280
 |      |-- ...
+|
+|-- /components
 |
 |-- /util
 |      |-- [led](#led)
@@ -124,7 +126,7 @@ while True:
 
 ---
 
-### ![hwsoc](img/hwsoc.png){: style="width:28px" } rgb
+### ![hwsoc](img/hwsoc.png){: style="width:28px" } Rgb
 Modul pro **RGB led** je vytvořen především pro práci s ***RGB svítivými dioadmi*** typu *WS*.
 Zdrojový kód knihovny: [util/rgb](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/rgb/__init__.py)
 
@@ -576,7 +578,7 @@ Ukázky jsou z vybraných příkladů pro pubsub:
 
 ---
 
-### ![hwsoc](img/database.png){: style="width:28px" } dekorator
+### ![hwsoc](img/database.png){: style="width:28px" } Dekorátor
 
 Možná jste si v některých našich ukázkách všimnuli speciálního použití `@` před definicí funkce, například v ► [pubsub](#pubsub)
 ```python

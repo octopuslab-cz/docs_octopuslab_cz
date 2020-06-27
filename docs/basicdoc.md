@@ -578,7 +578,29 @@ Ukázky jsou z vybraných příkladů pro pubsub:
 
 ### ![hwsoc](img/database.png){: style="width:28px" } dekorator
 
-Dekorátor je **funkce**, která dostane jeden argument a vrátí jednu hodnotu. *Je ale trochu speciální v tom, že jak argument, tak návratová hodnota jsou zase jiné funkce.*
+Možná jste si v některých našich ukázkách všimnuli speciálního použití `@` před definicí dunkce, například:
+```python
+@pubsub.subscriber("value")
+def display_num(value):
+    d7.show(value)
+```
+v ► [pubsub](#pubsub)
+
+nebo 
+```python
+@led_button.on_press
+def on_press_top_button():
+    print("on_press_top_button")
+    built_in_led.on()
+```
+
+v ► [button](#button)
+
+Dekorátor v Pythonu je **funkce**, která dostane jeden argument (funkci) a vrátí jednu hodnotu - opět funkci, která je modifikovanou verzí funkce původní. *Původní funkce ja takzvaně "odekorovaná".*
+
+Použití dekorátorů velmi zjednoduší a zpřehlení váš kód. Používá se na registraci, modifikaci a podobně. 
+
+
 
 ```python
 @dekorator

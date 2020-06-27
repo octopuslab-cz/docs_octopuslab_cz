@@ -578,15 +578,15 @@ Ukázky jsou z vybraných příkladů pro pubsub:
 
 ### ![hwsoc](img/database.png){: style="width:28px" } dekorator
 
-Možná jste si v některých našich ukázkách všimnuli speciálního použití `@` před definicí dunkce, například:
+Možná jste si v některých našich ukázkách všimnuli speciálního použití `@` před definicí funkce, například v ► [pubsub](#pubsub)
 ```python
 @pubsub.subscriber("value")
 def display_num(value):
     d7.show(value)
 ```
-v ► [pubsub](#pubsub)
 
-nebo 
+
+nebo v ► [button](#button)
 ```python
 @led_button.on_press
 def on_press_top_button():
@@ -594,7 +594,6 @@ def on_press_top_button():
     built_in_led.on()
 ```
 
-v ► [button](#button)
 
 Dekorátor v Pythonu je **funkce**, která dostane jeden argument (funkci) a vrátí jednu hodnotu - opět funkci, která je modifikovanou verzí funkce původní. *Původní funkce ja takzvaně "odekorovaná".*
 

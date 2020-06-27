@@ -536,7 +536,7 @@ while True:
 Protistrana je odebírá / naslouchá.
 A může je třeba zobrazovat na displeji:
 
-```
+```python
 import pubsub
 from util.octopus import disp7_init
 
@@ -552,5 +552,22 @@ def display_num(value):
 
 Ukázky jsou z vybraných příkladů pro pubsub: 
 [examples/pubsub](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/examples/pubsub)
+
 ---
+
+### dekorator
+
+Dekorátor je **funkce**, která dostane jeden argument a vrátí jednu hodnotu. *Je ale trochu speciální v tom, že jak argument, tak návratová hodnota jsou zase jiné funkce.*
+
+```python
+@dekorator
+def funkce():
+    pass
+
+# je stejné jako:
+
+def funkce():
+    pass
+funkce = dekorator(funkce)
+```
 

@@ -48,8 +48,10 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do dvou zá
 <pre>
 |-- boot.py       # inicializace po startu
 |-- main.py       # hlavní soubor programu
+|-- /assets       # obrázky, zvuky, tabulky
+--- /[config](#config)        # kofigurační soubory (.json)
 |-- /lib
-|      |-- pubsub
+|      |-- [pubsub](#pubsub)
 |      |-- /blesync_uart
 |      |-- ...
 |      |-- /bmp280
@@ -70,7 +72,6 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do dvou zá
 |      |-- ...
 |      |-- [pinout](#pinout)
 |
-|-- /assets       # obrázky, zvuky, tabulky
 |-- /pinouts      # nastavení pinů
 |-- /examples     # ukázky
 |      |-- ...
@@ -133,6 +134,7 @@ from util.rgb import Rgb
 
 from util.pinout import set_pinout
 pinout = set_pinout()   # set board pinout
+
 from util.io_config import get_from_file
 io_conf = get_from_file()
 
@@ -156,6 +158,7 @@ Zdrojový kód knihovny: [util/analog](https://github.com/octopusengine/octopusl
 ```python
 from time import sleep
 from util.analog import Analog
+
 an2 = Analog(33)
 
 while True:
@@ -312,11 +315,14 @@ Zdrojový kód knihovny: [util/dcmotors](https://github.com/octopusengine/octopu
 ```python
 from util.pinout import set_pinout
 pinout = set_pinout()
+
 from util.dcmotors import Motor, Steering
+
 motor_r = Motor(pinout.MOTOR_1A, pinout.MOTOR_2A, pinout.MOTOR_12EN)
 motor_l = Motor(pinout.MOTOR_3A, pinout.MOTOR_4A, pinout.MOTOR_34EN)
 steering = Steering(motor_l, motor_r)
 speed = 800
+
 steering.center(0)
 steering.center(-speed)
 steering.right(speed)
@@ -485,10 +491,13 @@ conf.save()
 
 ---
 
+## Pomocné moduly a třídy
+
 ### ![hwsoc](img/database.png){: style="width:28px" } pinout
 
 Práci s PINy nám ulehčuje přednastanený pinout v configu. Podle toho, jakou máme HW platformu máme přesně svázány konstanty (názvy PINů) s jejich číselnou reprezentací:
 
+Zdrojový kód knihovny: [util/pinout](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/pinout.py)
 
 ```python
 from util.led import Led
@@ -555,7 +564,7 @@ Ukázky jsou z vybraných příkladů pro pubsub:
 
 ---
 
-### dekorator
+### ![hwsoc](img/database.png){: style="width:28px" } dekorator
 
 Dekorátor je **funkce**, která dostane jeden argument a vrátí jednu hodnotu. *Je ale trochu speciální v tom, že jak argument, tak návratová hodnota jsou zase jiné funkce.*
 

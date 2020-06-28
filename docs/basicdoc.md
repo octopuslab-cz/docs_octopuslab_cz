@@ -85,9 +85,18 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do dvou zá
 |-- ...
 </pre>
 
+### Soubory boot.py a main.py
+
+`boot.py` - soubor, který se zavádí při bootování
+
+`main.py` je hlavní soubor programu, který budeme využívat pro své projekty 
+
 ---
 
-## Knihovny
+## Knihovny Lib
+
+
+## Knihovny Components
 
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Led
 Třída `Led` je vlastně jen jednoduchým rozšířením třídy `Pin`.
@@ -379,6 +388,7 @@ tt.get_temp() # default index 0 > first sensor
 tt.get_temp(tx[0])
 ```
 ---
+## Knihovny Ostatní
 
 ### ![hwsoc](img/database.png){: style="width:28px" } Database
 ESP díky paměti umožňuje bez nadsázky i základní práci s databází.

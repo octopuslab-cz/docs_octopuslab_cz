@@ -107,15 +107,21 @@ Připravujeme
 
 ## První spuštění
 
-- připojit se k zařízení
-- spustit initial setup
-- nastavit wifi
-- připojit se na wifi
+- připojit se k zařízení - *už v tomto kroku je možno projít si základní* [Tutorial1](/tutorial1)
+- spustit initial setup - nastavit wifi, připojit se na wifi
 - stáhnout poslední verzi prostředí Octopus
 
 ```bash
 >>> octopus_initial.setup()
- 
+
+      ,'''`.
+     /      \
+     |(@)(@)|
+     )      (
+    /,'))((`.\
+   (( ((  )) ))
+   )  \ `)(' / (
+       
 ==============================
          S E T U P
 ==============================

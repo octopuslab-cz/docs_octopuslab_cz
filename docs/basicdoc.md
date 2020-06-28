@@ -35,10 +35,10 @@ rozsvícení druhé ledky je: `led2.value(1)` no a zhasnutí třetí je `led3.va
 
 ### Knihovny (components | util | lib)
 
-Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do dvou základních adresářů:
-
-- `./lib`, kde jsou převážně knihovny třetích stran, a malé fragmenty, které mají výhodu, že se při importu v adresáři lib hledají, **Micropython** je nalezne bez udání cesty k nim.
-- `./util`, (utility) moduly octopusLAB, a třídy pro práci s periferiemi.
+Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několika základních adresářů:
+- [./components](/Knihovny Components), kam postupně přidáváme jednotlivé "osamostatnělé" komponenty.
+- [./lib], kde jsou převážně knihovny třetích stran, a malé fragmenty, které mají výhodu, že se při importu v adresáři lib hledají, **Micropython** je nalezne bez udání cesty k nim.
+- [./util], (utility) moduly octopusLAB, a třídy pro práci s periferiemi.
 
 *Uživatele vlastně nemusí zajímat, kde to je uloženo, a tak na to důraz neklademe, jen je vhodné si to pohlídat při sestavování větších projektů.*
 

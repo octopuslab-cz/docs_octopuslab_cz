@@ -5,20 +5,23 @@
 ![esp-flash](https://www.octopuslab.cz/wp-content/uploads/2019/08/esp-flash-1.jpg)
 
 
-Pro instalaci MicroPythonu na vaše ESP32 je třeba binární image "naflashovat" na náš kontroler. Instrukce se liší podle toho, jaký používáte operační systém, viz. dále.
+Pro instalaci MicroPythonu na vaše ESP32 je třeba binární image "naflashovat" na náš kontroler. Instrukce se liší podle toho, jaký používáte operační systém, viz dále.
 
 Pracujte v novém, prázdném adresáři, např. `projects/esp32`.
 
-Pro rychlý start práce s knihovnami OctopusLab si stáhněte do pracovního adresáře binárku s [Octopus Micropython pro ESP32](https://octopusengine.org/download/micropython/micropython-octopus.bin) `https://octopusengine.org/download/micropython/micropython-octopus.bin` - náš fork [oficiálního MicroPythonu](https://micropython.org/download/esp32/)
+Pro rychlý start práce s knihovnami OctopusLab si stáhněte do pracovního adresáře binárku Micropythonu s [Octopus Micropython pro ESP32](https://octopusengine.org/download/micropython/micropython-octopus.bin) `https://octopusengine.org/download/micropython/micropython-octopus.bin` - náš fork [oficiálního MicroPythonu](https://micropython.org/download/esp32/)
 
-Nyní jde o zprovoznění sériové linky do zařízení a nainstalování nástroje `esptool` pro nahrávání .bin souborů. Pro `esptool` je třeba mít [nainstalovaný Python3](https://naucse.python.cz/lessons/beginners/install/). Pokračujte kapitolou pro váš operační systém
+Nyní jde o zprovoznění sériové linky do zařízení a nainstalování nástroje `esptool` pro nahrávání `.bin` souborů. Pro `esptool` je třeba mít [nainstalovaný Python3](https://naucse.python.cz/lessons/beginners/install/). Pokračujte kapitolou pro váš operační systém.
 
 
 ### GNU/Linux
 
-*Tyto instrukce jsou laděné pro Ubuntu 20.04, poku používáte jinou distribuci, bude tento postup pravděpodobně také fungovat.*
+*Tyto instrukce jsou laděné pro Ubuntu 20.04, pokud používáte jinou distribuci, bude tento postup pravděpodobně také fungovat.*
 
-Po připojení ESP modulu přes kabel USB (typicky microUSB) se zpřístupní serial device, obvykle v `/dev/ttyUSB0`. K seriové konzoli se můžeme připojit pomocí příkazu `screen /dev/ttyUSB0 115200`
+Po připojení ESP modulu přes kabel USB (typicky microUSB) se zpřístupní serial device, obvykle v `/dev/ttyUSB0`. K seriové konzoli se můžeme připojit pomocí příkazu 
+```bash
+screen /dev/ttyUSB0 115200
+```
 
 !!! note "Jak zjistím, zda se mi zařízení hlásí jako `/dev/ttyUSB0`?"
     pokud chcete název zařízení zjistit, spusťte v terminálu `dmesg -w` před tím, než připojíte USB kabel.
@@ -29,12 +32,13 @@ Pokud příkaz končí chybou oprávnění, přidejte vašeho uživatele do skup
 
 Vyskočení z programu `screen` je lehce komplikované, musíte použít sekvenci klávesových zkratek. Postupně zmáčkněte <kbd>CTRL+A</kbd> a potom <kbd>K</kbd>. Dole se zobrazí prompt, zda chcete opravdu ukončit (kill), zmáčkněte <kbd>Y</kbd> pro potvrzení. Pokud ze screenu vyskočíte jinak, tak se vám může stát, že zůstane připojení "viset" a nebudete moci nahrávat soubory apod., protože na sériové lince může být připojena pouze jedna aplikace v takovém případě stačí vytáhnout a zastrčit USB kabel.
 
-#### Instalace nástroje `esptool`
+---
 
+#### Instalace nástroje `esptool`
 
 Nástroj `esptool` budeme instalovat do [Pythonového virtalenvu](https://naucse.python.cz/course/pyladies/beginners/venv-setup/) - oddělíme jej od systému.
 
-```
+```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install esptool
@@ -85,7 +89,7 @@ Po připojení ESP modulu přes kabel USB (typicky microUSB) musíme zjistit, na
 
 #### Flashování Octopus MicroPython
 
-Pokud chcete zkusit nejrychlejší verzi bez Pythonu v počítači – stačí pouze do vaší pracovní složky rozbalit exe soubor `esptool.exe`,  který si stáhnete zde: https://dl.espressif.com/dl/esptool-2.6.1-windows.zip
+Pokud chcete zkusit nejrychlejší verzi bez Pythonu v počítači – stačí pouze do vaší pracovní složky rozbalit *exe* soubor `esptool.exe`,  který si stáhnete zde: https://dl.espressif.com/dl/esptool-2.6.1-windows.zip
 Pak ho budete mít uložen například takto (ano staré win rozlišují `/` a  `\`):
 ```bash
 esptool.exe --chip esp32 -p COM6 erase_flash 
@@ -93,24 +97,22 @@ esptool.exe --chip esp32 -p COM6 write_flash -z 0x1000 ./download/micropython-oc
 ```
 (stačí psát pouze `esptool`)
 
-Používáme program [putty.exe](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) a nastavením: `Serial, rychlost 115200, váš COMport`. Po nastavení zavoláme `open`, zobrazí se terminál...
+Používáme program [putty.exe](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) a nastavením: `Serial, rychlost 115200, váš COMport`. Po nastavení zavoláme `open`, ukáže se nové okno terminálu.
 
 Pokud se na obrazovce nic nezobrazuje zmáčněte <kdb>ENTER</kdb> a měl by se vám zobrazit prompt interaktivního Pythonu `>>>`. Gratulujeme, máte funkční MicroPython!
-
-Připravujeme podrobnější popis - více najdete zatím na: [octopuslab.cz/micropython-octopus](https://www.octopuslab.cz/micropython-octopus/)
 
 ---
 
 ### Mac
 
-Připravujeme
+Připravujeme - *základ je podobný více Linuxu, z příkazové řádky*.
 
 ---
 
 ## První spuštění
 
 - připojit se k zařízení - *už v tomto kroku je možno projít si základní* [Tutorial1](/tutorial1)
-- spustit initial setup - nastavit wifi, připojit se na wifi
+- spustit `initial setup` - nastavit wifi, připojit se na wifi
 - stáhnout poslední verzi prostředí Octopus
 
 ```bash

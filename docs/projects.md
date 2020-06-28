@@ -3,7 +3,7 @@
 ## ROBOTboard
 
 ROBOTboard je základem několika projektů:
-- [EDU-KIT1](/e-edukit1)
+- [EDU-KIT1](/p-edukit1)
 - [Robot1](/p-robot01)
 
 Jádrem je modul ESP32 DoIt (2x15) 

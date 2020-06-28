@@ -79,3 +79,20 @@ sleep_ms(100)      # 100 mili sec.
 sleep_us(50)       # 50 micro sec.
 ```
 
+**nekonečný cyklus**
+Ještě drobná vsuvka - cykly a podmínky zmíníme v další části, ale už nyní použijeme jednu základní formu: "nekonečný cyklus"
+```
+while podmínka:
+... prováděj_pokud_je_splněná_podmínka()
+```
+
+```
+a = 0
+while True: 
+... a += 1
+... print(a)
+```
+v nekonečné smyčce maximální rychlostí vypisuje obsah zvětšující se proměnné "a"
+
+---
+

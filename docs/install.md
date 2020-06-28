@@ -2,6 +2,8 @@
 
 *Původní verze tohoto dokumentu je na https://www.octopuslab.cz/micropython-octopus/*
 
+![esp-flash](https://www.octopuslab.cz/wp-content/uploads/2019/08/esp-flash-1.jpg)
+
 
 Pro instalaci MicroPythonu na vaše ESP32 je třeba binární image "naflashovat" na náš kontroler. Instrukce se liší podle toho, jaký používáte operační systém, viz. dále.
 
@@ -132,7 +134,8 @@ Připravujeme
  [x]   - exit setup
 ==============================
 ```
-zvolte `w` [enter] 
+zvolte `w` [enter]
+
 **1. nastavíme wifi:** 
 ```bash
 ==============================
@@ -147,8 +150,10 @@ zvolte `a` a stiskněte [enter]
 pro přidání vaší wifi sítě do zařízení 
 (uloží se do flash ESP v config/wifi.json) 
 
-`SSID:` název Vaší wifi 
-`PASSWORD:` a heslo do ní 
+`SSID:` název Vaší wifi
+
+`PASSWORD:` a heslo do ní
+
 
 **2.  System download -  Deploy**
 Po připojení do Internetu se v select setupu napíše:

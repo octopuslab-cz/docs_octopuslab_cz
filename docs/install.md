@@ -85,7 +85,7 @@ Po připojení ESP modulu přes kabel USB (typicky microUSB) musíme zjistit, na
 
 Pokud chcete zkusit nejrychlejší verzi bez Pythonu v počítači – stačí pouze do vaší pracovní složky rozbalit exe soubor `esptool.exe`,  který si stáhnete zde: https://dl.espressif.com/dl/esptool-2.6.1-windows.zip
 Pak ho budete mít uložen například takto (ano staré win rozlišují `/` a  `\`):
-```
+```bash
 esptool.exe --chip esp32 -p COM6 erase_flash 
 esptool.exe --chip esp32 -p COM6 write_flash -z 0x1000 ./download/micropython-octopus.bin
 ```
@@ -113,6 +113,40 @@ Připravujeme
 - připojit se na wifi
 - stáhnout poslední verzi prostředí Octopus
 
+```bash
+>>> octopus_initial.setup()
+ 
+==============================
+         S E T U P
+==============================
+ [w]   - wifi submenu
+ [cw]  - connect wifi
+ [cl]  - connect LAN
+ [sd]  - system download
+ [x]   - exit setup
+==============================
 ```
-octopus_initial.setup()
+zvolte `w` [enter] 
+**1. nastavíme wifi:** 
+```bash
+==============================
+      S E T U P - W I F I
+==============================
+ [a]  - Add wifi network
+ [r]  - Remove wifi network
+ [s]  - Show configuration  
+==============================
 ```
+zvolte `a` a stiskněte [enter] 
+pro přidání vaší wifi sítě do zařízení 
+(uloží se do flash ESP v config/wifi.json) 
+
+`SSID:` název Vaší wifi 
+`PASSWORD:` a heslo do ní 
+
+**2.  System download -  Deploy**
+Po připojení do Internetu se v select setupu napíše:
+`cw` [enter] (conect wifi)
+ESP se připojí k WiFi
+
+`sd` [enter] (system download - from url octopus), které provede stažení **TARu** z našeho cloudu - vše se do ESP samo nahraje a rozbalí. Průběžně uvidíte všechny soubory (včetně podadresářů).

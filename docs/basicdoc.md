@@ -387,6 +387,31 @@ tt.get_temp(tx[0])
 
 ---
 
+## Knihovny Utils
+
+### ![hwsoc](img/database.png){: style="width:28px" } Database
+ESP díky paměti umožňuje bez nadsázky i základní práci s databází.
+Zaměříme se na dvě základní: lokální `btree` a vzdálené `MySQL`, `Influx`.
+
+```python
+from util.database.btreedb import BTreeDB
+db = BTreeDB("test")
+db.addOne("one","1")
+db.listAll()
+```
+---
+
+### ![hwsoc](img/database.png){: style="width:28px" } MQTT
+
+- MQTT - jako pub-sub
+- MQTT broker - na RPi
+- orchestrátor NodeJS
+- využití v IoT
+---
+
+
+---
+
 ## Knihovny Lib
 
 ### ![hwsoc](img/database.png){: style="width:28px" } pubsub
@@ -433,28 +458,6 @@ def display_num(value):
 Ukázky jsou z vybraných příkladů pro pubsub: 
 [examples/pubsub](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/examples/pubsub)
 
----
-
-## Knihovny Ostatní
-
-### ![hwsoc](img/database.png){: style="width:28px" } Database
-ESP díky paměti umožňuje bez nadsázky i základní práci s databází.
-Zaměříme se na dvě základní: lokální `btree` a vzdálené `MySQL`, `Influx`.
-
-```python
-from util.database.btreedb import BTreeDB
-db = BTreeDB("test")
-db.addOne("one","1")
-db.listAll()
-```
----
-
-### ![hwsoc](img/database.png){: style="width:28px" } MQTT
-
-- MQTT - jako pub-sub
-- MQTT broker - na RPi
-- orchestrátor NodeJS
-- využití v IoT
 ---
 
 ### ![hwsoc](img/bt.png){: style="width:28px" } BLE
@@ -524,8 +527,10 @@ import util.ble.bluefruit as bf
         led.value(0)
 ```
 
-
 ---
+
+## Knihovny Ostatní
+
 ### ![hwsoc](img/database.png){: style="width:28px" } Config
 
 Micropython má elegantně propacovanou práci se soubory (nahrávání a čtení) a i s `json` formátem, proto jsme toho využili pro externí konfigurační soubory. V adresáři `/config` jsou nahrány jednotlivé "jsony", které v sobě obsahují nějaké konstanty, nastavení a podobně. Proto můžeme daný projekt dynamicky konfigurovat. Využíváme to i v nastavení PINů jednotivých zařízení `device.json` nebo pro uložení přístupů k WiFi `wifi.json`.

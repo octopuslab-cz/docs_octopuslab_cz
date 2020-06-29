@@ -138,7 +138,7 @@ Připravujeme - *základ je podobný více Linuxu, z příkazové řádky*.
 ```
 zvolte `w` [enter]
 
-**1. nastavíme wifi:** 
+### 1. nastavení WiFi: 
 ```bash
 ==============================
       S E T U P - W I F I
@@ -157,9 +157,17 @@ pro přidání vaší wifi sítě do zařízení
 `PASSWORD:` a heslo do ní
 
 
-**2.  System download -  Deploy**
+### 2.  System download -  Deploy
 Po připojení do Internetu se v select setupu napíše:
 `cw` [enter] (conect wifi)
 ESP se připojí k WiFi
 
 `sd` [enter] (system download - from url octopus), které provede stažení **TARu** z našeho cloudu - vše se do ESP samo nahraje a rozbalí. Průběžně uvidíte všechny soubory (včetně podadresářů).
+
+### 3. Examples - je soubor příkladů
+
+Provedeme reset zařízení. Pak spustíme `setup()` a opět postupně `cw` (connect wifi) a tentokrát `sde` (system download examples).
+
+---
+
+

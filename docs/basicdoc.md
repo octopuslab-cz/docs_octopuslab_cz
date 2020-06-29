@@ -52,17 +52,14 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |-- boot.py       # inicializace po startu
 |-- main.py       # hlavní soubor programu
 |-- /assets       # obrázky, zvuky, tabulky
-|-- /[config](#config)       # kofigurační soubory (.json)
-|-- /lib
+|-- [/config](#config)       # kofigurační soubory (.json)
+|-- [/lib](#knihovny-lib)
 |      |-- [pubsub](#pubsub)
 |      |-- /blesync_uart
 |      |-- ...
 |      |-- /bmp280
-|      |-- ...
 |
-|-- /components
-|
-|-- /util
+|-- [/components](#knihovny-components)
 |      |-- [led](#led)
 |      |-- [rgb](#rgb)
 |      |-- [analog](#analog)
@@ -72,10 +69,14 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- [oled_](#oled)
 |      |-- [servo](#servo)
 |      |-- [dcmotors](#dcmotors)
+|
+|-- [/utils](#knihovny-utils)
+|      |-- octopus
 |      |-- [database](#database)
 |      |-- [mqtt](#mqtt)
 |      |-- ...
 |      |-- [pinout](#pinout)
+|      |-- BLE
 |
 |-- /pinouts      # nastavení pinů
 |-- /examples     # ukázky
@@ -105,11 +106,11 @@ Přidali k základní metodě `value()` dalších pár: `toggle()`, `blink()`
 
 
 Zdrojový kód knihovny:
-[./util/led](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/led/__init__.py)
+[./components/led](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/led/__init__.py)
 
 Nejkratší varianta použití:
 ```python
-from util.led import Led
+from components.led import Led
 led = Led(2)
 
 while True:
@@ -118,8 +119,8 @@ while True:
 
 Číslo PINu v ukázce je 2, to je svítivá dioda vestavěná v **DoIt** modulech i v našem ESP32boardu. Ale pro práci s obecným modulem, kde máme možnost si nastavit, kde se Led dioda nachází, použijeme pak variantu základní ukázky z examples, kde `BUILT_IN_LED` je konstanta, ve které je číslo PINu uloženo:
 ```python
-from util.led import Led
-from util.pinout import set_pinout
+from components.led import Led
+from utils.pinout import set_pinout
 
 pinout = set_pinout()           # set board pinout
 led = Led(pinout.BUILT_IN_LED)  # BUILT_IN_LED = 2
@@ -141,12 +142,12 @@ Zdrojový kód knihovny: [util/rgb](https://github.com/octopusengine/octopuslab/
 
 
 ```python
-from util.rgb import Rgb
+from components.rgb import Rgb
 
-from util.pinout import set_pinout
+from utils.pinout import set_pinout
 pinout = set_pinout()   # set board pinout
 
-from util.io_config import get_from_file
+from utils.io_config import get_from_file
 io_conf = get_from_file()
 
 ws = Rgb(pinout.WS_LED_PIN,io_conf.get('ws'))
@@ -168,7 +169,7 @@ Zdrojový kód knihovny: [util/analog](https://github.com/octopusengine/octopusl
 
 ```python
 from time import sleep
-from util.analog import Analog
+from components.analog import Analog
 
 an2 = Analog(33)
 
@@ -189,7 +190,7 @@ Zdrojový kód knihovny: [util/button](https://github.com/octopusengine/octopusl
 ```python
 from time import sleep
 from machine import Pin
-from util.button import Button
+from components.button import Button
 
 led_button = Button(0, release_value=1)
 built_in_led = Pin(2, Pin.OUT)
@@ -222,7 +223,7 @@ Pro práci s jednotlivými **bity**. `B1 = 0b11111001`. Bitové operace jsme si 
 Zdrojový kód knihovny: [util/bits](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/bits/__init__.py)
 
 ```python
-from util.bits import neg
+from components.bits import neg
 B1 = 0b11111001
 neg(B1) # > 0b00000110
 
@@ -241,8 +242,8 @@ Před inicializací se musí nejdříve připojit `SPI`.
 
 ```python
 from machine import Pin, SPI
-from util.pinout import set_pinout
-from util.display7 import Display7
+from utils.pinout import set_pinout
+from components.display7 import Display7
 
 
 print("this is simple Micropython example | octopusLAB & ESP32")
@@ -264,7 +265,7 @@ Kratší "octopus" verze:
 
 ```python
 from time import sleep
-from util.octopus import disp7_init
+from utils.octopus import disp7_init
 
 print("this is simple Micropython example | ESP32 & octopusLAB")
 print()
@@ -284,7 +285,7 @@ Ale ukázalo se, že pro vlastní projekty je lepší umět spouštět displej i
 
 Zjednodušené ovládání je pak tradičně:
 ```python
-from util.octopus import oled_init
+from utils.octopus import oled_init
 oled = oled_init()
 ...
 ```
@@ -298,9 +299,9 @@ Zdrojový kód knihovny: [util/servo](https://github.com/octopusengine/octopusla
 
 ```python
 from time import sleep
-from util.pinout import set_pinout
+from utils.pinout import set_pinout
 
-from util.servo import Servo
+from components.servo import Servo
 pinout = set_pinout()
 
 # s1 = Servo(pinout.PWM1_PIN)
@@ -324,10 +325,10 @@ while True:
 Zdrojový kód knihovny: [util/dcmotors](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/dcmotors/__init__.py)
 
 ```python
-from util.pinout import set_pinout
+from utils.pinout import set_pinout
 pinout = set_pinout()
 
-from util.dcmotors import Motor, Steering
+from components.dcmotors import Motor, Steering
 
 motor_r = Motor(pinout.MOTOR_1A, pinout.MOTOR_2A, pinout.MOTOR_12EN)
 motor_l = Motor(pinout.MOTOR_3A, pinout.MOTOR_4A, pinout.MOTOR_34EN)
@@ -350,14 +351,14 @@ Zdrojový kód knihovny: [util/buzzer](https://github.com/octopusengine/octopusl
 
 Základ práce:
 ```python
-from util.buzzer import Buzzer
+from components.buzzer import Buzzer
 piezzo = Buzzer(33)
 piezzo.beep()
 ```
 
 Doplňující třída `melody` jako přidání další části kódu:
 ```python
-from util.buzzer.melody import jingle1
+from components.buzzer.melody import jingle1
 piezzo.play_melody[jingle1]
 ```
 
@@ -372,16 +373,16 @@ Zdrojový kód knihovny: [util/iot](https://github.com/octopusengine/octopuslab/
 
 Ukázka: 
 ```python
-from util.iot import Relay
+from components.iot import Relay
 re1 = Relay() # default IoTboard pin 
 re1.value(1)
 re2 = Relay(26)
 
-from util.iot import Pwm
+from components.iot import Pwm
 pwm_led = Pwm(33)
 pwm_led.duty(300)
 
-from util.iot import Thermometer
+from components.iot import Thermometer
 tt = Thermometer(32)
 tx = tt.ds.scan()
 tt.get_temp() # default index 0 > first sensor
@@ -397,7 +398,7 @@ ESP díky paměti umožňuje bez nadsázky i základní práci s databází.
 Zaměříme se na dvě základní: lokální `btree` a vzdálené `MySQL`, `Influx`.
 
 ```python
-from util.database.btreedb import BTreeDB
+from utils.database.btreedb import BTreeDB
 db = BTreeDB("test")
 db.addOne("one","1")
 db.listAll()
@@ -446,7 +447,7 @@ A může je třeba zobrazovat na displeji:
 
 ```python
 import pubsub
-from util.octopus import disp7_init
+from utils.octopus import disp7_init
 
 d7 = disp7_init()  # 8 x 7segment display init
 
@@ -473,13 +474,13 @@ Pomocí mobilní aplikace šipkami nahoru (Up) a dolů (DOWN) pak ovládáme ves
 ```python
 import blesync_server
 import blesync_uart.server
-import util.ble.bluefruit as bf
+import utils.ble.bluefruit as bf
 
-from util.shell.terminal import getUid
+from shell.terminal import getUid
 uID5 = getUid(short=5)
 
 from time import sleep
-from util.led import Led
+from components.led import Led
 led = Led(2)
 
 
@@ -522,7 +523,7 @@ RIGHT = b'!B813'
 
 S touto knihovnou pak pracujeme takto:
 ```python
-import util.ble.bluefruit as bf
+import utils.ble.bluefruit as bf
 ...
     if message == bf.UP:
         led.value(1)
@@ -577,8 +578,8 @@ Práci s PINy nám ulehčuje přednastanený `pinout` v configu. Konfigurační 
 Zdrojový kód knihovny: [util/pinout](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/pinout.py)
 
 ```python
-from util.led import Led
-from util.pinout import set_pinout
+from components.led import Led
+from utils.pinout import set_pinout
 
 pinout = set_pinout()           # set board pinout
 led = Led(pinout.BUILT_IN_LED)  # BUILT_IN_LED = 2

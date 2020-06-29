@@ -13,7 +13,11 @@ Další informace jsou na našem webu http://www.octopuslab.cz
 ---
 ## ESP32
 
-![hwsoc](img/hwsoc.png){: style="margin:15px;float:left;" }  Na destičce o velikosti poštovní známky je mikrokontrolér spolu s několika klíčovými komponenty včetně krystalu, antény pro WiFi a Bluetooth. ESP32 je tak okamžitě připraveno k integraci do koncových produktů. ESP32 má:
+![hwsoc](img/hwsoc.png){: style="margin:15px;float:left;" }  Na destičce o velikosti poštovní známky je mikrokontrolér spolu s několika klíčovými komponenty včetně krystalu, antény pro WiFi a Bluetooth. ESP32 je tak okamžitě připraveno k integraci do koncových produktů. 
+
+![esp32](https://www.octopuslab.cz/wp-content/uploads/2020/06/esp32-s.png)
+
+ESP32 má:
 
 - dvě CPU jádra s nastavitelnou taktovací frekvencí do 240 MHz
 - klasické Bluetooth i podporu Bluetooth Low Energy (BLE)

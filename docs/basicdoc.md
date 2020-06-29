@@ -96,7 +96,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 
 ---
 
-## Knihovny Components
+## OCTOPUS Components
 
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Led
 Třída `Led` je vlastně jen jednoduchým rozšířením třídy `Pin`.
@@ -390,7 +390,7 @@ tt.get_temp(tx[0])
 
 ---
 
-## Knihovny Utils
+## OCTOPUS Utils
 
 ### ![hwsoc](img/database.png){: style="width:28px" } Database
 ESP díky paměti umožňuje bez nadsázky i základní práci s databází.
@@ -415,7 +415,7 @@ db.listAll()
 
 ---
 
-## Knihovny Lib
+## OCTOPUS Lib
 
 ### ![hwsoc](img/database.png){: style="width:28px" } pubsub
 
@@ -532,7 +532,7 @@ import util.ble.bluefruit as bf
 
 ---
 
-## Knihovny Ostatní
+## Ostatní podpůrné moduly
 
 ### ![hwsoc](img/database.png){: style="width:28px" } Config
 
@@ -569,8 +569,6 @@ b =  conf.get("b") # 2
 ```
 
 ---
-
-## Pomocné moduly a třídy
 
 ### ![hwsoc](img/database.png){: style="width:28px" } pinout
 
@@ -633,4 +631,8 @@ def funkce():
     pass
 funkce = dekorator(funkce)
 ```
+
+## Web server - IDE - jednoduché ovládání
+
+Jsme vyčlenili samostatně - ztím zde: [](https://www.octopuslab.cz/micropython-web-ide/)
 

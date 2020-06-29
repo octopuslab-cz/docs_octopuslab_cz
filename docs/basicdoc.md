@@ -53,13 +53,13 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |-- main.py       # hlavní soubor programu
 |-- /assets       # obrázky, zvuky, tabulky
 |-- [/config](#config)       # kofigurační soubory (.json)
-|-- [/lib](#knihovny-lib)
+|-- [/lib](#octopus-lib)
 |      |-- [pubsub](#pubsub)
 |      |-- /blesync_uart
 |      |-- ...
 |      |-- /bmp280
 |
-|-- [/components](#knihovny-components)
+|-- [/components](#octopus-components)
 |      |-- [led](#led)
 |      |-- [rgb](#rgb)
 |      |-- [analog](#analog)
@@ -70,7 +70,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- [servo](#servo)
 |      |-- [dcmotors](#dcmotors)
 |
-|-- [/utils](#knihovny-utils)
+|-- [/utils](#octopus-utils)
 |      |-- octopus
 |      |-- [database](#database)
 |      |-- [mqtt](#mqtt)
@@ -106,7 +106,7 @@ Přidali k základní metodě `value()` dalších pár: `toggle()`, `blink()`
 
 
 Zdrojový kód knihovny:
-[./components/led](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/led/__init__.py)
+[./components/led](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/led/__init__.py)
 
 Nejkratší varianta použití:
 ```python
@@ -138,7 +138,7 @@ while True:
 
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Rgb
 Modul pro **RGB led** je vytvořen především pro práci s ***RGB svítivými dioadmi*** typu *WS*.
-Zdrojový kód knihovny: [util/rgb](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/rgb/__init__.py)
+Zdrojový kód knihovny: [components/rgb](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/rgb/__init__.py)
 
 
 ```python
@@ -165,7 +165,7 @@ Zdrojový kód ukázky: [examples/rgb_blink.py](https://github.com/octopusengine
 Tento modul je pro práci s analogovým vstupem pomocí DAC převodníku. Opět se jedná o rozšíření základní třídy `ADC`, kde vytvořením instance s parametrem vstupního PINu zjednodušujeme celou inicializaci na `an = Analog(33)`. Základní metodu `read()` jsme rozšířili o `get_adc_aver(num)`, kde počítáme průměr z *num* neměřených hodnot.
 
 
-Zdrojový kód knihovny: [util/analog](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/analog/__init__.py)
+Zdrojový kód knihovny: [components/analog](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/analog/__init__.py)
 
 ```python
 from time import sleep
@@ -185,7 +185,7 @@ while True:
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Button
 Pro základní práci s tlačítky. Původně jsme používali samostatný blok s přerušením, ale knihovna pak byla přepsána tak, že využívá dekorátor `@led_button.on_press`, kterým uvedeme (odekorujeme) vlastní funkci `on_press_top_button()`, která se vyvolá vždy, když se zmáčkne tlačítko. Celá funkce pak běží na pozadí, je neblokující, a snadno i spolehlivě se dá použít i pro více tlačítek.
 
-Zdrojový kód knihovny: [util/button](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/button/__init__.py)
+Zdrojový kód knihovny: [components/button](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/button/__init__.py)
 
 ```python
 from time import sleep
@@ -220,7 +220,7 @@ Pro práci s jednotlivými **bity**. `B1 = 0b11111001`. Bitové operace jsme si 
 - `set_bit(B1,1)` pro nastavení stavu jednoho bitu
 - `int2bin()` pomocná funkce pro převod čísla na binární
 
-Zdrojový kód knihovny: [util/bits](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/bits/__init__.py)
+Zdrojový kód knihovny: [components/bits](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/bits/__init__.py)
 
 ```python
 from components.bits import neg
@@ -235,7 +235,7 @@ neg(B1) # > 0b00000110
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Display7
 Osm sedmisegmentovek s obvodem MAX na sběrnici `SPI` je do začátku ideální displej pro základy práce s mikrokontrolérem. Má "retro" sedm segmentů pro zobrazení čísel - proto `disp7`. Obdobný modul se shodným ovladačem je matice 8x8 svítivých diod, ten jsme pojmenovali `disp8`.
 
-Zdrojový kód [util/display7](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/util/display7)
+Zdrojový kód [components/display7](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/components/display7)
 
 Před inicializací se musí nejdříve připojit `SPI`.
 
@@ -295,7 +295,7 @@ oled = oled_init()
 Modul pro práci se servem, opět vytvořením instance na daném PINu (musí být PWM).
 Hlavní metodou je pak pootočení na daný úhel:  `set_degree()`.
 
-Zdrojový kód knihovny: [util/servo](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/servo/__init__.py)
+Zdrojový kód knihovny: [components/servo](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/servo/__init__.py)
 
 ```python
 from time import sleep
@@ -322,7 +322,7 @@ while True:
 
 ### ![hwsoc](img/mchtr.png){: style="width:28px" } DCmotors
 
-Zdrojový kód knihovny: [util/dcmotors](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/dcmotors/__init__.py)
+Zdrojový kód knihovny: [components/dcmotors](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/dcmotors/__init__.py)
 
 ```python
 from utils.pinout import set_pinout
@@ -347,7 +347,7 @@ steering.left(speed)
 
 Pasivní piezo "pípák" slouží pro akustická upozornění, ale umí přehrát i velmi jednoduché "retro" melodie.
 
-Zdrojový kód knihovny: [util/buzzer](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/util/buzzer)
+Zdrojový kód knihovny: [components/buzzer](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/components/buzzer)
 
 Základ práce:
 ```python
@@ -369,7 +369,7 @@ piezzo.play_melody[jingle1]
 
 Třída, která původně sloužila jako modul pro IoTboard, ale samostatná zahrnuje relé a PWM MOS-FET řízení.
 
-Zdrojový kód knihovny: [util/iot](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/util/iot)
+Zdrojový kód knihovny: [components/iot](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/components/iot)
 
 Ukázka: 
 ```python
@@ -511,7 +511,7 @@ server.start()
 #### ![hwsoc](img/mobplg.png){: style="width:28px" } Mobilní aplikace pro BLE
 Používáme **Bluefruit connect** od společnosti Adafruit. Jeden z odkazů na [play.google.com/store/apps](https://play.google.com/store/apps/details?id=com.adafruit.bluefruit.le.connect&hl=cs)
 
-Vytvořili jsme si pomocnou knihovnu pro "překládání" jimi definovaných kódů, která je zatím zde `./util/ble/blefruit.py`:
+Vytvořili jsme si pomocnou knihovnu pro "překládání" jimi definovaných kódů, která je zatím zde `./utils/ble/blefruit.py`:
 
 ```python
 UP =   b'!B516'
@@ -575,7 +575,7 @@ b =  conf.get("b") # 2
 
 Práci s PINy nám ulehčuje přednastanený `pinout` v configu. Konfigurační soubory pro jednotlivé hw moduly jsou v samostatném adresáři `/pinouts`. Podle toho, jakou máme HW platformu máme přesně svázány konstanty (názvy PINů) s jejich číselnou reprezentací:
 
-Zdrojový kód knihovny: [util/pinout](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/util/pinout.py)
+Zdrojový kód knihovny: [utils/pinout](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/pinout.py)
 
 ```python
 from components.led import Led

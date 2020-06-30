@@ -106,7 +106,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Led
 Třída `Led` je vlastně jen jednoduchým rozšířením třídy `Pin`.
 Parametr při vytváření instance je číslo pinu. `led = Led(2)`
-Přidali k základní metodě `value()` dalších pár: `toggle()`, `blink()` 
+Přidali jsme k základní metodě `value()` dalších několik metod: `toggle()`, `blink()` 
 
 
 Zdrojový kód knihovny:

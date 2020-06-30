@@ -64,7 +64,6 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- [rgb](#rgb)
 |      |-- [analog](#analog)
 |      |-- [button](#button)
-|      |-- [bits](#bits)
 |      |-- [display7](#display7)
 |      |-- [oled_](#oled)
 |      |-- [servo](#servo)
@@ -72,10 +71,11 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |
 |-- [/utils](#octopus-utils)
 |      |-- octopus
+|      |-- [pinout](#pinout)
+|      |-- [bits](#bits)
 |      |-- [database](#database)
 |      |-- [mqtt](#mqtt)
 |      |-- ...
-|      |-- [pinout](#pinout)
 |      |-- BLE
 |
 |-- [/pinouts](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/pinouts)      # nastavení pinů
@@ -215,25 +215,6 @@ def on_press_top_button():
 
 ---
 
-### ![hwsoc](img/bits.png){: style="width:28px" } Bits
-Pro práci s jednotlivými **bity**. `B1 = 0b11111001`. Bitové operace jsme si museli do Pythonu trochu doladit, aby se s nimi pracovalo lépe a intuitivně. **Používané metody:**
-
-- `neg(B1)` pro negaci - vrací *0b00000110*
-- `reverse()` obrácení pořadí bitů - vrací *0b1001111*
-- `get_bit(B1,1)` pro získání stavu jednoho bitu > 0
-- `set_bit(B1,1)` pro nastavení stavu jednoho bitu
-- `int2bin()` pomocná funkce pro převod čísla na binární
-
-Zdrojový kód knihovny: [components/bits](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/bits/__init__.py)
-
-```python
-from components.bits import neg
-B1 = 0b11111001
-neg(B1) # > 0b00000110
-
-```
-
----
 
 
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Display7
@@ -596,6 +577,26 @@ while True:
 ```
 
 ► [Led](#led)
+
+---
+
+### ![hwsoc](img/bits.png){: style="width:28px" } Bits
+Pro práci s jednotlivými **bity**. `B1 = 0b11111001`. Bitové operace jsme si museli do Pythonu trochu doladit, aby se s nimi pracovalo lépe a intuitivně. **Používané metody:**
+
+- `neg(B1)` pro negaci - vrací *0b00000110*
+- `reverse()` obrácení pořadí bitů - vrací *0b1001111*
+- `get_bit(B1,1)` pro získání stavu jednoho bitu > 0
+- `set_bit(B1,1)` pro nastavení stavu jednoho bitu
+- `int2bin()` pomocná funkce pro převod čísla na binární
+
+Zdrojový kód knihovny: [utils/bits](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/bits/__init__.py)
+
+```python
+from components.bits import neg
+B1 = 0b11111001
+neg(B1) # > 0b00000110
+
+```
 
 ---
 

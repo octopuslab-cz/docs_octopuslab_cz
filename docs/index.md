@@ -1,7 +1,7 @@
 # ![logo](img/logo_small.png){: style="width:39px" } OctopusLab
 
 Tohle je základní dokumentace, kde se prolínají popisy knihoven, příklady, návody, tutoriály, části workshopů, projektů a ukázek použití.
-Všechny podklady tohoto "manuálu" píšeme v `markdownu` a jsou veřejně na GitHubu, budeme rádi za vaše připomínky a nápady https://github.com/octopusengine/docs_octopuslab_cz
+Všechny podklady tohoto "manuálu" píšeme v [markdownu](https://cs.wikipedia.org/wiki/Markdown) a jsou veřejně na [GitHubu](https://github.com/octopusengine/docs_octopuslab_cz), budeme rádi za vaše připomínky a nápady https://github.com/octopusengine/docs_octopuslab_cz
 
 
 ## Vývojové a výukové moduly

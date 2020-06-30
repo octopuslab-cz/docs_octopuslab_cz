@@ -37,11 +37,11 @@ rozsvícení druhé ledky je: `led2.value(1)` no a zhasnutí třetí je `led3.va
 
 Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několika základních adresářů:
 
-- [/components](#knihovny-components), kam postupně přidáváme jednotlivé "osamostatnělé" komponenty.
+- [/components](#octopus-components), kam postupně přidáváme jednotlivé "osamostatnělé" komponenty.
 
-- [/lib](#knihovny-lib), kde jsou převážně knihovny třetích stran, a malé fragmenty, které mají výhodu, že se při importu v adresáři lib hledají, **Micropython** je nalezne bez udání cesty k nim.
+- [/lib](#octopus-lib), kde jsou převážně knihovny třetích stran, a malé fragmenty, které mají výhodu, že se při importu v adresáři lib hledají, **Micropython** je nalezne bez udání cesty k nim.
 
-- [/utils](#knihovny-utils), (utility) moduly octopusLAB, a třídy pro práci s periferiemi.
+- [/utils](#octopus-utils), (utility) moduly octopusLAB, a třídy pro práci s periferiemi.
 
 *Uživatele vlastně nemusí zajímat, kde to je uloženo, a tak na to důraz neklademe, jen je vhodné si to pohlídat při sestavování větších projektů.*
 
@@ -49,8 +49,8 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 
 ### Adresářová strukrura na ESP32
 <pre>
-|-- boot.py       # inicializace po startu
-|-- main.py       # hlavní soubor programu
+|-- [boot.py](#basicdoc/#soubory-bootpy-a-mainpy)       # inicializace po startu
+|-- [main.py](#basicdoc/#soubory-bootpy-a-mainpy)       # hlavní soubor programu
 |-- /assets       # obrázky, zvuky, tabulky
 |-- [/config](#config)       # kofigurační soubory (.json)
 |-- [/lib](#octopus-lib)

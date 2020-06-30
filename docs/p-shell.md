@@ -12,8 +12,8 @@ Popis:
 
 ### help
 
-```
---------+--------------------------+--------------------
+```batch
+   --------+--------------------------+--------------------
            | F: file name             |
            | M: "main.py"             | octopusLAB 2019-20
   ---------+--------------------------+--------------------
@@ -46,6 +46,37 @@ Popis:
 ### wifi
 
 ### editor
+
+Občas je potřeba udělat jen malou úpravu v krátkém programu. Nejčastěji je to postupné měnění nějakých parametrů, kterým si chceme ověřit funkčnost programu nebo otestovat různé varianty. To byl důvod, proč jsme se dospěli k na první pohled šílenému nápadu vytvořit alespoň "řádkový" editor v **Micropythonu**.
+```batch
+uPyShell:~/$ edit main.py
+...
+h 
+```
+`h` jako *help* vyvolá tuto stručnou nápovědu:
+
+```batch
+  h      print this help
+  p      print file (current state in buffer)
+  l      toggle line numbers (copy mode)
+  q      quit
+  q! x   quit without saving changes
+  w      write file (save)
+  wq     write into file and quit
+
+  i<int> [<str>]   insert new line at given position [int], containing [str] or empty
+  a<int> [<str>]   insert new line after given [int], containing [str] or empty
+  e<int> [<str>]   edit line number [int], replace line with [str] or will be prompted
+  d<int>           delete line number [int]
+  c<int>[-<int>]   comment/uncomment line [int] with a #, or multiple lines if a range is provided (does each line separately)
+
+NOTE: New line at the end of every non empty file is enforced.
+
+WARNING: Do not use for editing lines exceeding your terminal width - you may BREAK TOUR FILE!
+```
+
+
+
 
 ---
 

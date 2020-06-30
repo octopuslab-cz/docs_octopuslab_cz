@@ -78,9 +78,13 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- [pinout](#pinout)
 |      |-- BLE
 |
-|-- /pinouts      # nastavení pinů
-|-- /examples     # ukázky
-|      |-- ...
+|-- [/pinouts](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/pinouts)      # nastavení pinů
+|-- [/examples](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/examples)     # ukázky
+|      |-- /asyncio
+|      |-- /ble
+|      |-- /param
+|      |-- /pubsub
+|      |-- blink.py
 |      |-- ...
 |
 |-- /[shell](/p-shell)

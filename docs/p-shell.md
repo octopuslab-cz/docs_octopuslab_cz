@@ -2,7 +2,8 @@
 
 Emulátor Linuxového shellu:
 
-Samostatná stránka:
+Samostatné stránky:
+[octopuslab.cz/upyshell](https://www.octopuslab.cz/upyshell/)
 [octopuslab.cz/upyshell2](https://www.octopuslab.cz/upyshell2/)
 
 Zdrojové kódy: 
@@ -43,7 +44,29 @@ Popis:
 
 ### práce se soubory
 
+```batch
+uPyShell:~/$ ls                            # list = výpis adresářů
+uPyShell:~/$ mkdir test                    # vytvoření podadresáře "test"
+uPyShell:~/$ cd test
+uPyShell:~/$ cp main.py test/main_copy.py  # kopírování souboru
+uPyShell:~/$ cat test/main_copy.py         # prohlížení obsahu souboru
+uPyShell:~/$ rm test/main_copy.py          # smazání souboru
+
+```
+
+---
+
 ### wifi
+```batch
+uPyShell:~/$ wifi scan
+uPyShell:~/$ wifi off
+uPyShell:~/$ wifi on
+uPyShell:~/$ ifconfig
+uPyShell:~/$ ping
+uPyShell:~/$ wget https://your_url.path/file.py
+```
+
+---
 
 ### editor
 
@@ -75,9 +98,6 @@ NOTE: New line at the end of every non empty file is enforced.
 WARNING: Do not use for editing lines exceeding your terminal width - you may BREAK TOUR FILE!
 ```
 
-
-
-
 ---
 
 ### spouštění procesů
@@ -91,3 +111,5 @@ a by měla blikat Ledka. Běh programu se přeruší CTRL+C, program blink se za
 **Odbočka:**
 Jak docílíme toho, aby se blikání Ledky samo spouštělo hned po startu? Program main.py v kořenovém adresáři, je po boot.py přesně ten, který se po startu spustí. Takže si můžeme v shellu jednoduše blikání zkopírovat:
 `$ cp examples/blink.py main.py`
+
+---

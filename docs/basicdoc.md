@@ -49,8 +49,8 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 
 ### Adresářová strukrura na ESP32
 <pre>
-|-- [boot.py](#basicdoc/#soubory-bootpy-a-mainpy)       # inicializace po startu
-|-- [main.py](#basicdoc/#soubory-bootpy-a-mainpy)       # hlavní soubor programu
+|-- [boot.py](#soubory-bootpy-a-mainpy)       # inicializace po startu
+|-- [main.py](#soubory-bootpy-a-mainpy)       # hlavní soubor programu
 |-- /assets       # obrázky, zvuky, tabulky
 |-- [/config](#config)       # kofigurační soubory (.json)
 |-- [/lib](#octopus-lib)

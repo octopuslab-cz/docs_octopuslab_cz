@@ -111,9 +111,9 @@ Připravujeme - *základ je podobný více Linuxu, z příkazové řádky*.
 
 ## První spuštění
 
-- připojit se k zařízení - *už v tomto kroku je možno projít si základní* [Tutorial1](/tutorial1)
-- spustit `initial setup` - nastavit wifi, připojit se na wifi
-- stáhnout poslední verzi prostředí Octopus
+- **připojit se** k zařízení - *už v tomto kroku je možno projít si základní* [Tutorial1](/tutorial1)
+- **spustit setup** - nastavit wifi, připojit se na wifi
+- **stáhnout poslední verzi** prostředí Octopus
 
 ```bash
 >>> octopus_initial.setup()

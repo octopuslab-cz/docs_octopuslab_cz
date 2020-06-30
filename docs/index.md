@@ -56,6 +56,8 @@ def funkce(parametr):
 … co se má dělat
 ```
 
+---
+
 ## Jak se zapojit?
 
 Chobotnice je ráda za každý komentář

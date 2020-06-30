@@ -637,6 +637,12 @@ def funkce():
 funkce = dekorator(funkce)
 ```
 
+### Zrychlení práce procesoru
+
+- [speed_python] (http://docs.micropython.org/en/v1.9.3/pyboard/reference/speed_python.html)
+
+---
+
 ## Web server - IDE - jednoduché ovládání
 
 Jsme vyčlenili samostatně - ztím zde: [](https://www.octopuslab.cz/micropython-web-ide/)

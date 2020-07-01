@@ -73,6 +73,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- octopus
 |      |-- [pinout](#pinout)
 |      |-- [bits](#bits)
+|      |-- [transform](#transform)
 |      |-- [database](#database)
 |      |-- [mqtt](#mqtt)
 |      |-- ...
@@ -378,6 +379,69 @@ tt.get_temp(tx[0])
 
 ## OCTOPUS Utils
 
+### ![hwsoc](img/bits.png){: style="width:28px" } Bits
+Pro práci s jednotlivými **bity**. `B1 = 0b11111001`. Bitové operace jsme si museli do Pythonu trochu doladit, aby se s nimi pracovalo lépe a intuitivně. **Používané metody:**
+
+- `neg(B1)` pro negaci - vrací *0b00000110*
+- `reverse()` obrácení pořadí bitů - vrací *0b1001111*
+- `get_bit(B1,1)` pro získání stavu jednoho bitu > 0
+- `set_bit(B1,1)` pro nastavení stavu jednoho bitu
+- `int2bin()` pomocná funkce pro převod čísla na binární
+
+Zdrojový kód knihovny: [utils/bits](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/bits/__init__.py)
+
+```python
+from components.bits import neg
+B1 = 0b11111001
+neg(B1) # > 0b00000110
+
+```
+
+---
+
+### Transform
+
+Pomocné funkce pro mechatroniku, zaměřené na transformace souřadnicových systémů.
+
+- využívá se round - zaokrouhlení na určitý počet míst: `rr` = 3 
+- `Point2D()` class p2 = [x,y]
+- `distance2D(p1, p2, rr = 3)`
+- `polar2cart(r, alfa, rr = 3)`
+- `cart2polar(point)`
+- `def cosangle(opp, adj1, adj2)`
+- `move_2d_line(p_start, p_stop, steps = 300, max_dist = 100)`
+- `invkin2_1(point2d, rr = 6)` inversní kinematika 1
+- `invkin2(point2d, angleMode=DEGREES)`
+- `Point3D()` class p3 = [x,y,z]
+- `invkin3(point3d, angleMode=DEGREES)`
+- `distance3()`
+- ...
+
+```python
+from utils.transform import move_servo2, cosangle
+
+...
+def move_servo2(p1, p2, delay = delay):
+    steps = move_2d_line(p1, p2)
+    for step in steps:
+        alfa = cosangle(step[0], dist, dist)[0]
+        beta = cosangle(step[1], dist, dist)[0]
+        print(step, alfa, beta)
+
+        s1.set_degree(alfa)
+        s2.set_degree(beta)
+        sleep_ms(delay)
+
+p1 = 0, 0 # strart point
+p2 = 50, 50 # stop point
+move_servo2(p1, p2)
+
+```
+Více plánujeme v samostatné sekci [inversní kinematika](/inv_kinematics)
+
+---
+
+
 ### ![hwsoc](img/database.png){: style="width:28px" } Database
 ESP díky paměti umožňuje bez nadsázky i základní práci s databází.
 Zaměříme se na dvě základní: lokální `btree` a vzdálené `MySQL`, `Influx`.
@@ -577,26 +641,6 @@ while True:
 ```
 
 ► [Led](#led)
-
----
-
-### ![hwsoc](img/bits.png){: style="width:28px" } Bits
-Pro práci s jednotlivými **bity**. `B1 = 0b11111001`. Bitové operace jsme si museli do Pythonu trochu doladit, aby se s nimi pracovalo lépe a intuitivně. **Používané metody:**
-
-- `neg(B1)` pro negaci - vrací *0b00000110*
-- `reverse()` obrácení pořadí bitů - vrací *0b1001111*
-- `get_bit(B1,1)` pro získání stavu jednoho bitu > 0
-- `set_bit(B1,1)` pro nastavení stavu jednoho bitu
-- `int2bin()` pomocná funkce pro převod čísla na binární
-
-Zdrojový kód knihovny: [utils/bits](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/bits/__init__.py)
-
-```python
-from components.bits import neg
-B1 = 0b11111001
-neg(B1) # > 0b00000110
-
-```
 
 ---
 

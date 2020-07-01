@@ -418,6 +418,18 @@ Pomocné funkce pro mechatroniku, zaměřené na transformace souřadnicových s
 - ...
 
 ```python
+from utils.transform import Point2D, polar2cart, cosangle
+p1 = Point2D(1,3)
+print(p1)   # (1,3)
+print(p1.x) # 1
+print(p1.y) # 3
+p1.x, p1.y = polar2cart(10, 0)
+print(p1)
+...
+```
+
+
+```python
 from utils.transform import move_servo2, cosangle
 
 ...

@@ -4,8 +4,9 @@
 
 ![esp-flash](https://www.octopuslab.cz/wp-content/uploads/2019/08/esp-flash-1.jpg)
 
+Celý proces je rozdělen do tří kroků *(1) (2) a (3)*
 
-Pro instalaci MicroPythonu na vaše ESP32 je třeba binární image "naflashovat" na náš kontroler. Instrukce se liší podle toho, jaký používáte operační systém, viz dále.
+Pro instalaci MicroPythonu na vaše ESP32 je třeba binární image "naflashovat" na náš kontroler *(2)*. Instrukce se liší podle toho, jaký používáte operační systém, viz dále.
 
 Pracujte v novém, prázdném adresáři, např. `projects/esp32`.
 
@@ -36,7 +37,7 @@ Vyskočení z programu `screen` je lehce komplikované, musíte použít sekvenc
 
 #### Instalace nástroje `esptool`
 
-Nástroj `esptool` budeme instalovat do [Pythonového virtualenvu](https://naucse.python.cz/course/pyladies/beginners/venv-setup/) - oddělíme jej od systému.
+*(1)* Nástroj `esptool` budeme instalovat do [Pythonového virtualenvu](https://naucse.python.cz/course/pyladies/beginners/venv-setup/) - oddělíme jej od systému.
 
 ```bash
 python3 -m venv venv
@@ -46,6 +47,7 @@ pip install esptool
 
 #### Flashování Octopus MicroPython
 
+*(3)*
 ```bash
 cd projects/esp32
 ```
@@ -89,7 +91,7 @@ Po připojení ESP modulu přes kabel USB (typicky microUSB) musíme zjistit, na
 
 #### Flashování Octopus MicroPython
 
-Pokud chcete zkusit nejrychlejší verzi bez Pythonu v počítači – stačí pouze do vaší pracovní složky rozbalit *exe* soubor `esptool.exe`,  který si stáhnete zde: https://dl.espressif.com/dl/esptool-2.6.1-windows.zip
+Pokud chcete zkusit nejrychlejší verzi bez Pythonu v počítači – stačí pouze do vaší pracovní složky rozbalit *exe* soubor `esptool.exe` *(1)*,  který si stáhnete zde: https://dl.espressif.com/dl/esptool-2.6.1-windows.zip
 Pak ho budete mít uložen například takto (ano staré win rozlišují `/` a  `\`):
 ```bash
 esptool.exe --chip esp32 -p COM6 erase_flash 
@@ -113,7 +115,7 @@ Připravujeme - *základ je podobný více Linuxu, z příkazové řádky*.
 
 - **připojit se** k zařízení - *už v tomto kroku je možno projít si základní* [Tutorial1](/tutorial1)
 - **spustit setup** - nastavit wifi, připojit se na wifi
-- **stáhnout poslední verzi** prostředí Octopus
+- **stáhnout poslední verzi** prostředí Octopus *(3)*
 
 ```bash
 >>> octopus_initial.setup()
@@ -138,7 +140,7 @@ Připravujeme - *základ je podobný více Linuxu, z příkazové řádky*.
 ```
 zvolte `w` [enter]
 
-### 1. nastavení WiFi: 
+### Nastavení WiFi: 
 ```bash
 ==============================
       S E T U P - W I F I
@@ -157,15 +159,19 @@ pro přidání vaší wifi sítě do zařízení
 `PASSWORD:` a heslo do ní
 
 
-### 2.  System download -  Deploy
+### System download -  Deploy
 Po připojení do Internetu se v select setupu napíše:
 `cw` [enter] (conect wifi)
 ESP se připojí k WiFi
 
 `sd` [enter] (system download - from url octopus), které provede stažení **TARu** z našeho cloudu - vše se do ESP samo nahraje a rozbalí. Průběžně uvidíte všechny soubory (včetně podadresářů).
+*(3)*
 
-### 3. Examples - je soubor příkladů
+---
 
+### Examples - je soubor příkladů
+
+Pokud si chcete nahrát velký balíček ukázek a testů, máme k dispozici opět "zabalený" `.tar` soubor u nás v cloudu.
 Provedeme reset zařízení. Pak spustíme `setup()` a opět postupně `cw` (connect wifi) a tentokrát `sde` (system download examples).
 
 ---

@@ -4,9 +4,24 @@
 
 ![esp-flash](https://www.octopuslab.cz/wp-content/uploads/2019/08/esp-flash-1.jpg)
 
-Celý proces je rozdělen do tří kroků *(1) (2) a (3)*
+Celý **proces je rozdělen do tří bloků** - na této stránce je označujeme *(*1) (*2) a (*3)*
 
-Pro instalaci MicroPythonu na vaše ESP32 je třeba binární image "naflashovat" na náš kontroler *(2)*. Instrukce se liší podle toho, jaký používáte operační systém, viz dále.
+**1) Příprava počítače** (PC s Windows, IOS nebo Linux)
+Červená šipka > Do počítače stáhneme nástroj esptool
+(python nebo exe)
+
+**2) Instalace Micropythonu do ESP**
+Fialové šipky > Do počítače stáhneme Micropython a pomocí esptool ho nahrajeme do ESP
+
+**3) Instalace "workframe" octopus**
+Zelená a oranžová > Pomocí terminálu Putty dokončíme instalaci knihoven v modulu octopus()
+3.1 octopus Micropython: pomocí octopus_initial.setup()
+3.2 Micropython „vlastní“: pomocí deploy – úplně na konci
+
+---
+
+
+Pro instalaci MicroPythonu na vaše ESP32 je třeba binární image "naflashovat" na náš kontroler *(*2)*. Instrukce se liší podle toho, jaký používáte operační systém, viz dále.
 
 Pracujte v novém, prázdném adresáři, např. `projects/esp32`.
 
@@ -37,7 +52,7 @@ Vyskočení z programu `screen` je lehce komplikované, musíte použít sekvenc
 
 #### Instalace nástroje `esptool`
 
-*(1)* Nástroj `esptool` budeme instalovat do [Pythonového virtualenvu](https://naucse.python.cz/course/pyladies/beginners/venv-setup/) - oddělíme jej od systému.
+*(*1)* Nástroj `esptool` budeme instalovat do [Pythonového virtualenvu](https://naucse.python.cz/course/pyladies/beginners/venv-setup/) - oddělíme jej od systému.
 
 ```bash
 python3 -m venv venv
@@ -47,7 +62,7 @@ pip install esptool
 
 #### Flashování Octopus MicroPython
 
-*(3)*
+*(*3)*
 ```bash
 cd projects/esp32
 ```
@@ -91,7 +106,7 @@ Po připojení ESP modulu přes kabel USB (typicky microUSB) musíme zjistit, na
 
 #### Flashování Octopus MicroPython
 
-Pokud chcete zkusit nejrychlejší verzi bez Pythonu v počítači – stačí pouze do vaší pracovní složky rozbalit *exe* soubor `esptool.exe` *(1)*,  který si stáhnete zde: https://dl.espressif.com/dl/esptool-2.6.1-windows.zip
+Pokud chcete zkusit nejrychlejší verzi bez Pythonu v počítači – stačí pouze do vaší pracovní složky rozbalit *exe* soubor `esptool.exe` *(*1)*,  který si stáhnete zde: https://dl.espressif.com/dl/esptool-2.6.1-windows.zip
 Pak ho budete mít uložen například takto (ano staré win rozlišují `/` a  `\`):
 ```bash
 esptool.exe --chip esp32 -p COM6 erase_flash 
@@ -121,9 +136,9 @@ Připravujeme - *základ je podobný více Linuxu, z příkazové řádky*.
 
 Pro ulehčení instalace máme vlstní fork Micropythonu, do kterého jsme zaintegrovali malý modul `octopus_initial`.
 
-!!! hint " **Vychytávka (TAB)**"
+!!! hint " **Vychytávka [TAB]**"
     Když chcete v Pythnou nebo Micropythonu něco napsat, naučte se využívat TABulátor (klávesa `TAB`). Když například po promptu `>>>` chcete napsat `octopus_initial.setup()`, zkuste napsat pouze prvních pár písmen a pak zmáčknout `TAB`:
-    `>>> oc [TAB]` a systém vám doplní nebo dá vybrat. Stejně tak po tečce: `octopus_initial.` stačí napsat `se` a pak `TAB` - a "našeptávač" automaticky soplní `setup` - nezapomeňte na závorky `()`, je to metoda.
+    `>>> oc [TAB]` a systém vám doplní nebo dá vybrat. Stejně tak po tečce: `octopus_initial.` stačí napsat `se` a pak `TAB` - a "našeptávač" automaticky doplní `setup` (nezapomeňte na závorky `()`, je to metoda).
 
 
 ```bash
@@ -144,7 +159,7 @@ Pro ulehčení instalace máme vlstní fork Micropythonu, do kterého jsme zaint
  [cw]  - connect wifi
  [cl]  - connect LAN
  [sd]  - system download
- [x]   - exit setup
+ [q]   - quit setup
 ==============================
 ```
 zvolte `w` [enter]
@@ -174,11 +189,11 @@ Po připojení do Internetu se v select setupu napíše:
 ESP se připojí k WiFi
 
 `sd` [enter] (system download - from url octopus), které provede stažení **TARu** z našeho cloudu - vše se do ESP samo nahraje a rozbalí. Průběžně uvidíte všechny soubory (včetně podadresářů).
-*(3)*
+*(*3)*
 
 ---
 
-### Examples - je soubor příkladů
+### Examples - je adresář plný příkladů
 
 Pokud si chcete nahrát velký balíček ukázek a testů, máme k dispozici opět "zabalený" `.tar` soubor u nás v cloudu.
 Provedeme reset zařízení. Pak spustíme `setup()` a opět postupně `cw` (connect wifi) a tentokrát `sde` (system download examples).

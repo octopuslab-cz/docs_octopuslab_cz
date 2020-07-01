@@ -122,8 +122,8 @@ Připravujeme - *základ je podobný více Linuxu, z příkazové řádky*.
 Pro ulehčení instalace máme vlstní fork Micropythonu, do kterého jsme zaintegrovali malý modul `octopus_initial`.
 
 !!! hint " **Vychytávka**"
-Když chcete v Pythnou nebo Micropythonu něco napsat, naučte se využívat TABulátor (klávesa `TAB`). Když například po promptu `>>>` chcete napsat `octopus_initial.setup()`, zkuste napsat pouze prvních pár písmen a pak zmáčknout `TAB`:
-`>>> oc [TAB]` a systém vám doplní nebo dá vybrat. Stejně tak po tečce: `octopus_initial.` stačí napsat `s` a pak `TAB`.
+    Když chcete v Pythnou nebo Micropythonu něco napsat, naučte se využívat TABulátor (klávesa `TAB`). Když například po promptu `>>>` chcete napsat `octopus_initial.setup()`, zkuste napsat pouze prvních pár písmen a pak zmáčknout `TAB`:
+    `>>> oc [TAB]` a systém vám doplní nebo dá vybrat. Stejně tak po tečce: `octopus_initial.` stačí napsat `s` a pak `TAB`.
 
 
 ```bash

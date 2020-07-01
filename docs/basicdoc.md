@@ -399,13 +399,13 @@ neg(B1) # > 0b00000110
 
 ---
 
-### Transform
+### ![hwsoc](img/mchtr.png){: style="width:28px" } Transform
 
-Pomocné funkce pro mechatroniku, zaměřené na transformace souřadnicových systémů.
+Pomocné funkce pro mechatroniku, zaměřené na transformace souřadnicových systémů a základy inversní kinematiky.
 
-- využívá se round - zaokrouhlení na určitý počet míst: `rr` = 3 
-- `Point2D()` class p2 = [x,y]
-- `distance2D(p1, p2, rr = 3)`
+- `Point2D()` class p2 = (x,y) | p2.x, p2.y
+- `distance2D(p1, p2, rr = 3)` vzdálenost dvou bodů v rovině
+-  *využívá se round - zaokrouhlení na určitý počet míst:* `rr` = 3 
 - `polar2cart(r, alfa, rr = 3)`
 - `cart2polar(point)`
 - `def cosangle(opp, adj1, adj2)`
@@ -414,7 +414,7 @@ Pomocné funkce pro mechatroniku, zaměřené na transformace souřadnicových s
 - `invkin2(point2d, angleMode=DEGREES)`
 - `Point3D()` class p3 = [x,y,z]
 - `invkin3(point3d, angleMode=DEGREES)`
-- `distance3()`
+- `distance3()` vzdálenost dvou bodů v prostoru
 - ...
 
 ```python

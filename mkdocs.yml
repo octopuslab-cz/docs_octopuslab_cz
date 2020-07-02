@@ -1,4 +1,13 @@
 site_name: OctopusLab
+site_url: https://docs.octopuslab.cz
+repo_url: https://github.com/octopusengine/docs_octopuslab_cz
+repo_name: GitHub
+edit_uri: blob/master/docs/
+site_description: 'Python, IoT, roboti a já'
+site_author: 'OctopusLAB'
+copyright: 'CC-BY'
+google_analytics: ['UA-171553408-2', 'shop.octopuslab.cz']
+
 nav:
   - Úvod: index.md
   - Instalace: install.md

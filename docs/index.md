@@ -63,7 +63,7 @@ def funkce(parametr):
 
 ## Jak se zapojit?
 
-Chobotnice je ráda za každý komentář
+Chobotnice je ráda za každý komentář :like:
 
 ```
       ,'''`.

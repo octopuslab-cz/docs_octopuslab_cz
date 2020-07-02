@@ -32,4 +32,28 @@ led.value(1)
 976 # po přiložení magnetu 
 ```
 
+Pro další pokus je vhodné mít už kromě modulu i nějakou možnost připojid další LED diodu nebo například malý piezzo "pípák":
+
+![breadboard](https://www.octopuslab.cz/wp-content/uploads/2019/08/Sn%C3%ADmek-obrazovky-22-768x525.png)
+
+```python
+from components.buzzer import Buzzer
+piezzo = Buzzer(18)
+piezzo.beep()
+ 
+# napřímo přes octopus():
+beep()                   
+# základní pípnutí (1000,50) > 1kHz na 50ms
+
+beep(440,500)            
+# komorní a 440Hz na 0.5s 
+
+>>> from components.buzzer import notes 
+>>> Notes.A4                
+440    
+#k dispozici jsou tóny C3-C7 
+>>> buzzer.play_tone(Notes.A4)   # = tone(440) 
+```
+
+
 ---

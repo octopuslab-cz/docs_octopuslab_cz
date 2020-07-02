@@ -11,12 +11,14 @@ nav:
       - 'Micropython workshop Robot': ws-robot.md
       - 'Upyshell workshop ': ws-upyshell.md
       - 'Github ': github.md
-  - Referenční příručka: basicdoc.md
-  - Projekty: projects.md
-  - 'Vybrané projekty':
+  - 'Dokumentace':
+      - 'Referenční příručka': basicdoc.md
+  - 'Projekty':
       - 'EDU-KIT1': proj-edukit1.md
-      - 'uPyshell': proj-shell.md
+      - 'IoT': proj-iot.md
       - 'Robot 01': proj-robot01.md
+      - 'Hydroponie': proj-hydro.md
+      - 'Ostatní projekty': projects.md
 
 theme: readthedocs
 

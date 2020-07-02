@@ -9,8 +9,8 @@ nav:
       - 'Tutorial 3 EDUkit1': tutorial3-edukit1.md
       - 'Micropython workshop IoT': ws-iot.md
       - 'Micropython workshop Robot': ws-robot.md
-      - 'Github ': github.md
       - 'Upyshell workshop ': ws-upyshell.md
+      - 'Github ': github.md
   - Referenční příručka: basicdoc.md
   - Projekty: projects.md
   - 'Vybrané projekty':

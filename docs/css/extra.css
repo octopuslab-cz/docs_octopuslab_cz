@@ -33,3 +33,7 @@
 .rst-content .admonition.hint .admonition-title:before {
     content: "\f0eb";
 }
+
+h6 {
+    margin-bottom: 0;
+}

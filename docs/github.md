@@ -1,4 +1,4 @@
-# Co je to github a jak se s ním pracuje
+# ![logo](img/logo_small.png) Co je to github a jak se s ním pracuje
 
 p ř i p r a v u j e m e
 

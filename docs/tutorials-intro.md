@@ -1,4 +1,4 @@
-# Předmluva k tutoriálůn
+# ![logo](img/logo_small.png) Předmluva k tutoriálůn
 
 ## Používané označení
 

@@ -14,20 +14,9 @@ Další informace jsou na našem webu http://www.octopuslab.cz
 
 ## ESP32
 
-![hwsoc](img/hwsoc.png){: style="margin:15px;float:left;" } Na destičce *vypadající jako známka* je mikrokontrolér spolu s několika klíčovými komponenty včetně krystalu, antény pro WiFi a Bluetooth. ESP32 je tak okamžitě připraveno k integraci do koncových produktů. 
+![hwsoc](img/hwsoc.png){: style="margin:15px;float:left;" } Na destičce *vypadající jako známka* je mikrokontrolér spolu s několika klíčovými komponenty včetně krystalu, antény pro WiFi a Bluetooth. ESP32 je tak okamžitě připraveno k integraci do koncových produktů.
 
-![esp32](https://www.octopuslab.cz/wp-content/uploads/2020/06/esp32-s.png)
-
-ESP32 má:
-
-- dvě CPU jádra s nastavitelnou taktovací frekvencí do 240 MHz
-- klasické Bluetooth i podporu Bluetooth Low Energy (BLE)
-- 4MB Flash paměť
-- 3 bloky paměti RAM v celkové velikosti 520kB
-- periferie zahrnují kapacitní dotykové senzory, Hallův snímač, zesilovač s nízkým šumem, rozhraní pro SD kartu, Ethernet, vysokorychlostní SPI, UART, I2S a I2C
-
-*Takže má dostatečný výkon, aby na něm mohl běžet i robustnější systém, jako je Micropython.*
-
+Podrobnější popis je na samostatné stránce [ESP32](/esp32)
 
 ---
 ## Micropython

@@ -6,7 +6,7 @@ Většina ukázek z tohoto tutoriálu bude fungovat i na běžném počítači p
 
 ---
 
-![ufo-gr](img/ufo-gre.gif){: style="width:23px" }  CTRL+C
+### CTRL+C
 
 Po restartu nám ESP32 posílá do našeho počítače na terminál první zprávy.
 Zeleně jsou systémové inforamce, které nás v tuto chvíli nezajímají.
@@ -17,17 +17,16 @@ module with ESP32
 Type "help()" for more information.
 ```
 
-![ufo-sil](img/ufo-sil.gif){: style="width:23px" }  Výčet klávesových zkratek pro práci s REPLem: 
+!!! hint "Výčet klávesových zkratek pro práci s REPLem"
 
-```
-CTRL-A     # on a blank line, enter raw REPL mode
-CTRL-B     # on a blank line, enter normal REPL mode
-CTRL-C     # interrupt a running program
-CTRL-D     # on a blank line, do a soft reset of the board
-CTRL-E     # on a blank line, enter paste mode
-```
+    - CTRL-A  (on a blank line, enter raw REPL mode)
+    - CTRL-B  (on a blank line, enter normal REPL mode)
+    - **CTRL-C**  (interrupt a running program)
+    - **CTRL-D**  (on a blank line, do a soft reset of the board)
+    - CTRL-E  (on a blank line, enter paste mode)
 
-![ufo-gr](img/ufo-gre.gif){: style="width:23px" }  **>>>**
+
+### >>>
 
 `>>>` toto je takzvaný "prompt", terminálová výzva, abychom tam něco napsali - příkaz nebo "posloupnost příkazů".
 
@@ -42,8 +41,9 @@ CTRL-E     # on a blank line, enter paste mode
 
 ---
 
-![ufo-or](img/ufo-ora.gif){: style="width:23px" } 
-někdy chceme složitější matematické výrazy, než je 
+### Math
+
+Někdy chceme složitější matematické výrazy, než je 
 `+` sčítání | `-` odčítání | `*` násobení | `/` dělení
 
 Pro další matematické funkce a konstanty použijeme knihovnu `math`.
@@ -59,8 +59,20 @@ Pro další matematické funkce a konstanty použijeme knihovnu `math`.
 3.141593               # počet desetinných míst je omezený                 
 ```
 
+!!! hint "**Python je jednoduchý**"
 
-Více řádkové "dočasné definice vlastních funkcí" pomocí `def název(parametry):` - nezapomenout na dvojtečku!
+    - logické členění se provádí pomocí striktního odsazování bloků
+    - pozor na závorky u metod a funkcí `print("řetězec“)` a uvozovky pro takzvané *řetězce (shluky písmen, co nejsou číslo)*
+    - pozor na dvojtečku za deklarací funkce, cyklu nebo podmínky: def funkce(parametr)`:`
+
+```
+>>> hodnota = 123
+>>> print(hodnota)      # > 123 | vypíše obsah proměnné s názvem hodnota (korektně)
+>>> print(math.pi)      # > 3.141593
+```
+
+
+Více řádkové "dočasné definice vlastních funkcí" pomocí `def název(parametry):` - odsazení za nás udělá REPL ... nezapomenout na dvojtečku!
 
 ```
 def suma(x, y):

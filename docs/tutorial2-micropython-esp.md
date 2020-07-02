@@ -1,15 +1,16 @@
 # ![logo](img/logo_small.png) Tutorial 2
 
-V druhém pokračování základního tutoriálu už budeme potřebovat ESP32.
+V [prvním díle](/tutorial1-python) jsme se seznámili s úplnými základy.
+V tomto druhém pokračování základního tutoriálu už budeme potřebovat ESP32.
 
-teplota u procesoru:
+## Teplota u procesoru
 ```
 >>> import esp32
 >>> esp32.raw_temperature()
 127
 ```
 
-hallova sonda - magnetického pole:
+## Hallova sonda - magnetického pole
 ```
 >>> import esp32
 >>> esp32.hall_sensor()
@@ -19,8 +20,6 @@ hallova sonda - magnetického pole:
 ```
 >>> esp32.hall_sensor() 
 976 # po přiložení magnetu 
-```
-
 ```
 
 ---

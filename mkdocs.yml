@@ -2,20 +2,21 @@ site_name: OctopusLab
 nav:
   - Úvod: index.md
   - Instalace: install.md
+  - 'Tutoriály':
+      - 'Předmluva ': tutorials-intro.md
+      - 'Tutorial 1 Python ': tutorial1-python.md
+      - 'Tutorial 2 Micropython ESP': tutorial2-micropython-esp.md
+      - 'Tutorial 3 EDUkit1': tutorial3-edukit1.md
+      - 'Micropython workshop IoT': ws-iot.md
+      - 'Micropython workshop Robot': ws-robot.md
+      - 'Github ': github.md
+      - 'Upyshell workshop ': ws-upyshell.md
   - Referenční příručka: basicdoc.md
   - Projekty: projects.md
-  - 'Vybrané projekty': 
-      - 'EDU-KIT1': p-edukit1.md
-      - 'uPyshell': p-shell.md
-      - 'Robot 01': p-robot01.md
-  - 'Workshopy / tutoriály':
-      - 'Předmluva ': tut-predmluva.md
-      - 'Github ': github.md
-      - 'Tutorial 1 ': tutorial1.md
-      - 'Micropython workshop 1': ws1.md
-      - 'Micropython workshop IoT': ws-iot.md
-      - 'Tutorial 2 ': tutorial2.md
-      - 'Upyshell workshop ': ws-upyshell.md
+  - 'Vybrané projekty':
+      - 'EDU-KIT1': proj-edukit1.md
+      - 'uPyshell': proj-shell.md
+      - 'Robot 01': proj-robot01.md
 
 theme: readthedocs
 

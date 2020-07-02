@@ -3,6 +3,8 @@
 Tohle je základní dokumentace, kde se prolínají popisy knihoven, příklady, návody, tutoriály, části workshopů, projektů a ukázek použití.
 Všechny podklady tohoto "manuálu" píšeme v [markdownu](https://cs.wikipedia.org/wiki/Markdown) a jsou veřejně na [GitHubu](https://github.com/octopusengine/docs_octopuslab_cz), budeme rádi za vaše připomínky a nápady https://github.com/octopusengine/docs_octopuslab_cz
 
+[Co je to github a jak se s ním pracuje?](/github)
+
 
 ## Vývojové a výukové moduly
 
@@ -77,6 +79,7 @@ Chobotnice je ráda za každý komentář
 
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #31708f; background-color: #d9edf7; border-color: #bce8f1;">
 Každý může navrhovat doplnění, hlásit chyby a libovolným způsobem přispívat. Vždy, když se navrhovaná změna schválí (commit) do hlavní větve (master branch), automaticky se publikuje na těchto stránkách. Budeme rádi, když nám dáte vědět, jak se Vám s naším dokumentem pracuje. Vypadá to jenom jako taková blost, ale fakt to dalo dost práce.
+[Co je to github a jak se s ním pracuje?](/github)
 </div>
 
 Za tým octopusLABu: *Honza Čopák, Petr Kracík, Vašek Chalupníček, Vladimír Jiříček, Jan Češpivo, a další*

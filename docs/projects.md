@@ -1,5 +1,7 @@
 # ![logo](img/logo_small.png) Vybrané projekty
 
+Toto je jen souhrný výčet některých projektů, který budeme postupně doplňovat. Mnohým z nich se budeme věnovat podrobněji.
+
 ## ROBOTboard
 
 ROBOTboard je základem několika projektů:
@@ -17,7 +19,10 @@ Podrobněji na samostatné stránce [octopuslab.cz/esp32-board](https://www.octo
 ---
 
 ## uPyShell
-...
+
+Podrobněji na samostatné stránce [uPyShell](/p-shell)
+
+---
 
 ## IoT Parallel Garden 1
 

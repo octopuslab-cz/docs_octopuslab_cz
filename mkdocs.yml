@@ -10,6 +10,7 @@ nav:
       - 'Robot 01': p-robot01.md
   - 'Workshopy / tutoriály':
       - 'Předmluva ': tut-predmluva.md
+      - 'Github ': github.md
       - 'Tutorial 1 ': tutorial1.md
       - 'Micropython workshop 1': ws1.md
       - 'Micropython workshop IoT': ws-iot.md

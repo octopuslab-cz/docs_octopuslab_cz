@@ -82,7 +82,8 @@ def suma(x, y):
 3
 ```
 
-**čekací prodlevy**   - program bude pokračovat až po uplynutí dané doby 
+### Čekací prodlevy
+- program bude pokračovat až po uplynutí dané doby 
 ```
 from time import sleep, sleep_ms # importujeme jen potřebné knihovny
 
@@ -91,7 +92,7 @@ sleep_ms(100)      # 100 mili sec.
 sleep_us(50)       # 50 micro sec.
 ```
 
-**nekonečný cyklus**
+### Nekonečný cyklus
 Ještě drobná vsuvka - cykly a podmínky zmíníme v další části, ale už nyní použijeme jednu základní formu: "nekonečný cyklus"
 ```
 while podmínka:
@@ -105,6 +106,17 @@ while True:
 ... print(a)
 ```
 v nekonečné smyčce maximální rychlostí vypisuje obsah zvětšující se proměnné "a"
+
+### Generátor náhodných čísel
+
+Občas se nám v programu hodí vygenerovat pseudonáhodné číslo (pro testování, jednoduché hry, nebo speciální efekty)
+
+```python
+>>> from os import urandom
+>>> urandom(1)[0]
+42
+```
+
 
 ---
 

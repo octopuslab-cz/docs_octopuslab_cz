@@ -2,6 +2,31 @@
 
 **Jednotlivé ukázky (v tutoriálech a workshopech) se v mezích možností budeme snažit dělit na:**
 
+!!! note "**note**"
+    tady neco je note
+!!! important "**important**"
+    tady neco je important
+
+---
+
+!!! attention "**attention**"
+    tady neco je attention
+!!! warning "**warning**"
+    tady neco je warning
+
+!!! hint "**hint**"
+    tady neco je hint
+!!! tip "**tip**"
+    tady neco je tip
+
+
+!!! danger "**danger**"
+    tady neco je danger
+!!! error "**error**"
+    tady neco je error
+
+---
+
 !!! hint "**Jednoduché základy**"
       Jedním nebo občas i několika po sobě jdoucími příkazy pouze "komandujeme" ESP mikrokontroler s připojenými periferiemi. Jedná se o základní  "početní úkony" a jednoduché metody práce s HW, ovládání LED (svítivé diody), RGB (barevné diody), piezo, jednoduchý podprogram... 
 

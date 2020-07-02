@@ -1,0 +1,35 @@
+.admonition.note .admonition-title {
+    display: none;
+}
+.admonition.important  {
+    background-color: #ffedcc;
+}
+
+.admonition.tip  {
+    background-color: #e7f2fa;
+}
+.admonition.tip .admonition-title {
+    background-color: #6ab0de;
+}
+
+.admonition.note .admonition-title,
+.admonition.important .admonition-title {
+        display: none;
+}
+
+
+.rst-content .admonition.error .admonition-title:before {
+    content: "\f188";
+}
+
+.rst-content .admonition.attention .admonition-title:before {
+    content: "\f071";
+}
+
+.rst-content .admonition.tip .admonition-title:before {
+    content: "\f08d";
+}
+
+.rst-content .admonition.hint .admonition-title:before {
+    content: "\f0eb";
+}

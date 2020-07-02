@@ -19,6 +19,9 @@ nav:
 
 theme: readthedocs
 
+extra_css:
+    - css/extra.css
+
 markdown_extensions:
   - markdown.extensions.admonition
   # - markdown.extensions.smarty

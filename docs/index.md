@@ -3,8 +3,9 @@
 Tohle je základní dokumentace, kde se prolínají popisy knihoven, příklady, návody, tutoriály, části workshopů, projektů a ukázek použití.
 Všechny podklady tohoto "manuálu" píšeme v [markdownu](https://cs.wikipedia.org/wiki/Markdown) a jsou veřejně na [GitHubu](https://github.com/octopusengine/docs_octopuslab_cz), budeme rádi za vaše připomínky a nápady https://github.com/octopusengine/docs_octopuslab_cz
 
-[Co je to github a jak se s ním pracuje?](/github)
+![github](img/github.jpg){: style="width:90px" } [Co to je? A jak se s ním pracuje?](/github)
 
+---
 
 ## Vývojové a výukové moduly
 
@@ -50,10 +51,10 @@ Pro podrobnější proniknutí do tajů programování v Pythonu doporučujeme:
 Python je ale velmi jednoduchý, proto se alespoň zmíníme velmi stručně o syntaxi Pythonu (**syntaxe** = forma, jak se "to" píše*):
 
 - logické členění se provádí pomocí striktního odsazování bloků
-- pozor na závorky u metod a funkcí `print("řetězec“)` a uvozovky pro takzvané řetězce (shluky písmen, co nejsou číslo)
+- pozor na závorky u metod a funkcí `print("řetězec“)` a uvozovky pro takzvané *řetězce (shluky písmen, co nejsou číslo)*
 - pozor na dvojtečku za deklarací funkce, cyklu nebo podmínky:
 
-```
+```python
 def funkce(parametr):
 … co se má dělat
 ```
@@ -82,6 +83,6 @@ Každý může navrhovat doplnění, hlásit chyby a libovolným způsobem přis
 [Co je to github a jak se s ním pracuje?](/github)
 </div>
 
-Za tým octopusLABu: *Honza Čopák, Petr Kracík, Vašek Chalupníček, Vladimír Jiříček, Jan Češpivo, a další*
+Za tým octopusLABu: *Honza Čopák, Petr Kracík, Vašek Chalupníček, Vladimír Jiříček, Jan Češpivo, Milan Špaček, Metěj Suchánek a další*
 
 ---

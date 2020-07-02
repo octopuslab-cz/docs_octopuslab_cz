@@ -112,7 +112,7 @@ Pak ho budete mít uložen například takto (ano staré win rozlišují `/` a  
 esptool.exe --chip esp32 -p COM6 erase_flash 
 esptool.exe --chip esp32 -p COM6 write_flash -z 0x1000 ./download/micropython-octopus.bin
 ```
-(stačí psát pouze `esptool`)
+(stačí psát pouze se musí odklikat „Security & Privacy“.esptool`)
 
 Používáme program [putty.exe](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) a nastavením: `Serial, rychlost 115200, váš COMport`. Po nastavení zavoláme `open`, ukáže se nové okno terminálu.
 
@@ -123,18 +123,21 @@ Pokud se na obrazovce nic nezobrazuje zmáčněte <kdb>ENTER</kdb> a měl by se 
 ### Mac
 
 Připravujeme - *základ je podobný více Linuxu, z příkazové řádky*.
+Největší zádrhel tam byla nutnost "odklikat" `Security & Privacy`, aby vás to pustilo k portu.
 
 ---
 
 ## První spuštění
 
-- **připojit se** k zařízení - *už v tomto kroku je možno projít si základní* [Tutorial1](/tutorial1)
-- **spustit setup** - nastavit wifi, připojit se na wifi
-- **stáhnout poslední verzi** prostředí Octopus *(3)*
+
+
+- **připojit se** USB kabelem k zařízení - *už v tomto kroku je možno projít si základní* [Tutorial1](/tutorial1)
+- **spustit setup** - z prostředí Micropythonu nastavit wifi, připojit se na wifi
+- **stáhnout poslední verzi** "workframe" Octopus *(3)*
 
 ### octopus_initial.setup()
 
-Pro ulehčení instalace máme vlstní fork Micropythonu, do kterého jsme zaintegrovali malý modul `octopus_initial`.
+Pro ulehčení instalace máme vlastní fork Micropythonu, do kterého jsme zaintegrovali malý modul `octopus_initial`.
 
 !!! hint " **Vychytávka [TAB]**"
     Když chcete v Pythnou nebo Micropythonu něco napsat, naučte se využívat TABulátor (klávesa `TAB`). Když například po promptu `>>>` chcete napsat `octopus_initial.setup()`, zkuste napsat pouze prvních pár písmen a pak zmáčknout `TAB`:

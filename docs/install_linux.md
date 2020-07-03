@@ -1,12 +1,16 @@
 ## GNU/Linux
 
+### Stažení Octopus MicroPython
+
 Pracujte v novém, prázdném adresáři, např. `projects/esp32`.
 
 Pro rychlý start práce s knihovnami OctopusLab si stáhněte do pracovního adresáře binárku Micropythonu s [Octopus Micropython pro ESP32](https://octopusengine.org/download/micropython/micropython-octopus.bin) `https://octopusengine.org/download/micropython/micropython-octopus.bin` - náš fork [oficiálního MicroPythonu](https://micropython.org/download/esp32/)
 
-Nyní jde o zprovoznění sériové linky do zařízení a nainstalování nástroje `esptool` pro nahrávání `.bin` souborů. Pro `esptool` je třeba mít [nainstalovaný Python3](https://naucse.python.cz/lessons/beginners/install/). Pokračujte kapitolou pro váš operační systém.
+Nyní jde o zprovoznění sériové linky do zařízení a nainstalování nástroje `esptool` pro nahrávání `.bin` souborů. Pro `esptool` je třeba mít [nainstalovaný Python3](https://naucse.python.cz/lessons/beginners/install/). 
 
 *Tyto instrukce jsou laděné pro Ubuntu 20.04, pokud používáte jinou distribuci, bude tento postup pravděpodobně také fungovat.*
+
+### Terminál
 
 Po připojení ESP modulu přes kabel USB (typicky microUSB) se zpřístupní serial device, obvykle v `/dev/ttyUSB0`. K seriové konzoli se můžeme připojit pomocí příkazu 
 ```bash

@@ -1,7 +1,8 @@
 # ![logo](img/logo_small.png) Tutorial 2
 
-V [prvním díle](/tutorial1-python) jsme se seznámili s úplnými základy.
-V tomto druhém pokračování základního tutoriálu už budeme potřebovat ESP32.
+V předchozím [tutorial 1](/tutorial1-python) jsme se seznámili s úplnými základy. V tomto druhém pokračování už budeme potřebovat ESP32. Předpokládáme, že již máte na svém ESP [nainstalovaný Micropython](/install).
+
+---
 
 ## Rozsvítíme LED diodu?
 

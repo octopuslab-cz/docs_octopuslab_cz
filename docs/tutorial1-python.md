@@ -1,8 +1,9 @@
 # ![logo](img/logo_small.png) Tutorial 1
 
+
 ## Pár prvních pokusů s Micropythonem
 
-Většina ukázek z tohoto tutoriálu bude fungovat i na běžném počítači při použití Pythonu. Cílem je pochopení a procvičení elementárních základů. Pokračování, kde už využijeme ESP32 s Micropythonem je na samostatné stránce: [Tutorial2](/tutorial2)
+Většina ukázek z tohoto tutoriálu bude fungovat i na běžném počítači při použití Pythonu. Cílem je pochopení a procvičení elementárních základů. Pokračování, kde už využijeme ESP32 s Micropythonem je na samostatné stránce: [Tutorial2](/tutorial2). Pro ten už si ale už musíte [nainstalovat](/install) Micropython na ESP.
 
 ---
 

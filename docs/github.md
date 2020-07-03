@@ -22,6 +22,11 @@ Zdroj [Wikipedia/Markdown](https://cs.wikipedia.org/wiki/Markdown)
 
 Pokud chcete aktivně přispívat na Githubu, základem je mít vytvořen uživatelský účet. Vřele Vám to doporučujeme. A budeme rádi, když nám pomůžete vytvářet dokumentaci ještě lepší. Můžete nejen testovat a zkoušet náš programový kód, ale můžete inspirovat k jeho zlepšení, oprimalizaci a rozšíření.
 
+### Edit on GitHub
+
+V pravém hormím rohu tohoto dokumentu si můžete povšimnout "tlačítka" `Edit on GitHub`, které vede přímo na podklady k dané stránce.
+Přinejmenším nám můžete poslat zprávu, že někde máme chybu nebo podnět pro doplnění.
+
 ### Nejčastější gitové výrazy
 
 Pull request, commit...

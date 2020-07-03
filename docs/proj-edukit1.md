@@ -4,12 +4,10 @@
 
 - Základem je deska ROBOTboard: [vyvojove-desky/robot-board](https://www.octopuslab.cz/vyvojove-desky/robot-board/)
 
-
 - Samostatná stránka projektu: [octopuslab.cz/edu-kit1](https://www.octopuslab.cz/edu-kit1/)
-
 
 - Repozitář na Githubu: [octopusengine/octopuslab-edu-kit1](https://github.com/octopusengine/octopuslab-edu-kit1)
 
-Úvodní seznámení je popsáno v samostatném [Workshopu](/ws1)
+Úvodní seznámení je popsáno v samostatném [Tutoriálu (EDU_KIT1)](/tutorial3-edukit1)
 
 ---

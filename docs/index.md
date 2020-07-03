@@ -4,6 +4,8 @@ Tohle je základní dokumentace, kde se prolínají popisy knihoven, příklady,
 
 ---
 
+![octopusLAB](https://www.octopuslab.cz/wp-content/uploads/2019/03/c05pen-fb1-1024x487.jpg)
+
 ## Vývojové a výukové moduly
 
 Co vlastně děláme? Vymýšlíme různé hardwarové moduly (zaměření na ESP32 a Micropython). Vyrábíme desky plošných spojů, které se dají podle potřeby proměnit v celou řadu zajímavých projektů.

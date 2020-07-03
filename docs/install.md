@@ -7,32 +7,33 @@
 !!! note
     Celý **proces je rozdělen do tří bloků**
 
-    *Pro instalaci MicroPythonu na vaše ESP32 je třeba binární image "naflashovat" na náš kontroler. Postup se liší podle toho, jaký používáte operační systém, viz dále.* 
+    *Pro instalaci MicroPythonu na vaše ESP32 je třeba "naflashovat" Micropython na náš kontroler. Postup se liší podle toho, jaký používáte operační systém, viz dále.* 
 
-    1. ###### Příprava počítače (PC s Windows, IOS nebo Linux)
+    1. ###### Příprava počítače
     Červená šipka: Do počítače stáhneme nástroj esptool | python nebo exe
     
     2. ###### Instalace Micropythonu do ESP
-    Fialové šipky: Do počítače stáhneme Micropython a pomocí esptool ho nahrajeme do ESP
+    Fialové šipky: Do počítače stáhneme Micropython (binární soubor) a pomocí esptool ho nahrajeme do ESP
 
-    3. ###### Instalace "workframe" octopus
-    Zelená a oranžová > Pomocí terminálu (screen nebo Putty) dokončíme instalaci knihoven v modulu octopus
+    3. ###### Instalace "workframe" octopus do ESP
+    Zelená a oranžová:  Pomocí terminálu (screen nebo Putty) dokončíme instalaci knihoven v modulu octopus
 
+První dva body se liší podle použité platformy (operačního systému):
 
 - [GNU/Linux](/install_linux)
 - [Windows](/install_win)
 - [Mac_OS](/install_mac)
 
-Pokud je na Vašem ESP úspěšně nahrán Micropython, můžete pokračovat dalším krokem:
+Pokud je na Vašem ESP úspěšně nahrán Micropython, můžete pokračovat dalším krokem tři:
 
 ---
 
-## První spuštění a doinstalace systému do ESP
+## První spuštění a instalace "workframe" octopus
 
 
 - **připojit se** USB kabelem k zařízení - *už v tomto kroku je možno projít si základní* [Tutorial1](/tutorial1)
 - **spustit setup** - z prostředí Micropythonu nastavit wifi, připojit se na wifi
-- **stáhnout poslední verzi** "workframe" Octopus
+- **stáhnout poslední verzi** "workframe" Octopus pomocí *octopus_initial.setup*
 
 ### octopus_initial.setup()
 

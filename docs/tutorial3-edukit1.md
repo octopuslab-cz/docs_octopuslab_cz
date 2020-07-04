@@ -20,8 +20,8 @@ DC motory
 
 ### Exoandér I2C
 
-
-
-
-
 ---
+
+Pro pokračování - materiály k některým Workshopům
+
+Tvoření jednoduché hry [Workshop EDUshield1)](/ws-edushield1)

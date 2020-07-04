@@ -364,7 +364,7 @@ piezzo.beep()
 Doplňující třída `melody` jako přidání další části kódu:
 ```python
 from components.buzzer.melody import jingle1
-piezzo.play_melody[jingle1]
+piezzo.play_melody(jingle1)
 ```
 
 

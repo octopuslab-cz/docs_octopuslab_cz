@@ -7,7 +7,7 @@
 !!! note
     Celý **proces je rozdělen do tří bloků**
 
-    *Pro instalaci MicroPythonu na vaše ESP32 říkáme **flashování**. ("Nafleššovat" znamená nahrát na vnitřní **flash** paměť.) Postup se liší podle toho, jaký používáte operační systém, viz dále.* 
+    Instalaci MicroPythonu do ESP32 říkáme **flashování**. ("Naflešovat" znamená nahrát na vnitřní **flash** paměť.) Postup se liší podle toho, jaký používáte počítač a operační systém, viz dále - kroky 1 a 2.
 
     1. ###### Příprava počítače
     Červená šipka: Do počítače stáhneme nástroj `esptool` | python nebo exe
@@ -16,7 +16,7 @@
     Fialové šipky: Do počítače stáhneme `Micropython.bin` (binární soubor) a pomocí esptool ho nahrajeme do ESP
 
     3. ###### Instalace "workframe" octopus do ESP
-    Zelená a oranžová:  Pomocí terminálu (`screen` nebo `Putty`) dokončíme instalaci knihoven v modulu octopus
+    Zelená a oranžová:  Pomocí terminálu (`screen` nebo `Putty`) dokončíme instalaci dalších knihoven *"octopus workspace"*
 
 První dva body se liší podle použité platformy (operačního systému):
 

@@ -12,7 +12,6 @@ nav:
   - Úvod: index.md
   - Instalace: install.md
   - 'Tutoriály':
-      - 'Předmluva ': tutorials-intro.md
       - 'Tutorial 1 Python ': tutorial1-python.md
       - 'Tutorial 2 Micropython ESP': tutorial2-micropython-esp.md
       - 'Tutorial 3 EDUkit1': tutorial3-edukit1.md
@@ -20,8 +19,11 @@ nav:
       - 'Micropython workshop Robot': ws-robot.md
       - 'Upyshell workshop ': ws-upyshell.md
       - 'Github ': github.md
+      - 'Popis markdown': tutorials-intro.md
   - 'Dokumentace':
       - 'Referenční příručka': basicdoc.md
+      - 'Class': class.md
+      - 'Pubsub': pubsub.md
   - 'Projekty':
       - 'EDU-KIT1': proj-edukit1.md
       - 'IoT': proj-iot.md

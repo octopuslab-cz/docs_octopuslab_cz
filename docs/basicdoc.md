@@ -260,7 +260,7 @@ for i in range(999):
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Oled
 Oblíbili jsme si také malý 128x64px monochromatický OLED displej. Jeho přímé použítí vyžaduje už i inicializaci I2C a další drobnosti, proto jsme většinou využívali knihovny octopus.
 Ale ukázalo se, že pro vlastní projekty je lepší umět spouštět displej i "samostatně", což je v ukázce:
-[examples/oled_test.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/oled_test.py)
+[examples/test_oled.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/test_oled.py)
 
 Zjednodušené ovládání je pak tradičně:
 ```python
@@ -606,6 +606,70 @@ import utils.ble.bluefruit as bf
 
 ---
 
+## OCTOPUS Examples
+
+### examples/x.py
+
+V souboru s názvem komponenty by měla být základní ukázka, nejčastěji nejjednodušší nebo nejkratší s využitím **octopus workframe**
+
+- analog
+- button
+- dcmotor
+- display7
+
+- ...
+
+pro mnohé elementární dvouřádkové "návody" ani samostatný soubor ukázky neexistuje. Například pro **led** by vypadal takto:
+
+```python
+from components.led import Led
+led = Led(2)
+led.blink()
+```
+► [Led](#led)
+
+nebo pro **oled** displej:
+```python
+from utils.octopus import oled_init
+oled = oled_init()
+```
+► [Oled](#oled)
+
+### examples/x_basic.py
+
+ukázka, která pordobněji vysvětlí použítí obecnějšího přístupu, naopak oproti předchozímu - zcela bez využití **octopus workframe**
+
+- [oled_basic](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/oled_basic.py)
+- ... (chystáme další)
+
+► [Oled](#oled)
+
+
+### examples/test_x.py
+
+Tyto ukázky slouží zároveň i jako soubor hardwarových testů jednotlivých komponent, a jsou volány z testovacího adresáře `tests`. Vyznačují se tím, že vždy pouze provedou nějakou akci nebo soubor akcí a pak skončí, aby se případně mohlo pokračovat dalším.
+Například pro otestování EDU_KIT1: voláme soubor [/tests/main-test_sw1.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/tests/main-test_sw1.py) který spouští následující ukázka/testy:
+
+```python
+import examples.test_esp32
+import examples.test_led
+import examples.test_rgb
+import examples.test_display7
+import examples.test_analog
+```
+
+### eaxamples/subdir
+
+Specifické ukázky jsou v podaresářích:
+
+- eaxamples/ble
+- eaxamples/pubsub
+- eaxamples/asyncio
+- eaxamples/database
+- eaxamples/param
+
+---
+
 ## Ostatní podpůrné moduly
 
 ### ![hwsoc](img/database.png){: style="width:28px" } Config
@@ -691,7 +755,6 @@ def on_press_top_button():
 Dekorátor v Pythonu je **funkce**, která dostane jeden argument (funkci) a vrátí jednu hodnotu - opět funkci, která je modifikovanou verzí funkce původní. *Původní funkce ja takzvaně "odekorovaná".*
 
 Použití dekorátorů velmi zjednoduší a zpřehlení váš kód. Používá se na registraci, modifikaci a podobně. 
-
 
 
 ```python

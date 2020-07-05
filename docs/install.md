@@ -107,8 +107,8 @@ Více o ukázkách se dozvíte v dokumentaci: [/basicdoc/#octopus-examples](/bas
 Pro některé projekty a ukázky musíme mít správně nastavenou platformu (desku) a některé další periferie. Příkazem `setup()` nastavujeme i další WiFi sítě.
 
 
-!!! hint "**hint**"
-    Z prostředí Micropythonu `>>>` spouštíme úvodní inicializační `octopus_initial.setup()`, který je součástí našeho forku Micropythonu. Použijem ho pouze poprvé, než se nám stáhne aktální verze "octopus framework*. Pro další nastavování už používáme `setup()`, který je rozšířenou verzí *octopus_initial*.
+!!! hint "**setup() | octopus_initial.setup()**"
+    Z prostředí Micropythonu `>>>` spouštíme úplně poprvé inicializační `octopus_initial.setup()`, který je součástí našeho forku Micropythonu. Pak se nám stáhne aktální verze "octopus framework* a pro další nastavování už používáme `setup()`, který je rozšířenou verzí *octopus_initial*.
 
 Rozšířené možnosti nastavení:
 
@@ -148,8 +148,8 @@ select:
 
 ### Základní vysvětlení: 
 
-- První nastavení desky - `ds` - nejvíce použijete *5* pro ROBOTboard nebo *9* pro ESP32board
-- `ios` - nastavení periférií, není nezbytné, kromě oled(I2c) nebo disp7 (SPI)
+- První nastavení desky - `ds` - nejčastěji se používá `5` pro [ROBOTboard](https://www.octopuslab.cz/vyvojove-desky/robot-board/) nebo `9` pro [ESP32board](https://www.octopuslab.cz/esp32-board/) - i na "prázdném" ESP je vhodné zvolit alespoň jednu z variant (až podle konkrétních periferíí a především pak podle druhu sběrnic, se řeší, co dál)
+- `ios` - nastavení periférií, není nezbytné, kromě oled(I2c) nebo disp7 (SPI) - pokud chcete využít "chytré" [pinouty](/basicdoc/#pinout) "octopus frameworku".
 - `w`/ `cw`, `sd`/ `sde` - pro update
 
 ---

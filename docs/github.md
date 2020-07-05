@@ -29,6 +29,11 @@ Přinejmenším nám můžete poslat zprávu, že někde máme chybu nebo podně
 
 ### Nejčastější gitové výrazy
 
-Pull request, commit...
+#### git clone - Naklonování repozitáře
+#### git push - Posílání změn 
+#### pull request - Žádost o začlenění
+#### git pull - Aktualizace
+#### issues - Hlášení chyb
+...
 
 ---

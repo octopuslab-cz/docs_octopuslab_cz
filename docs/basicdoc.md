@@ -9,7 +9,7 @@ V dalších částech, především pak v oddíle **Workshopy / tutoriály** se 
 !!! attention "Základ pro další pochopení (Micro)Pythonu"
     Téměř vše v Pythonu je objekt. **Objekt** je kolekce dat (proměnných) a **metod** (funkcí), které s danými daty pracují. Prototypem objektů jsou **třídy**, z nichž jsou všechny **objekty** (čísla, řetězce, funkce, moduly, metody, atp) odvozeny coby **instance**.
     Pokud vám to není jasné, trochu podrobněji se o tom rozepisujeme na samostatné stránce: [class()](/class).
-    Pro správné pochopení a především v kontextu práce s hardware doporučujeme předchozí odkaz alespoň letmo navštívit.
+    Pro správné pochopení a především v kontextu práce s hardware začátečníkům doporučujeme zmíněný odkaz alespoň letmo navštívit.
 
 !!! note
       Toto není výuka programování – ale jen ukázky a experimenty s přihlédnutím na sadu knihoven a modulů **octopusLab** pro práci s vybraným HW.
@@ -44,7 +44,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |-- [/config](#config)       # kofigurační soubory (.json)
 |-- [/lib](#octopus-lib)
 |      |-- [pubsub](#pubsub)
-|      |-- /blesync_uart
+|      |-- [/blesync_uart](#BLE)
 |      |-- ...
 |      |-- /bmp280
 |      |-- /bh1750 # i2c light sensor
@@ -80,6 +80,8 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- /pubsub
 |      |-- blink.py
 |      |-- ...
+|
+|-- /tests
 |
 |-- /[shell](/p-shell)
 |      |-- [shell](/p-shell)
@@ -543,7 +545,7 @@ Ukázky jsou z vybraných příkladů pro pubsub:
 
 ### ![hwsoc](img/bt.png){: style="width:28px" } BLE
 Jelikož obecná problematika BLE (Bluetooth low energy) je poměrně obsáhlá, tak i modul BLE je dost robustní. Zahrnuje několik částí: `blesync`, `blesync_client`, `blesync_server` a samostatný modul `blesync_uart`. Každopádně funguje velmi dobře a snahou bylo, aby práce s ním byla srozumitelná a přitom umožnila využít všechny možné výhody, které BLE obecně přináší.
-Projek má svůj vlastní repozitář: [/blesync](https://github.com/blesync)
+Projekt má svůj vlastní repozitář: [/blesync](https://github.com/blesync).
 
 Následující příklad umožní z mobilní aplikace nalézt ESP zařízení jako `octopus-led-UID`, kde UID je čás unikátního ID, které má každé ESP.
 Pomocí mobilní aplikace šipkami nahoru (Up) a dolů (DOWN) pak ovládáme vestavěnou Led diodu.

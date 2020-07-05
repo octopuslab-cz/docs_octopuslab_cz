@@ -286,6 +286,10 @@ def oled_init():
 oled = oled_init()
 oled.text("octopusLAB", 0, 0)
 oled.show()
+
+oled.draw_image() # default /assets/octopus_image.pbm
+oled.invert(0)
+...
 ```
 
 ---

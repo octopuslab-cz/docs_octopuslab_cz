@@ -7,7 +7,7 @@
 !!! note
     Celý **proces je rozdělen do tří bloků**
 
-    Instalaci MicroPythonu do ESP32 říkáme **flashování**. ("Naflešovat" znamená nahrát na vnitřní **flash** paměť.) Postup se liší podle toho, jaký používáte počítač a operační systém, viz dále - kroky 1 a 2.
+    Instalaci MicroPythonu do ESP32 říkáme **flashování**. ("Naflešovat" znamená nahrát do vnitřní **flash** paměti ESP.) Postup se liší podle toho, jaký používáte počítač a operační systém, viz dále - kroky 1 a 2.
 
     1. ###### Příprava počítače
     Červená šipka: Do počítače stáhneme nástroj `esptool` | python nebo exe
@@ -24,14 +24,15 @@ První dva body se liší podle použité platformy (operačního systému):
 - [Windows](/install_win)
 - [Mac_OS](/install_mac)
 
-Pokud je na Vašem ESP úspěšně nahrán Micropython, můžete pokračovat dalším krokem tři:
+Pokud je na Vašem **ESP32** úspěšně nahrán **Micropython**, můžete pokračovat dalším krokem tři:
 
 ## První spuštění a instalace "workframe" octopus
 
+Posledními kroky jsou:
 
 - **připojit se** USB kabelem k zařízení - *už v tomto kroku je možno projít si základní* [Tutorial1](/tutorial1)
-- **spustit setup** - z prostředí Micropythonu nastavit wifi, připojit se na wifi
-- **stáhnout poslední verzi** "workframe" Octopus pomocí *octopus_initial.setup*
+- **spustit setup** - z prostředí Micropythonu nastavit wifi, připojit se na wifi. Zamapatujte si: `setup()`
+- **stáhnout poslední verzi** "workframe" Octopus pomocí *octopus_initial.setup*. (Celý systém se stahuje z Internetu přímo do ESP32 přes WiFi.)
 
 ### octopus_initial.setup()
 
@@ -98,6 +99,58 @@ ESP se připojí k WiFi
 
 Pokud si chcete nahrát velký balíček ukázek a testů, máme k dispozici opět "zabalený" `.tar` soubor u nás v cloudu.
 Provedeme reset zařízení. Pak spustíme `setup()` a opět postupně `cw` (connect wifi) a tentokrát `sde` (system download examples).
+Více o ukázkách se dozvíte v dokumentaci: [/basicdoc/#octopus-examples](/basicdoc/#octopus-examples).
+
+---
+## Setup - nastavení systému
+
+Pro některé projekty a ukázky musíme mít správně nastavenou platformu (desku) a některé další periferie. Příkazem `setup()` nastavujeme i další WiFi sítě.
+
+
+!!! hint "**hint**"
+    Z prostředí Micropythonu `>>>` spouštíme úvodní inicializační `octopus_initial.setup()`, který je součástí našeho forku Micropythonu. Použijem ho pouze poprvé, než se nám stáhne aktální verze "octopus framework*. Pro další nastavování už používáme `setup()`, který je rozšířenou verzí *octopus_initial*.
+
+Rozšířené možnosti nastavení:
+
+```bash
+>>> setup()
+      ,'''`.
+     /      \
+     |(@)(@)|
+     )      (
+    /,'))((`.\
+   (( ((  )) ))
+   )  \ `)(' / (
+
+Hello, this will help you initialize your ESP
+ver: 0.68 / 30.6.2020 (c)octopusLAB
+Press Ctrl+C to abort
+
+==============================
+        S E T U P
+==============================
+[w]   - wifi submenu
+[cw]  - connect wifi
+[cl]  - connect LAN
+[sd]  - system download > stable octopus modules from URL
+[sde] - system download > examples (from URL) /[sdh] hydroponics
+[sdp] - system download > petrkr (Beta octopus modules from URL)
+[sdo] - system download > octopus (Alfa octopus modules from URL)
+[ds]  - device setting
+[ios] - I/O setting submenu
+[mq]  - mqtt() and sending data setup
+[si]  - system info
+[wr]  - run web repl
+[q]   - quit setup
+==============================
+select:
+```
+
+### Základní vysvětlení: 
+
+- První nastavení desky - `ds` - nejvíce použijete *5* pro ROBOTboard nebo *9* pro ESP32board
+- `ios` - nastavení periférií, není nezbytné, kromě oled(I2c) nebo disp7 (SPI)
+- `w`/ `cw`, `sd`/ `sde` - pro update
 
 ---
 

@@ -30,7 +30,7 @@ Pokud je na Vašem **ESP32** úspěšně nahrán **Micropython**, můžete pokra
 
 Posledními kroky jsou:
 
-- **připojit se** USB kabelem k zařízení - *už v tomto kroku je možno projít si základní* [Tutorial1](/tutorial1)
+- **připojit se** USB kabelem k zařízení - *už v tomto kroku je možno projít si základní* [Tutorial1-python](/tutorial1-python)
 - **spustit setup** - z prostředí Micropythonu nastavit wifi, připojit se na wifi. Zamapatujte si: `setup()`
 - **stáhnout poslední verzi** "workframe" Octopus pomocí *octopus_initial.setup*. (Celý systém se stahuje z Internetu přímo do ESP32 přes WiFi.)
 

@@ -60,3 +60,5 @@ Používáme program [putty.exe](https://www.chiark.greenend.org.uk/~sgtatham/pu
 ![putty](https://www.octopuslab.cz/wp-content/uploads/2019/11/putty1.png)
 
 Pokud se na obrazovce nic nezobrazuje zmáčněte <kdb>ENTER</kdb> a měl by se vám zobrazit prompt interaktivního Pythonu `>>>`. Gratulujeme, máte funkční MicroPython!
+
+Dále můžete pokračovat podkapitolou [první spuštění a instalace octopus workframe](/install/#prvni-spusteni-a-instalace-workframe-octopus).

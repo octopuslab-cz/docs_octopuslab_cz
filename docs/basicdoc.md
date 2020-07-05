@@ -11,6 +11,14 @@ V dalších částech, především pak v oddíle **Workshopy / tutoriály** se 
     Pokud vám to není jasné, trochu podrobněji se o tom rozepisujeme na samostatné stránce: [class()](/class).
     Pro správné pochopení a především v kontextu práce s hardware doporučujeme předchozí odkaz alespoň letmo navštívit.
 
+!!! note
+      Toto není výuka programování – ale jen ukázky a experimenty s přihlédnutím na sadu knihoven a modulů **octopusLab** pro práci s vybraným HW.
+
+      Pro podrobnější proniknutí do tajů programování v Pythonu doporučujeme: 
+
+      - [naucse.python.cz](https://naucse.python.cz/)
+      - [naucse.python.cz/course/mi-pyt/intro/micropython](https://naucse.python.cz/course/mi-pyt/intro/micropython/)
+      - [howto.py.cz](http://howto.py.cz/index.htm)
 
 ---
 
@@ -39,9 +47,10 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- /blesync_uart
 |      |-- ...
 |      |-- /bmp280
+|      |-- /bh1750 # i2c light sensor
 |      |-- colors_rgb.py
 |      |-- hcsr04.py # ultrasonic
-|      |-- bh1750 # i2c light sensor
+|      |-- ...
 |
 |-- [/components](#octopus-components)
 |      |-- [led](#led)

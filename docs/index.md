@@ -26,7 +26,7 @@ Podrobnější popis je na samostatné stránce [ESP32](/esp32)
 ![uPy](img/upy.jpg){: style="width:90px;float:left;" } Micropython je "odlehčená" verze populárního programovacího jazyka Python. *Je to přesněji softwarová implementace vyššího programovacího jazkyka kompatibilního s Python 3.x. Je napsaný v C a optimalizovaný pro použití v mikrokontrolétech.*
 
 !!! note
-      Toto není výuka programování – ale jen ukázky a experimenty s přihlédnutím na sadu knihoven a modulů <b>octopusLab</b> pro práci s vybraným HW.
+      Toto není výuka programování – ale jen ukázky a experimenty s přihlédnutím na sadu knihoven a modulů **octopusLab** pro práci s vybraným HW.
 
       Pro podrobnější proniknutí do tajů programování v Pythonu doporučujeme: 
 

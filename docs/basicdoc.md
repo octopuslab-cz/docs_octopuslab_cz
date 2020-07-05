@@ -497,7 +497,7 @@ db.listAll()
 
 ### ![hwsoc](img/database.png){: style="width:28px" } pubsub
 
-Nástroj pro předávání hodnot mezi nezávislými komponenty v rámci projektu a to i v samostatně běžících vláknech. Pracuje na principu **publish and subscribe**.
+Nástroj pro předávání hodnot mezi nezávislými komponenty v rámci projektu a to i v samostatně běžících vláknech. Pracuje na principu **publish and subscribe**. Fork z [basecue/micropython-pubsub](https://github.com/basecue/micropython-pubsub).
 
 Zdrojový kód knihovny: [./lib/pubsub.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/lib/pubsub.py)
 
@@ -543,6 +543,7 @@ Ukázky jsou z vybraných příkladů pro pubsub:
 
 ### ![hwsoc](img/bt.png){: style="width:28px" } BLE
 Jelikož obecná problematika BLE (Bluetooth low energy) je poměrně obsáhlá, tak i modul BLE je dost robustní. Zahrnuje několik částí: `blesync`, `blesync_client`, `blesync_server` a samostatný modul `blesync_uart`. Každopádně funguje velmi dobře a snahou bylo, aby práce s ním byla srozumitelná a přitom umožnila využít všechny možné výhody, které BLE obecně přináší.
+Projek má svůj vlastní repozitář: [/blesync](https://github.com/blesync)
 
 Následující příklad umožní z mobilní aplikace nalézt ESP zařízení jako `octopus-led-UID`, kde UID je čás unikátního ID, které má každé ESP.
 Pomocí mobilní aplikace šipkami nahoru (Up) a dolů (DOWN) pak ovládáme vestavěnou Led diodu.

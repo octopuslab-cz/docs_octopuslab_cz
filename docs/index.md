@@ -1,6 +1,6 @@
 # ![logo](img/logo_small.png){: style="width:39px" } OctopusLab
 
-Tohle je základní dokumentace, kde se prolínají popisy knihoven, příklady, návody, tutoriály, části workshopů, projektů a ukázek použití.
+Tohle je základní dokumentace, kde se prolínají [popisy knihoven](/basicdoc), příklady, návody, tutoriály, části workshopů, projektů a ukázek použití.
 
 ---
 

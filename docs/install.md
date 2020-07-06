@@ -76,18 +76,19 @@ Zvolte `w` [enter].
  [r]  - Remove wifi network
  [s]  - Show configuration  
 ==============================
+select:
 ```
-Zvolte `a` a stiskněte [enter] *(add wifi)* pro přidání vaší wifi sítě do zařízení a vyplňte správně:
+Zvolte `a` *(add wifi)* a stiskněte [enter] pro přidání vaší wifi sítě do zařízení a vyplňte správně:
 
 **SSID:** název Vaší wifi | **PASSWORD:** a heslo do ní. Nastavení WiFi se uloží do flash ESP (v *config/wifi.json*) a **je uchováno** i pro další použití.
 
 
 ### • System download -  Deploy
 
-Pro připojení do Internetu se v **select:** `setup()` napíše:
-`cw` [enter] *(conect wifi)* a ESP se připojí k WiFi
+Pro připojení do Internetu se ve volbě **select:** napíše:
+`cw` *(conect wifi)* [enter] a ESP se připojí k internetu
 
-`sd` [enter] *(system download - from url octopus)*, které provede stažení **TARu** z našeho cloudu - vše se do ESP samo nahraje a rozbalí. Průběžně uvidíte všechny soubory (včetně podadresářů).
+`sd` *(system download - from url octopus)* [enter], které provede stažení **TARu** z našeho cloudu - vše se do ESP samo nahraje a rozbalí. Průběžně uvidíte všechny soubory (včetně podadresářů).
 
 !!! tip "**Co obsahuje stable.tar**"
 
@@ -161,7 +162,7 @@ select:
 
 ### Základní nastavení: 
 
-- První nastavení desky - `ds` - nejčastěji se používá `5` pro [ROBOTboard](https://www.octopuslab.cz/vyvojove-desky/robot-board/) nebo `9` pro [ESP32board](https://www.octopuslab.cz/esp32-board/) - i na "prázdném" ESP je vhodné zvolit alespoň jednu z variant (až podle konkrétních periferíí a především pak podle druhu sběrnic, se řeší, co dál)
+- První nastavení desky - `ds` *(device setting)* - nejčastěji se používá `5` pro [ROBOTboard](https://www.octopuslab.cz/vyvojove-desky/robot-board/) nebo `9` pro [ESP32board](https://www.octopuslab.cz/esp32-board/) - i na "prázdném" ESP je vhodné zvolit alespoň jednu z variant (až podle konkrétních periferíí a především pak podle druhu sběrnic, se řeší, co dál)
 - `ios` - nastavení periférií, není nezbytné, kromě oled(I2c) nebo disp7 (SPI) - pokud chcete využít "chytré" [pinouty](/basicdoc/#pinout) "octopus frameworku".
 - `w`/ `cw`, `sd`/ `sde` - pro update
 

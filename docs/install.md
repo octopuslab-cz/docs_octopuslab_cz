@@ -5,7 +5,7 @@
 !!! note
     Celý **proces je rozdělen do tří bloků**
 
-    Instalaci MicroPythonu do ESP32 říkáme **flashování**. ("Naflešovat" znamená nahrát do vnitřní **flash** paměti ESP.) Postup se liší podle toho, jaký používáte počítač a operační systém, viz dále - kroky 1 a 2.
+    Instalaci MicroPythonu do [ESP32](/esp32) říkáme **flashování**. ("Naflešovat" znamená nahrát do vnitřní **flash** paměti ESP.) Postup se liší podle toho, jaký používáte počítač a operační systém, viz dále - kroky 1 a 2.
 
     1. ###### Příprava počítače
     Červená šipka: Do počítače stáhneme nástroj `esptool` | python nebo exe

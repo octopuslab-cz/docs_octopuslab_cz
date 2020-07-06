@@ -1,4 +1,4 @@
-# ![logo](img/logo_small.png) ESP 32
+# ![logo](img/logo_small.png){: style="width:39px" } ESP 32
 
 ![esp32](https://www.octopuslab.cz/wp-content/uploads/2020/06/esp32-s.png)
 

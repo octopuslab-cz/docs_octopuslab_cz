@@ -31,6 +31,7 @@ nav:
       - 'Robot 01': proj-robot01.md
       - 'Hydroponie': proj-hydro.md
       - 'Ostatní projekty': projects.md
+      - 'ESP32': esp32.md
 
 theme: readthedocs
 

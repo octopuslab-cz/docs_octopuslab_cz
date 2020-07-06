@@ -124,7 +124,7 @@ Pro některé projekty a ukázky musíme mít správně nastavenou platformu (de
 
 
 !!! hint "**octopus_initial.setup() | setup()**"
-    Z prostředí Micropythonu `>>>` spouštíme úplně poprvé inicializační `octopus_initial.setup()`, který je součástí našeho forku Micropythonu. Pak se nám stáhne aktální verze "octopus framework* a pro další nastavování už používáme `setup()`, který je rozšířenou verzí *octopus_initial*.
+    Z prostředí Micropythonu `>>>` spouštíme úplně poprvé inicializační `octopus_initial.setup()`, který je součástí našeho forku Micropythonu. Pak se nám stáhne aktální verze "octopus framework* a pro další nastavování už používáme pouze `setup()`, který je rozšířenou verzí *octopus_initial*.
 
 Rozšířené možnosti nastavení:
 

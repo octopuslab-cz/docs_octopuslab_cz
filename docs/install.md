@@ -31,7 +31,7 @@ Pokud je na Vašem **ESP32** úspěšně nahrán **Micropython**, můžete pokra
 Posledními kroky jsou:
 
 - **připojit se** USB kabelem k zařízení - *už v tomto kroku je možno projít si základní* [Tutorial1-python](/tutorial1-python)
-- **spustit setup** - z prostředí Micropythonu nastavit wifi, připojit se na wifi. Zamapatujte si: `setup()`
+- **spustit setup** - z prostředí Micropythonu nastavit wifi, připojit se na wifi. 
 - **stáhnout poslední verzi** "workframe" Octopus pomocí *octopus_initial.setup*. (Celý systém se stahuje z Internetu přímo do ESP32 přes WiFi.)
 
 ### • octopus_initial.setup()
@@ -120,10 +120,10 @@ Více o ukázkách se dozvíte v dokumentaci: [/basicdoc/#octopus-examples](/bas
 ---
 ## Setup - nastavení systému
 
-Pro některé projekty a ukázky musíme mít správně nastavenou platformu (desku) a některé další periferie. Příkazem `setup()` nastavujeme i další WiFi sítě.
+Pro některé projekty a ukázky musíme mít správně nastavenou platformu (desku) a některé další periferie. Příkazem `setup()` nastavujeme i další WiFi sítě. 
 
 
-!!! hint "**setup() | octopus_initial.setup()**"
+!!! hint "**octopus_initial.setup() | setup()**"
     Z prostředí Micropythonu `>>>` spouštíme úplně poprvé inicializační `octopus_initial.setup()`, který je součástí našeho forku Micropythonu. Pak se nám stáhne aktální verze "octopus framework* a pro další nastavování už používáme `setup()`, který je rozšířenou verzí *octopus_initial*.
 
 Rozšířené možnosti nastavení:

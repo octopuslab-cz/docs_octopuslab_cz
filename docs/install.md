@@ -77,7 +77,7 @@ Zvolte `w` [enter].
  [s]  - Show configuration  
 ==============================
 ```
-Zvolte `a` a stiskněte [enter] pro přidání vaší wifi sítě do zařízení a vyplňte správně:
+Zvolte `a` a stiskněte [enter] *(add wifi)* pro přidání vaší wifi sítě do zařízení a vyplňte správně:
 
 **SSID:** název Vaší wifi | **PASSWORD:** a heslo do ní. Nastavení WiFi se uloží do flash ESP (v *config/wifi.json*) a **je uchováno** i pro další použití.
 
@@ -85,22 +85,13 @@ Zvolte `a` a stiskněte [enter] pro přidání vaší wifi sítě do zařízení
 ### • System download -  Deploy
 
 Pro připojení do Internetu se v **select:** `setup()` napíše:
-`cw` [enter] (conect wifi) a ESP se připojí k WiFi
+`cw` [enter] *(conect wifi)* a ESP se připojí k WiFi
 
-`sd` [enter] (system download - from url octopus), které provede stažení **TARu** z našeho cloudu - vše se do ESP samo nahraje a rozbalí. Průběžně uvidíte všechny soubory (včetně podadresářů).
+`sd` [enter] *(system download - from url octopus)*, které provede stažení **TARu** z našeho cloudu - vše se do ESP samo nahraje a rozbalí. Průběžně uvidíte všechny soubory (včetně podadresářů).
 
----
+!!! tip "**Co obsahuje stable.tar**"
 
-### • Examples - je adresář plný příkladů
-
-Pokud si chcete nahrát velký balíček ukázek a testů, máme k dispozici opět "zabalený" `.tar` soubor u nás v cloudu.
-Provedeme reset zařízení. Pak spustíme `setup()` a opět postupně `cw` (connect wifi) a tentokrát `sde` (system download examples).
-Více o ukázkách se dozvíte v dokumentaci: [/basicdoc/#octopus-examples](/basicdoc/#octopus-examples).
-
-!!! note "
-    **Co obsahuje stable.tar**"
-
-    Vybrané knihovny, které jsou veřejně dostupné na [github.com/octopusengine/octopuslab](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython) po našem otestování jsou převedeny do `.mpy` a uloženy do souboru `stable.tar`, který je v našem cloudu *(vzdálené internetové úložiště)*
+    Vybrané knihovny, které jsou veřejně dostupné na [github.com/octopusengine/octopuslab](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython) po našem otestování jsou převedeny do `.mpy` a uloženy do souboru `stable.tar`, který je v našem **cloudu** *(vzdálené internetové úložiště)*
 
     Ukázka jak v octopusLABu "kompilujeme" `.py` do `.mpy` (to vy dělat nemusíte)
     
@@ -114,6 +105,14 @@ Více o ukázkách se dozvíte v dokumentaci: [/basicdoc/#octopus-examples](/bas
     Compile file ...
     ...
     ```
+
+---
+
+### • Examples - je adresář plný příkladů
+
+Pokud si chcete nahrát velký balíček ukázek a testů, máme k dispozici opět "zabalený" `.tar` soubor u nás v cloudu.
+Provedeme reset zařízení. Pak spustíme `setup()` a opět postupně `cw` (connect wifi) a tentokrát `sde` (system download examples).
+Více o ukázkách se dozvíte v dokumentaci: [/basicdoc/#octopus-examples](/basicdoc/#octopus-examples).
 
 ---
 ## Setup - nastavení systému

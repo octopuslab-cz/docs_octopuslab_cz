@@ -36,7 +36,7 @@ Posledními kroky jsou:
 
 ### • octopus_initial.setup()
 
-Pro ulehčení instalace máme vlastní fork Micropythonu, do kterého jsme zaintegrovali malý modul `octopus_initial`.
+Pro ulehčení instalace máme vlastní fork Micropythonu, do kterého jsme zaintegrovali malý modul `octopus_initial` s metodou `setup()`.
 
 !!! hint " **Vychytávka [TAB]**"
     Když chcete v Pythnou nebo Micropythonu něco napsat, naučte se využívat TABulátor (klávesa `TAB`). Když například po promptu `>>>` chcete napsat `octopus_initial.setup()`, zkuste napsat pouze prvních pár písmen a pak zmáčknout `TAB`:
@@ -81,9 +81,8 @@ zvolte `a` a stiskněte [enter]
 pro přidání vaší wifi sítě do zařízení 
 (uloží se do flash ESP v config/wifi.json) 
 
-`SSID:` název Vaší wifi
-
-`PASSWORD:` a heslo do ní
+- **SSID:** název Vaší wifi
+- **PASSWORD:** a heslo do ní
 
 
 ### • System download -  Deploy
@@ -124,7 +123,7 @@ Pro některé projekty a ukázky musíme mít správně nastavenou platformu (de
 
 
 !!! hint "**octopus_initial.setup() | setup()**"
-    Z prostředí Micropythonu `>>>` spouštíme úplně poprvé inicializační `octopus_initial.setup()`, který je součástí našeho forku Micropythonu. Pak se nám stáhne aktální verze "octopus framework* a pro další nastavování už používáme pouze `setup()`, který je rozšířenou verzí *octopus_initial*.
+    Z prostředí Micropythonu `>>>` spouštíme úplně poprvé inicializační `octopus_initial.setup()`, který je součástí našeho forku Micropythonu. Pak se nám stáhne aktální verze "octopus framework* a pro další nastavování už používáme pouze `setup()`, který je rozšířenou verzí *octopus_initial.setup()*.
 
 Rozšířené možnosti nastavení:
 

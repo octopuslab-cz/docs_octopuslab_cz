@@ -154,4 +154,13 @@ select:
 
 ---
 
+## Práce se soubory - Ampy
+
+Pro přesouvání souborů do ESP máme víc možností. Jednoduché úpravy a přímé kopírování se dají rovnou provádět v ESP v `uPysHellu`. Tam se dá využít příkaz `edit` a pak `cp`. Ještě je tu i možnost `wget` pro stažení libovolného souboru z internetu.
+
+Druhou možností je speciální IDE *Thonny - Python IDE for beginners*, ke stažení zde: https://thonny.org/
+
+A poslední varianta, kterou jsme dříve využívali i pro `deploy` (sestavení systému) je program `ampy`, přímo určený pro vzdálenou práci se soubory na ESP.
+Tomu se věnujeme obšírněji na samostatné stránce [ampy](/ampy).
+
 

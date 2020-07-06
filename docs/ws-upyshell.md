@@ -25,7 +25,7 @@ Popis:
        pwd | Print Working Dir.       |
         ls | LiSt files and dir.      | ls examples
      mkdir | make directory           | mkdir newdir
-        cp | CoPy F (defaulf M)       | cp test.py back.py
+        cp | CoPy F (default M)       | cp test.py back.py
         rm | ReMove F                 | rm test.py
        top | main proces info         | 
       wifi | wireless "fidelity"      | wifi on / wifi scan

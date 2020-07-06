@@ -18,12 +18,13 @@ nav:
       - 'Micropython workshop IoT': ws-iot.md
       - 'Micropython workshop Robot': ws-robot.md
       - 'Upyshell workshop ': ws-upyshell.md
-      - 'Github ': github.md
-      - 'Popis markdown': tutorials-intro.md
   - 'Dokumentace':
       - 'Referenční příručka': basicdoc.md
       - 'Class': class.md
       - 'Pubsub': pubsub.md
+      - 'Ampy': ampy.md
+      - 'Github ': github.md
+      - 'Popis markdown': tutorials-intro.md
   - 'Projekty':
       - 'EDU-KIT1': proj-edukit1.md
       - 'IoT': proj-iot.md

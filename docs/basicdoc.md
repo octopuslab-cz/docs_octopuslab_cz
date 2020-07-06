@@ -89,6 +89,11 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |-- ...
 </pre>
 
+!!! warning "**Pozor**"
+    **Pokud jste používali náš systém už v roce 2019**, přeinstalujte si na novou verzi. Velká část systému by vám už nefungovala. Od té doby došlo totiž k řadě změn. Především byly tři zásadní verze Micropythonu, kde se měnil i formát "kompilovaných" souborů `.mpy`, které jsou základem naší distribuce. Také se doplnilo `BLE` pro práci s **BlueTooth low energy**.
+    A další změnou byla velká `refaktorizace` systému **octopus**, kde podardesář `util` byl rozdělen na `utils` (rp sw utility a hlaví framework) a `components` (kde jsou převážně knihovny pro hw komponenty a periferie.) Také `shell` byl přesunut do rootu z `util/shell`.
+
+
 ### Soubory boot.py a main.py
 
 `boot.py` - soubor, který se zavádí při bootování

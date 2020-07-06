@@ -1,6 +1,6 @@
 # ![logo](img/logo_small.png){: style="width:39px" } OctopusLab
 
-Tohle je základní dokumentace, kde se prolínají [popisy knihoven](/basicdoc), příklady, návody, tutoriály, části workshopů, projektů a ukázek použití.
+V těchto materiálech se prolíná dokumentace, návody, tutoriály, části workshopů, projektů a **ukázek použití**. Důraz je kladen na [popis knihoven](/basicdoc) pro OctopusLAB "worklow". *(Kde komplexnější procesy, rozdělujeme na jednodušší činnosti a jejich vazby.)*
 
 ---
 
@@ -8,22 +8,22 @@ Tohle je základní dokumentace, kde se prolínají [popisy knihoven](/basicdoc)
 
 ## Vývojové a výukové moduly
 
-Co vlastně děláme? Vymýšlíme různé hardwarové moduly (zaměření na ESP32 a Micropython). Vyrábíme desky plošných spojů, které se dají podle potřeby proměnit v celou řadu zajímavých projektů.
-**Námi navržené vývojové a experimentální desky, slouží i jako finálně zapojitelné moduly pro projekty nebo jejich části. Jednoduché (nebo částečně zapojené) projekty výborně pomáhají i při výuce.**
-Další informace jsou na našem webu http://www.octopuslab.cz
+Co vlastně děláme? Vyvíjíme hardwarové moduly zaměřené na využití **ESP32** a **Micropythonu**. Navrhujeme desky plošných spojů, které se dají podle potřeby proměnit v celou řadu zajímavých projektů pro robotiku, internet věcí a pod.
+**Námi navržené vývojové a experimentální desky, slouží i jako finálně zapojitelné moduly pro projekty nebo jejich části. Jednoduché (nebo částečně zapojené) "produkty" výborně pomáhají i při výuce.**
+Další informace můžete najít na našem webu http://www.octopuslab.cz
 
 ---
 
 ## ESP32
 
-![hwsoc](img/hwsoc.png){: style="margin:15px;float:left;" } Výrobcem tohoto "mikropočítače" je společnost [Espressif](https://www.espressif.com/en/products/socs/esp32/overview) - proto nejspíš zkratka *ESP*. Na destičce *vypadající jako poštovní známka* je mikrokontrolér spolu s několika klíčovými komponenty včetně krystalu, antény pro WiFi a Bluetooth. ESP32 je tak okamžitě připraveno k integraci do koncových produktů.
+![hwsoc](img/hwsoc.png){: style="margin:15px;float:left;" } Výrobcem tohoto "mikropočítače" je společnost [Espressif](https://www.espressif.com/en/products/socs/esp32/overview) (proto zkratka *ESP*). Na destičce *vypadající jako poštovní známka* je mikroprocesor s pamětí, a několika klíčovými komponenty včetně krystalu, antény pro WiFi a Bluetooth. ESP32 je tak okamžitě připraveno k integraci do koncových produktů.
 
-Pokud vás zajíma víc, naleznete to na samostatné stránce [ESP32](/esp32)
+Přesnější název je **mikrokontrolér**, což je obvod, který kromě procesoru obashuje i paměť a další části, především pro vstupy a výstupy nebo komunikaci. Pokud vás zajíma víc podrobností, naleznete je na samostatné stránce [ESP32](/esp32)
 
 ---
 ## Micropython
 
-![uPy](img/upy.jpg){: style="width:90px;float:left;" } Micropython je "odlehčená" verze populárního programovacího jazyka Python. *Je to přesněji softwarová implementace vyššího programovacího jazkyka kompatibilního s Python 3.x. Je napsaný v C a optimalizovaný pro použití v mikrokontrolétech.*
+![uPy](img/upy.jpg){: style="width:90px;float:left;" } Micropython je "odlehčená" verze populárního programovacího jazyka **Python**. *Je to přesněji softwarová implementace vyššího programovacího jazkyka kompatibilního s Python 3.x. Je napsaný v C a optimalizovaný pro použití v mikrokontrolérech.*
 
 !!! note
       Toto není výuka programování – ale jen ukázky a experimenty s přihlédnutím na sadu knihoven a modulů **octopusLab** pro práci s vybraným HW.

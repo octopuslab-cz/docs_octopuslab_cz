@@ -86,9 +86,7 @@ Zvolte `a` *(add wifi)* a stiskněte [enter] pro přidání vaší wifi sítě d
 ### • System download -  Deploy
 
 Pro připojení do Internetu se ve volbě **select:** napíše:
-`cw` *(conect wifi)* [enter] a ESP se připojí k internetu
-
-`sd` *(system download - from url octopus)* [enter], které provede stažení **TARu** z našeho cloudu - vše se do ESP samo nahraje a rozbalí. Průběžně uvidíte všechny soubory (včetně podadresářů).
+`cw` *(conect wifi)* [enter] a ESP se připojí k internetu. Pak už můžeme zadat `sd` *(system download - from url octopus)* [enter], které provede stažení **TARu** z našeho cloudu - vše se do ESP samo nahraje a rozbalí. Průběžně uvidíte všechny soubory (včetně podadresářů).
 
 !!! tip "**Co obsahuje stable.tar**"
 

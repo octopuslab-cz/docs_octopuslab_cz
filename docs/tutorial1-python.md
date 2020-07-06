@@ -57,8 +57,18 @@ Pro další matematické funkce a konstanty použijeme knihovnu `math`.
 3.0
 
 >>> math.pi            # konstanta Pí
-3.141593               # počet desetinných míst je omezený                 
+3.141593               # počet desetinných míst je omezený
 ```
+
+!!! note
+      Toto není výuka programování – ale jen ukázky a experimenty s přihlédnutím na sadu knihoven a modulů **octopusLab** pro práci s vybraným HW.
+
+      Pro podrobnější proniknutí do tajů programování v Pythonu doporučujeme: 
+
+      - [naucse.python.cz](https://naucse.python.cz/)
+      - [naucse.python.cz/course/mi-pyt/intro/micropython](https://naucse.python.cz/course/mi-pyt/intro/micropython/)
+      - [howto.py.cz](http://howto.py.cz/index.htm)
+
 
 !!! hint "**Python je jednoduchý**"
 

@@ -18,7 +18,7 @@ Další informace můžete najít na našem webu http://www.octopuslab.cz
 
 ![hwsoc](img/hwsoc.png){: style="margin:15px;float:left;" } Výrobcem tohoto "mikropočítače" je společnost [Espressif](https://www.espressif.com/en/products/socs/esp32/overview) (proto zkratka *ESP*). Na destičce *vypadající jako poštovní známka* je mikroprocesor s pamětí, a několika klíčovými komponenty včetně krystalu, antény pro WiFi a Bluetooth. ESP32 je tak okamžitě připraveno k integraci do koncových produktů.
 
-Přesnější název je **mikrokontrolér**, což je obvod, který kromě procesoru obashuje i paměť a další části, především pro vstupy a výstupy nebo komunikaci. Pokud vás zajíma víc podrobností, naleznete je na samostatné stránce [ESP32](/esp32)
+Přesnější název je **mikrokontrolér**, což je obvod, který kromě procesoru obsahuje i paměť a další části, především pro vstupy a výstupy nebo komunikaci. Pokud vás zajíma víc podrobností, naleznete je na samostatné stránce [ESP32](/esp32)
 
 ---
 ## Micropython
@@ -54,11 +54,11 @@ Přesnější název je **mikrokontrolér**, což je obvod, který kromě proces
 !!! hint "Open source projekt je založen na spolupráci"
     Všechny podklady tohoto "manuálu" píšeme v [markdownu](https://cs.wikipedia.org/wiki/Markdown) a jsou veřejně na [GitHubu](https://github.com/octopusengine/docs_octopuslab_cz), budeme rádi za vaše připomínky a nápady https://github.com/octopusengine/docs_octopuslab_cz
       
-    Každý může navrhovat doplnění, hlásit chyby a libovolným způsobem přispívat. Vždy, když se navrhovaná změna schválí (commit) do hlavní větve (master branch), automaticky se publikuje na těchto stránkách. Budeme rádi, když nám dáte vědět, jak se Vám s naším dokumentem pracuje. Vypadá to jenom jako taková blost, ale fakt to dalo dost práce.
+    Každý může navrhovat doplnění, hlásit chyby a libovolným způsobem přispívat. Vždy, když se navrhovaná změna schválí *(commit)* do hlavní větve *(master branch)*, automaticky se publikuje na těchto stránkách. Budeme rádi, když nám dáte vědět, jak se Vám s naším dokumentem pracuje. Vypadá to jenom jako taková blost, ale fakt to dalo dost práce.
     
 
 ![github](img/github.jpg){: style="width:90px" } [Co to je? A jak se s ním pracuje?](/github)
 
-Za tým octopusLABu: *Honza Čopák, Petr Kracík, Vašek Chalupníček, Vladimír Jiříček, Jan Češpivo, Milan Špaček, Metěj Suchánek a další*
+**Za tým octopusLABu:** *Honza Čopák, Petr Kracík, Vašek Chalupníček, Vladimír Jiříček, Jan Češpivo, Milan Špaček, Metěj Suchánek a další*
 
 ---

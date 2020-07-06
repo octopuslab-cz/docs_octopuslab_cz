@@ -1,7 +1,5 @@
 # ![logo](img/logo_small.png) Instalace systému - společná část
 
-*Původní verze tohoto dokumentu je na https://www.octopuslab.cz/micropython-octopus/*
-
 ![esp-flash](https://www.octopuslab.cz/wp-content/uploads/2019/08/esp-flash-1.jpg)
 
 !!! note
@@ -18,6 +16,8 @@
     3. ###### Instalace "workframe" octopus do ESP
     Zelená a oranžová:  Pomocí terminálu (`screen` nebo `Putty`) dokončíme instalaci dalších knihoven *"octopus workspace"*
 
+## 1. 2. Instalace Micropythonu a octopus "workframe"
+
 První dva body se liší podle použité platformy (operačního systému):
 
 - [GNU/Linux](/install_linux)
@@ -26,7 +26,7 @@ První dva body se liší podle použité platformy (operačního systému):
 
 Pokud je na Vašem **ESP32** úspěšně nahrán **Micropython**, můžete pokračovat dalším krokem tři:
 
-## První spuštění a instalace "workframe" octopus
+## 3. První spuštění a instalace "workframe" octopus
 
 Posledními kroky jsou:
 
@@ -120,7 +120,7 @@ Pro některé projekty a ukázky musíme mít správně nastavenou platformu (de
 
 
 !!! hint "**octopus_initial.setup() | setup()**"
-    Z prostředí Micropythonu `>>>` spouštíme úplně poprvé inicializační `octopus_initial.setup()`, který je součástí našeho forku Micropythonu. Pak se nám stáhne aktální verze "octopus framework* a pro další nastavování už používáme pouze `setup()`, který je rozšířenou verzí *octopus_initial.setup()*.
+    Z prostředí Micropythonu `>>>` spouštíme úplně poprvé inicializační `octopus_initial.setup()`, který je součástí našeho forku Micropythonu. Pak se nám stáhne aktální verze *octopus framework* a pro další nastavování už používáme pouze `setup()`, který je rozšířenou verzí *octopus_initial.setup()*.
 
 Rozšířené možnosti nastavení:
 
@@ -174,5 +174,9 @@ Druhou možností je speciální IDE *Thonny - Python IDE for beginners*, ke sta
 
 A poslední varianta, kterou jsme dříve využívali i pro `deploy` (sestavení systému) je program `ampy`, přímo určený pro vzdálenou práci se soubory na ESP.
 Tomu se věnujeme obšírněji na samostatné stránce [ampy](/ampy).
+
+---
+
+*Původní verze tohoto dokumentu je na https://www.octopuslab.cz/micropython-octopus/*
 
 

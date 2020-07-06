@@ -97,7 +97,8 @@ Pokud si chcete nahrát velký balíček ukázek a testů, máme k dispozici op�
 Provedeme reset zařízení. Pak spustíme `setup()` a opět postupně `cw` (connect wifi) a tentokrát `sde` (system download examples).
 Více o ukázkách se dozvíte v dokumentaci: [/basicdoc/#octopus-examples](/basicdoc/#octopus-examples).
 
-!!! note "**Co obsahuje stable.tar**"
+!!! note "
+    **Co obsahuje stable.tar**"
 
     Vybrané knihovny, které jsou veřejně dostupné na [github.com/octopusengine/octopuslab](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython) po našem otestování jsou převedeny do `.mpy` a uloženy do souboru `stable.tar`, který je v našem cloudu *(vzdálené internetové úložiště)*
 

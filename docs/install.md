@@ -63,6 +63,7 @@ Pro ulehčení instalace máme vlastní fork Micropythonu, do kterého jsme zain
  [sd]  - system download
  [q]   - quit setup
 ==============================
+select:
 ```
 zvolte `w` [enter]
 
@@ -86,9 +87,25 @@ pro přidání vaší wifi sítě do zařízení
 
 
 ### System download -  Deploy
-Po připojení do Internetu se v select setupu napíše:
-`cw` [enter] (conect wifi)
-ESP se připojí k WiFi
+
+!!! note "**stable.tar**"
+
+    Vybrané knihovny, které jsou veřejně dostupné na [github.com/octopusengine/octopuslab](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython) po otestování převedeme do souboru `stable.tar`, který je v našem cloudu *(vzdálené internetové úložiště)*
+
+    ```./precompile.sh 
+    Compile file deploy/lib/blesync_uart/__init__.py
+    Compile file deploy/lib/blesync_uart/client.py
+    Compile file deploy/lib/blesync_uart/server.py
+    Compile file deploy/lib/blesync.py
+    Compile file deploy/lib/blesync_client.py
+    Compile file deploy/lib/blesync_server.py
+    Compile file deploy/components/oled/__init__.py
+    Compile file deploy/components/__init__.py
+    Compile file ...
+    ```
+
+Po připojení do Internetu se v **select:** `setup()` napíše:
+`cw` [enter] (conect wifi) a ESP se připojí k WiFi
 
 `sd` [enter] (system download - from url octopus), které provede stažení **TARu** z našeho cloudu - vše se do ESP samo nahraje a rozbalí. Průběžně uvidíte všechny soubory (včetně podadresářů).
 *(*3)*

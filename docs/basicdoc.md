@@ -34,6 +34,12 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 
 *Uživatele vlastně nemusí zajímat, kde to je uloženo, a tak na to důraz neklademe, jen je vhodné si to pohlídat při sestavování větších projektů.*
 
+!!! hint "**Zdroje programového kódu**"
+    `Github` => `stable.tar` => `docs`
+    
+    Naší snahou je udržet v souladu zdroj z githubu: [github.com/octopusengine/octopuslab](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython), který se po *kompilaci a komprimaci* stane [stable.tar](/install/#system-download-deploy) a k němu udržovat aktuální **dokumentaci**.
+
+
 ---
 
 ### Adresářová strukrura na ESP32

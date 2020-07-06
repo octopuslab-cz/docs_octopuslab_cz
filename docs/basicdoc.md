@@ -97,14 +97,43 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 
 !!! warning "**Pozor**"
     **Pokud jste používali náš systém už v roce 2019**, přeinstalujte si na novou verzi. Velká část systému by vám už nefungovala. Od té doby došlo totiž k řadě změn. Především byly tři zásadní verze Micropythonu, kde se měnil i formát "kompilovaných" souborů `.mpy`, které jsou základem naší distribuce. Také se doplnilo `BLE` pro práci s **BlueTooth low energy**.
-    A další změnou byla velká `refaktorizace` systému **octopus**, kde podardesář `util` byl rozdělen na `utils` (rp sw utility a hlaví framework) a `components` (kde jsou převážně knihovny pro hw komponenty a periferie.) Také `shell` byl přesunut do rootu z `util/shell`.
+    A další změnou byla velká `refaktorizace` systému **octopus**, kde podardesář `util` byl rozdělen na `utils` (pro SW utility a hlavní framework) a `components` (kde jsou převážně knihovny pro hw komponenty a periferie.) Také `shell` byl přesunut z `util/shell` do rootu.
 
 
 ### Soubory boot.py a main.py
 
-`boot.py` - soubor, který se zavádí při bootování
+#### • boot.py 
+je soubor, který se spouští jako první po bezprostřením startu nebo po resetu ESP. Zpravidla ho neměníme. Měl by obsahovat základní obecnou inicializaci. My tam máme především definice cest k modulům:
 
-`main.py` je hlavní soubor programu, který budeme využívat pro své projekty 
+```python
+# boot.py
+def setup():
+    import utils.setup
+    utils.setup.setup()
+
+def octopus():
+    import utils.octopus
+    utils.octopus.octopus()
+    return utils.octopus
+
+def reset():
+    from machine import reset
+    reset()
+
+def shell():
+    import shell
+    shell.shell()
+```
+
+#### • main.py 
+je hlavní soubor uživatelského programu, který budeme využívat pro své projekty. Spustí se (pokud existuje) hned po boot.py.
+Často používáme jednoduché kopírování existujícího programu nebo ukázky (z examples) v prostředí uPyshell:
+
+```batch
+$ cp examples/blink.py main.py
+
+```
+
 
 ---
 
@@ -626,7 +655,7 @@ import utils.ble.bluefruit as bf
 
 ## OCTOPUS Examples
 
-### examples/x.py
+### • examples/x.py
 
 V souboru s názvem komponenty by měla být základní ukázka, nejčastěji nejjednodušší nebo nejkratší s využitím **octopus workframe**
 
@@ -653,7 +682,7 @@ oled = oled_init()
 ```
 ► [Oled](#oled)
 
-### examples/x_basic.py
+### • examples/x_basic.py
 
 ukázka, která pordobněji vysvětlí použítí obecnějšího přístupu, naopak oproti předchozímu - zcela bez využití **octopus workframe**
 
@@ -663,7 +692,7 @@ ukázka, která pordobněji vysvětlí použítí obecnějšího přístupu, nao
 ► [Oled](#oled)
 
 
-### examples/test_x.py
+### • examples/test_x.py
 
 Tyto ukázky slouží zároveň i jako soubor hardwarových testů jednotlivých komponent, a jsou volány z testovacího adresáře `tests`. Vyznačují se tím, že vždy pouze provedou nějakou akci nebo soubor akcí a pak skončí, aby se případně mohlo pokračovat dalším.
 Například pro otestování EDU_KIT1: voláme soubor [/tests/main-test_sw1.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/tests/main-test_sw1.py) který spouští následující ukázka/testy:
@@ -676,7 +705,7 @@ import examples.test_display7
 import examples.test_analog
 ```
 
-### eaxamples/subdir
+### • eaxamples/subdir
 
 Specifické ukázky jsou v podaresářích:
 

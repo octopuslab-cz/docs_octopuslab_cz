@@ -34,7 +34,7 @@ Posledními kroky jsou:
 - **spustit setup** - z prostředí Micropythonu nastavit wifi, připojit se na wifi. Zamapatujte si: `setup()`
 - **stáhnout poslední verzi** "workframe" Octopus pomocí *octopus_initial.setup*. (Celý systém se stahuje z Internetu přímo do ESP32 přes WiFi.)
 
-### octopus_initial.setup()
+### • octopus_initial.setup()
 
 Pro ulehčení instalace máme vlastní fork Micropythonu, do kterého jsme zaintegrovali malý modul `octopus_initial`.
 
@@ -67,7 +67,7 @@ select:
 ```
 zvolte `w` [enter]
 
-### Nastavení WiFi: 
+### • Nastavení WiFi: 
 ```bash
 ==============================
       S E T U P - W I F I
@@ -86,7 +86,7 @@ pro přidání vaší wifi sítě do zařízení
 `PASSWORD:` a heslo do ní
 
 
-### System download -  Deploy
+### • System download -  Deploy
 
 !!! note "**stable.tar**"
 
@@ -104,15 +104,14 @@ pro přidání vaší wifi sítě do zařízení
     Compile file ...
     ```
 
-Po připojení do Internetu se v **select:** `setup()` napíše:
+Pro připojení do Internetu se v **select:** `setup()` napíše:
 `cw` [enter] (conect wifi) a ESP se připojí k WiFi
 
 `sd` [enter] (system download - from url octopus), které provede stažení **TARu** z našeho cloudu - vše se do ESP samo nahraje a rozbalí. Průběžně uvidíte všechny soubory (včetně podadresářů).
-*(*3)*
 
 ---
 
-### Examples - je adresář plný příkladů
+### • Examples - je adresář plný příkladů
 
 Pokud si chcete nahrát velký balíček ukázek a testů, máme k dispozici opět "zabalený" `.tar` soubor u nás v cloudu.
 Provedeme reset zařízení. Pak spustíme `setup()` a opět postupně `cw` (connect wifi) a tentokrát `sde` (system download examples).
@@ -163,7 +162,7 @@ Press Ctrl+C to abort
 select:
 ```
 
-### Základní vysvětlení: 
+### Základní nastavení: 
 
 - První nastavení desky - `ds` - nejčastěji se používá `5` pro [ROBOTboard](https://www.octopuslab.cz/vyvojove-desky/robot-board/) nebo `9` pro [ESP32board](https://www.octopuslab.cz/esp32-board/) - i na "prázdném" ESP je vhodné zvolit alespoň jednu z variant (až podle konkrétních periferíí a především pak podle druhu sběrnic, se řeší, co dál)
 - `ios` - nastavení periférií, není nezbytné, kromě oled(I2c) nebo disp7 (SPI) - pokud chcete využít "chytré" [pinouty](/basicdoc/#pinout) "octopus frameworku".

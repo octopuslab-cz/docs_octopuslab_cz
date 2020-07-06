@@ -77,12 +77,11 @@ zvolte `w` [enter]
  [s]  - Show configuration  
 ==============================
 ```
-zvolte `a` a stiskněte [enter] 
-pro přidání vaší wifi sítě do zařízení 
-(uloží se do flash ESP v config/wifi.json) 
+zvolte `a` a stiskněte [enter] pro přidání vaší wifi sítě do zařízení a vyplňte správně:
 
-- **SSID:** název Vaší wifi
-- **PASSWORD:** a heslo do ní
+**SSID:** název Vaší wifi | **PASSWORD:** a heslo do ní
+
+Nastavení WiFi se uloží do flash ESP (v *config/wifi.json*) a je uchováno i pro další použití.
 
 
 ### • System download -  Deploy

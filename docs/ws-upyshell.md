@@ -3,15 +3,18 @@
 Emulátor Linuxového shellu:
 
 Samostatné stránky:
+
 [octopuslab.cz/upyshell](https://www.octopuslab.cz/upyshell/)
+
 [octopuslab.cz/upyshell2](https://www.octopuslab.cz/upyshell2/)
 
-Zdrojové kódy: 
+Zdrojové kódy:
+
 [octopusengine/micropython-shell](https://github.com/octopusengine/micropython-shell)
 
-Popis:
+## Popis:
 
-### help
+### • help
 
 ```batch
    --------+--------------------------+--------------------
@@ -42,7 +45,7 @@ Popis:
 ```
 ---
 
-### práce se soubory
+### • práce se soubory
 
 ```batch
 uPyShell:~/$ ls                            # list = výpis adresářů
@@ -56,7 +59,7 @@ uPyShell:~/$ rm test/main_copy.py          # smazání souboru
 
 ---
 
-### wifi
+### • wifi
 ```batch
 uPyShell:~/$ wifi scan
 uPyShell:~/$ wifi off
@@ -68,7 +71,7 @@ uPyShell:~/$ wget https://your_url.path/file.py
 
 ---
 
-### editor
+### • editor
 
 Občas je potřeba udělat jen malou úpravu v krátkém programu. Nejčastěji je to postupné měnění nějakých parametrů, kterým si chceme ověřit funkčnost programu nebo otestovat různé varianty. To byl důvod, proč jsme se dospěli k na první pohled šílenému nápadu vytvořit alespoň "řádkový" editor v **Micropythonu**.
 ```batch
@@ -100,7 +103,7 @@ WARNING: Do not use for editing lines exceeding your terminal width - you may BR
 
 ---
 
-### spouštění procesů
+### • spouštění procesů
 
 V shellu napíšeme pro spuštění programu:
 `$ run examples/blink.led`

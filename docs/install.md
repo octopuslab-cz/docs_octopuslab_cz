@@ -65,7 +65,7 @@ Pro ulehčení instalace máme vlastní fork Micropythonu, do kterého jsme zain
 ==============================
 select:
 ```
-zvolte `w` [enter]
+Zvolte `w` [enter].
 
 ### • Nastavení WiFi: 
 ```bash
@@ -77,30 +77,12 @@ zvolte `w` [enter]
  [s]  - Show configuration  
 ==============================
 ```
-zvolte `a` a stiskněte [enter] pro přidání vaší wifi sítě do zařízení a vyplňte správně:
+Zvolte `a` a stiskněte [enter] pro přidání vaší wifi sítě do zařízení a vyplňte správně:
 
-**SSID:** název Vaší wifi | **PASSWORD:** a heslo do ní
-
-Nastavení WiFi se uloží do flash ESP (v *config/wifi.json*) a je uchováno i pro další použití.
+**SSID:** název Vaší wifi | **PASSWORD:** a heslo do ní. Nastavení WiFi se uloží do flash ESP (v *config/wifi.json*) a **je uchováno** i pro další použití.
 
 
 ### • System download -  Deploy
-
-!!! note "**stable.tar**"
-
-    Vybrané knihovny, které jsou veřejně dostupné na [github.com/octopusengine/octopuslab](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython) po otestování převedeme do souboru `stable.tar`, který je v našem cloudu *(vzdálené internetové úložiště)*
-
-    ```./precompile.sh 
-    Compile file deploy/lib/blesync_uart/__init__.py
-    Compile file deploy/lib/blesync_uart/client.py
-    Compile file deploy/lib/blesync_uart/server.py
-    Compile file deploy/lib/blesync.py
-    Compile file deploy/lib/blesync_client.py
-    Compile file deploy/lib/blesync_server.py
-    Compile file deploy/components/oled/__init__.py
-    Compile file deploy/components/__init__.py
-    Compile file ...
-    ```
 
 Pro připojení do Internetu se v **select:** `setup()` napíše:
 `cw` [enter] (conect wifi) a ESP se připojí k WiFi
@@ -114,6 +96,23 @@ Pro připojení do Internetu se v **select:** `setup()` napíše:
 Pokud si chcete nahrát velký balíček ukázek a testů, máme k dispozici opět "zabalený" `.tar` soubor u nás v cloudu.
 Provedeme reset zařízení. Pak spustíme `setup()` a opět postupně `cw` (connect wifi) a tentokrát `sde` (system download examples).
 Více o ukázkách se dozvíte v dokumentaci: [/basicdoc/#octopus-examples](/basicdoc/#octopus-examples).
+
+!!! note "**Co obsahuje stable.tar**"
+
+    Vybrané knihovny, které jsou veřejně dostupné na [github.com/octopusengine/octopuslab](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython) po našem otestování jsou převedeny do `.mpy` a uloženy do souboru `stable.tar`, který je v našem cloudu *(vzdálené internetové úložiště)*
+
+    Ukázka jak v octopusLABu "kompilujeme" `.py` do `.mpy` (to vy dělat nemusíte)
+    
+    ```./precompile.sh 
+    Compile file deploy/lib/blesync_uart/__init__.py
+    Compile file deploy/lib/blesync_uart/client.py
+    Compile file deploy/lib/blesync_uart/server.py
+    Compile file deploy/lib/blesync.py
+    Compile file deploy/components/oled/__init__.py
+    Compile file deploy/components/__init__.py
+    Compile file ...
+    ...
+    ```
 
 ---
 ## Setup - nastavení systému

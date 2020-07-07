@@ -538,6 +538,18 @@ db.listAll()
 
 ## OCTOPUS Lib
 
+### LCD
+
+```python
+from machine import I2C , Pin
+i = I2C(scl=Pin(22), sda=Pin(21), freq=100000)
+# i.scan() # > [39]
+from lib.esp8266_i2c_lcd import I2cLcd
+lcd = I2cLcd(i, 39, 2, 16)
+lcd.writetext("abc")
+```
+
+
 ### St7735
 
 Barevný displej TFT 128x160, který ale vyžaduje při práci s Micropythonem větší paměť.

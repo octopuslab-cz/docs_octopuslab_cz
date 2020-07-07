@@ -54,8 +54,9 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- ...
 |      |-- /bmp280
 |      |-- /bh1750 # i2c light sensor
+|      |-- [st7735.py](#st7735)
 |      |-- colors_rgb.py
-|      |-- hcsr04.py # ultrasonic
+|      |-- [hcsr04.py](#hcsr04) # ultrasonic
 |      |-- ...
 |
 |-- [/components](#octopus-components)
@@ -536,6 +537,70 @@ db.listAll()
 ---
 
 ## OCTOPUS Lib
+
+### St7735
+
+Barevný displej TFT 128x160, který ale vyžaduje při práci s Micropythonem větší paměť.
+
+```python
+from machine import Pin, SPI, SDCard
+from time import sleep, sleep_ms
+
+from utils.pinout import set_pinout
+pinout = set_pinout()
+
+import framebuf
+from lib import st7735
+from lib.rgb import color565
+
+print("spi.TFT 128x160 init >")
+spi = SPI(1, baudrate=10000000, polarity=1, phase=0, sck=Pin(pinout.SPI_CLK_PIN), mosi=Pin(pinout.SPI_MOSI_PIN))
+ss = Pin(pinout.SPI_CS0_PIN, Pin.OUT)
+
+rst = Pin(27, Pin.OUT) #PWM1(17) > DEv3(27)
+cs = Pin(5, Pin.OUT)  #SCE0()
+dc = Pin(26, Pin.OUT)  #PWM2(16) >  IO26?
+
+tft = st7735.ST7735R(spi, cs = cs, dc = dc, rst = rst)
+
+print("spi.TFT framebufer >")
+fb = framebuf.FrameBuffer(bytearray(tft.width*tft.height*2), tft.width, tft.height, framebuf.RGB565)
+fbp = fb.pixel
+
+fb.line(128,0,0,166,color565(0,255,0))
+tft.blit_buffer(fb, 0, 0, tft.width, tft.height)
+...
+```
+
+[examples/test_tft128x160.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/test_tft128x160.py)
+
+---
+
+### hcsr04
+
+Ultrazvukový měřič vzdálenosti.
+
+```python
+from time import sleep
+from util.pinout import set_pinout
+
+pinout = set_pinout()
+
+from hcsr04 import HCSR04
+print("ulrasonic distance sensor")
+echo = HCSR04(trigger_pin=pinout.PWM2_PIN, echo_pin=pinout.PWM1_PIN)
+
+while True:
+    echo_cm = echo.distance_cm()
+    print(echo_cm)
+    sleep(1)
+
+```
+
+[examples/ultrasonic.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/ultrasonic.py)
+
+---
+
 
 ### ![hwsoc](img/database.png){: style="width:28px" } pubsub
 

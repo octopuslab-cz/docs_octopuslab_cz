@@ -71,6 +71,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |
 |-- [/utils](#octopus-utils)
 |      |-- octopus
+|      |-- [octopus_lib](#octopus_lib)
 |      |-- [pinout](#pinout)
 |      |-- [bits](#bits)
 |      |-- [transform](#transform)
@@ -252,8 +253,6 @@ def on_press_top_button():
 
 ---
 
-
-
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Display7
 Osm sedmisegmentovek s obvodem MAX na sběrnici `SPI` je do začátku ideální displej pro základy práce s mikrokontrolérem. Má "retro" sedm segmentů pro zobrazení čísel - proto `disp7`. Obdobný modul se shodným ovladačem je matice 8x8 svítivých diod, ten jsme pojmenovali `disp8`.
 
@@ -320,8 +319,10 @@ def oled_init():
     from machine import Pin, I2C
     import ssd1306
 
-    pinout = set_pinout()
-    i2c = I2C(0, scl=Pin(pinout.I2C_SCL_PIN), sda=Pin(pinout.I2C_SDA_PIN), freq=100000)
+    # pinout = set_pinout()
+    # i2c = I2C(0, scl=Pin(pinout.I2C_SCL_PIN), sda=Pin(pinout.I2C_SDA_PIN), freq=100000)
+    from utils.octopus_lib import i2c_init
+    i2c = i2c_init()
 
     oled = ssd1306.SSD1306_I2C(128, 64, i2c, 0x3c)
     return oled
@@ -830,6 +831,44 @@ from config import Config
 conf = Config("your_config")
 a =  conf.get("a") # 1
 b =  conf.get("b") # 2
+
+```
+
+### ![hwsoc](img/database.png){: style="width:28px" } octopus_lib
+
+#### i2c_init()
+
+```python
+
+```
+
+```python
+# I2C address:
+OLED_ADDR = 0x3c
+LCD_ADDR = 0x27
+bhLight = 0x23
+bh2Light = 0x5c
+tslLight = 0x39
+
+# PCF8574           PCF8574A
+# AAA - hex (dec)
+# 210
+# 000 - 0x20 (32)   0x38 (56)
+# 001 - 0x21 (33) * 0x39 (57)
+# 010 - 0x22 (34)   0x3A (58)
+# 011 - 0x23 (35) * 0x3B (59)
+# 100 - 0x24 (36)   0x3C (60)
+# 101 - 0x25 (37)   0x3D (61)
+# 110 - 0x26 (38)   0x3E (62)
+# 111 - 0x27 (39)   0x3F (63)
+# * ROBOTboard
+
+```
+
+
+#### spi_init()
+
+```python
 
 ```
 

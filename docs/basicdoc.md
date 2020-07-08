@@ -541,12 +541,15 @@ db.listAll()
 ### LCD
 
 ```python
-from machine import I2C , Pin
-i = I2C(scl=Pin(22), sda=Pin(21), freq=100000)
-# i.scan() # > [39]
+# from machine import I2C , Pin
+# i = I2C(scl=Pin(22), sda=Pin(21), freq=100000)
+from utils.octopus_lib import i2c_init
+i2c = i2c_init()
+# i2c.scan() # > [39]
 from lib.esp8266_i2c_lcd import I2cLcd
-lcd = I2cLcd(i, 39, 2, 16)
-lcd.writetext("abc")
+lcd = I2cLcd(i2c, 39, 2, 16) # addr, rows, col
+lcd.putstr("octopusLab") # write text
+...
 ```
 
 

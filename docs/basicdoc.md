@@ -180,7 +180,24 @@ while True:
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Rgb
 Modul pro **RGB led** je vytvořen především pro práci s ***RGB svítivými dioadmi*** typu *WS*.
 Zdrojový kód knihovny: [components/rgb](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/rgb/__init__.py)
+Používáme typ **WS2812b** - proto zkratka WS. Knihovna je pak rozšířením vestavěné `NeoPixel`. Rozšířeno o metody:
 
+- color(color, index)
+- simpleTest()
+- wheel()
+- random_color()
+- rainbow_cycle()
+
+
+```python
+from components.rgb import Rgb
+ws = Rgb(15) # BUILT_IN_RGB (WS) ROBOTboard
+ws.color((255,0,0)) # R G B => RED
+
+ws.simpleTest()
+```
+
+Obecnější s využitím set_pinout() a io_config:
 
 ```python
 from components.rgb import Rgb

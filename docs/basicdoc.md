@@ -70,13 +70,13 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- [dcmotors](#dcmotors)
 |
 |-- [/utils](#octopus-utils)
-|      |-- octopus
 |      |-- [octopus_lib](#octopus_lib)
 |      |-- [pinout](#pinout)
 |      |-- [bits](#bits)
 |      |-- [transform](#transform)
 |      |-- [database](#database)
 |      |-- [mqtt](#mqtt)
+|      |-- octopus
 |      |-- ...
 |      |-- BLE
 |
@@ -258,20 +258,22 @@ Osm sedmisegmentovek s obvodem MAX na sběrnici `SPI` je do začátku ideální 
 
 Zdrojový kód [components/display7](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/components/display7)
 
-Před inicializací se musí nejdříve připojit `SPI`.
+Před inicializací se musí nejdříve připojit `SPI`. V následující ukázce je "dvojitě" zakomentovaná `##` obecnější metoda a použitá je `spi_init()` z knihovny `octopus_lib`.
 
 
 ```python
 from machine import Pin, SPI
-from utils.pinout import set_pinout
 from components.display7 import Display7
-
+## from utils.pinout import set_pinout
+from utils.octopus_lib import spi_init
 
 print("this is simple Micropython example | octopusLAB & ESP32")
 
 print("--- spi-init ---")
-pinout = set_pinout()
-spi = SPI(1, baudrate=10000000, polarity=1, phase=0, sck=Pin(pinout.SPI_CLK_PIN), mosi=Pin(pinout.SPI_MOSI_PIN))
+## pinout = set_pinout()
+## spi = SPI(1, baudrate=10000000, polarity=1, phase=0, sck=Pin(pinout.SPI_CLK_PIN), mosi=Pin(pinout.SPI_MOSI_PIN))
+spi = spi_init()
+
 ss = Pin(pinout.SPI_CS0_PIN, Pin.OUT)
 #spi.deinit() #print("spi > close")
 
@@ -282,7 +284,8 @@ d7.display()
 
 ```
 
-Kratší "octopus" verze:
+
+Nejkratší "octopus" verze:
 
 ```python
 from time import sleep

@@ -39,7 +39,6 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
     
     Naší snahou je udržet v souladu zdroj z githubu: [github.com/octopusengine/octopuslab](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython), který se po *kompilaci a komprimaci* stane [stable.tar](/install/#system-download-deploy) a k němu udržovat aktuální **dokumentaci**.
 
-
 ---
 
 ### Adresářová strukrura na ESP32
@@ -285,7 +284,7 @@ d7.display()
 ```
 
 
-Nejkratší "octopus" verze:
+Nejkratší je "octopus framework" verze, kde je ale nutno mít přes `setup()` a `ds` nastavenu desku (nějčastěji ROBOTboard nebo ESP32board) a dále pomocí `ios` nastaveno `disp7` (4 | 1)
 
 ```python
 from time import sleep

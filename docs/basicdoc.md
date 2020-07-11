@@ -178,14 +178,14 @@ while True:
 ---
 
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Rgb
-Modul pro **RGB led** je vytvořen především pro práci s ***RGB svítivými dioadmi***.
+Modul pro **RGB led** je vytvořen především pro práci s ***RGB svítivými diodami***.
 Používáme typ **WS2812b** - *proto zkratka WS*. Knihovna je pak rozšířením vestavěné `NeoPixel`.
 
 Zdrojový kód knihovny: [components/rgb](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/rgb/__init__.py)
 
 Rozšířeno o metody:
 
-- `color(color)` # pro jednu LED diodu
+- `color(color)` # pro jednu LED diodu, color ve formátu (R,G,B), 0-255
 - `color(color, index)` # pro více, indexováno
 - `simpleTest()` # proběhne R, G, B
 - `wheel()` # z čísla vygenerje barvu

@@ -82,6 +82,11 @@ Pro další matematické funkce a konstanty použijeme knihovnu `math`.
 >>> print(math.pi)      # > 3.141593
 ```
 
+### Výpis dostupných modulů:
+```
+>>> help("modules")
+```
+
 
 Více řádkové "dočasné definice vlastních funkcí" pomocí `def název(parametry):` - odsazení za nás udělá REPL ... nezapomenout na dvojtečku!
 

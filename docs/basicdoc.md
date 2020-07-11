@@ -359,6 +359,18 @@ oled.invert(0)
 ...
 ```
 
+```python
+>>> from assets.icons9x9 import ICON_clr, ICON_heart
+>>> oled.draw_icon(ICON_heart,115,15) 
+
+>>> def heartBeat()               
+...    oled.draw_icon(ICON_heart,115,15)
+...    sleep(1)
+...    oled.draw_icon(ICON_clr,115,15)                 
+...    sleep(1)
+...
+```
+
 ---
 ### ![hwsoc](img/mchtr.png){: style="width:28px" } Servo
 Modul pro práci se servem, opět vytvořením instance na daném PINu (musí být PWM).

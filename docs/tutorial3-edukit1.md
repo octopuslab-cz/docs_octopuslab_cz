@@ -1,10 +1,10 @@
 # ![logo](img/logo_small.png) Tutorial 3 - EDU_KIT1
 
-Předpokládáme, že již máte na svém ESP [nainstalovaný Micropython](/install). V úvodních [tutorial 1 (Python)](/tutorial1-python) a [tutorial 2 (Micropython | ESP)](/tutorial2-micropython-esp) jsme se seznámili s úplnými základy. V tomto dalším pokračování už budeme potřebovat ESP32. 
+Předpokládáme, že již máte na svém [ESP32 Do-It](/esp32/#modul-esp32-doit-2x15) nainstalovaný [Micropython](/install). V úvodních [tutorial 1 (Python)](/tutorial1-python) a [tutorial 2 (Micropython | ESP)](/tutorial2-micropython-esp) jsme se seznámili s úplnými základy. V tomto dalším pokračování už budeme potřebovat **ESP32**. 
 
 ## • Led
 
-Led dioda osazená na DoIt modulu je na Pinu 2.
+Led dioda osazená na [ESP32 Do-It](/esp32/#modul-esp32-doit-2x15) modulu je na Pinu 2.
 [referenční příručka / led](/basicdoc/#led)
 
 ## • RGB Led

@@ -4,11 +4,22 @@ Předpokládáme, že již máte na svém ESP [nainstalovaný Micropython](/inst
 
 ## • Led
 
+Led dioda osazená na DoIt modulu je na Pinu 2.
+[referenční příručka / led](/basicdoc/#led)
+
 ## • RGB Led
+
+RGB barevná dioda je na WS konektoru. Tento typ se dá připojit i na další konektor a diod WS se může řadit víc z sebou. (Až 127, na to je ale potřeba posílit napájení napětí 5V) Používáme častěji **pásek** 8-mi diod, **kroužek** 12 nebo 18, také **matice** 4x4 a spojované do většího bloku.
+[referenční příručka / rgb](/basicdoc/#rgb)
 
 ## • Display7
 
+Oblíbený modul s obvodem MAX na sběrnici SPI přímo připojitelný na OCTOBUS-display sběrnici.
+[referenční příručka / display7](/basicdoc/#led)
+
 ## • Servo
+
+[referenční příručka / servo](/basicdoc/#servo)
 
 ## • Senzory
 
@@ -16,9 +27,12 @@ Předpokládáme, že již máte na svém ESP [nainstalovaný Micropython](/inst
 
 ### Mechatronika
 
-DC motory
+Modul ROBOT board se dá v jedné verzi zapojení osadit "H-můstkem" L293, kterým se dají ovládat dva DC motory. Používáme "levné čínské" žluté, na 5-9V (doporučeno 7)
 
-### Exoandér I2C
+#### DC motory
+
+### Expandér I2C
+PCF 8 bit + výkonový budič ULN. 
 
 ---
 

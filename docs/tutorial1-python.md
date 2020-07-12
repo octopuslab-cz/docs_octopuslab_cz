@@ -50,20 +50,18 @@ Někdy chceme složitější matematické výrazy, než je
 Pro další matematické funkce a konstanty použijeme knihovnu `math`.
 
 ```
->>> import math        # importujeme knihovnu, až když jí potřebujeme,
+>>> import math        # knihovnuimportuje me, až když jí potřebujeme,
                        # jinak nám zbytečně blokuje operační paměť
 
->>> math.log10(1000)   # funkce - logaritmus
+>>> math.log10(1000)   # funkce logaritmus je jenou z metod knihovny math
 3.0
 
->>> math.pi            # konstanta Pí
-3.141593               # počet desetinných míst je omezený
+>>> math.pi            # konstanta Pí (není to metoda!)
+3.141593               # a počet desetinných míst je omezený
 ```
 
 !!! note
-      Toto není výuka programování – ale jen ukázky a experimenty s přihlédnutím na sadu knihoven a modulů **octopusLab** pro práci s vybraným HW.
-
-      Pro podrobnější proniknutí do tajů programování v Pythonu doporučujeme: 
+      Toto není výuka programování – ale jen ukázky a experimenty s přihlédnutím na sadu knihoven a modulů **octopusLab** pro práci s vybraným hardware. Pro podrobnější proniknutí do tajů programování v Pythonu doporučujeme: 
 
       - [naucse.python.cz](https://naucse.python.cz/)
       - [naucse.python.cz/course/mi-pyt/intro/micropython](https://naucse.python.cz/course/mi-pyt/intro/micropython/)
@@ -73,7 +71,7 @@ Pro další matematické funkce a konstanty použijeme knihovnu `math`.
 !!! hint "**Python je jednoduchý**"
 
     - logické členění se provádí pomocí striktního odsazování bloků
-    - pozor na závorky u metod a funkcí `print("řetězec“)` a uvozovky pro takzvané *řetězce (shluky písmen, co nejsou číslo)*
+    - pozor na závorky u metod a funkcí `print("řetězec")` a uvozovky pro takzvané *řetězce (shluky písmen, co nejsou číslo)*
     - pozor na dvojtečku za deklarací funkce, cyklu nebo podmínky: def funkce(parametr)`:`
 
 ```
@@ -82,11 +80,10 @@ Pro další matematické funkce a konstanty použijeme knihovnu `math`.
 >>> print(math.pi)      # > 3.141593
 ```
 
-### Výpis dostupných modulů:
+### Výpis dostupných modulů
 ```
 >>> help("modules")
 ```
-
 
 Více řádkové "dočasné definice vlastních funkcí" pomocí `def název(parametry):` - odsazení za nás udělá REPL ... nezapomenout na dvojtečku!
 

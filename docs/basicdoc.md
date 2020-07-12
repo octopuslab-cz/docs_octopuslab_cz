@@ -158,6 +158,28 @@ while True:
     led.blink()
 ```
 
+```python
+dir(led)
+['class', 'init', 'module', 'qualname', 'value', 'dict', 'pin', 'blink', 'toggle', 'state']
+
+>>> led.pin
+> Pin(2)
+>>> led.state
+> False
+>>> led.value(1) # svítí
+>>> led.state    # info o stavu
+1
+```
+
+. TAB nabídka metod: 
+Micropython má obrovskou výhodu v tom, že běží jako interpret: když uživatel napíše název proměnné nebo instance objektu, skoro všechno se o nich můžeme dozvědět. Napište `led` pak `.` (tečka) a stiskněte `TAB`:
+```
+led.
+class       init        module      qualname
+value       dict        pin         blink
+toggle      state
+```
+
 Číslo PINu v ukázce je 2, to je svítivá dioda vestavěná v **DoIt** modulech i v našem ESP32boardu. Ale pro práci s obecným modulem, kde máme možnost si nastavit, kde se Led dioda nachází, použijeme pak variantu základní ukázky z examples, kde `BUILT_IN_LED` je konstanta, ve které je číslo PINu uloženo:
 ```python
 from components.led import Led

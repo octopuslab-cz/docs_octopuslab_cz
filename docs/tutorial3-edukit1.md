@@ -2,17 +2,17 @@
 
 Předpokládáme, že již máte na svém ESP [nainstalovaný Micropython](/install). V úvodních [tutorial 1 (Python)](/tutorial1-python) a [tutorial 2 (Micropython | ESP)](/tutorial2-micropython-esp) jsme se seznámili s úplnými základy. V tomto dalším pokračování už budeme potřebovat ESP32. 
 
-## Led
+## • Led
 
-## RGB Led
+## • RGB Led
 
-## Display7
+## • Display7
 
-## Servo
+## • Servo
 
-## Senzory
+## • Senzory
 
-## Možnosti rozšíření
+## • Možnosti rozšíření
 
 ### Mechatronika
 

@@ -171,7 +171,7 @@ dir(led)
 1
 ```
 
-. TAB nabídka metod: 
+**. TAB nabídka metod:** 
 Micropython má obrovskou výhodu v tom, že běží jako interpret: když uživatel napíše název proměnné nebo instance objektu, skoro všechno se o nich můžeme dozvědět. Napište `led` pak `.` (tečka) a stiskněte `TAB`:
 ```
 led.

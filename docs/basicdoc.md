@@ -581,6 +581,8 @@ db = BTreeDB("test")
 db.addOne("one","1")
 db.listAll()
 ```
+
+Zvídavějším doporučujeme odkaz na práci s daty a databáze ► [Workshop Python DATA](/ws-python-data)
 ---
 
 ### ![hwsoc](img/database.png){: style="width:28px" } MQTT

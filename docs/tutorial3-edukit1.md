@@ -41,4 +41,5 @@ PCF 8 bit + výkonový budič ULN.
 
 Pro pokračování - materiály k některým Workshopům
 
-Tvoření jednoduché hry [Workshop EDUshield1)](/ws-edushield1)
+Práce s daty a databáze ► [Workshop Python DATA](/ws-python-data)
+Tvoření jednoduché hry ► [Workshop EDUshield1)](/ws-edushield1)

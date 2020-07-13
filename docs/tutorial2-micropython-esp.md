@@ -63,9 +63,9 @@ beep(440,500)
 
 *Opakování a shrnutí.*
 
-### Prtostá sekvence příkazů
+### Obyčejná sekvence příkazů
 
-Zatím jsme používali terminál a většinou nám stačil jeden příkaz nebo postupná sekvence příkazů na více řádcích: 
+Zatím jsme používali terminál a většinou nám stačil jeden příkaz nebo postupná sekvence příkazů na několika málo řádcích: 
 
 ```python
 >>> from machine import Pin
@@ -79,6 +79,8 @@ Končí-li však řádek dvojtečkou `:`, Python to vyhodnotí jako "blok" a vyz
 
 ### Definování vlastní funkce - def
 
+Vlastní funkce je "podprogram", který se využívá pro opakující se bloky kódu nebo pro zpřehlednění rozsáhlejších programů.
+Podle příkazu  `def ` a dvojtečky `: ` na konci řádku pozná Python, že uživatel definuje svou vlastní funkci, třeba pro součet dvou vstupních čísel:
 
 ```python
 >>> def suma(x, y):

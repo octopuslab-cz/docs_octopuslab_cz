@@ -40,46 +40,8 @@ Type "help()" for more information.
 133              #zobrazí vypočtenou hodnotu (jako kalkulačka)
 ```
 
----
-
-### Help
-
-```
->>> help()
-Welcome to MicroPython on the ESP32!
-
-For generic online docs please visit http://docs.micropython.org/
-
-For access to the hardware use the 'machine' module:
-
-import machine
-pin12 = machine.Pin(12, machine.Pin.OUT)
-pin12.value(1)
-pin13 = machine.Pin(13, machine.Pin.IN, machine.Pin.PULL_UP)
-print(pin13.value())
-i2c = machine.I2C(scl=machine.Pin(21), sda=machine.Pin(22))
-i2c.scan()
-i2c.writeto(addr, b'1234')
-i2c.readfrom(addr, 4)
-
-Basic WiFi configuration:
-
-import network
-sta_if = network.WLAN(network.STA_IF); sta_if.active(True)
-sta_if.scan()                             # Scan for available access points
-sta_if.connect("<AP_name>", "<password>") # Connect to an AP
-sta_if.isconnected()                      # Check for successful connection
-
-Control commands:
-  CTRL-A        -- on a blank line, enter raw REPL mode
-  CTRL-B        -- on a blank line, enter normal REPL mode
-  CTRL-C        -- interrupt a running program
-  CTRL-D        -- on a blank line, do a soft reset of the board
-  CTRL-E        -- on a blank line, enter paste mode
-
-For further help on a specific object, type help(obj)
-For a list of available modules, type help('modules')
-```
+*Python zde běží v takzvaném interaktivním módu. Po každém vložení řádku (nebo bloku řádků) se okamžitě napsaný příkaz (nebo skupina příkazů) provede a čeká na další výzvu zobrazením `>>>`. 
+Je to výhodné pro testování jednotlivých příkazů, také pro výuku nebo průběžné modifikace.*
 
 ---
 
@@ -121,12 +83,101 @@ Pro další matematické funkce a konstanty použijeme knihovnu `math`.
 >>> print(math.pi)      # > 3.141593
 ```
 
+### Help
+
+Zkuste si napsat `help()`
+
+```
+>>> help()
+Welcome to MicroPython on the ESP32!
+
+For generic online docs please visit http://docs.micropython.org/
+
+For access to the hardware use the 'machine' module:
+
+import machine
+pin12 = machine.Pin(12, machine.Pin.OUT)
+pin12.value(1)
+pin13 = machine.Pin(13, machine.Pin.IN, machine.Pin.PULL_UP)
+print(pin13.value())
+i2c = machine.I2C(scl=machine.Pin(21), sda=machine.Pin(22))
+i2c.scan()
+i2c.writeto(addr, b'1234')
+i2c.readfrom(addr, 4)
+
+Basic WiFi configuration:
+
+import network
+sta_if = network.WLAN(network.STA_IF); sta_if.active(True)
+sta_if.scan()                             # Scan for available access points
+sta_if.connect("<AP_name>", "<password>") # Connect to an AP
+sta_if.isconnected()                      # Check for successful connection
+
+Control commands:
+  CTRL-A        -- on a blank line, enter raw REPL mode
+  CTRL-B        -- on a blank line, enter normal REPL mode
+  CTRL-C        -- interrupt a running program
+  CTRL-D        -- on a blank line, do a soft reset of the board
+  CTRL-E        -- on a blank line, enter paste mode
+
+For further help on a specific object, type help(obj)
+For a list of available modules, type help('modules')
+```
+
 ### Výpis dostupných modulů
 ```
 >>> help("modules")
 ```
+Pro zvídavé, kteé zajímá, jaké všechny "moduly" jsou aktuálně v Micropythonu dostupny (Verze 1.12-599):
+```
+__main__          inisetup          ubinascii         urandom
+_boot             machine           ubluetooth        ure
+_onewire          math              ucollections      urequests
+_thread           micropython       ucryptolib        uselect
+_uasyncio         neopixel          uctypes           usocket
+_webrepl          network           uerrno            ussl
+apa106            ntptime           uhashlib          ustruct
+btree             onewire           uhashlib          utils/octopus_initial
+builtins          ssd1306           uheapq            utils/wifi_connect
+cmath             sys               uio               utime
+dht               uarray            ujson             utimeq
+ds18x20           uasyncio/__init__ umqtt/robust      uwebsocket
+esp               uasyncio/core     umqtt/simple      uzlib
+esp32             uasyncio/event    uos               webrepl
+flashbdev         uasyncio/funcs    upip              webrepl_setup
+framebuf          uasyncio/lock     upip_utarfile     websocket_helper
+gc                uasyncio/stream   upysh
+Plus any modules on the filesystem
+```
 
-### Blok na více řádků
+A po importu se můžete dotázat na každý modul samostatně:
+```
+>>> import math
+>>> help(math)
+object <module 'math'> is of type module
+  __name__ -- math
+  e -- 2.718282
+  pi -- 3.141593
+  sqrt -- <function>
+  pow -- <function>
+  exp -- <function>
+  expm1 -- <function>
+  log -- <function>
+  log2 -- <function>
+  log10 -- <function>
+  cosh -- <function>
+  sinh -- <function>
+  tanh -- <function>
+  acosh -- <function>
+  asinh -- <function>
+  atanh -- <function>
+  cos -- <function>
+  sin -- <function>
+...
+```
+---
+
+### Blok programu na více řádků a odsazování
 
 Více řádkové "dočasné definice vlastních funkcí" pomocí `def název(parametry):` - odsazení za nás udělá REPL `...` nezapomenout na dvojtečku!
 
@@ -146,6 +197,9 @@ Více řádkové "dočasné definice vlastních funkcí" pomocí `def název(par
     (doporučeno 3 nebo 4) nebo TABelátorem. 
     A musí to být stále stejně! Kombinace mezer a TAB je také **syntaktická chyba**.
 
+*Píšeme-li postupně řádek po řádku - příkaz po příkaze, odsazování není potřeba. Až v definování procedur, v cyklech nebo podmínkách - tedy "po dvojtečce" `:`*
+
+---
 
 ### Čekací prodlevy
 - program bude pokračovat až po uplynutí dané doby 
@@ -170,10 +224,7 @@ Ještě drobná vsuvka - cykly a podmínky zmíníme v další části, ale už 
 ... a += 1
 ... print(a)
 ```
-v nekonečné smyčce maximální rychlostí vypisuje obsah zvětšující se proměnné "a"
-
-
-
+v nekonečné smyčce maximální rychlostí vypisuje obsah zvětšující se proměnné "a".
 
 
 ### Generátor náhodných čísel

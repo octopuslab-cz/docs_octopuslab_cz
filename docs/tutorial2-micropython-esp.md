@@ -77,9 +77,15 @@ Už jsem se o tom zmínili několikrát a už byste to mohli mít i zažité. Po
 a opět nám oznámí své *další očekávání pro nové pokyny* promptem `>>>`.
 Končí-li však řádek dvojtečkou `:`, Python to vyhodnotí jako "blok" a vyzve nás pro pokračování třemi tečkami `...`:
 
+### Funkce
+
+Funkce v Pythonu je spíše podprogram, přesněji "metoda", jakou se dají zpracovat různé vstupní veličiny.
+Podrobněji na ► [naucse.python.cz/../functions](https://naucse.python.cz/course/pyladies/beginners/functions/)
+A stáhněte si také ► [tahák s užitečnými funkcemi](https://pyvec.github.io/cheatsheets/basic-functions/basic-functions-cs.pdf)
+
 ### Definování vlastní funkce - def
 
-Vlastní funkce je "podprogram", který se využívá pro opakující se bloky kódu nebo pro zpřehlednění rozsáhlejších programů.
+Vlastní funkce je "podprogram", který si vytvoříme sami pro opakující se bloky kódu nebo pro zpřehlednění rozsáhlejších programů.
 Podle příkazu  `def ` a dvojtečky `: ` na konci řádku pozná Python, že uživatel definuje svou vlastní funkci, třeba pro součet dvou vstupních čísel:
 
 ```python
@@ -100,6 +106,10 @@ Opět se používá stejná konstrukce s dvojtečkou za výrazem podmínky `if`:
 ...
 >>>
 ```
+
+Více podrobností na ► [naucse.python.cz/../comparisons](https://naucse.python.cz/course/pyladies/beginners/comparisons/) (porovnávání)
+ ► [naucse.python.cz/../expressions](https://naucse.python.cz/course/pyladies/beginners/expressions/) (vyhodnocování výrazů)
+
 
 ### Cyklus while nebo for
 
@@ -125,6 +135,6 @@ Podobně pak i `for` cyklus:
 012345>>>
 ```
 
-
+Více na ► [naucse.python.cz/../while](https://naucse.python.cz/course/pyladies/beginners/while/) (cyklus while)
 
 ---

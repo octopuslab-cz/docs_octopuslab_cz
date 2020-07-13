@@ -126,15 +126,26 @@ Pro další matematické funkce a konstanty použijeme knihovnu `math`.
 >>> help("modules")
 ```
 
-Více řádkové "dočasné definice vlastních funkcí" pomocí `def název(parametry):` - odsazení za nás udělá REPL ... nezapomenout na dvojtečku!
+### Blok na více řádků
+
+Více řádkové "dočasné definice vlastních funkcí" pomocí `def název(parametry):` - odsazení za nás udělá REPL `...` nezapomenout na dvojtečku!
 
 ```
-def suma(x, y):
+>>> def suma(x, y):
 ... return x + y
 
 >>> suma (1, 2)
 3
 ```
+
+!!! error "**Odsazování**"
+
+    - zmínili jsme už, že logické členění se provádí pomocí striktního **odsazování** bloků
+    - při psaní jednořádkových pokusů v terminálu (po `>>>`) Vám po řádku končícím dvojtečkou Python sám předvyplní 
+    symbolické tři tečky `...` jako odsazení *viz předchozí ukázka*, ale pozor! Při psaní programu do souboru se odsazuje pomocí mezer 
+    (doporučeno 3 nebo 4) nebo TABelátorem. 
+    A musí to být stále stejně! Kombinace mezer a TAB je také **syntaktická chyba**.
+
 
 ### Čekací prodlevy
 - program bude pokračovat až po uplynutí dané doby 
@@ -149,17 +160,21 @@ sleep_us(50)       # 50 micro sec.
 ### Nekonečný cyklus
 Ještě drobná vsuvka - cykly a podmínky zmíníme v další části, ale už nyní použijeme jednu základní formu: "nekonečný cyklus"
 ```
-while podmínka:
+>>> while podmínka:
 ... prováděj_pokud_je_splněná_podmínka()
 ```
 
 ```
-a = 0
-while True: 
+>>> a = 0
+>>> while True: 
 ... a += 1
 ... print(a)
 ```
 v nekonečné smyčce maximální rychlostí vypisuje obsah zvětšující se proměnné "a"
+
+
+
+
 
 ### Generátor náhodných čísel
 

@@ -128,7 +128,8 @@ For a list of available modules, type help('modules')
 ```
 >>> help("modules")
 ```
-Pro zvídavé, kteé zajímá, jaké všechny "moduly" jsou aktuálně v Micropythonu dostupny (Verze 1.12-599):
+Pokud vás zajímá, které "moduly" jsou aktuálně v Micropythonu dostupny 
+*(Verze 1.12-599)*:
 ```
 __main__          inisetup          ubinascii         urandom
 _boot             machine           ubluetooth        ure
@@ -150,7 +151,7 @@ gc                uasyncio/stream   upysh
 Plus any modules on the filesystem
 ```
 
-A po importu se můžete dotázat na každý modul samostatně:
+A po importu se můžete dotázat na každý modul samostatně (podobně i `math.` + TAB):
 ```
 >>> import math
 >>> help(math)

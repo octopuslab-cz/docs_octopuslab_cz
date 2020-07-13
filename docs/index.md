@@ -10,8 +10,8 @@ V těchto materiálech se sdružuje dokumentace, návody a tutoriály, části w
 
 Co vlastně děláme? Vyvíjíme hardwarové moduly zaměřené na využití **ESP32** a **Micropythonu**. Navrhujeme desky plošných spojů, které se dají podle potřeby proměnit v celou řadu zajímavých projektů pro robotiku, internet věcí a pod.
 **Námi navržené vývojové a experimentální desky, slouží i jako finálně zapojitelné moduly pro projekty nebo jejich části. Jednoduché (nebo částečně zapojené) "produkty" výborně pomáhají i při výuce.**
-V zákldní části se zaměřujeme na jednu z našich "stavebnic" [EDU-KIT1](https://docs.octopuslab.cz/proj-edukit1/).
-Další informace můžete najít na našem webu http://www.octopuslab.cz
+V základní části se zaměřujeme na jednu z našich "stavebnic" [EDU-KIT1](https://docs.octopuslab.cz/proj-edukit1/).
+Další informace můžete najít na webu http://www.octopuslab.cz
 
 ---
 

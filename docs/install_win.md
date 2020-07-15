@@ -26,7 +26,10 @@ Pracujte v novém, prázdném adresáři, např. `projects/esp32`. *Takže byste
 
 Pro rychlý start práce s knihovnami OctopusLab si stáhněte do pracovního adresáře binárku Micropythonu z [Octopus Micropython pro ESP32](https://octopusengine.org/download/micropython/micropython-octopus.bin) `https://octopusengine.org/download/micropython/micropython-octopus.bin` - náš fork [oficiálního MicroPythonu](https://micropython.org/download/esp32/)
 
-Po připojení ESP modulu přes kabel USB (typicky microUSB) musíme zjistit, na kterém COM portu ho máme. Typicky `WIN + X` a v menu `Správce zařízení / Porty (COM a Lpt)` najdeme zařízení **Silicon Labs  CP210x USB to UART**. A tam bývá `COM + číslo` (COM3, COM6...)
+
+#### Detekce portu, kde je ESP
+
+Po připojení ESP modulu přes kabel USB (microUSB) musíme zjistit, na kterém `COM` portu ho máme. Typicky stačí zmáčknout symbol Windows a X -> `WIN + X` a v menu `Správce zařízení / Porty (COM a Lpt)` najdeme zařízení **Silicon Labs  CP210x USB to UART**. A tam bývá `COM + číslo` (COM3, COM6...). *Zkuste si ESP kabelem střídavě připojovat a odpojovat - COM port by se měl zobrazovat a pak mizet, podle stavu připojení.*
 
 ---
 
@@ -53,9 +56,10 @@ někdy je nutno v tuto chvíli na ESP zmáčknout `BOOT`. Více je o tom zde: ht
 
 ### Terminál (putty)
 
-Tato část je také součástí přípravy počítače.
+Tato část je také součástí přípravy počítače. Předpokládáme, že již víte, na kterém portu je ESP připojeno:
+► [Detekce portu, kde je ESP](/install_win/#detekce-portu-kde-je-esp)
 
-Používáme program [putty.exe](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) a nastavením: `Serial, rychlost 115200, váš COMport`. Po nastavení zavoláme `open`, ukáže se nové okno terminálu.
+Jako **komunikační terminál** používáme program [putty.exe](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) a nastavením: `Serial, rychlost 115200, váš COMport`. Po nastavení zavoláme `open`, ukáže se nové okno terminálu. Doporučujeme si nastavení uložit, například jako v naší ukázce: `esp32-COM6` (pro port COM6) pomocí příkazu `save`. K opětovnému nahrání pak slouží `load`.
 
 ![putty](https://www.octopuslab.cz/wp-content/uploads/2019/11/putty1.png)
 

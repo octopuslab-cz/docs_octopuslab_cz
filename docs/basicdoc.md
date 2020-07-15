@@ -64,7 +64,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- [analog](#analog)
 |      |-- [button](#button)
 |      |-- [display7](#display7)
-|      |-- [oled_](#oled)
+|      |-- [oled](#oled)
 |      |-- [servo](#servo)
 |      |-- [dcmotors](#dcmotors)
 |
@@ -135,7 +135,6 @@ $ cp examples/blink.py main.py
 
 ```
 
-
 ---
 
 ## OCTOPUS Components
@@ -200,8 +199,8 @@ while True:
 ---
 
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Rgb
-Modul pro **RGB led** je vytvořen především pro práci s ***RGB svítivými diodami***.
-Používáme typ **WS2812b** - *proto zkratka WS*. Knihovna je pak rozšířením vestavěné `NeoPixel`.
+Modul pro **adresovatelnou RGB led** je vytvořen především pro práci s ***RGB svítivými diodami***.
+Používáme typ **WS2812b** - *proto zkratka WS*. Knihovna je pak rozšířením vestavěné `NeoPixel`. *Pro řízení klasické RGB je potřeba na každou barevnou složku samostatný PIN, což využíváme jen ojediněle.*
 
 Zdrojový kód knihovny: [components/rgb](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/rgb/__init__.py)
 

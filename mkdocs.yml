@@ -10,7 +10,11 @@ google_analytics: ['UA-171553408-2', 'shop.octopuslab.cz']
 
 nav:
   - Úvod: index.md
-  - Instalace: install.md
+  - 'Instalace':
+      - 'Společná část': install.md
+      - 'Windows ': install_win.md
+      - 'Linux ': install_linux.md
+      - 'Mac ': install_mac.md
   - 'Tutoriály':
       - 'Tutorial 1 Python ': tutorial1-python.md
       - 'Tutorial 2 Micropython ESP': tutorial2-micropython-esp.md

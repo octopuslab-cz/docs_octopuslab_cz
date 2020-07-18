@@ -944,13 +944,13 @@ máme definovány číselné konstanty (v programu se neměnící čísla), nap�
 Tato konstanta je uložena v souborech `pinouts/file_name`. Pro ROBOTboart je to `2`, takže v souboru pro definici pinů najdete řádek `BUILT_IN_LED = const(2)`. Výchozí společné piny jsou v [/pinouts/olab_esp32_base.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/pinouts/olab_esp32_base.py) a ROBOTboard je přebírá.
 
 
-Jak se s modulem pinout pracuje se dá zkusit z terminálu Micropythonu:
-```python
+Jak se s modulem pinout pracuje? Můžete si zkusit z terminálu Micropythonu: `>>>`
 
+```python
 >>> from utils.pinout import set_pinout
 >>> pinout = set_pinout()
 ```
-A už máme dostupné piny na `pinout.NAZEV_PINU`, djí se zjistit i osatní PINy, po `pinout` tečka `TAB`:
+A už máme dostupné piny na `pinout.NAZEV_PINU`, dají se zjistit i osatní PINy, po `pinout` tečka `TAB`:
 
 ```python
 >>> pinout.
@@ -959,7 +959,6 @@ WS_LED_PIN      ONE_WIRE_PIN    PIEZZO_PIN      MOTOR_12EN
 MOTOR_34EN      MOTOR_1A        MOTOR_2A        MOTOR_3A
 MOTOR_4A        ANALOG_PIN      PWM1_PIN        PWM2_PIN
 PWM3_PIN        SERVO_MIN       SERVO_MAX       I39_PIN
-I34_PIN         I35_PIN         MFET_PIN        RELAY_PIN
 DEV1_PIN        DEV2_PIN        BUILT_IN_LED    HALL_SENSOR
 I2C_SCL_PIN     I2C_SDA_PIN     SPI_CLK_PIN     SPI_MISO_PIN
 SPI_MOSI_PIN    SPI_CS0_PIN     RXD0            TXD0

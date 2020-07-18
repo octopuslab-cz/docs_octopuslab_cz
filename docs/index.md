@@ -19,7 +19,7 @@ Další informace můžete najít na webu http://www.octopuslab.cz
 
 ![hwsoc](img/hwsoc.png){: style="margin:15px;float:left;" } Výrobcem tohoto "mikropočítače" je společnost [Espressif](https://www.espressif.com/en/products/socs/esp32/overview) (proto zkratka *ESP*). Na destičce *vypadající jako poštovní známka* je mikroprocesor s pamětí, a několika klíčovými komponenty včetně krystalu, antény pro WiFi a Bluetooth. ESP32 je tak okamžitě připraveno k integraci do koncových produktů.
 
-Přesnější název je **mikrokontrolér**, což je obvod, který kromě procesoru obsahuje i paměť a další části, především pro vstupy a výstupy nebo komunikaci. Pokud vás zajíma víc podrobností, naleznete je na samostatné stránce [ESP32](/esp32)
+Přesnější název je **mikrokontrolér**, což je obvod, který kromě procesoru obsahuje i paměť a další části, především pro vstupy a výstupy nebo komunikaci. Pokud vás zajíma víc podrobností, naleznete je na další samostatné stránce [ESP32](/esp32)
 
 ---
 ## Micropython

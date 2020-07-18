@@ -9,7 +9,9 @@ copyright: 'CC-BY'
 google_analytics: ['UA-171553408-2', 'shop.octopuslab.cz']
 
 nav:
-  - Úvod: index.md
+  - 'Úvod': 
+      - 'OctopusLAB': index.md
+      - 'ESP32': esp32.md
   - 'Instalace':
       - 'Společná část': install.md
       - 'Windows ': install_win.md
@@ -25,6 +27,7 @@ nav:
       - 'Python data': ws-python-data.md
   - 'Dokumentace':
       - 'Referenční příručka': basicdoc.md
+      - 'Pinouts': pinouts.md
       - 'Class': class.md
       - 'Pubsub': pubsub.md
       - 'Ampy': ampy.md
@@ -36,7 +39,6 @@ nav:
       - 'Robot 01': proj-robot01.md
       - 'Hydroponie': proj-hydro.md
       - 'Ostatní projekty': projects.md
-      - 'ESP32': esp32.md
 
 theme: readthedocs
 

@@ -79,7 +79,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- ...
 |      |-- BLE
 |
-|-- [/pinouts](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/pinouts)      # nastavení pinů
+|-- [/pinouts](/pinouts)      # nastavení pinů
 |-- [/examples](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/examples)     # ukázky
 |      |-- /asyncio
 |      |-- /ble
@@ -934,16 +934,42 @@ tslLight = 0x39
 
 ### ![hwsoc](img/database.png){: style="width:28px" } pinout
 
-Práci s PINy nám ulehčuje přednastanený `pinout` v configu. Konfigurační soubory pro jednotlivé hw moduly jsou v samostatném adresáři `/pinouts`. Podle toho, jakou máme HW platformu máme přesně svázány konstanty (názvy PINů) s jejich číselnou reprezentací:
+Práci s PINy nám ulehčuje přednastanený **pinout** uložený v konfiguračním souboru. Konfigurační soubory pro jednotlivé hw moduly jsou v samostatném adresáři `/pinouts`. Podle toho, jakou máme HW platformu, máme přesně svázány konstanty (názvy PINů) s jejich číselnou reprezentací. 
+Vybrané soubory zapojení pinů jsou na samostatné stránce ► [pinouts](/pinouts).
 
 Zdrojový kód knihovny: [utils/pinout](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/pinout.py)
+
+**Princip je jednoduchý:**
+máme definovány číselné konstanty (v programu se neměnící čísla), například pro vestavěnou Led diodu: `BUILT_IN_LED = const(číslo)`. **Číslo** je zde číslo PINu a může se lišit podle dané desky (deska je nastavena příkazem `>>> setup()`)
+Tato konstanta je uložena v souborech `pinouts/file_name`. Pro ROBOTboart je to `2`, takže v souboru pro definici pinů najdete řádek `BUILT_IN_LED = const(2)`. Výchozí společné piny jsou v [/pinouts/olab_esp32_base.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/pinouts/olab_esp32_base.py) a ROBOTboard je přebírá.
+
+
+Jak se pinům dostaneme?
+```python
+
+from utils.pinout import set_pinout # import library
+pinout = set_pinout()               # set board pinout
+```
+A už máme dostupné piny na `pinout.NAZEV_PINU`
+
+```python
+led = Led(pinout.BUILT_IN_LED)      # BUILT_IN_LED = 2
+```
+je shodné s:
+```python
+led = Led(2)
+```
+ale číslo `2` si nemusíme pamatovat, navíc u různých modulů se může lišit.
+
+Celá ukázka pro blikání vestavěné Ledky na různých modulech - může být na PINu `2` nebo také na `15`... nebo úplně jiném.
+A my toto číslo při správné konfiguraci modulu (desky) nemusíme řešit a k vestavěné Ledce přistupujeme názvem PINu: `BUILT_IN_LED`
 
 ```python
 from components.led import Led
 from utils.pinout import set_pinout
 
-pinout = set_pinout()           # set board pinout
-led = Led(pinout.BUILT_IN_LED)  # BUILT_IN_LED = 2
+pinout = set_pinout()
+led = Led(pinout.BUILT_IN_LED)
 
 print("---examples/blink.py---")
 # start main loop

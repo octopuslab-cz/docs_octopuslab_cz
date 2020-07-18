@@ -13,12 +13,12 @@ Nejčastěji budeme používat dva zákldaní moduly, s ESP32:
 
 ---
 
-## Pinouts file
+### Pinouts files - zapojení PINů
 
 Celý komplet souborů [pinouts](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/pinouts) je na Githubu.
 Zaměříme se proto jen na některé hlavní části:
 
-### base.py
+### ![hwsoc](img/hwsoc.png){: style="width:28px" } base.py
 
 ```
 # Base abstract pinouts without any, this base can be replaced by any board specific settings
@@ -88,7 +88,7 @@ TXD1 = None
 
 ```
 
-### olab_esp32_robot_board1.py
+### ![hwsoc](img/hwsoc.png){: style="width:28px" } olab_esp32_robot_board1.py
 
 ```
 """
@@ -139,7 +139,7 @@ DEV1_PIN = const(32)
 DEV2_PIN = const(33)
 ```
 
-### esp32-micropython/pinouts/olab_esp32_esp32_board1.py
+### ![hwsoc](img/hwsoc.png){: style="width:28px" } olab_esp32_esp32_board1.py
 
 Toto bude postupem času hlavní OctopusLAB modul:
 ```

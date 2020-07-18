@@ -961,8 +961,8 @@ led = Led(2)
 ```
 ale číslo `2` si nemusíme pamatovat, navíc u různých modulů se může lišit.
 
-Celá ukázka pro blikání vestavěné Ledky na různých modulech - může být na PINu `2` nebo také na `15`... nebo úplně jiném.
-A my toto číslo při správné konfiguraci modulu (desky) nemusíme řešit a k vestavěné Ledce přistupujeme názvem PINu: `BUILT_IN_LED`
+*Celá ukázka pro blikání vestavěné Ledky na různých modulech - může být na PINu `2` nebo také na `15`... nebo úplně jiném.
+A my toto číslo při správné konfiguraci modulu (desky) nemusíme řešit a k vestavěné Ledce přistupujeme názvem PINu: `BUILT_IN_LED`.*
 
 ```python
 from components.led import Led
@@ -971,13 +971,10 @@ from utils.pinout import set_pinout
 pinout = set_pinout()
 led = Led(pinout.BUILT_IN_LED)
 
-print("---examples/blink.py---")
 # start main loop
-
 while True:
     led.blink()
 ```
-
 ► [Led](#led)
 
 ---

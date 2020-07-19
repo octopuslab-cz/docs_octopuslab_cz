@@ -14,7 +14,7 @@
     Fialové šipky: Do počítače stáhneme `Micropython.bin` (binární soubor) a pomocí esptool ho nahrajeme do ESP
 
     3. ###### Instalace "workframe" octopus do ESP
-    Zelená a oranžová:  Pomocí terminálu (`screen` nebo `Putty`) dokončíme instalaci dalších knihoven *"octopus workspace"*
+    Zelená a oranžová:  Pomocí terminálu (`screen` nebo `Putty`) dokončíme instalaci dalších knihoven *"octopus framework"*
 
 ## 1. 2. Instalace Micropythonu a octopus "workframe"
 

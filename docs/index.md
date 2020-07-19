@@ -1,6 +1,6 @@
 # ![logo](img/logo_small.png){: style="width:39px" } OctopusLab
 
-V těchto materiálech se sdružuje dokumentace, návody a tutoriály, části workshopů, projektů a **ukázek použití**. Důraz je kladen na [popis knihoven](/basicdoc) pro OctopusLAB "worklow", *kde komplexnější procesy, rozdělujeme na jednodušší činnosti a jejich vazby.*
+V těchto materiálech se sdružuje dokumentace, návody a tutoriály, části workshopů, projektů a **ukázek použití**. Důraz je kladen na [popis knihoven](/basicdoc) pro OctopusLAB "framework", *kde komplexnější procesy, rozdělujeme na jednodušší činnosti a jejich vazby.*
 
 ---
 

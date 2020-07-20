@@ -927,7 +927,18 @@ tslLight = 0x39
 #### spi_init()
 
 ```python
+from machine import Pin, SPI
+from components.display7 import Display7
+## from utils.pinout import set_pinout
+from utils.octopus_lib import spi_init
 
+print("--- spi-init ---")
+## spi = SPI(1, baudrate=10000000, polarity=1, phase=0, sck=Pin(pinout.SPI_CLK_PIN), mosi=Pin(pinout.SPI_MOSI_PIN))
+spi = spi_init()
+
+ss = Pin(pinout.SPI_CS0_PIN, Pin.OUT)
+#spi.deinit() #print("spi > close")
+...
 ```
 
 ---
@@ -1038,7 +1049,7 @@ funkce = dekorator(funkce)
 
 ### Zrychlení práce procesoru
 
-- [speed_python] (http://docs.micropython.org/en/v1.9.3/pyboard/reference/speed_python.html)
+- [speed_python](http://docs.micropython.org/en/v1.9.3/pyboard/reference/speed_python.html)
 
 ---
 

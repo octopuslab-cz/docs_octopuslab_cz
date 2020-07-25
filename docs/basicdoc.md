@@ -592,6 +592,80 @@ Zvídavějším doporučujeme odkaz na práci s daty a databáze ► [Workshop P
 - využití v IoT
 ---
 
+### ![hwsoc](img/database.png){: style="width:28px" } Influx
+
+Pro zobrazování dat ve **Grafaně** průběžně posíláme údaje na vzdálený server, který je ukládá do databáze **Influx**.
+Jednoduchý příklad jednorázového odeslání jedné hodnoty (influx si k údaji přiřadí **timestamp** - datum a čas):
+
+```python
+from utils.wifi_connect import WiFiConnect
+from utils.database.influxdb import InfluxDB
+
+# influx = InfluxDB(iurl, idb, iusr, ipsw, imetric, place=iplace)
+influx = InfluxDB("https://your.server.com/grafana/influx/user...", "user_db", "i_usr", "i_psw", "i_metric", place=iplace)
+
+value = analog.get_adc_aver() # from component.analog... analog = ...
+influx.write(metric_val1=value)
+...
+
+```
+
+► [Analog](#analog)
+
+---
+
+Nechceme mít přístupové údaje ve zdrojovém kódu. Abychom pro každou změnu použili identický program,
+využijeme configurační soubor: 
+
+```python
+from utils.wifi_connect import WiFiConnect
+from utils.database.influxdb import InfluxDB
+from config import Config
+
+# config influx and try connect:
+
+config_setkeys = ["influx_url",
+                  "influx_db",
+                  "influx_user",
+                  "influx_pass",
+                  "influx_metric",
+                  "influx_place"]
+
+config = Config("infux12v-monitoring",config_setkeys)
+
+try:
+    iurl = config.get("influx_url")
+    idb = config.get("influx_db")
+    iusr = config.get("influx_user")
+    ipsw = config.get("influx_pass")
+    imetric = config.get("influx_metric")
+    iplace = config.get("influx_place")
+
+    if iurl is None:
+        raise Exception("Config error: InfluxDB URL is not set. Check configuration")
+
+    if idb is None:
+        raise Exception("Config error: InfluxDB Database is not set. Check configuration")
+
+    if imetric is None:
+        raise Exception("Config error: InfluxDB Metric is not set")
+
+    influx = InfluxDB(iurl, idb, iusr, ipsw, imetric, place=iplace)
+    print("influx: ", iurl, idb)
+except Exception as e:
+    print("config Exception: {0}".format(e))
+    print("Use config.setup()")
+    exit(1)
+
+# --- /
+
+...
+
+```
+
+
+► [Config](#config)
+
 
 ---
 
@@ -646,6 +720,8 @@ tft.blit_buffer(fb, 0, 0, tft.width, tft.height)
 ...
 ```
 
+► [pinout](#pinout)
+
 [examples/test_tft128x160.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/test_tft128x160.py)
 
 ---
@@ -670,6 +746,8 @@ while True:
     sleep(1)
 
 ```
+
+► [pinout](#pinout)
 
 [examples/ultrasonic.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/ultrasonic.py)
 
@@ -753,7 +831,6 @@ def on_message(service, conn_handle, message):
         led.toggle()
 
     service.send(conn_handle, message)
-
 
 _connections = []
 

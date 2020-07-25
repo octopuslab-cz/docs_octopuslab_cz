@@ -939,7 +939,24 @@ Specifické ukázky jsou v podaresářích:
 
 Micropython má elegantně propacovanou práci se soubory (nahrávání a čtení) a i s `json` formátem, proto jsme toho využili pro externí konfigurační soubory. V adresáři `/config` jsou nahrány jednotlivé "jsony", které v sobě obsahují nějaké konstanty, nastavení a podobně. Proto můžeme daný projekt dynamicky konfigurovat. Využíváme to i v nastavení PINů jednotivých zařízení `device.json` nebo pro uložení přístupů k WiFi `wifi.json`.
 
-Zdrojový kód knihovny: [./config/__init__.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/config/__init__.py) 
+Zdrojový kód knihovny: [./config/__init__.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/config/__init__.py)
+
+#### Jednotlivé **metody** pro základní vyrianty používání:
+
+1) Vytvořením pomocí konstruktoru: `myConfig = Config("myConfigFile",keys)`        
+Vyžaduje předefinici klíčových "metrik": `keys = ["tempMax","tempMin"]`
+
+- `setup()`
+- `print()` # for keys
+
+2) Vytvořením pomocí konstruktoru bez `keys`: `myConfig = Config("myConfigFile")`
+
+- `print_all()`
+- `get("key")`
+- `set("key",value)`
+- `create_from_query("a=1&b=2")` # key1 = "a", value1 = 1 ...
+- `save()`
+
 
 Mějme ukázkový projekt **termostat**, který na základě změřené teploty pustí buď topení, nebo chlazení (ventilátor). Volitelně si můžeme v programu definovat `keys`, kde máme uloženy názvy podstatných konstant. Instanci pak vytváříme `conf = Config("your_file", keys)`, kde "your_file" je název - nejčastěji shodný s názvem projektu. Například "termostat". Se souborem se pak dá pracovat několika metodami, například: `setup()` (interaktivní mód - používáme nejčastěji), `create_from_query()`, `set()`, `save()` ... 
 

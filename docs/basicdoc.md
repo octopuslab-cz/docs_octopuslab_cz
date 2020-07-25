@@ -941,13 +941,35 @@ Micropython má elegantně propacovanou práci se soubory (nahrávání a čten�
 
 Zdrojový kód knihovny: [./config/__init__.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/config/__init__.py)
 
-#### Jednotlivé **metody** pro základní vyrianty používání:
+#### Jednotlivé **metody** pro základní varianty používání:
 
 1) Vytvořením pomocí konstruktoru: `myConfig = Config("myConfigFile",keys)`        
 Vyžaduje předefinici klíčových "metrik": `keys = ["tempMax","tempMin"]`
 
 - `setup()`
 - `print()` # for keys
+
+Mějme ukázkový projekt **termostat**, který na základě změřené teploty pustí buď topení, nebo chlazení (ventilátor). Volitelně si můžeme v programu definovat `keys`, kde máme uloženy názvy podstatných konstant. Instanci pak vytváříme `conf = Config("your_file", keys)`, kde "your_file" je název - nejčastěji shodný s názvem projektu. Například "termostat". Se souborem se pak dá pracovat několika metodami, například: `setup()` (interaktivní mód - používáme nejčastěji), `create_from_query()`, `set()`, `save()` ... 
+
+```python
+>>> from config import Config
+>>> keys = ["tempMax","tempMin"]
+>>> conf = Config("termostat", keys) # > config/termostat.json
+>>> conf.setup()
+
+==================================================
+        S E T U P - config/termostat.json
+==================================================
+[ 1] -          tempMax -
+[ 2] -          tempMin -
+[q] - Quit from json setup
+==================================================
+select:
+
+```
+
+Vidíme, že nastavení `config` je snadné. Stačí vyplnit nebo modifikovat interaktivní tabulku.
+
 
 2) Vytvořením pomocí konstruktoru bez `keys`: `myConfig = Config("myConfigFile")`
 
@@ -958,26 +980,28 @@ Vyžaduje předefinici klíčových "metrik": `keys = ["tempMax","tempMin"]`
 - `save()`
 
 
-Mějme ukázkový projekt **termostat**, který na základě změřené teploty pustí buď topení, nebo chlazení (ventilátor). Volitelně si můžeme v programu definovat `keys`, kde máme uloženy názvy podstatných konstant. Instanci pak vytváříme `conf = Config("your_file", keys)`, kde "your_file" je název - nejčastěji shodný s názvem projektu. Například "termostat". Se souborem se pak dá pracovat několika metodami, například: `setup()` (interaktivní mód - používáme nejčastěji), `create_from_query()`, `set()`, `save()` ... 
-
 ```python
-from config import Config
-
-keys = ["tempMax","tempMin"]
-conf = Config("your_file", keys) # > config/your_file.json
-conf.setup()
-
 
 # vytvoření konfigu: a = 1, b = 2
-conf = Config("your_config")
-conf.create_from_query("a=1&b=2")
-conf.set("c",3)
-
-conf.save()
-
+>>> conf = Config("your_config")
+>>> conf.create_from_query("a=1&b=2")
+{'a': '1', 'b': '2'}
+>>> conf.set("c",3)
+>>> conf.save()
+Writing new config item to file config/your_config.json
+>>> conf.print_all()
+-----------------------------------------
+                  a - 1
+                  c - 3
+                  b - 2
+-----------------------------------------
+>>>
 ```
 
+---
+
 Ve svém programu pak `config` použijeme následovně:
+
 ```python
 from config import Config
 conf = Config("your_config")

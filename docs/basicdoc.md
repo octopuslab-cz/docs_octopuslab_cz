@@ -614,8 +614,8 @@ influx.write(metric_val1=value)
 
 ---
 
-Nechceme mít přístupové údaje ve zdrojovém kódu. Abychom pro každou změnu použili identický program,
-využijeme configurační soubor: 
+Abychom mohli použít identický program s minimem změn,
+využijeme konfigurační soubor, pomocí `config`. A také nechceme mít **přístupové údaje ve zdrojovém kódu**! 
 
 ```python
 from utils.wifi_connect import WiFiConnect

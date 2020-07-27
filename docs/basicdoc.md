@@ -571,7 +571,7 @@ Více plánujeme v samostatné sekci [inversní kinematika](/inv_kinematics)
 
 ### ![hwsoc](img/database.png){: style="width:28px" } Database
 ESP díky paměti umožňuje bez nadsázky i základní práci s databází.
-Zaměříme se na dvě základní: lokální `btree` a vzdálené `MySQL`, `Influx`.
+Zaměříme se na dvě základní: lokální `btree` a vzdálené `MySQL`, `InfluxDB`.
 
 ```python
 from utils.database.btreedb import BTreeDB
@@ -592,79 +592,48 @@ Zvídavějším doporučujeme odkaz na práci s daty a databáze ► [Workshop P
 - využití v IoT
 ---
 
-### ![hwsoc](img/database.png){: style="width:28px" } Influx
+### ![hwsoc](img/database.png){: style="width:28px" } InfluxDB
 
-Pro zobrazování dat ve **Grafaně** průběžně posíláme údaje na vzdálený server, který je ukládá do databáze **Influx**.
-Jednoduchý příklad jednorázového odeslání jedné hodnoty (influx si k údaji přiřadí **timestamp** - datum a čas):
+Pro zobrazování dat v **Grafaně** průběžně posíláme údaje na vzdálený server, který je ukládá do databáze **InfluxDB**.
+Jednoduchý příklad jednorázového odeslání jedné hodnoty (**timestamp** - datum a čas se přidají při ukládání automaticky):
 
 ```python
-from utils.wifi_connect import WiFiConnect
 from utils.database.influxdb import InfluxDB
 
-# influx = InfluxDB(iurl, idb, iusr, ipsw, imetric, place=iplace)
-influx = InfluxDB("https://your.server.com/grafana/influx/user...", "user_db", "i_usr", "i_psw", "i_metric", place=iplace)
+influx = InfluxDB("https://your.server.com/grafana/influx/user...", "user_db", "i_usr", "i_psw", "i_measurement")
 
-value = analog.get_adc_aver() # from component.analog... analog = ...
-influx.write(metric_val1=value)
+value = 25.6  # zde je treba cist hodnotu z nejakeho senzoru, napr. teplomeru
+influx.write(temperature=value)
 ...
-
 ```
 
-► [Analog](#analog)
+Metoda `write` musí dostat pojmenované parametry (key word arguments - tzv. kwargs), které se v Influxu použijí, jako jednotlivé fieldy. V příkladu nahoře je to `temperature`, kam ukládáme hodnotu ze sensoru.
+
+Funkční ukázka např: [examples/influxdb_disp7_therm.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/influxdb_disp7_therm.py)
 
 ---
 
 Abychom mohli použít identický program s minimem změn,
-využijeme konfigurační soubor, pomocí `config`. A také nechceme mít **přístupové údaje ve zdrojovém kódu**! 
+využijeme konfigurační soubor, načteme pomocí `fromconfig()`. A také nechceme mít **přístupové údaje ve zdrojovém kódu**! 
 
 ```python
-from utils.wifi_connect import WiFiConnect
 from utils.database.influxdb import InfluxDB
-from config import Config
 
-# config influx and try connect:
+influx = InfluxDB.fromconfig()
 
-config_setkeys = ["influx_url",
-                  "influx_db",
-                  "influx_user",
-                  "influx_pass",
-                  "influx_metric",
-                  "influx_place"]
-
-config = Config("infux12v-monitoring",config_setkeys)
-
-try:
-    iurl = config.get("influx_url")
-    idb = config.get("influx_db")
-    iusr = config.get("influx_user")
-    ipsw = config.get("influx_pass")
-    imetric = config.get("influx_metric")
-    iplace = config.get("influx_place")
-
-    if iurl is None:
-        raise Exception("Config error: InfluxDB URL is not set. Check configuration")
-
-    if idb is None:
-        raise Exception("Config error: InfluxDB Database is not set. Check configuration")
-
-    if imetric is None:
-        raise Exception("Config error: InfluxDB Metric is not set")
-
-    influx = InfluxDB(iurl, idb, iusr, ipsw, imetric, place=iplace)
-    print("influx: ", iurl, idb)
-except Exception as e:
-    print("config Exception: {0}".format(e))
-    print("Use config.setup()")
-    exit(1)
-
-# --- /
-
-...
-
+temp = ...
+influx.write(temperature=temp)
 ```
 
+`fromconfig()` bere volitelně jako první parametr, název konfiguračního souboru, default je `"influxdb"`, tedy soubor `config/influxdb.json`.
 
-► [Config](#config)
+Příklad obsahu je:
+
+```json
+{"influxdb_url": "https://parallelgarden.surikata.info:8086", "influxdb_pass": "heslo", "influxdb_name": "nazev_db", "influxdb_user": "uzivatel", "influxdb_measurement": "meteo", "influxdb_tags": {"location": "balkon"}}
+```
+
+Více o vytváření a editaci konfiguračních souborů ► [Config](#config)
 
 
 ---

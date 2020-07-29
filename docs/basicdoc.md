@@ -47,7 +47,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |-- [main.py](#soubory-bootpy-a-mainpy)       # hlavní soubor programu
 |-- /assets       # obrázky, zvuky, tabulky
 |-- [/config](#config)       # kofigurační soubory (.json)
-|-- [/lib](#octopus-lib)
+|-- [/lib]
 |      |-- [pubsub](#pubsub)
 |      |-- [/blesync_uart](#BLE)
 |      |-- ...
@@ -67,9 +67,13 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- [oled](#oled)
 |      |-- [servo](#servo)
 |      |-- [dcmotors](#dcmotors)
+|      |-- [plc]
+|      |-- [iot](#iot)
+|            | Relay | PWM | Thermometer
 |
 |-- [/utils](#octopus-utils)
 |      |-- [octopus_lib](#octopus_lib)
+|            | [I2C](#i2c) | [SPI](#spi) | [LCD](#lcd) | 
 |      |-- [pinout](#pinout)
 |      |-- [bits](#bits)
 |      |-- [transform](#transform)
@@ -479,9 +483,13 @@ re1 = Relay() # default IoTboard pin
 re1.value(1)
 re2 = Relay(26)
 
+
+
 from components.iot import Pwm
 pwm_led = Pwm(33)
 pwm_led.duty(300)
+
+
 
 from components.iot import Thermometer
 tt = Thermometer(32)
@@ -981,10 +989,13 @@ b =  conf.get("b") # 2
 
 ### ![hwsoc](img/database.png){: style="width:28px" } octopus_lib
 
-#### i2c_init()
+#### I2C
+`i2c_init()`
 
 ```python
-
+>>> from utils.octopus_lib import i2c_init
+>>> i2c = i2c_init()
+>>> i2c.scan()
 ```
 
 ```python
@@ -1011,7 +1022,8 @@ tslLight = 0x39
 ```
 
 
-#### spi_init()
+#### SPI
+`spi_init()`
 
 ```python
 from machine import Pin, SPI

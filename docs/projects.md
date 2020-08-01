@@ -20,7 +20,7 @@ Podrobněji na samostatné stránce [octopuslab.cz/esp32-board](https://www.octo
 
 ## uPyShell
 
-Podrobněji na samostatné stránce [uPyShell](/p-shell)
+Podrobněji na samostatné stránce [uPyShell](/upyshell)
 
 ---
 

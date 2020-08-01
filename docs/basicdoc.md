@@ -95,9 +95,9 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |
 |-- /tests
 |
-|-- /[shell](/p-shell)
-|      |-- [shell](/p-shell)
-|      |-- [editor](/p-shell/#editor)
+|-- /shell
+|      |-- [shell](/upyshell)
+|      |-- [editor](/upyshell/#editor)
 |-- ...
 </pre>
 

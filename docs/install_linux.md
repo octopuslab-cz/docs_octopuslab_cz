@@ -75,4 +75,4 @@ screen /dev/ttyUSB0 115200
 
 Pokud se na obrazovce nic nezobrazuje zmáčněte <kdb>ENTER</kdb> a měl by se vám zobrazit prompt interaktivního Pythonu `>>>`. Gratulujeme, máte funkční MicroPython!
 
-Dále můžete pokračovat podkapitolou [první spuštění a instalace octopus workframe](/install/#prvni-spusteni-a-instalace-workframe-octopus).
+Dále můžete pokračovat podkapitolou [první spuštění a instalace octopus workframe](/install/#3-prvni-spusteni-a-instalace-workframe-octopus).

@@ -39,7 +39,7 @@ a z emulátoru terminálu se dá spustit příkazem `run examples/blink.py`:
 uPyShell:~/$ run examples/blink.py
 ```
 
-► [Led](/basicdoc/#led) ► [UpyShell](/ws-upyshell)
+► [Led](/basicdoc/#led) ► [UpyShell](/upyshell)
 
 ---
 
@@ -52,7 +52,7 @@ oled = oled_init()
 
 ### • examples/x_basic.py
 
-ukázka, která ale podrdobněji vysvětlí použítí obecnějšího přístupu, naopak oproti předchozímu - je zcela bez využití **octopus workframe**
+ukázka, která ale podrobněji vysvětlí použítí obecnějšího přístupu, naopak oproti předchozímu - je zcela bez využití **octopus workframe**
 
 - [oled_basic](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/oled_basic.py)
 - ... (chystáme další)

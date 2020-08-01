@@ -5,4 +5,4 @@ Největší zádrhel tam byla nutnost "odklikat" `Security & Privacy`, aby vás 
 
 ---
 
-Dále můžete pokračovat podkapitolou [první spuštění a instalace octopus workframe](/install/#prvni-spusteni-a-instalace-workframe-octopus).
+Dále můžete pokračovat podkapitolou [první spuštění a instalace octopus workframe](/install/#3-prvni-spusteni-a-instalace-workframe-octopus).

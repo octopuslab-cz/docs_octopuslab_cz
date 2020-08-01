@@ -56,6 +56,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- [st7735.py](#st7735)
 |      |-- colors_rgb.py
 |      |-- [hcsr04.py](#hcsr04) # ultrasonic
+|      |-- [lcd](#lcd)
 |      |-- ...
 |
 |-- [/components](#octopus-components)
@@ -326,7 +327,7 @@ def position(dx,dy):
 
 @button_dwn.on_press
 def on_press_dwn():
-    print("dwn")
+    print("down")
     position(0,1)
 
 @button_top.on_press
@@ -701,6 +702,11 @@ Více o vytváření a editaci konfiguračních souborů ► [Config](#config)
 
 ### LCD
 
+Knihovna třetí strany pro ovládání dvou nebo čtyř-řádkového LCD displeje připojeného k `i2c` expandéru, byla původně určena pro starší ESP8266, ale funguje nám bez úprav i pro ESP32 (protože komunikační protokol na i2c se nemění).
+
+Základem v nastavení je: počet řádků `rows` - 1/2/4, a počet "sloupců" `col` odpovídá počtu znaků na řádku.
+Ukauka pro displej `2x16`: 
+
 ```python
 # from machine import I2C , Pin
 # i = I2C(scl=Pin(22), sda=Pin(21), freq=100000)
@@ -713,6 +719,24 @@ lcd.putstr("octopusLab") # write text
 ...
 ```
 
+V našem podadrešáři assets máme v souboru `lcd_chars.py` tabulky některých znaků pro LCD:
+
+```python
+import assets.lcd_chars as ch
+
+from utils.octopus import lcd2_init
+lcd = lcd2_init()
+
+lcd.custom_char(0, ch.happy)
+lcd.putchar(chr(0))
+
+lcd.custom_char(1, ch.clock)
+lcd.putchar(chr(1))
+
+...
+```
+
+---
 
 ### St7735
 

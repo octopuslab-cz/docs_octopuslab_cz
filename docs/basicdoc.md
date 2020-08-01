@@ -295,6 +295,57 @@ def on_press_top_button():
 
 ► [Led](#led) | [@Dekorátor](#dekorator)
 
+Práce se čtyřmi tlačítky (na ESP32board) - ukázka je zakomentována spolupráce s displejem `tft` ► [st7735](#st7735)
+
+```python
+from utils.pinout import set_pinout
+pinout = set_pinout()
+
+from components.button import Button
+from utils.transform import Point2D
+
+print("buttons init>")
+button_dwn = Button(34, release_value=1)
+button_top = Button(36, release_value=1)
+button_lef = Button(35, release_value=1)
+button_rig = Button(39, release_value=1)
+
+# size = 3
+cursor = Point2D(63,81) # center TFT128*166 dispaly (mod 3)
+
+def position(dx,dy):
+    global mx # cursor, fb, tft
+    cursor.x = cursor.x + dx*3
+    cursor.y = cursor.y + dy*3
+
+    print(cursor.x,cursor.y)
+    # fb.fill(color565(*BLACK))
+    # tft.blit_buffer(fb, 0, 0, tft.width, tft.height)
+    # tft.fill_rectangle(cursor.x,cursor.y, 6, 6, color565(*RED))
+
+
+@button_dwn.on_press
+def on_press_dwn():
+    print("dwn")
+    position(0,1)
+
+@button_top.on_press
+def on_press_top():
+    print("top")
+    position(0,-1)
+
+@button_lef.on_press
+def on_press_lef():
+    print("left")
+    position(-1,0)
+
+@button_rig.on_press
+def on_press_rig():
+    print("right")
+    position(1,0)
+
+```
+
 ---
 
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Display7

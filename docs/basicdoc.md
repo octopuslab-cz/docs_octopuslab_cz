@@ -85,7 +85,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- BLE
 |
 |-- [/pinouts](/pinouts)      # nastavení pinů
-|-- [/examples](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/examples)     # ukázky
+|-- [/examples](/examples)      # ukázky
 |      |-- /asyncio
 |      |-- /ble
 |      |-- /param
@@ -695,8 +695,8 @@ Příklad obsahu je:
 
 Více o vytváření a editaci konfiguračních souborů ► [Config](#config)
 
-
 ---
+
 
 ## OCTOPUS Lib
 
@@ -719,7 +719,7 @@ lcd.putstr("octopusLab") # write text
 ...
 ```
 
-V našem podadrešáři assets máme v souboru `lcd_chars.py` tabulky některých znaků pro LCD:
+V našem podadresáři `/assets` máme v souboru `lcd_chars.py` tabulky některých znaků pro LCD:
 
 ```python
 import assets.lcd_chars as ch
@@ -735,8 +735,8 @@ lcd.putchar(chr(1))
 
 ...
 ```
-
 ---
+
 
 ### St7735
 
@@ -777,6 +777,7 @@ tft.blit_buffer(fb, 0, 0, tft.width, tft.height)
 [examples/test_tft128x160.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/test_tft128x160.py)
 
 ---
+
 
 ### hcsr04
 
@@ -852,6 +853,7 @@ Ukázky jsou z vybraných příkladů pro pubsub:
 
 ---
 
+
 ### ![hwsoc](img/bt.png){: style="width:28px" } BLE
 Jelikož obecná problematika BLE (Bluetooth low energy) je poměrně obsáhlá, tak i modul BLE je dost robustní. Zahrnuje několik částí: `blesync`, `blesync_client`, `blesync_server` a samostatný modul `blesync_uart`. Každopádně funguje velmi dobře a snahou bylo, aby práce s ním byla srozumitelná a přitom umožnila využít všechny možné výhody, které BLE obecně přináší.
 Projekt má svůj vlastní repozitář: [/blesync](https://github.com/blesync).
@@ -918,70 +920,6 @@ import utils.ble.bluefruit as bf
     if message == bf.DOWN:
         led.value(0)
 ```
-
----
-
-## OCTOPUS Examples
-
-### • examples/x.py
-
-V souboru s názvem komponenty by měla být základní ukázka, nejčastěji nejjednodušší nebo nejkratší s využitím **octopus workframe**
-
-- analog
-- button
-- dcmotor
-- display7
-
-- ...
-
-pro mnohé elementární dvouřádkové "návody" ani samostatný soubor ukázky neexistuje. Například pro **led** by vypadal takto:
-
-```python
-from components.led import Led
-led = Led(2)
-led.blink()
-```
-► [Led](#led)
-
-nebo pro **oled** displej:
-```python
-from utils.octopus import oled_init
-oled = oled_init()
-```
-► [Oled](#oled)
-
-### • examples/x_basic.py
-
-ukázka, která pordobněji vysvětlí použítí obecnějšího přístupu, naopak oproti předchozímu - zcela bez využití **octopus workframe**
-
-- [oled_basic](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/oled_basic.py)
-- ... (chystáme další)
-
-► [Oled](#oled)
-
-
-### • examples/test_x.py
-
-Tyto ukázky slouží zároveň i jako soubor hardwarových testů jednotlivých komponent, a jsou volány z testovacího adresáře `tests`. Vyznačují se tím, že vždy pouze provedou nějakou akci nebo soubor akcí a pak skončí, aby se případně mohlo pokračovat dalším.
-Například pro otestování EDU_KIT1: voláme soubor [/tests/main-test_sw1.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/tests/main-test_sw1.py) který spouští následující ukázka/testy:
-
-```python
-import examples.test_esp32
-import examples.test_led
-import examples.test_rgb
-import examples.test_display7
-import examples.test_analog
-```
-
-### • eaxamples/subdir
-
-Specifické ukázky jsou v podaresářích:
-
-- eaxamples/ble
-- eaxamples/pubsub
-- eaxamples/asyncio
-- eaxamples/database
-- eaxamples/param
 
 ---
 

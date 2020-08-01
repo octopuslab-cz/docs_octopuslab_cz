@@ -30,6 +30,7 @@ nav:
       - 'Pinouts': pinouts.md
       - 'Class': class.md
       - 'Pubsub': pubsub.md
+      - 'Examples - ukázky': examples.md
       - 'Ampy': ampy.md
       - 'Github ': github.md
       - 'Popis markdown': tutorials-intro.md

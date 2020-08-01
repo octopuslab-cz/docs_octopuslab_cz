@@ -53,9 +53,9 @@ uPyShell:~/$ help
 ## Spouštění procesů
 
 ### Více „souběžně běžících procesů“
-Na test se dá použít sleep 10 (pauza 10 vteřin) která když se spustí s „&“ na konci: sleep 10 & , tak se rozběhne v samostatném vlákně / procesu. Stejně tak spouštíme ukázku – blikání ledky:
-run examples/blink.py &
-Běžící procesy pak vidíme v top – zatím není jednoduché je ukončit, máme značná omezení – takže řešíme dočasně resetem – ale pracujeme na tom.
+Na test se dá použít příkaz `sleep 10` (pauza 10 vteřin). Když se spustí s `&` na konci: `sleep 10 &`, tak se rozběhne v samostatném vlákně / procesu. Stejně tak spouštíme ukázku – blikání ledky:
+`run examples/blink.py &`
+Běžící procesy pak vidíme v `top` – zatím není jednoduché je ukončit, máme značná omezení – takže řešíme dočasně resetem – ale pracujeme na tom.
 
 ![shell-run](https://www.octopuslab.cz/wp-content/uploads/2020/02/shell3threads.png)
 

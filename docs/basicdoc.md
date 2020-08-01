@@ -296,7 +296,7 @@ def on_press_top_button():
 
 ► [Led](#led) | [@Dekorátor](#dekorator)
 
-Práce se čtyřmi tlačítky (na ESP32board) - ukázka je zakomentována spolupráce s displejem `tft` ► [st7735](#st7735)
+Práce se čtyřmi tlačítky (na ESP32board) - v ukázce je zakomentována spolupráce s displejem `tft` ► [st7735](#st7735)
 
 ```python
 from utils.pinout import set_pinout

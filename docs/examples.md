@@ -41,7 +41,9 @@ uPyShell:~/$ run examples/blink.py
 
 ► [Led](/basicdoc/#led) ► [UpyShell](/ws-upyshell)
 
-Podobně pak pro **oled** displej:
+---
+
+Podobně pak pro **oled** displej, inicializace přímo na displeji něco "napíše":
 ```python
 from utils.octopus import oled_init
 oled = oled_init()
@@ -50,18 +52,19 @@ oled = oled_init()
 
 ### • examples/x_basic.py
 
-ukázka, která pordobněji vysvětlí použítí obecnějšího přístupu, naopak oproti předchozímu - zcela bez využití **octopus workframe**
+ukázka, která ale podrdobněji vysvětlí použítí obecnějšího přístupu, naopak oproti předchozímu - je zcela bez využití **octopus workframe**
 
 - [oled_basic](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/oled_basic.py)
 - ... (chystáme další)
 
 ► [Oled](/basicdoc/#oled)
 
+---
 
 ### • examples/test_x.py
 
-Tyto ukázky slouží zároveň i jako soubor hardwarových testů jednotlivých komponent, a jsou volány z testovacího adresáře `tests`. Vyznačují se tím, že vždy pouze provedou nějakou akci nebo soubor akcí a pak skončí, aby se případně mohlo pokračovat dalším.
-Například pro otestování EDU_KIT1: voláme soubor [/tests/main-test_sw1.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/tests/main-test_sw1.py) který spouští následující ukázka/testy:
+Tyto ukázky slouží zároveň i jako soubor "hardwarových" testů jednotlivých komponent, a jsou volány z testovacího adresáře `tests`. Vyznačují se tím, že vždy **pouze jednou** provedou nějakou akci nebo soubor akcí a pak program skončí, aby se případně mohlo pokračovat dalším.
+Například pro otestování [EDU_KIT1](/proj-edukit1): voláme soubor [/tests/main-test_sw1.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/tests/main-test_sw1.py) který spouští následující ukázka/testy:
 
 ```python
 import examples.test_esp32
@@ -82,4 +85,3 @@ Specifické ukázky jsou v podaresářích:
 - eaxamples/param
 
 ---
-

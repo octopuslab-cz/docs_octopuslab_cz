@@ -7,7 +7,7 @@ V předchozím [tutorial 1](/tutorial1-python) jsme se seznámili s úplnými z�
 
 ### Rozsvítíme LED diodu?
 
-Na velké části ESP modulů máme k dispozici vestavěnou svítivou diodu na PINU 2. Nejjednodušší, jak nastavit hodnotu `value()` na pinu `Pin` je následující způsob:
+Na velké části ESP modulů máme k dispozici vestavěnou svítivou diodu na PINU 2. *(Což vychází nejspíš z nepsané dohody původem z Arduina)* Nejjednodušší, jak nastavit hodnotu `value()` na pinu `Pin` *(a změnoun stavu z `0` na `1` se rozsvítí LED dioda)* je následující způsob:
 
 ```python
 >>> from machine import Pin

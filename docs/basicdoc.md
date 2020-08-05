@@ -66,6 +66,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- [button](#button)
 |      |-- [display7](#display7)
 |      |-- [oled](#oled)
+|      |-- [buzzer](#buzzer)
 |      |-- [servo](#servo)
 |      |-- [dcmotors](#dcmotors)
 |      |-- [plc]
@@ -448,6 +449,31 @@ oled.invert(0)
 ```
 
 ---
+
+
+### ![hwsoc](img/hwsoc.png){: style="width:28px" } Buzzer
+
+Pasivní piezo "pípák" slouží pro akustická upozornění, ale umí přehrát i velmi jednoduché "retro" melodie.
+
+Zdrojový kód knihovny: [components/buzzer](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/components/buzzer)
+
+Základ práce:
+```python
+from components.buzzer import Buzzer
+piezzo = Buzzer(33)
+piezzo.beep()
+```
+
+Doplňující třída `melody` jako přidání další části kódu:
+```python
+from components.buzzer.melody import jingle1
+piezzo.play_melody(jingle1)
+```
+
+
+---
+
+
 ### ![hwsoc](img/mchtr.png){: style="width:28px" } Servo
 Modul pro práci se servem, opět vytvořením instance na daném PINu (musí být PWM).
 Hlavní metodou je pak pootočení na daný úhel:  `set_degree()`.
@@ -500,27 +526,6 @@ steering.left(speed)
 
 ---
 
-### ![hwsoc](img/hwsoc.png){: style="width:28px" } Buzzer
-
-Pasivní piezo "pípák" slouží pro akustická upozornění, ale umí přehrát i velmi jednoduché "retro" melodie.
-
-Zdrojový kód knihovny: [components/buzzer](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/components/buzzer)
-
-Základ práce:
-```python
-from components.buzzer import Buzzer
-piezzo = Buzzer(33)
-piezzo.beep()
-```
-
-Doplňující třída `melody` jako přidání další části kódu:
-```python
-from components.buzzer.melody import jingle1
-piezzo.play_melody(jingle1)
-```
-
-
----
 
 ### ![hwsoc](img/wsetup.png){: style="width:28px" } IoT
 

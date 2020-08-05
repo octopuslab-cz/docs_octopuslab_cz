@@ -15,6 +15,21 @@ Na velké části ESP modulů máme k dispozici vestavěnou svítivou diodu na P
 >>> led.value(1)
 ```
 
+Třídu `Pin` jsme rozšířili o další metody, které by mohla mít LED dioda a vznikla tak třída `Led` v adreasáři `components`. Není to nic světoborného, ale u složitějších rozšíření se hodí vědět, jak na to. Každopádně se nám použití trochu zjednoduší:
+
+```python
+>>> from components.led import Led
+>>> led = Lin(2)
+>>> led.value(1) # není potřeba Pin.OUT - je obsaženo ve třídě Led
+
+>>> led.blink() # nová metoda
+>>> led.toggle()
+```
+
+Popis třídy Led ► [components/led](/basicdoc/#led)
+
+--- 
+
 ### Teplota u procesoru
 ```python
 >>> import esp32
@@ -33,6 +48,8 @@ Na velké části ESP modulů máme k dispozici vestavěnou svítivou diodu na P
 >>> esp32.hall_sensor() 
 976 # po přiložení magnetu 
 ```
+
+Ostatní metody **knihovny ESP32** v originální anglické dokumentaci ►► [library/esp32](https://docs.micropython.org/en/latest/library/esp32.html)
 
 ### Piezzo
 
@@ -59,9 +76,14 @@ beep(440,500)
 >>> buzzer.play_tone(Notes.A4)   # = tone(440) 
 ```
 
+---
+
+
 ## Víceřádkové programy - funkce, podmínky a cykly
 
 *Opakování a shrnutí.*
+
+---
 
 ### Obyčejná sekvence příkazů
 
@@ -107,8 +129,8 @@ Opět se používá stejná konstrukce s dvojtečkou za výrazem podmínky `if`:
 >>>
 ```
 
-Více podrobností na ► [naucse.python.cz/../comparisons](https://naucse.python.cz/course/pyladies/beginners/comparisons/) (porovnávání)
- ► [naucse.python.cz/../expressions](https://naucse.python.cz/course/pyladies/beginners/expressions/) (vyhodnocování výrazů)
+Více podrobností na ►► [naucse.python.cz/../comparisons](https://naucse.python.cz/course/pyladies/beginners/comparisons/) (porovnávání)
+ ►► [naucse.python.cz/../expressions](https://naucse.python.cz/course/pyladies/beginners/expressions/) (vyhodnocování výrazů)
 
 
 ### Cyklus while nebo for
@@ -135,6 +157,6 @@ Podobně pak i `for` cyklus:
 012345>>>
 ```
 
-Více na ► [naucse.python.cz/../while](https://naucse.python.cz/course/pyladies/beginners/while/) (cyklus while)
+Více na ►► [naucse.python.cz/../while](https://naucse.python.cz/course/pyladies/beginners/while/) (cyklus while)
 
 ---

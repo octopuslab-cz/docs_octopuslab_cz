@@ -7,13 +7,15 @@ V předchozím [tutorial 1](/tutorial1-python) jsme se seznámili s úplnými z�
 
 ### Rozsvítíme LED diodu?
 
-Na velké části ESP modulů máme k dispozici vestavěnou svítivou diodu na PINU 2. *(Což vychází nejspíš z nepsané dohody původem z Arduina)* Nejjednodušší, jak nastavit hodnotu `value()` na pinu `Pin` *(a změnoun stavu z `0` na `1` se rozsvítí LED dioda)* je následující způsob:
+Na velké části ESP modulů máme k dispozici vestavěnou svítivou diodu na PINU 2. *(Což vychází nejspíš z nepsané dohody původem z Arduina)* Nejjednodušší, jak nastavit hodnotu `value()` na pinu `Pin` je následující způsob:
 
 ```python
 >>> from machine import Pin
 >>> led = Pin(2, Pin.OUT)
 >>> led.value(1)
 ```
+
+*(Změnou stavu / hodnoty (value) z `0` na `1` se rozsvítí LED dioda)*
 
 Třídu `Pin` jsme rozšířili o další metody, které by mohla mít LED dioda a vznikla tak třída `Led` v adreasáři `components`. Není to nic světoborného, ale u složitějších rozšíření se hodí vědět, jak na to. Každopádně se nám použití trochu zjednoduší:
 
@@ -27,6 +29,7 @@ Třídu `Pin` jsme rozšířili o další metody, které by mohla mít LED dioda
 ```
 
 Popis třídy Led ► [components/led](/basicdoc/#led)
+A zdrojový kód knihovny ►► [github//components/led](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/led/__init__.py)
 
 --- 
 

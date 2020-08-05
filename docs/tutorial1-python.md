@@ -26,6 +26,8 @@ Type "help()" for more information.
     - **CTRL-D**  (on a blank line, do a soft reset of the board)
     - CTRL-E  (on a blank line, enter paste mode)
 
+    Nejčastěji potřebujeme CTRL-C (zastavené programu) nebo CTRL-D (reset)
+
 
 ### >>>
 
@@ -70,12 +72,6 @@ Pro další matematické funkce a konstanty použijeme knihovnu `math`.
       - [naucse.python.cz/course/mi-pyt/intro/micropython](https://naucse.python.cz/course/mi-pyt/intro/micropython/)
       - [howto.py.cz](http://howto.py.cz/index.htm)
 
-
-!!! hint "**Python je jednoduchý**"
-
-    - logické členění se provádí pomocí striktního odsazování bloků
-    - pozor na závorky u metod a funkcí `print("řetězec")` a uvozovky pro takzvané *řetězce (shluky písmen, co nejsou číslo)*
-    - pozor na dvojtečku za deklarací funkce, cyklu nebo podmínky: def funkce(parametr)`:`
 
 ```
 >>> hodnota = 123
@@ -176,6 +172,13 @@ object <module 'math'> is of type module
   sin -- <function>
 ...
 ```
+
+!!! hint "**Python je jednoduchý**"
+
+    - logické členění se provádí pomocí striktního odsazování bloků
+    - pozor na závorky u metod a funkcí `print("řetězec")` a uvozovky pro takzvané *řetězce (shluky písmen, co nejsou číslo)*
+    - pozor na dvojtečku za deklarací funkce, cyklu nebo podmínky: def funkce(parametr)`:`
+
 ---
 
 ### Blok programu na více řádků a odsazování
@@ -222,8 +225,8 @@ Ještě drobná vsuvka - cykly a podmínky zmíníme v další části, ale už 
 ```
 >>> a = 0
 >>> while True: 
-... a += 1
-... print(a)
+...    a += 1
+...    print(a)
 ```
 v nekonečné smyčce maximální rychlostí vypisuje obsah zvětšující se proměnné "a".
 
@@ -244,4 +247,3 @@ Občas se nám v programu hodí vygenerovat pseudonáhodné číslo (pro testov�
 !!! hint " **Vychytávka [TAB]**"
     Když chcete v Pythnou nebo Micropythonu něco napsat, naučte se využívat TABulátor (klávesa `TAB`). Když například po promptu `>>>` chcete napsat `octopus_initial.setup()`, zkuste napsat pouze prvních pár písmen a pak zmáčknout `TAB`:
     `>>> oc [TAB]` a systém vám doplní nebo dá vybrat. Stejně tak po tečce: `octopus_initial.` stačí napsat `se` a pak `TAB` - a "našeptávač" automaticky doplní `setup` (nezapomeňte na závorky `()`, je to metoda).
-

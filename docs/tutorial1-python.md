@@ -3,15 +3,15 @@
 
 ## Pár prvních pokusů s Micropythonem
 
-Většina ukázek z tohoto tutoriálu bude fungovat i na běžném počítači při použití Pythonu. Cílem je pochopení a procvičení elementárních základů. Pokračování, kde už využijeme ESP32 s Micropythonem je na samostatné stránce: [Tutorial2](/tutorial2-micropython-esp). Pro ten už si ale už musíte [nainstalovat](/install) Micropython na ESP.
+Většina ukázek z tohoto tutoriálu bude fungovat i na běžném počítači při použití Pythonu. Cílem je pochopení a procvičení elementárních základů. Pokračování, kde už využijeme ESP32 s Micropythonem, je na samostatné stránce: [Tutorial2](/tutorial2-micropython-esp). Pro ten už si ale musíte [nainstalovat](/install) Micropython na ESP.
 
 ---
 
-### CTRL+C
+### CTRL-C
 
 Po restartu nám ESP32 posílá do našeho počítače na terminál první zprávy.
-Zeleně jsou systémové inforamce, které nás v tuto chvíli nezajímají.
-Po stisknuté **CTL+C** se přeruší běh programu a uvidíme verzi Micropythonu
+Zeleně jsou systémové informace, které nás v tuto chvíli nezajímají.
+Po stisknutí **CTRL-C** se přeruší běh programu a uvidíme verzi Micropythonu:
 ```
 MicroPython v1.11-180-g8f55a8fab-dirty-build-octopusLAB on 2019-07-29; 
 module with ESP32                                                                                                             
@@ -26,7 +26,7 @@ Type "help()" for more information.
     - **CTRL-D**  (on a blank line, do a soft reset of the board)
     - CTRL-E  (on a blank line, enter paste mode)
 
-    Nejčastěji potřebujeme CTRL-C (zastavené programu) nebo CTRL-D (reset)
+    Nejčastěji potřebujeme CTRL-C (zastavení programu) nebo CTRL-D (reset)
 
 
 ### >>>
@@ -34,31 +34,31 @@ Type "help()" for more information.
 `>>>` toto je takzvaný "prompt", terminálová výzva, abychom tam něco napsali - příkaz nebo "posloupnost příkazů".
 
 ```
->>> a = 123      #do proměnné se uložila hodnota (číslo 123)
->>> a            #vytiskne / zobrazí hodnotu proměnné 
-123              #nebo print(a) 
+>>> a = 123      # do proměnné se uložila hodnota (číslo 123)
+>>> a            # vytiskne / zobrazí hodnotu proměnné 
+123              # nebo print(a) 
                 
 >>> a + 10
-133              #zobrazí vypočtenou hodnotu (jako kalkulačka)
+133              # zobrazí vypočtenou hodnotu (jako kalkulačka)
 ```
 
 *Python zde běží v takzvaném interaktivním módu. Po každém vložení řádku (nebo bloku řádků) se okamžitě napsaný příkaz (nebo skupina příkazů) provede a čeká na další výzvu zobrazením `>>>`. 
-Je to výhodné pro testování jednotlivých příkazů, také pro výuku nebo průběžné modifikace.*
+Je to výhodné pro testování jednotlivých příkazů, pro výuku nebo průběžné modifikace.*
 
 ---
 
 ### Math
 
-Někdy chceme složitější matematické výrazy, než je 
+Někdy chceme použít i složitější matematické výrazy, než je 
 `+` sčítání | `-` odčítání | `*` násobení | `/` dělení
 
 Pro další matematické funkce a konstanty použijeme knihovnu `math`.
 
 ```
->>> import math        # knihovnuimportuje me, až když jí potřebujeme,
+>>> import math        # knihovnu importujeme, až když ji potřebujeme,
                        # jinak nám zbytečně blokuje operační paměť
 
->>> math.log10(1000)   # funkce logaritmus je jenou z metod knihovny math
+>>> math.log10(1000)   # funkce logaritmus o základu deset je jednou z metod knihovny math
 3.0
 
 >>> math.pi            # konstanta Pí (není to metoda!)
@@ -124,7 +124,7 @@ For a list of available modules, type help('modules')
 ```
 >>> help("modules")
 ```
-Pokud vás zajímá, které "moduly" jsou aktuálně v Micropythonu dostupny 
+Pokud vás zajímá, které "moduly" jsou aktuálně v Micropythonu dostupné 
 *(Verze 1.12-599)*:
 ```
 __main__          inisetup          ubinascii         urandom
@@ -183,7 +183,7 @@ object <module 'math'> is of type module
 
 ### Blok programu na více řádků a odsazování
 
-Více řádkové "dočasné definice vlastních funkcí" pomocí `def název(parametry):` - odsazení za nás udělá REPL `...` nezapomenout na dvojtečku!
+Víceřádkové "dočasné definice vlastních funkcí" se provádí pomocí `def název(parametry):` - odsazení za nás udělá REPL `...` nezapomenout na dvojtečku!
 
 ```
 >>> def suma(x, y):
@@ -198,7 +198,7 @@ Více řádkové "dočasné definice vlastních funkcí" pomocí `def název(par
     - zmínili jsme už, že logické členění se provádí pomocí striktního **odsazování** bloků
     - při psaní jednořádkových pokusů v terminálu (po `>>>`) Vám po řádku končícím dvojtečkou Python sám předvyplní 
     symbolické tři tečky `...` jako odsazení *viz předchozí ukázka*, ale pozor! Při psaní programu do souboru se odsazuje pomocí mezer 
-    (doporučeno 3 nebo 4) nebo TABelátorem. 
+    (doporučeno 3 nebo 4) nebo TABulátorem. 
     A musí to být stále stejně! Kombinace mezer a TAB je také **syntaktická chyba**.
 
 *Píšeme-li postupně řádek po řádku - příkaz po příkaze, odsazování není potřeba. Až v definování procedur, v cyklech nebo podmínkách - tedy "po dvojtečce" `:`*
@@ -206,17 +206,17 @@ Více řádkové "dočasné definice vlastních funkcí" pomocí `def název(par
 ---
 
 ### Čekací prodlevy
-- program bude pokračovat až po uplynutí dané doby 
+- program bude pokračovat až po uplynutí dané doby:
 ```
 from time import sleep, sleep_ms # importujeme jen potřebné knihovny
 
-sleep(1)           # 1 sekund pauza
-sleep_ms(100)      # 100 mili sec.
-sleep_us(50)       # 50 micro sec.
+sleep(1)           # 1 sekunda pauza
+sleep_ms(100)      # 100 milisekund pauza
+sleep_us(50)       # 50 mikrosekund pauza
 ```
 
 ### Nekonečný cyklus
-Ještě drobná vsuvka - cykly a podmínky zmíníme v další části, ale už nyní použijeme jednu základní formu: "nekonečný cyklus"
+Ještě drobná vsuvka - cykly a podmínky zmíníme v další části, ale už nyní použijeme jednu základní formu: "nekonečný cyklus":
 ```
 >>> while podmínka:
 ... prováděj_pokud_je_splněná_podmínka()
@@ -228,12 +228,12 @@ Ještě drobná vsuvka - cykly a podmínky zmíníme v další části, ale už 
 ...    a += 1
 ...    print(a)
 ```
-v nekonečné smyčce maximální rychlostí vypisuje obsah zvětšující se proměnné "a".
+v nekonečné smyčce se maximální rychlostí vypisuje obsah zvětšující se proměnné "a".
 
 
 ### Generátor náhodných čísel
 
-Občas se nám v programu hodí vygenerovat pseudonáhodné číslo (pro testování, jednoduché hry, nebo speciální efekty)
+Občas se nám v programu hodí vygenerovat pseudonáhodné číslo (pro testování, jednoduché hry nebo speciální efekty)
 
 ```python
 >>> from os import urandom
@@ -245,5 +245,5 @@ Občas se nám v programu hodí vygenerovat pseudonáhodné číslo (pro testov�
 ---
 
 !!! hint " **Vychytávka [TAB]**"
-    Když chcete v Pythnou nebo Micropythonu něco napsat, naučte se využívat TABulátor (klávesa `TAB`). Když například po promptu `>>>` chcete napsat `octopus_initial.setup()`, zkuste napsat pouze prvních pár písmen a pak zmáčknout `TAB`:
+    Když chcete v Pythonu nebo Micropythonu něco napsat, naučte se využívat TABulátor (klávesa `TAB`). Když například po promptu `>>>` chcete napsat `octopus_initial.setup()`, zkuste napsat pouze prvních pár písmen a pak zmáčknout `TAB`:
     `>>> oc [TAB]` a systém vám doplní nebo dá vybrat. Stejně tak po tečce: `octopus_initial.` stačí napsat `se` a pak `TAB` - a "našeptávač" automaticky doplní `setup` (nezapomeňte na závorky `()`, je to metoda).

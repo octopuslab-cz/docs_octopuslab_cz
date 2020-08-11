@@ -1172,5 +1172,15 @@ funkce = dekorator(funkce)
 
 ## Web server - IDE - jednoduché ovládání
 
-Jsme vyčlenili samostatně - ztím zde: [](https://www.octopuslab.cz/micropython-web-ide/)
+Jsme vyčlenili samostatně - zatím zde: [micropython-web-ide](https://www.octopuslab.cz/micropython-web-ide/)
 
+### Web server
+
+ESP32 má dostatečný výkon, aby na něm mohl běžet jednoduchý **webový server** (server s jednoduchými "html" stránkami, k kterému se v lokální síti připojíme přes IP ESPčka)
+
+```python
+>>> from utils.octopus import w, web_server
+>>> w()
+>>> web_server() 
+
+```

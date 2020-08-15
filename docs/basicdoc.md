@@ -549,7 +549,7 @@ pwm_led.duty(300)
 
 
 from components.iot import Thermometer
-tt = Thermometer(32)
+tt = Thermometer(32) # DEV1 (ROBOTboard)
 tx = tt.ds.scan()
 tt.get_temp() # default index 0 > first sensor
 tt.get_temp(tx[0])

@@ -75,7 +75,8 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |
 |-- [/utils](#octopus-utils)
 |      |-- [octopus_lib](#octopus_lib)
-|            | [I2C](#i2c) | [SPI](#spi) | [LCD](#lcd) | 
+|            | [I2C](#i2c) | [SPI](#spi) | [LCD](#lcd) |
+|      |-- [WiFiConnect](#wificonnect)
 |      |-- [pinout](#pinout)
 |      |-- [bits](#bits)
 |      |-- [transform](#transform)
@@ -443,7 +444,7 @@ oled.invert(0)
 >>> def heartBeat()               
 ...    oled.draw_icon(ICON_heart,115,15)
 ...    sleep(1)
-...    oled.draw_icon(ICON_clr,115,15)                 
+...    oled.draw_icon(ICON_clr,115,15)
 ...    sleep(1)
 ...
 ```
@@ -558,6 +559,18 @@ tt.get_temp(tx[0])
 ---
 
 ## OCTOPUS Utils
+
+### ![hwsoc](img/bits.png){: style="width:28px" } WiFiConnect
+
+Hlavní výhodou našeho rozšíření pro připojení k WiFi je používání uloženého nastavení (v `config/wifi.json`).
+Nastavení WiFi se provádí pomocí [setup()](../install/#setup-nastaveni-systemu)
+
+```python
+from utils.wifi_connect import WiFiConnect
+
+net = WiFiConnect()
+net.connect
+```
 
 ### ![hwsoc](img/bits.png){: style="width:28px" } Bits
 Pro práci s jednotlivými **bity**. `B1 = 0b11111001`. Bitové operace jsme si museli do Pythonu trochu doladit, aby se s nimi pracovalo lépe a intuitivně. **Používané metody:**

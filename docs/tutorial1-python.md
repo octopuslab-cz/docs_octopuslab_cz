@@ -215,8 +215,46 @@ sleep_ms(100)      # 100 milisekund pauza
 sleep_us(50)       # 50 mikrosekund pauza
 ```
 
+### Generátor náhodných čísel
+
+Občas se nám v programu hodí vygenerovat **pseudonáhodné** číslo (pro testování, jednoduché hry nebo speciální efekty)
+
+```python
+>>> from os import urandom
+>>> urandom(1)[0]
+42
+```
+
+
+### Smyčky | Cykly
+
+```python
+i = 0
+while (i < 3):
+    print(i)
+    i += 1
+```
+Vypíše:
+```
+1
+2
+3
+```
+
+### Podmínky
+```python
+from os import urandom
+num = urandom(1)[0]
+if (num < 100):
+   print("number {0} < 100".format(nun))
+
+```
+
+Povšimněte si konstrukce `format`, kdy můžeme do řetězce vložit proměnnou, aniž bychom ho postupně "slepovali".
+
+
 ### Nekonečný cyklus
-Ještě drobná vsuvka - cykly a podmínky zmíníme v další části, ale už nyní použijeme jednu základní formu: "nekonečný cyklus":
+Ještě drobná vsuvka - cykly a podmínky jsme zmínili v předchozí části, nyní použijeme jednu základní formu: "nekonečný cyklus":
 ```
 >>> while podmínka:
 ... prováděj_pokud_je_splněná_podmínka()
@@ -229,18 +267,6 @@ Ještě drobná vsuvka - cykly a podmínky zmíníme v další části, ale už 
 ...    print(a)
 ```
 v nekonečné smyčce se maximální rychlostí vypisuje obsah zvětšující se proměnné "a".
-
-
-### Generátor náhodných čísel
-
-Občas se nám v programu hodí vygenerovat pseudonáhodné číslo (pro testování, jednoduché hry nebo speciální efekty)
-
-```python
->>> from os import urandom
->>> urandom(1)[0]
-42
-```
-
 
 ---
 

@@ -249,8 +249,7 @@ S "dospělým" Pythonem si můžete vyzkoušet více ►► [naucse.python/cykly
 from os import urandom
 num = urandom(1)[0]
 if (num < 100):
-   print("number {0} < 100".format(nun))
-
+   print("number {0} < 100".format(num))
 ```
 
 Povšimněte si konstrukce `format`, kdy můžeme do řetězce vložit proměnnou, aniž bychom ho postupně "slepovali".
@@ -271,6 +270,8 @@ Ještě drobná vsuvka - cykly a podmínky jsme zmínili v předchozí části, 
 ...    a += 1
 ...    print(a)
 ```
+
+
 v nekonečné smyčce se maximální rychlostí vypisuje obsah zvětšující se proměnné "a".
 
 ---

@@ -44,6 +44,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 ### Adresářová strukrura na ESP32
 <pre>
 |-- [boot.py](#soubory-bootpy-a-mainpy)       # inicializace po startu
+|      |-- [reset](#reset)
 |-- [main.py](#soubory-bootpy-a-mainpy)       # hlavní soubor programu
 |-- /assets       # obrázky, zvuky, tabulky
 |-- [/config](#config)       # kofigurační soubory (.json)
@@ -133,9 +134,20 @@ def shell():
     shell.shell()
 ```
 
+##### Reset
+
+Pro zjednodušené použití resetu pomocí příkazu `reset()` je v `boot.py` přednastaveno:
+```python
+def reset():
+    from machine import reset
+    reset()
+```
+
+---
+
 #### • main.py 
-je hlavní soubor uživatelského programu, který budeme využívat pro své projekty. Spustí se (pokud existuje) hned po boot.py.
-Často používáme jednoduché kopírování existujícího programu nebo ukázky (z examples) v prostředí uPyshell:
+je hlavní soubor uživatelského programu, který budeme využívat pro své projekty. Spustí se (pokud existuje) hned po `boot.py`.
+Často používáme jednoduché kopírování existujícího programu nebo ukázky (z examples) v prostředí [uPyshell](/upyshell):
 
 ```batch
 $ cp examples/blink.py main.py
@@ -569,8 +581,21 @@ Nastavení WiFi se provádí pomocí [setup()](../install/#setup-nastaveni-syste
 from utils.wifi_connect import WiFiConnect
 
 net = WiFiConnect()
-net.connect
+net.connect()
 ```
+
+```python
+# hard reconect
+net.sta_if.disconnect()
+net.connect()
+
+# hard reset
+reset()
+```
+
+V případě "závažnějšího problému" s připojením někdy pomůže až "tvrdý" [reset](#reset).
+
+
 
 ### ![hwsoc](img/bits.png){: style="width:28px" } Bits
 Pro práci s jednotlivými **bity**. `B1 = 0b11111001`. Bitové operace jsme si museli do Pythonu trochu doladit, aby se s nimi pracovalo lépe a intuitivně. **Používané metody:**

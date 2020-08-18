@@ -217,7 +217,7 @@ sleep_us(50)       # 50 mikrosekund pauza
 
 ### Generátor náhodných čísel
 
-Občas se nám v programu hodí vygenerovat **pseudonáhodné** číslo (pro testování, jednoduché hry nebo speciální efekty)
+Občas se nám v programu hodí vygenerovat **pseudonáhodné** číslo (pro testování, jednoduché hry nebo speciální efekty).
 
 ```python
 >>> from os import urandom
@@ -226,7 +226,7 @@ Občas se nám v programu hodí vygenerovat **pseudonáhodné** číslo (pro tes
 ```
 
 
-### Smyčky | Cykly
+### Smyčky | Cykly 
 
 ```python
 i = 0
@@ -241,7 +241,10 @@ Vypíše:
 3
 ```
 
+S "dospělým" Pythonem si můžete vyzkoušet více ►► [naucse.python/cykly](https://naucse.python.cz/course/pyladies/sessions/loops/)
+
 ### Podmínky
+
 ```python
 from os import urandom
 num = urandom(1)[0]
@@ -251,6 +254,8 @@ if (num < 100):
 ```
 
 Povšimněte si konstrukce `format`, kdy můžeme do řetězce vložit proměnnou, aniž bychom ho postupně "slepovali".
+
+S "dospělým" Pythonem si můžete vyzkoušet více ►► [naucse.python/podminky](https://naucse.python.cz/course/pyladies/beginners/comparisons/)
 
 
 ### Nekonečný cyklus

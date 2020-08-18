@@ -585,16 +585,19 @@ net.connect()
 ```
 
 ```python
-# hard reconect
-net.sta_if.disconnect()
-net.connect()
+if not net.isconnected()
+    # hard reconect
+    net.sta_if.disconnect()
+    net.connect()
+```
 
+V případě "závažnějšího problému" s připojením někdy pomůže až "tvrdý" [reset](#reset).
+```python
 # hard reset
 reset()
 ```
 
-V případě "závažnějšího problému" s připojením někdy pomůže až "tvrdý" [reset](#reset).
-
+---
 
 
 ### ![hwsoc](img/bits.png){: style="width:28px" } Bits

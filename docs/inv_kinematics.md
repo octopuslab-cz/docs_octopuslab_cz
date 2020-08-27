@@ -1,7 +1,10 @@
 ## Inversní kinematika
 
+
 p ř i p r a v u j e m e
 
+
+Jednoduchá ukázka - bod x,y se převádí na dva úhly (pro dvě serva)
 
 ```python
 from utils.transform import *

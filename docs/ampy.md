@@ -1,8 +1,8 @@
 # ![logo](img/logo_small.png){: style="width:39px" } Ampy
 
-S programem **ampy** pracujeme v příkazové řádce svého počítače. Slouží pro "vzdálenou" práci s ESP po sériové lince, kdy nám umožňuje především přesouvat soubory do ESP `put`/ z ESP `get`, vytvářet adresáře `mkdir` a podobně.
+S programem **ampy** pracujeme v příkazové řádce svého počítače. Slouží pro "vzdálenou" práci s ESP po sériové lince, kdy nám umožňuje především přesouvat soubory **do** ESP `put`/ **z** ESP `get`, vytvářet adresáře `mkdir` a podobně.
 
-Pozor na kolize portu - **ampy** nesmí být blokováno sériovým terminálem (screen nebo [putty](./install_win/#terminal-putty)).
+Pozor na kolize portu - **ampy** nesmí být blokováno sériovým terminálem (screen nebo [putty](../install_win/#terminal-putty)).
 
 
 ## Instalace

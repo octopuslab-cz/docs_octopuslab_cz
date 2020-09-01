@@ -5,6 +5,16 @@ S programem **ampy** pracujeme v příkazové řádce svého počítače.
 
 ## Instalace
 
+Pro používání `ampy` musíte mít nainstalován Python3.
+
+**Windows:**
+Instalace Pythonu – hezky popsáno na https://naucse.python.cz/course/pyladies/beginners/install/
+
+**Linux:**
+Python bývá už součástí základní instalace
+
+Instalace `ampy` přes `pip`:
+
 ```bash
 pip install adafruit-ampy 
 pip install adafruit-ampy --upgrade  

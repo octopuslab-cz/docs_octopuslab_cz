@@ -1,11 +1,12 @@
 # ![logo](img/logo_small.png){: style="width:39px" } Ampy
 
 S programem **ampy** pracujeme v příkazové řádce svého počítače.
+Pozor na kolize portu - **ampy** nesmí být blokováno sériovým terminálem (screen nebo putty).
 
 
 ## Instalace
 
-Pro používání `ampy` musíte mít nainstalován Python3.
+Pro používání **ampy** musíte mít nainstalován Python3.
 
 **Windows:**
 Instalace Pythonu – hezky popsáno na https://naucse.python.cz/course/pyladies/beginners/install/

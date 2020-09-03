@@ -288,6 +288,30 @@ Pro základní práci s tlačítky. Původně jsme používali samostatný blok 
 
 Zdrojový kód knihovny: [components/button](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/button/__init__.py)
 
+
+```python
+from machine import Pin
+
+from button import Button
+
+boot_pin = Pin(0, Pin.IN)
+
+boot_button = Button(boot_pin, release_value=1)
+
+
+@boot_button.on_press
+def boot_button_on_press():
+    print('boot_button_on_press')
+
+
+@boot_button.on_release
+def boot_button_on_release():
+    print('boot_button_on_release')
+```
+
+Stará verze 1.0 měla v konstruktoru číslo PINu.
+Nová verze 2.0 má přímo instanci PINu.
+
 ```python
 from time import sleep
 from machine import Pin

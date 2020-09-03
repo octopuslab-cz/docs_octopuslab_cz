@@ -54,7 +54,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- ...
 |      |-- /bmp280
 |      |-- /bh1750 # i2c light sensor
-|      |-- [st7735.py](#st7735)
+|      |-- [st7735.py](#st7735) # TFT128*166 color display
 |      |-- colors_rgb.py
 |      |-- [hcsr04.py](#hcsr04) # ultrasonic
 |      |-- [lcd](#lcd)
@@ -788,6 +788,21 @@ lcd.putchar(chr(1))
 
 Barevný displej TFT 128x160, který ale vyžaduje při práci s Micropythonem větší paměť.
 
+Doporučené připojení k `ESP32board`:
+```
+Display | ESP32board
+------------------------
+1-RST   | PWM2     (16)
+2-CS    | SCE0     (5)
+3-D/C   | PWM1     (17)
+4-DIN   | SPI_MOSI
+5-CLK   | SPI_CLK
+6-UCC   | 5V
+7-BL    | 3V3
+8-GND   | GND
+```
+
+
 ```python
 from machine import Pin, SPI, SDCard
 from time import sleep, sleep_ms
@@ -803,9 +818,9 @@ print("spi.TFT 128x160 init >")
 spi = SPI(1, baudrate=10000000, polarity=1, phase=0, sck=Pin(pinout.SPI_CLK_PIN), mosi=Pin(pinout.SPI_MOSI_PIN))
 ss = Pin(pinout.SPI_CS0_PIN, Pin.OUT)
 
-rst = Pin(27, Pin.OUT) #PWM1(17) > DEv3(27)
-cs = Pin(5, Pin.OUT)  #SCE0()
-dc = Pin(26, Pin.OUT)  #PWM2(16) >  IO26?
+rst = Pin(16, Pin.OUT) #PWM2 (16) / DEv3(27)
+cs = Pin(5, Pin.OUT)   #SCE0 (5)
+dc = Pin(26, Pin.OUT)  #PWM1 (17) /  IO26
 
 tft = st7735.ST7735R(spi, cs = cs, dc = dc, rst = rst)
 

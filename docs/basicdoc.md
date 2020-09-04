@@ -286,16 +286,15 @@ while True:
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Button
 Pro základní práci s tlačítky. Původně jsme používali samostatný blok s přerušením, ale knihovna pak byla přepsána tak, že využívá dekorátor `@led_button.on_press`, kterým uvedeme (odekorujeme) vlastní funkci `on_press_top_button()`, která se vyvolá vždy, když se zmáčkne tlačítko. Celá funkce pak běží na pozadí, je neblokující, a snadno i spolehlivě se dá použít i pro více tlačítek.
 
+
 Zdrojový kód knihovny: [components/button](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/button/__init__.py)
 
 
 ```python
 from machine import Pin
-
 from button import Button
 
 boot_pin = Pin(0, Pin.IN)
-
 boot_button = Button(boot_pin, release_value=1)
 
 
@@ -304,9 +303,15 @@ def boot_button_on_press():
     print('boot_button_on_press')
 
 
+@boot_button.on_long_press
+def boot_button_on_long_press():
+    print('boot_button_on_long_press')
+
+
 @boot_button.on_release
 def boot_button_on_release():
     print('boot_button_on_release')
+
 ```
 
 Stará verze 1.0 měla v konstruktoru číslo PINu.

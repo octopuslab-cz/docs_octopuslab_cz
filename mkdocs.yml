@@ -33,6 +33,7 @@ nav:
       - 'UpyShell': upyshell.md
       - 'Examples - ukázky': examples.md
       - 'Ampy': ampy.md
+      - 'Thonny': thonny.md
       - 'Github ': github.md
       - 'Popis markdown': tutorials-intro.md
   - 'Projekty':

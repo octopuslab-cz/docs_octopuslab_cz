@@ -166,17 +166,22 @@ select:
 
 ---
 
-## Práce se soubory - Upyshell | Ampy | thonny
+## Práce se soubory - Upyshell | Ampy | Thonny
 
 Pro přesouvání souborů do ESP máme víc možností. Jednoduché úpravy a přímé kopírování se dají rovnou provádět v ESP pomocí emulátoru [uPyShell](/upyshell). Tam se dá využít příkaz `edit` a pak `cp`. Ještě je tu i možnost `wget` pro stažení libovolného souboru z internetu.
+(pro `wget` musí být vytvořen adresář `download`)
 
-Druhou možností je speciální IDE *Thonny - Python IDE for beginners*, ke stažení zde: https://thonny.org/
 
-A poslední varianta, kterou jsme dříve využívali i pro `deploy` (sestavení systému) je program `ampy`, přímo určený pro vzdálenou práci se soubory na ESP.
-Tomu se věnujeme obšírněji na samostatné stránce [ampy](/ampy).
+Další  varianta, kterou jsme dříve využívali i pro `deploy` (sestavení systému) je program `ampy`, přímo určený pro vzdálenou práci se soubory na ESP. Tomu se věnujeme obšírněji na samostatné stránce ► [ampy](/ampy).
+
+
+Existuje jednoduché IDE s přímým připojením k ESP - opět v samostatném bloku ► [Thonny](/thonny).
+(Je k dispozici pro Win, Mac i Linux). 
+Aplikace **Thonny** v posledních verzích prošla řadou změn a tak si jistě zaslouží Vaší pozornost.
 
 ---
 
 *Původní verze tohoto dokumentu je na https://www.octopuslab.cz/micropython-octopus/*
 
 
+ 

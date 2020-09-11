@@ -1,7 +1,7 @@
-# ![logo](img/logo_small.png) PIP | upip | PIPI
+# ![logo](img/logo_small.png) PIP | upip | pipi
 
 Postupně pracujeme na vlastních "balíčcích" (packages), které budeme distribuovat pomocí `pip` (package installer for Python), přesněji `upip` (pro Micropython).
-V prvním kroku chceme k čisté "vanila" binárce Micropthonu doplnit [octopus_initial.setup()](./install/#octopus_initialsetup) v nějaké "lite" verzi z githubu nebo z vlastního cloudu:
+V prvním kroku chceme k čisté "vanila" binárce Micropthonu doplnit [octopus_initial.setup()](../install/#octopus_initialsetup) v nějaké "lite" verzi z githubu nebo z vlastního cloudu:
 
 ► [github/octopus-init-lite](https://github.com/octopusengine/octopus-init-lite)
 

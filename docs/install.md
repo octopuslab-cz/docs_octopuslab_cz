@@ -24,6 +24,7 @@ První dva body se liší podle použité platformy (operačního systému):
 - [Windows](/install_win)
 - [Mac_OS](/install_mac)
 
+
 Pokud je na Vašem **ESP32** úspěšně nahrán **Micropython**, můžete pokračovat dalším krokem tři:
 
 ## 3. První spuštění a instalace "workframe" octopus
@@ -37,6 +38,9 @@ Posledními kroky jsou:
 ### • octopus_initial.setup()
 
 Pro ulehčení instalace máme vlastní fork Micropythonu, do kterého jsme zaintegrovali malý modul `octopus_initial` s metodou `setup()`.
+
+Pokud používáte základní (vanilla) verzi Micropythonu, máte možnost stáhnout si "lite" verzi i pomocí [upip](../pip), která přidává lite modul `micropython-octopuslab-installer` s metodou `deploy()`.
+
 
 !!! hint " **Vychytávka [TAB]**"
     Když chcete v Pythnou nebo Micropythonu něco napsat, naučte se využívat TABulátor (klávesa `TAB`). Když například po promptu `>>>` chcete napsat `octopus_initial.setup()`, zkuste napsat pouze prvních pár písmen a pak zmáčknout `TAB`:
@@ -106,6 +110,12 @@ Pro připojení do Internetu se ve volbě **select:** napíše:
     ```
 
 ---
+
+!!! hint " **uPip**"
+    Když chcete použít základní (vanilla) verzi Micropythonu, máte možnost stáhnout si "lite" verzi instalátoru i pomocí uPip, která přidává lite modul `micropython-octopuslab-installer` s metodou `deploy()`. 
+    Podrobněji na samostatné stránce ► [upip](../pip).
+
+
 
 ### • Examples - je adresář plný příkladů
 

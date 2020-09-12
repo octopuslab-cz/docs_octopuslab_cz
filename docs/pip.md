@@ -9,7 +9,8 @@ Prvním balíčkem je `micropython-octopus-installer`, nahrazující [octopus_in
 ► [github.com/octopuslab-installer](https://github.com/octopusengine/octopuslab-installer)
 
 
-V čisté (vanila) verzi Micropythonu stačí provést dva následující kroky:
+►►[Micropython](http://micropython.org/download/esp32/) pro ESP32. (Používáme zatím lépe otestovanou verzi `ESP-IDF v3.x`)
+V této základní (vanilla) verzi Micropythonu stačí provést dva následující kroky:
 
 **Připojení k WiFi**¨
 

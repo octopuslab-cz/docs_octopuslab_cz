@@ -4,6 +4,7 @@ Postupně pracujeme na vlastních "balíčcích" (packages), které budeme distr
 V prvním kroku chceme k čisté "vanila" binárce Micropthonu doplnit [octopus_initial.setup()](../install/#octopus_initialsetup) v nějaké "lite" verzi z githubu nebo z vlastního cloudu:
 
 ► [pipi.org/octopuslab-installer](https://pypi.org/project/micropython-octopuslab-installer/#data)
+
 ► [github.com/octopuslab-installer](https://github.com/octopusengine/octopuslab-installer)
 
 ```python

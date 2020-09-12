@@ -3,7 +3,8 @@
 Postupně pracujeme na vlastních "balíčcích" (packages), které budeme distribuovat pomocí `pip` (package installer for Python), přesněji `upip` (pro Micropython).
 V prvním kroku chceme k čisté "vanila" binárce Micropthonu doplnit [octopus_initial.setup()](../install/#octopus_initialsetup) v nějaké "lite" verzi z githubu nebo z vlastního cloudu:
 
-► [github/octopuslab-installer](https://github.com/octopusengine/octopuslab-installer)
+► [pipi.org/octopuslab-installer](https://pypi.org/project/micropython-octopuslab-installer/#data)
+► [github.com/octopuslab-installer](https://github.com/octopusengine/octopuslab-installer)
 
 ```python
 import upip

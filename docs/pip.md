@@ -1,18 +1,32 @@
 # ![logo](img/logo_small.png) PIP | upip | pipi
 
-Postupně pracujeme na vlastních "balíčcích" (packages), které budeme distribuovat pomocí `pip` (package installer for Python), přesněji `upip` (pro Micropython).
-V prvním kroku chceme k čisté "vanila" binárce Micropthonu doplnit [octopus_initial.setup()](../install/#octopus_initialsetup) v nějaké "lite" verzi z githubu nebo z vlastního cloudu:
+Postupně pracujeme na vlastních "balíčcích" (packages), které budeme distribuovat pomocí `pip` (package installer for Python), přesněji `upip` (pro Micropython). Chceme používat `pipi` (the Python Package Index) na stránkách ►► [pypi.org/](https://pypi.org/).
 
-► [pipi.org/octopuslab-installer](https://pypi.org/project/micropython-octopuslab-installer/#data)
 
+Prvním balíčkem je `micropython-octopus-installer`, nahrazující [octopus_initial.setup()](../install/#octopus_initialsetup) v "lite" verzi.
+
+► [pipi.org/octopuslab-installer](https://pypi.org/project/micropython-octopuslab-installer/#data) | 
 ► [github.com/octopuslab-installer](https://github.com/octopusengine/octopuslab-installer)
 
+
+V čisté (vanila) verzi Micropythonu stačí provést dva následující kroky:
+
+**Připojení k WiFi**¨
+
 ```python
-import upip
-upip.install('shutil')  # TODO include in `setup.py`
-upip.install('micropython-octopuslab-installer')
-from lib import octopuslab_installer
-octopuslab_installer.deploy()
+>>> import network
+>>> wlan = network.WLAN(network.STA_IF)
+>>> wlan.active(True)
+>>> wlan.connect('ssid', 'password')
+```
+
+**Instalace metody deploy() z octopuslab_installer**
+```python
+>>> import upip
+>>> upip.install('shutil')  # TODO include in `setup.py`
+>>> upip.install('micropython-octopuslab-installer')
+>>> from lib import octopuslab_installer
+>>> octopuslab_installer.deploy()
 ```
 
 ---
@@ -39,8 +53,6 @@ for installation, upip does not support arbitrary code in setup.py.
 ```
 
 
-V dalších krocích chceme používat `pipi` (the Python Package Index), který zkoušíme na vlastní doméně.
 
-►► [pypi.org/](https://pypi.org/)
 
 ---

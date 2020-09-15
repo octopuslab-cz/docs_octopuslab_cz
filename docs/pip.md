@@ -16,19 +16,19 @@ V této základní (vanilla) verzi Micropythonu stačí provést dva následují
 **Připojení k WiFi**¨
 
 ```python
->>> import network
->>> wlan = network.WLAN(network.STA_IF)
->>> wlan.active(True)
->>> wlan.connect('ssid', 'password')
+import network
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+wlan.connect('ssid', 'password')
 ```
 
 **Instalace metody deploy() z octopuslab_installer**
 ```python
->>> import upip
->>> upip.install('shutil')  # TODO include in `setup.py`
->>> upip.install('micropython-octopuslab-installer')
->>> from lib import octopuslab_installer
->>> octopuslab_installer.deploy()
+import upip
+upip.install('shutil')  # TODO include in `setup.py`
+upip.install('micropython-octopuslab-installer')
+from lib import octopuslab_installer
+octopuslab_installer.deploy()
 ```
 
 ---

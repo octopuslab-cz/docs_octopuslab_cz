@@ -15,7 +15,8 @@ V této základní (vanilla) verzi Micropythonu stačí provést dva následují
 
 **Připojení k WiFi**
 
-Můžete použít copy&paste celého bloku popmocí `CTRL+E` (nezapomeňte si vyplnit svoje ssid a heslo).
+Můžete použít copy&paste celého bloku popmocí `CTRL+E` 
+(nezapomeňte si vyplnit svoje ssid a heslo).
 
 ```python
 import network
@@ -29,6 +30,9 @@ wlan.connect('ssid', 'password')
 import upip
 upip.install('shutil')  # TODO include in `setup.py`
 upip.install('micropython-octopuslab-installer')
+
+# wait for install
+
 from lib import octopuslab_installer
 octopuslab_installer.deploy()
 ```

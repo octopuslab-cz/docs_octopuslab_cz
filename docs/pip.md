@@ -1,16 +1,17 @@
-# ![logo](img/logo_small.png) PIP | upip | pipi
+# ![logo](img/logo_small.png) PIP | upip | pypi
 
-Postupně pracujeme na vlastních "balíčcích" (packages), které budeme distribuovat pomocí `pip` (package installer for Python), přesněji `upip` (pro Micropython). Chceme používat `pipi` (the Python Package Index) na stránkách ►► [pypi.org/](https://pypi.org/).
+Pracujeme na vlastních "instalčních balíčcích" (packages), které budeme distribuovat pomocí `pip` (package installer for Python), přesněji `upip` (pro Micropython). Chceme používat `pypi` (the Python Package Index) na stránkách ►► [pypi.org/](https://pypi.org/).
 
 
 Prvním balíčkem je `micropython-octopus-installer`, nahrazující [octopus_initial.setup()](../install/#octopus_initialsetup) v "lite" verzi.
 
-► [pipi.org/octopuslab-installer](https://pypi.org/project/micropython-octopuslab-installer/#data) | 
-► [github.com/octopuslab-installer](https://github.com/octopusengine/octopuslab-installer)
+► [pipi.org/octopuslab-installer](https://pypi.org/project/micropython-octopuslab-installer/#data)
 
+► [github.com/octopuslab-installer](https://github.com/octopusengine/octopuslab-installer)
 
 ►►[Micropython](http://micropython.org/download/esp32/) pro ESP32. (Používáme zatím lépe otestovanou verzi `ESP-IDF v3.x`)
 V této základní (vanilla) verzi Micropythonu stačí provést dva následující kroky:
+
 
 **Připojení k WiFi**¨
 
@@ -52,8 +53,6 @@ Current value of sys.path[1]: /lib
 Note: only MicroPython packages (usually, named micropython-*) are supported
 for installation, upip does not support arbitrary code in setup.py.
 ```
-
-
 
 
 ---

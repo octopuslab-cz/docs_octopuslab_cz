@@ -7,7 +7,7 @@
 !!! attention "**Stručně:**"
     - pracujeme stále v jednom podadresáři, do kterého musíme
     - stáhnout a *rozzipovat* [esptool.exe](https://dl.espressif.com/dl/esptool-2.6.1-windows.zip)
-    - stáhnnout [Octopus Micropython pro ESP32](https://octopusengine.org/download/micropython/micropython-octopus.bin)
+    - stáhnnout [Octopus Micropython pro ESP32](https://octopusengine.org/download/micropython/micropython-octopus.bin) nebo vanilla [Micropython](http://micropython.org/download/esp32/)
     - připojit ESP a *detekovat* **COM** port
     - pomocí `esptool` přehrát Micropython na ESP
     - stáhnout si [putty.exe](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)

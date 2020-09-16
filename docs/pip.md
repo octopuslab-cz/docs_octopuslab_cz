@@ -15,7 +15,7 @@ V této základní (vanilla) verzi Micropythonu stačí provést dva následují
 
 **Připojení k WiFi**
 
-Můžete použít copy&paste celého bloku popmocí `CTRL+E` 
+Můžete použít copy&paste celého bloku popmocí `CTRL+E`
 (nezapomeňte si vyplnit svoje ssid a heslo).
 
 ```python

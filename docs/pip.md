@@ -28,7 +28,6 @@ wlan.connect('ssid', 'password')
 **Instalace metody deploy() z octopuslab_installer**
 ```python
 import upip
-upip.install('shutil')  # TODO include in `setup.py`
 upip.install('micropython-octopuslab-installer')
 
 # wait for install

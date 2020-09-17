@@ -16,6 +16,7 @@
     3. ###### Instalace "workframe" octopus do ESP
     Zelená a oranžová:  Pomocí terminálu (`screen` nebo `Putty`) dokončíme instalaci dalších knihoven *"octopus framework"*
 
+
 ## 1. 2. Instalace Micropythonu a octopus "workframe"
 
 První dva body se liší podle použité platformy (operačního systému):
@@ -39,7 +40,10 @@ Posledními kroky jsou:
 
 Pro ulehčení instalace máme vlastní fork Micropythonu, do kterého jsme zaintegrovali malý modul `octopus_initial` s metodou `setup()`.
 
-Pokud používáte základní (vanilla) verzi Micropythonu, máte možnost stáhnout si "lite" verzi i pomocí [upip](../pip), která přidává lite modul `micropython-octopuslab-installer` s metodou `deploy()`.
+!!! hint " **uPip**"
+    Když chcete použít základní (vanilla) verzi Micropythonu, máte možnost stáhnout si "lite" verzi instalátoru i pomocí uPip, která přidává lite modul `micropython-octopuslab-installer` s metodou `deploy()`. 
+    Podrobněji na samostatné stránce ► [upip](../pip).
+
 
 
 !!! hint " **Vychytávka [TAB]**"
@@ -111,12 +115,6 @@ Pro připojení do Internetu se ve volbě **select:** napíše:
 
 ---
 
-!!! hint " **uPip**"
-    Když chcete použít základní (vanilla) verzi Micropythonu, máte možnost stáhnout si "lite" verzi instalátoru i pomocí uPip, která přidává lite modul `micropython-octopuslab-installer` s metodou `deploy()`. 
-    Podrobněji na samostatné stránce ► [upip](../pip).
-
-
-
 ### • Examples - je adresář plný příkladů
 
 Pokud si chcete nahrát velký balíček ukázek a testů, máme k dispozici opět "zabalený" `.tar` soubor u nás v cloudu.
@@ -175,8 +173,8 @@ select:
 - `w`/ `cw`, `sd`/ `sde` - pro update
 
 ---
-
-## Práce se soubory - Upyshell | Ampy | Thonny
+  
+## Práce se soubory - uPyshell | Ampy | Thonny
 
 Pro přesouvání souborů do ESP máme víc možností. Jednoduché úpravy a přímé kopírování se dají rovnou provádět v ESP pomocí emulátoru [uPyShell](/upyshell). Tam se dá využít příkaz `edit` a pak `cp`. Ještě je tu i možnost `wget` pro stažení libovolného souboru z internetu.
 (pro `wget` musí být vytvořen adresář `download`)
@@ -190,6 +188,32 @@ Existuje jednoduché IDE s přímým připojením k ESP - opět v samostatném b
 Aplikace **Thonny** v posledních verzích prošla řadou změn a tak si jistě zaslouží Vaší pozornost.
 
 ---
+
+## Shrnutí
+
+Velmi zjednodušeně: Instalce Micropythonu nebo forku OctopusLAB Micropythonu `uPy` je úvodní částí. 
+Dále chceme instalovat soubor knihoven `lib` - a nakonec pracovat s hlavním programem `main.py`.
+
+
+```
+             |  uPy  |  lib  |"main.py"
+--------------------------------------------
+esptool      |   V   |   ~   |   -   |
+ampy         |   -   |   V   |   -   |
+upip         |   -   |   V   |   -   |
+             |       |       |       |
+web_server   |   -   |   ~   |   V   |
+thonny       |   -   |   ~   |   V   |
+shell editor |   -   |   -   |   V   |
+--------------------------------------------
+V ... vhodné
+~ ... použitelné
+- ... nevhodné
+
+```
+
+
+
 
 *Původní verze tohoto dokumentu je na https://www.octopuslab.cz/micropython-octopus/*
 

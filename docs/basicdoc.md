@@ -76,7 +76,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |
 |-- [/utils](#octopus-utils)
 |      |-- [octopus_lib](#octopus_lib)
-|            | [I2C](#i2c) | [SPI](#spi) | [LCD](#lcd) |
+|            | [I2C](#i2c) | [SPI](#spi) | [LCD](#lcd) | [RTC](#rtc)
 |      |-- [WiFiConnect](#wificonnect)
 |      |-- [pinout](#pinout)
 |      |-- [bits](#bits)
@@ -1142,6 +1142,30 @@ ss = Pin(pinout.SPI_CS0_PIN, Pin.OUT)
 #spi.deinit() #print("spi > close")
 ...
 ```
+
+
+#### RTC
+
+Modul reálného času má Micropython v poslední verzi doplněn i o ntp modulem `ntptime`.
+
+```python
+from ntptime import settime
+from machine import RTC
+from utils.octopus import w
+from utils.octopus_lib import get_hhmm, setlocal
+
+rtc = RTC()
+w() # připojení k internetu
+settime()
+print(get_hhmm(rtc))
+
+# + 2 h.
+setlocal(2)
+print(get_hhmm(rtc))
+
+```
+
+Zdroj ukázky [test_rtc_ntp.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/test_rtc_ntp.py)
 
 ---
 

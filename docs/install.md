@@ -199,8 +199,8 @@ Dále chceme instalovat soubor knihoven `lib` - a nakonec pracovat s hlavním pr
              |  uPy  |  lib  |"main.py"
 --------------------------------------------
 esptool      |   V   |   ~   |   -   |
-ampy         |   -   |   V   |   -   |
-upip         |   -   |   V   |   -   |
+ampy         |   -   |   V   |   V   |
+upip         |   -   |   V   |   ~   |
              |       |       |       |
 web_server   |   -   |   ~   |   V   |
 thonny       |   -   |   ~   |   V   |

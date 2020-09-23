@@ -213,7 +213,7 @@ while True:
     led.blink()
 ```
 
-► [pinout](#pinout)
+🡒 [pinout](#pinout)
 
 ---
 
@@ -258,7 +258,7 @@ ws.simpleTest()
 ```
 Zdrojový kód ukázky: [examples/rgb_blink.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/rgb_blink.py)
 
-► [pinout](#pinout)
+🡒 [pinout](#pinout)
 
 ---
 
@@ -337,9 +337,9 @@ def on_press_top_button():
     built_in_led.off()
 ```
 
-► [Led](#led) | [@Dekorátor](#dekorator)
+🡒 [Led](#led) | [@Dekorátor](#dekorator)
 
-Práce se čtyřmi tlačítky (na ESP32board) - v ukázce je zakomentována spolupráce s displejem `tft` ► [st7735](#st7735)
+Práce se čtyřmi tlačítky (na ESP32board) - v ukázce je zakomentována spolupráce s displejem `tft` 🡒 [st7735](#st7735)
 
 ```python
 from utils.pinout import set_pinout
@@ -541,7 +541,7 @@ while True:
         sleep(1)
 ```
 
-► [pinout](#pinout)
+🡒 [pinout](#pinout)
 
 ---
 
@@ -715,7 +715,7 @@ db.addOne("one","1")
 db.listAll()
 ```
 
-Zvídavějším doporučujeme odkaz na práci s daty a databáze ► [Workshop Python DATA](/ws-python-data)
+Zvídavějším doporučujeme odkaz na práci s daty a databáze 🡒 [Workshop Python DATA](/ws-python-data)
 
 ---
 
@@ -768,7 +768,7 @@ Příklad obsahu je:
 {"influxdb_url": "https://parallelgarden.surikata.info:8086", "influxdb_pass": "heslo", "influxdb_name": "nazev_db", "influxdb_user": "uzivatel", "influxdb_measurement": "meteo", "influxdb_tags": {"location": "balkon"}}
 ```
 
-Více o vytváření a editaci konfiguračních souborů ► [Config](#config)
+Více o vytváření a editaci konfiguračních souborů 🡒 [Config](#config)
 
 ---
 
@@ -862,7 +862,7 @@ tft.blit_buffer(fb, 0, 0, tft.width, tft.height)
 ...
 ```
 
-► [pinout](#pinout)
+🡒 [pinout](#pinout)
 
 [examples/test_tft128x160.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/test_tft128x160.py)
 
@@ -890,7 +890,7 @@ while True:
 
 ```
 
-► [pinout](#pinout)
+🡒 [pinout](#pinout)
 
 [examples/ultrasonic.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/ultrasonic.py)
 
@@ -936,7 +936,7 @@ def display_num(value):
     d7.show(value)
 ```
 
-► [Disp7](#disp7)
+🡒 [Disp7](#disp7)
 
 Ukázky jsou z vybraných příkladů pro pubsub: 
 [examples/pubsub](https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/examples/pubsub)
@@ -1176,9 +1176,9 @@ Zdroj ukázky 🡒 [test_rtc_ntp.py](https://github.com/octopusengine/octopuslab
 ### ![hwsoc](img/database.png){: style="width:28px" } pinout
 
 Práci s PINy nám ulehčuje přednastanený **pinout**, který je uložený v konfiguračním souboru. Konfigurační soubory pro jednotlivé hw moduly jsou v samostatném adresáři `/pinouts`. Podle toho, jakou máme HW platformu, máme přesně svázány konstanty (čísla PINů) s jejich názvy.
-Vybrané soubory zapojení pinů jsou na samostatné stránce ► [pinouts](/pinouts).
+Vybrané soubory zapojení pinů jsou na samostatné stránce 🡒 [pinouts](/pinouts).
 
-Zdrojový kód knihovny: ► [utils/pinout](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/pinout.py)
+Zdrojový kód knihovny: 🡒 [utils/pinout](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/pinout.py)
 
 **Princip je jednoduchý:**
 máme definovány číselné konstanty (v programu se neměnící čísla), například pro vestavěnou Led diodu: `BUILT_IN_LED = const(číslo)`. **Číslo** je zde číslo PINu a může se lišit podle dané desky (deska je nastavena příkazem `>>> setup()`).
@@ -1236,14 +1236,14 @@ led = Led(pinout.BUILT_IN_LED)
 while True:
     led.blink()
 ```
-► [Led](#led)
+🡒 [Led](#led)
 
 ---
 
 
 ### ![hwsoc](img/database.png){: style="width:28px" } Dekorátor
 
-Možná jste si v některých našich ukázkách všimnuli speciálního použití `@` před definicí funkce, například v ► [pubsub](#pubsub)
+Možná jste si v některých našich ukázkách všimnuli speciálního použití `@` před definicí funkce, například v 🡒 [pubsub](#pubsub)
 ```python
 @pubsub.subscriber("value")
 def display_num(value):
@@ -1251,7 +1251,7 @@ def display_num(value):
 ```
 
 
-nebo v ► [button](#button)
+nebo v 🡒 [button](#button)
 ```python
 @led_button.on_press
 def on_press_top_button():

@@ -7,9 +7,9 @@
 Přímo v Micropythonu jsme si napsali užitečný **nástroj** pro práci v Micropythonu, který se na první pohled chová jako klasický Linuxový shell *(příkazová řádka v terminálu pro práci se soubory a pod.)*
 
 Jak to celé funguje můžete vidět v krátkém *(zhruba dvouminutovém)* videu:
-► [youtube-upyshell](https://www.youtube.com/watch?time_continue=30&v=97gLfae7_AI&feature=emb_logo)
+🡒 [youtube-upyshell](https://www.youtube.com/watch?time_continue=30&v=97gLfae7_AI&feature=emb_logo)
 
-Zdrojový kód je na Githubu ► [/micropython-shell](https://github.com/octopusengine/micropython-shell)
+Zdrojový kód je na Githubu 🡒 [/micropython-shell](https://github.com/octopusengine/micropython-shell)
 
 Po úspěšném dokončení [instalace octopusLAB frameworku](/install/#3-prvni-spusteni-a-instalace-workframe-octopus), máme "uPyShell" k dispozici po zadání příkazu `shell()` v Micropythonovém REPLu  - poznáte ho podle promptu `>>>`.
 
@@ -59,6 +59,6 @@ Běžící procesy pak vidíme v `top` – zatím není jednoduché je ukončit,
 
 ![shell-run](https://www.octopuslab.cz/wp-content/uploads/2020/02/shell3threads.png)
 
-Pro základní seznámení doporučujeme samosatnou stránku workshopu ► [workshop UpyShell](/ws-upyshell)
+Pro základní seznámení doporučujeme samosatnou stránku workshopu 🡒 [workshop UpyShell](/ws-upyshell)
 
 ---

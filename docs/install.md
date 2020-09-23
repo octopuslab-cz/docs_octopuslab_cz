@@ -42,7 +42,7 @@ Pro ulehčení instalace máme vlastní fork Micropythonu, do kterého jsme zain
 
 !!! hint " **uPip**"
     Když chcete použít základní (vanilla) verzi Micropythonu, máte možnost stáhnout si "lite" verzi instalátoru i pomocí uPip, která přidává lite modul `micropython-octopuslab-installer` s metodou `deploy()`. 
-    Podrobněji na samostatné stránce ► [upip](../pip).
+    Podrobněji na samostatné stránce 🡒 [upip](../pip).
 
 
 
@@ -180,10 +180,10 @@ Pro přesouvání souborů do ESP máme víc možností. Jednoduché úpravy a p
 (pro `wget` musí být vytvořen adresář `download`)
 
 
-Další  varianta, kterou jsme dříve využívali i pro `deploy` (sestavení systému) je program `ampy`, přímo určený pro vzdálenou práci se soubory na ESP. Tomu se věnujeme obšírněji na samostatné stránce ► [ampy](/ampy).
+Další  varianta, kterou jsme dříve využívali i pro `deploy` (sestavení systému) je program `ampy`, přímo určený pro vzdálenou práci se soubory na ESP. Tomu se věnujeme obšírněji na samostatné stránce 🡒 [ampy](/ampy).
 
 
-Existuje jednoduché IDE s přímým připojením k ESP - opět v samostatném bloku ► [Thonny](/thonny).
+Existuje jednoduché IDE s přímým připojením k ESP - opět v samostatném bloku 🡒 [Thonny](/thonny).
 (Je k dispozici pro Win, Mac i Linux). 
 Aplikace **Thonny** v posledních verzích prošla řadou změn a tak si jistě zaslouží Vaší pozornost.
 

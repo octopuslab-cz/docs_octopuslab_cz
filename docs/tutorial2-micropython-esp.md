@@ -28,8 +28,8 @@ Třídu `Pin` jsme rozšířili o další metody, které by mohla mít LED dioda
 >>> led.toggle()
 ```
 
-Popis třídy Led ► [components/led](/basicdoc/#led)
-A zdrojový kód knihovny ►► [github//components/led](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/led/__init__.py)
+Popis třídy Led 🡒 [components/led](/basicdoc/#led)
+A zdrojový kód knihovny ↠ [github//components/led](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/led/__init__.py)
 
 --- 
 
@@ -52,7 +52,7 @@ A zdrojový kód knihovny ►► [github//components/led](https://github.com/oct
 976 # po přiložení magnetu 
 ```
 
-Ostatní metody **knihovny ESP32** v originální anglické dokumentaci ►► [library/esp32](https://docs.micropython.org/en/latest/library/esp32.html)
+Ostatní metody **knihovny ESP32** v originální anglické dokumentaci ↠ [library/esp32](https://docs.micropython.org/en/latest/library/esp32.html)
 
 ### Piezzo
 
@@ -105,8 +105,8 @@ Končí-li však řádek dvojtečkou `:`, Python to vyhodnotí jako "blok" a vyz
 ### Funkce
 
 Funkce v Pythonu je spíše podprogram, přesněji "metoda", jakou se dají zpracovat různé vstupní veličiny.
-Podrobněji na ► [naucse.python.cz/../functions](https://naucse.python.cz/course/pyladies/beginners/functions/)
-A stáhněte si také ► [tahák s užitečnými funkcemi](https://pyvec.github.io/cheatsheets/basic-functions/basic-functions-cs.pdf)
+Podrobněji na 🡒 [naucse.python.cz/../functions](https://naucse.python.cz/course/pyladies/beginners/functions/)
+A stáhněte si také 🡒 [tahák s užitečnými funkcemi](https://pyvec.github.io/cheatsheets/basic-functions/basic-functions-cs.pdf)
 
 ### Definování vlastní funkce - def
 
@@ -132,8 +132,8 @@ Opět se používá stejná konstrukce s dvojtečkou za výrazem podmínky `if`:
 >>>
 ```
 
-Více podrobností na ►► [naucse.python.cz/../comparisons](https://naucse.python.cz/course/pyladies/beginners/comparisons/) (porovnávání)
- ►► [naucse.python.cz/../expressions](https://naucse.python.cz/course/pyladies/beginners/expressions/) (vyhodnocování výrazů)
+Více podrobností na ↠ [naucse.python.cz/../comparisons](https://naucse.python.cz/course/pyladies/beginners/comparisons/) (porovnávání)
+ ↠ [naucse.python.cz/../expressions](https://naucse.python.cz/course/pyladies/beginners/expressions/) (vyhodnocování výrazů)
 
 
 ### Cyklus while nebo for
@@ -160,6 +160,6 @@ Podobně pak i `for` cyklus:
 012345>>>
 ```
 
-Více na ►► [naucse.python.cz/../while](https://naucse.python.cz/course/pyladies/beginners/while/) (cyklus while)
+Více na ↠ [naucse.python.cz/../while](https://naucse.python.cz/course/pyladies/beginners/while/) (cyklus while)
 
 ---

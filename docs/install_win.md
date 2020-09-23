@@ -57,7 +57,7 @@ někdy je nutno v tuto chvíli na ESP zmáčknout `BOOT`. Více je o tom zde: ht
 ### Terminál (putty)
 
 Tato část je také součástí přípravy počítače. Předpokládáme, že již víte, na kterém portu je ESP připojeno:
-► [Detekce portu, kde je ESP](/install_win/#detekce-portu-kde-je-esp)
+🡒 [Detekce portu, kde je ESP](/install_win/#detekce-portu-kde-je-esp)
 
 Jako **komunikační terminál** používáme program [putty.exe](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) a nastavením: `Serial, rychlost 115200, váš COMport`. Po nastavení zavoláme `Open`, ukáže se nové okno terminálu. Doporučujeme si nastavení uložit, například jako v naší ukázce: `esp32-COM6` (pro port COM6) pomocí příkazu `Save`. K opětovnému nahrání pak slouží `Load`.
 

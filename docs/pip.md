@@ -1,15 +1,17 @@
 # ![logo](img/logo_small.png) PIP | upip | pypi
 
-Pracujeme na vlastních "instalčních balíčcích" (packages), které budeme distribuovat pomocí `pip` (package installer for Python), přesněji `upip` (pro Micropython). Chceme používat `pypi` (the Python Package Index) na stránkách ►► [pypi.org/](https://pypi.org/).
+Pracujeme na vlastních "instalčních balíčcích" (packages), které budeme distribuovat pomocí `pip` (package installer for Python), přesněji `upip` (pro Micropython). Chceme používat `pypi` (the Python Package Index) na stránkách 
+
+🡒 [pypi.org/](https://pypi.org/).
 
 
 Prvním balíčkem je `micropython-octopus-installer`, nahrazující [octopus_initial.setup()](../install/#octopus_initialsetup) v "lite" verzi.
 
-► [pipi.org/octopuslab-installer](https://pypi.org/project/micropython-octopuslab-installer/#data)
+🡒 [pipi.org/octopuslab-installer](https://pypi.org/project/micropython-octopuslab-installer/#data)
 
-► [github.com/octopuslab-installer](https://github.com/octopusengine/octopuslab-installer)
+🡒 [github.com/octopuslab-installer](https://github.com/octopusengine/octopuslab-installer)
 
-►►[Micropython](http://micropython.org/download/esp32/) pro ESP32. (Používáme zatím lépe otestovanou verzi `ESP-IDF v3.x`)
+↠[Micropython](http://micropython.org/download/esp32/) pro ESP32. (Používáme zatím lépe otestovanou verzi `ESP-IDF v3.x`)
 V této základní (vanilla) verzi Micropythonu stačí provést dva následující kroky:
 
 
@@ -40,7 +42,7 @@ octopuslab_installer.deploy()
 
 ## uPip
 
-►► [micropython/packages](https://docs.micropython.org/en/latest/reference/packages.html)
+↠ [micropython/packages](https://docs.micropython.org/en/latest/reference/packages.html)
 
 
 ```python

@@ -39,7 +39,7 @@ a z emulátoru terminálu se dá spustit příkazem `run examples/blink.py`:
 uPyShell:~/$ run examples/blink.py
 ```
 
-► [Led](/basicdoc/#led) ► [UpyShell](/upyshell)
+🡒 [Led](/basicdoc/#led) 🡒 [UpyShell](/upyshell)
 
 ---
 
@@ -48,7 +48,7 @@ Podobně pak pro **oled** displej, inicializace přímo na displeji něco "napí
 from utils.octopus import oled_init
 oled = oled_init()
 ```
-► [Oled](/basicdoc/#oled)
+🡒 [Oled](/basicdoc/#oled)
 
 ### • examples/x_basic.py
 
@@ -57,7 +57,7 @@ ukázka, která ale podrobněji vysvětlí použítí obecnějšího přístupu,
 - [oled_basic](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/oled_basic.py)
 - ... (chystáme další)
 
-► [Oled](/basicdoc/#oled)
+🡒 [Oled](/basicdoc/#oled)
 
 ---
 

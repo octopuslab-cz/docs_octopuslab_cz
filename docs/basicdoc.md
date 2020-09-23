@@ -1148,6 +1148,10 @@ ss = Pin(pinout.SPI_CS0_PIN, Pin.OUT)
 
 Modul reálného času má Micropython v poslední verzi doplněn i o ntp modulem `ntptime`.
 
+Co se skrývá v ↠ [ntptime](https://github.com/micropython/micropython/blob/master/ports/esp8266/modules/ntptime.py)?
+Především metoda `settime()`, pomocí které získáme přesný čas ze serveru `pool.ntp.org`.
+
+
 ```python
 from ntptime import settime
 from machine import RTC
@@ -1165,7 +1169,7 @@ print(get_hhmm(rtc))
 
 ```
 
-Zdroj ukázky [test_rtc_ntp.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/test_rtc_ntp.py)
+Zdroj ukázky 🡒 [test_rtc_ntp.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/test_rtc_ntp.py)
 
 ---
 

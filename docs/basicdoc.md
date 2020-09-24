@@ -591,10 +591,10 @@ pwm_led.duty(300)
 
 
 from components.iot import Thermometer
-tt = Thermometer(32) # DEV1 (ROBOTboard)
-tx = tt.ds.scan()
-tt.get_temp() # default index 0 > first sensor
-tt.get_temp(tx[0])
+tt = Thermometer(32)  # DEV1 pin (ROBOTboard)
+tx = tt.ds.scan()  # get list of all Dallas sensors
+tt.get_temp()  # default index 0 -> first sensor
+tt.get_temp(0)  # first sensor explicitly
 ```
 
 ---

@@ -1281,7 +1281,7 @@ funkce = dekorator(funkce)
 
 ### Zrychlení práce procesoru
 
-Zkoušíme pro začátek dekorátory `@micropython.native` nebo `@micropython.viper` - podrobněji popsáno:
+Zkoušíme dekorátory `@micropython.native` nebo `@micropython.viper` - podrobněji popsáno:
 
 - [speed_python](http://docs.micropython.org/en/v1.9.3/pyboard/reference/speed_python.html)
 
@@ -1297,22 +1297,22 @@ from utils.octopus_decor import octopus_debug
 def test1():
     for i in range(10000000):
         xx=i
-test1()
-
 
 @octopus_debug
 @micropython.native
 def test2_native():
     for i in range(10000000):
         xx=i
-test2_native()
-
 
 @octopus_debug
 @micropython.viper
 def test3_viper():
     for i in range(10000000):
         xx=i
+
+
+test1()
+test2_native()
 test3_viper()
 ```
 

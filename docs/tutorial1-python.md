@@ -284,7 +284,10 @@ v nekonečné smyčce se maximální rychlostí vypisuje obsah zvětšující se
 
 Python umožňuje i složitější "konstrukce" typu:
 ```
->>> list(5 * x + y for x in range(10) for y in [4, 2, 1])
+>>> list(5 * x + y for x in range(5) for y in [3, 2, 1])
+
+[3, 2, 1, 8, 7, 6, 13, 12, 11, 18, 17, 16, 23, 22, 21]
+
 ```
 
 

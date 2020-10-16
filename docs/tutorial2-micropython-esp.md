@@ -117,7 +117,7 @@ Podle příkazu  `def ` a dvojtečky `: ` na konci řádku pozná Python, že u�
 >>> def suma(x, y):
 ...    return x + y
 
->>> suma (1, 2)
+>>> suma(1, 2)
 3
 ```
 
@@ -130,7 +130,7 @@ Podle příkazu  `def ` a dvojtečky `: ` na konci řádku pozná Python, že u�
 Opět se používá stejná konstrukce s dvojtečkou za výrazem podmínky `if`:
 ```python
 >>> cislo = 10
->>> if cislo<0:
+>>> if cislo < 0:
 ...    print("cislo je zaporne")
 ...
 >>>
@@ -147,7 +147,7 @@ Dvojtečka je i ve `while` cyklu:
 
 ```python
 >>> cislo = 0
->>> while cislo<2:
+>>> while cislo < 2:
 ...    print(cislo)
 ...    cislo = cislo +1
 ...

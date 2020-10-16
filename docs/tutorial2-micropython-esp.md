@@ -115,11 +115,15 @@ Podle příkazu  `def ` a dvojtečky `: ` na konci řádku pozná Python, že u�
 
 ```python
 >>> def suma(x, y):
-... return x + y
+...    return x + y
 
 >>> suma (1, 2)
 3
 ```
+
+*Ani v příkazovém řádku/promptu `>>>` nezapomínejte na odsazení. Po `...` je nutno udělat TAB nebo "pár mezer" (doporučeno 4).*
+
+---
 
 ### Podmínka
 **Program** - to ale není jen obyčejná posloupnost příkazů. Často se používá *podmíněné větvení* - což znamená, že na základě vyhodnocení nějakého výrazu se program může chovat různým způsobem a může i pokračovat různým "směrem".
@@ -127,7 +131,7 @@ Opět se používá stejná konstrukce s dvojtečkou za výrazem podmínky `if`:
 ```python
 >>> cislo = 10
 >>> if cislo<0:
-... print("cislo je zaporne")
+...    print("cislo je zaporne")
 ...
 >>>
 ```
@@ -135,6 +139,7 @@ Opět se používá stejná konstrukce s dvojtečkou za výrazem podmínky `if`:
 Více podrobností na ↠ [naucse.python.cz/../comparisons](https://naucse.python.cz/course/pyladies/beginners/comparisons/) (porovnávání)
  ↠ [naucse.python.cz/../expressions](https://naucse.python.cz/course/pyladies/beginners/expressions/) (vyhodnocování výrazů)
 
+---
 
 ### Cyklus while nebo for
 
@@ -143,8 +148,8 @@ Dvojtečka je i ve `while` cyklu:
 ```python
 >>> cislo = 0
 >>> while cislo<2:
-... print(cislo)
-... cislo = cislo +1
+...    print(cislo)
+...    cislo = cislo +1
 ...
 0
 1
@@ -155,7 +160,7 @@ Dvojtečka je i ve `while` cyklu:
 Podobně pak i `for` cyklus:
 ```python
 >>> for cislo in range(6):
-... print(cislo, end="")
+...    print(cislo, end="")
 ...
 012345>>>
 ```

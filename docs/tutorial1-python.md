@@ -187,7 +187,7 @@ Víceřádkové "dočasné definice vlastních funkcí" se provádí pomocí `de
 
 ```
 >>> def suma(x, y):
-... return x + y
+...    return x + y
 
 >>> suma (1, 2)
 3
@@ -261,7 +261,7 @@ S "dospělým" Pythonem si můžete vyzkoušet více ↠ [naucse.python/podminky
 Ještě drobná vsuvka - cykly a podmínky jsme zmínili v předchozí části, nyní použijeme jednu základní formu: "nekonečný cyklus":
 ```
 >>> while podmínka:
-... prováděj_pokud_je_splněná_podmínka()
+...    prováděj_pokud_je_splněná_podmínka()
 ```
 
 ```
@@ -279,3 +279,15 @@ v nekonečné smyčce se maximální rychlostí vypisuje obsah zvětšující se
 !!! hint " **Vychytávka [TAB]**"
     Když chcete v Pythonu nebo Micropythonu něco napsat, naučte se využívat TABulátor (klávesa `TAB`). Když například po promptu `>>>` chcete napsat `octopus_initial.setup()`, zkuste napsat pouze prvních pár písmen a pak zmáčknout `TAB`:
     `>>> oc [TAB]` a systém vám doplní nebo dá vybrat. Stejně tak po tečce: `octopus_initial.` stačí napsat `se` a pak `TAB` - a "našeptávač" automaticky doplní `setup` (nezapomeňte na závorky `()`, je to metoda).
+
+---
+
+Python a následně i Micropython umožňuje i složitější "konstrukce" typu:
+```
+>>> list(5 * x + y for x in range(10) for y in [4, 2, 1])
+```
+
+
+Zkuste se obaznámit s některými "datovými strukrurami" typu: řetězec, pole, seznam, slovník nebo pokročilejší databáze.
+Tomuto tématu se podrobněji věnujeme v samostatném workshopu:
+[ws-python-data](/ws-python-data) 

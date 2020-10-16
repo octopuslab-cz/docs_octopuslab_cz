@@ -21,7 +21,9 @@ nav:
   - 'Tutoriály':
       - 'Tutorial 1 Python ': tutorial1-python.md
       - 'Tutorial 2 Micropython ESP': tutorial2-micropython-esp.md
-      - 'Tutorial 3 EDUkit1': tutorial3-edukit1.md
+      - 'Tutorial EDUkit1': tutorial-edukit1.md
+      - 'Tutorial EDUkit2': tutorial-edukit2.md
+      - 'Tutorial Robot': tutorial-robot.md
       - 'Micropython workshop IoT': ws-iot.md
       - 'Micropython workshop Robot': ws-robot.md
       - 'Upyshell workshop ': ws-upyshell.md

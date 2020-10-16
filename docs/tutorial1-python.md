@@ -125,26 +125,27 @@ For a list of available modules, type help('modules')
 >>> help("modules")
 ```
 Pokud vás zajímá, které "moduly" jsou aktuálně v Micropythonu dostupné 
-*(Verze 1.12-599)*:
+*(Verze 1.13)*:
 ```
-__main__          inisetup          ubinascii         urandom
-_boot             machine           ubluetooth        ure
-_onewire          math              ucollections      urequests
-_thread           micropython       ucryptolib        uselect
-_uasyncio         neopixel          uctypes           usocket
-_webrepl          network           uerrno            ussl
-apa106            ntptime           uhashlib          ustruct
-btree             onewire           uhashlib          utils/octopus_initial
-builtins          ssd1306           uheapq            utils/wifi_connect
-cmath             sys               uio               utime
-dht               uarray            ujson             utimeq
-ds18x20           uasyncio/__init__ umqtt/robust      uwebsocket
-esp               uasyncio/core     umqtt/simple      uzlib
-esp32             uasyncio/event    uos               webrepl
-flashbdev         uasyncio/funcs    upip              webrepl_setup
-framebuf          uasyncio/lock     upip_utarfile     websocket_helper
-gc                uasyncio/stream   upysh
+__main__          inisetup          ubluetooth        ure
+_boot             machine           ucollections      urequests
+_onewire          math              ucryptolib        uselect
+_thread           micropython       uctypes           usocket
+_uasyncio         neopixel          uerrno            ussl
+_webrepl          network           uhashlib          ustruct
+apa106            ntptime           uhashlib          usys
+btree             onewire           uheapq            utils/octopus_initial
+builtins          ssd1306           uio               utils/wifi_connect
+cmath             uarray            ujson             utime
+dht               uasyncio/__init__ umqtt/robust      utimeq
+ds18x20           uasyncio/core     umqtt/simple      uwebsocket
+esp               uasyncio/event    uos               uzlib
+esp32             uasyncio/funcs    upip              webrepl
+flashbdev         uasyncio/lock     upip_utarfile     webrepl_setup
+framebuf          uasyncio/stream   upysh             websocket_helper
+gc                ubinascii         urandom
 Plus any modules on the filesystem
+
 ```
 
 A po importu se můžete dotázat na každý modul samostatně (podobně i `math.` + TAB):

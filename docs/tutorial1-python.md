@@ -282,12 +282,12 @@ v nekonečné smyčce se maximální rychlostí vypisuje obsah zvětšující se
 
 ---
 
-Python a následně i Micropython umožňuje i složitější "konstrukce" typu:
+Python umožňuje i složitější "konstrukce" typu:
 ```
 >>> list(5 * x + y for x in range(10) for y in [4, 2, 1])
 ```
 
 
-Zkuste se obaznámit s některými "datovými strukrurami" typu: řetězec, pole, seznam, slovník nebo pokročilejší databáze.
+Zkuste se obeznámit s některými "datovými strukturami" typu: řetězec, pole, seznam, slovník nebo pokročilejší databáze.
 Tomuto tématu se podrobněji věnujeme v samostatném workshopu:
 [ws-python-data](/ws-python-data) 

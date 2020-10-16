@@ -207,6 +207,7 @@ Víceřádkové "dočasné definice vlastních funkcí" se provádí pomocí `de
 ---
 
 ### Čekací prodlevy
+
 - program bude pokračovat až po uplynutí dané doby:
 ```
 from time import sleep, sleep_ms # importujeme jen potřebné knihovny
@@ -290,7 +291,6 @@ Python umožňuje i složitější "konstrukce" typu:
 [3, 2, 1, 8, 7, 6, 13, 12, 11, 18, 17, 16, 23, 22, 21]
 
 ```
-
 
 Zkuste se obeznámit s některými "datovými strukturami" typu: řetězec, pole, seznam, slovník nebo pokročilejší databáze.
 Tomuto tématu se podrobněji věnujeme v samostatném workshopu:

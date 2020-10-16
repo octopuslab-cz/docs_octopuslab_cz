@@ -10,7 +10,7 @@ a v **Port** Vaše USB připojení k ESP - například `Silicon Labs CP210x USB 
 
 ![thony1](https://www.octopuslab.cz/wp-content/uploads/2020/10/thony1-1200x765.png)
 
-Pak v pravém sloupci vidíte i soubory dostupné v ESP, které můžete v hlavním okně (horní) editovat, v okně dolním pak bývá přednastaven terminál (shell).
+Pak v levém sloupci vidíte i soubory dostupné v ESP, které můžete v hlavním okně (horní) editovat, v okně dolním pak bývá přednastaven terminál (shell).
 
 ---
 

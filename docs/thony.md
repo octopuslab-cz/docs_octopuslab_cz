@@ -1,15 +1,16 @@
 # ![logo](img/logo_small.png){: style="width:39px" } Thony
 
-Alternativou k IDE + ampy (i esptool) je tento jednoduchý nástroj (program běžící na PC). V prvním vydání byl takřka nepoužitelný (až na pár tutoriálových výjimek), ale ty novější verze, po odstranění řady zásadních nedostatků, už běží mnohem lépe. Pro velmi jednoduché a paměťově nenáročné pokusy funguje dobře, ale když chcete připojení k WiFi a zároveň BlueToth, tak nejspíš narazíte. Občas i běžící program znemožní korektní start `Thony`, a jelikož se tluče komunikace na sériovém portu, musíte si osvojit specifické rutiny, jak to provozovat.Pomáhají opakované restarty jak ESP tak Aplikace Thony, což není úplně komfortní, ale za zkoušku to stojí.
+Alternativou k IDE + ampy (i esptool) je tento jednoduchý nástroj (program běžící na PC). V prvním vydání byl takřka nepoužitelný (až na pár tutoriálových výjimek), ale ty novější verze, po odstranění řady zásadních nedostatků, už běží mnohem lépe. Pro velmi jednoduché a paměťově nenáročné pokusy funguje podle očekávání, ale když chcete připojení k WiFi a zároveň BlueTooth, tak nejspíš narazíte. Občas i běžící program znemožní korektní start `Thony`, a jelikož se tluče komunikace na sériovém portu, musíte si osvojit specifické rutiny, jak to provozovat. Pomáhají opakované restarty jak ESP tak Aplikace Thony, což není úplně komfortní, ale za zkoušku to stojí.
+
 
 Nastavení v `Tools/Options/Interpreter`, by mělo být zvoleno v **Interpreter** `MicroPython (ESP32)`
 a v **Port** Vaše USB připojení k ESP - například `Silicon Labs CP210x USB to UART Bridge (COM6)`.
 
+---
 
 ![thony1](https://www.octopuslab.cz/wp-content/uploads/2020/10/thony1-1200x765.png)
 
 Pak v pravém sloupci vidíte i soubory dostupné v ESP, které můžete v hlavním okně (horní) editovat, v okně dolním pak bývá přednastaven terminál (shell).
-
 
 ---
 

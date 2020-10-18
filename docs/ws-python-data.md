@@ -18,13 +18,12 @@ print('str[3:-2] = ', str[3:-2]) #-> op (od-do odzadu)
 
 ---
 
-## Pole a seznamy
-
+## Pole / seznamy
 
 ```python
-s = [3, 1, 2]
-
-list(s)
+# definice seznamu
+>>> s = [3, 1, 2]
+>>> list(s)
 ```
 
 Zjednodušně můžeme navázat na řetězec, který je vlastně seznamem znaků a proto některé operace budou velmi podobné. Například spojení `+`,
@@ -41,7 +40,6 @@ opakování `*`, přístup k prvku `[index]`... a více dalších. Seznamy a ře
 ...
 ```
 
-
 Tahák na seznamy 🡒 [/lists-cs.pdf](https://pyvec.github.io/cheatsheets/lists/lists-cs.pdf)
 
 ---
@@ -53,12 +51,36 @@ a často slouží jako základ jednoduchých databázových struktur.
 
 ```
 dict = {"key","value"}
+```
 
-d[k] = v
+```python
+# vytvoření slovníku
+>>> barvy = {'jablko': 'cervena', 'hruska': 'zelena'} # Micropython bez diakritiky
+>>> barvy['boruvka'] = 'modra'                        # nový záznam
+>>> barva = barvy['jablko']
 
-d[k]
-d.get(k)
+>>> hodnoty = dict(a=1, b=2) # z pojmenovaných argumentů
+>>> hodnota = hodnoty['b']
 
+# d.get(k)
+# d.pop(k)
+...
+
+```
+
+```python
+# iterace: d.keys() d.values() d.items()
+for ovoce, barva in barvy.items():
+    print('{}: {}'.format(
+    ovoce, barva))
+```
+
+```python
+# json
+import json
+json.loads(s)
+json.dumps(d)
+json.dumps(d, indent=2, ensure_ascii=False) # : odsazení o 2 mezery, nekódovat diakritiku
 ```
 
 Slovníkový tahák  🡒 [/dicts-cs.pdf](https://pyvec.github.io/cheatsheets/dicts/dicts-cs.pdf)
@@ -79,3 +101,30 @@ Tuto jsme trochu rozšířili a zpřístupnili pro práci s našimi projekty.
 Stručně v octopusLAB frameworku 🡒 [/docs/database](/basicdoc/#database)
 
 ---
+
+## Config
+
+Framework Octopus má třídu `Config`, která usnadní práci s externím nastavováním.
+V adresáři confih je uližen `json` soubor, do (a ze) kterého se ukládají (načítají) data.
+
+Podrobněji na [basicdoc/#config](basicdoc/#config).
+
+Modifikovaná ukázka práce s Configem:
+
+```python
+>>> from config import Config
+>>> promenne = "tempMax tempMin" # slova oddělená mezerami
+>>> keys = promenne.split()      # keys = ["tempMax","tempMin"]
+>>> conf = Config("termostat", keys) # > config/termostat.json
+>>> conf.setup()
+
+==================================================
+        S E T U P - config/termostat.json
+==================================================
+[ 1] -          tempMax - 23
+[ 2] -          tempMin - 18
+[q] - Quit from json setup
+==================================================
+...
+
+```

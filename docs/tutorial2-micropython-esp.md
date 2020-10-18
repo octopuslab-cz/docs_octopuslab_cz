@@ -21,7 +21,7 @@ Třídu `Pin` jsme rozšířili o další metody, které by mohla mít LED dioda
 
 ```python
 >>> from components.led import Led
->>> led = Lin(2)
+>>> led = Led(2)
 >>> led.value(1) # není potřeba Pin.OUT - je obsaženo ve třídě Led
 
 >>> led.blink() # nová metoda
@@ -149,7 +149,7 @@ Dvojtečka je i ve `while` cyklu:
 >>> cislo = 0
 >>> while cislo < 2:
 ...    print(cislo)
-...    cislo = cislo +1
+...    cislo = cislo + 1
 ...
 0
 1

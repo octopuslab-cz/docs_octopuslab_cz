@@ -1090,7 +1090,7 @@ b =  conf.get("b") # 2
 
 ```
 
-Pro lepší pochopení datových struktur nastudujte 🡒 [ws-python-data/](../ws-python-data/)
+Pro lepší pochopení datových struktur nastudujte 🡒 [/ws-python-data](../ws-python-data/)
 
 ---
 

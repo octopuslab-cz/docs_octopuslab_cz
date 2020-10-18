@@ -44,3 +44,6 @@ Pro pokračování - materiály k některým Workshopům:
 Práce s daty a databáze 🡒 [Workshop Python DATA](/ws-python-data)
 
 Tvoření jednoduché hry 🡒 [Workshop EDUshield1)](/ws-edushield1)
+
+---
+

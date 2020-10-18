@@ -1061,7 +1061,6 @@ Vidíme, že nastavení `config` je snadné. Stačí vyplnit nebo modifikovat in
 
 
 ```python
-
 # vytvoření konfigu: a = 1, b = 2
 >>> conf = Config("your_config")
 >>> conf.create_from_query("a=1&b=2")

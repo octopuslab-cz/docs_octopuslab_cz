@@ -4,6 +4,7 @@ Toto je hlavní část dokumentace, popisující **co a jak**.
 V dalších částech, především pak v oddíle **Workshopy / tutoriály** se pak dozvíte **jak na to**.
 
 ---
+
 ## Moduly, třídy, funkce
 
 !!! attention "Základ pro další pochopení (Micro)Pythonu"
@@ -423,8 +424,7 @@ d7.display()
 
 ```
 
-
-Nejkratší je "octopus framework" verze, kde je ale nutno mít přes `setup()` a `ds` nastavenu desku (nějčastěji ROBOTboard nebo ESP32board) a dále pomocí `ios` nastaveno `disp7` (4 | 1)
+Nejkratší variantou je **octopus framework** verze, kde je ale nutno mít přes `setup()` a `ds` nastavenu desku (nějčastěji ROBOTboard nebo ESP32board) a dále pomocí `ios` nastaveno `disp7` (4 | 1)
 
 ```python
 from time import sleep
@@ -512,7 +512,6 @@ from components.buzzer.melody import jingle1
 piezzo.play_melody(jingle1)
 ```
 
-
 ---
 
 
@@ -544,6 +543,7 @@ while True:
 🡒 [pinout](#pinout)
 
 ---
+
 
 ### ![hwsoc](img/mchtr.png){: style="width:28px" } DCmotors
 
@@ -1013,6 +1013,7 @@ import utils.ble.bluefruit as bf
 
 ---
 
+
 ## Ostatní podpůrné moduly
 
 ### ![hwsoc](img/database.png){: style="width:28px" } Config
@@ -1092,6 +1093,7 @@ b =  conf.get("b") # 2
 Pro lepší pochopení datových struktur nastudujte 🡒 [/ws-python-data](../ws-python-data/)
 
 ---
+
 
 ### ![hwsoc](img/database.png){: style="width:28px" } octopus_lib
 
@@ -1175,6 +1177,7 @@ print(get_hhmm(rtc))
 Zdroj ukázky 🡒 [test_rtc_ntp.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/test_rtc_ntp.py)
 
 ---
+
 
 ### ![hwsoc](img/database.png){: style="width:28px" } pinout
 
@@ -1281,6 +1284,7 @@ funkce = dekorator(funkce)
 ```
 
 ---
+
 
 ### Zrychlení práce procesoru
 

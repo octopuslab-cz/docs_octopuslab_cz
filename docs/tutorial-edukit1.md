@@ -46,4 +46,24 @@ Práce s daty a databáze 🡒 [Workshop Python DATA](/ws-python-data)
 Tvoření jednoduché hry 🡒 [Workshop EDUshield1)](/ws-edushield1)
 
 ---
+# Jednoduché ukázky
+
+## Náhodně blikajíci ledka
+
+```python
+from utils.octopus_lib import randint
+from components.led import Led
+
+led = Led(2)
+
+# random blink
+def randblink(n):
+    for _ in range(n):
+       delay = randint(100,500)
+       print(delay)
+       led.blink(delay)
+
+
+>>> randblink(10)
+```
 

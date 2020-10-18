@@ -107,7 +107,7 @@ Stručně v octopusLAB frameworku 🡒 [/docs/database](/basicdoc/#database)
 Framework Octopus má třídu `Config`, která usnadní práci s externím nastavováním.
 V adresáři confih je uližen `json` soubor, do (a ze) kterého se ukládají (načítají) data.
 
-Podrobněji na [basicdoc/#config](basicdoc/#config).
+Podrobněji na 🡒 [basicdoc/config](/basicdoc/#config).
 
 Modifikovaná ukázka práce s Configem:
 

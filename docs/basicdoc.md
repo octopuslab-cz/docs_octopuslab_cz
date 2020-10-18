@@ -1090,6 +1090,10 @@ b =  conf.get("b") # 2
 
 ```
 
+Pro lepší pochopení datových struktur nastudujte 🡒 [ws-python-data/](../ws-python-data/)
+
+---
+
 ### ![hwsoc](img/database.png){: style="width:28px" } octopus_lib
 
 #### I2C

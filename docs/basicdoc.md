@@ -43,6 +43,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 ---
 
 ### Adresářová strukrura na ESP32
+
 <pre>
 |-- [boot.py](#soubory-bootpy-a-mainpy)       # inicializace po startu
 |      |-- [reset](#reset)
@@ -239,6 +240,11 @@ ws = Rgb(15) # BUILT_IN_RGB (WS) ROBOTboard
 ws.color((255,0,0)) # R G B => RED
 
 ws.simpleTest()
+
+import colors_rgb as rgb # definice barev v /lib - BLACK (nesvítí)
+ws.color(rgb.BLUE)       # zobrazení barvy, rgb.RED/rgb.GREEN ...
+
+
 ```
 
 Obecnější s využitím set_pinout() a io_config:

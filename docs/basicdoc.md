@@ -45,52 +45,52 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 ### Adresářová strukrura na ESP32
 
 <pre>
-|-- [boot.py](#soubory-bootpy-a-mainpy)       # inicializace po startu
-|      |-- [reset](#reset)
-|-- [main.py](#soubory-bootpy-a-mainpy)       # hlavní soubor programu
+|-- <a href="#soubory-bootpy-a-mainpy">boot.py</a>       # inicializace po startu
+|      |-- <a href="#reset">reset</a>
+|-- <a href="#soubory-bootpy-a-mainpy">main.py</a>       # hlavní soubor programu
 |-- /assets       # obrázky, zvuky, tabulky
-|-- [/config](#config)       # kofigurační soubory (.json)
+|-- <a href="#config">/config</a>       # kofigurační soubory (.json)
 |-- [/lib]
-|      |-- [pubsub](#pubsub)
-|      |-- [/blesync_uart](#BLE)
+|      |-- <a href="#pubsub">pubsub</a>
+|      |-- <a href="#BLE">/blesync_uart</a>
 |      |-- ...
 |      |-- /bmp280
 |      |-- /bh1750 # i2c light sensor
-|      |-- [st7735.py](#st7735) # TFT128*166 color display
+|      |-- <a href="#st7735">st7735.py</a> # TFT128*166 color display
 |      |-- colors_rgb.py
-|      |-- [hcsr04.py](#hcsr04) # ultrasonic
-|      |-- [lcd](#lcd)
+|      |-- <a href="#hcsr04">hcsr04.py</a> # ultrasonic
+|      |-- <a href="#lcd">lcd</a>
 |      |-- ...
 |
-|-- [/components](#octopus-components)
-|      |-- [led](#led)
-|      |-- [rgb](#rgb)
-|      |-- [analog](#analog)
-|      |-- [button](#button)
-|      |-- [display7](#display7)
-|      |-- [oled](#oled)
-|      |-- [buzzer](#buzzer)
-|      |-- [servo](#servo)
-|      |-- [dcmotors](#dcmotors)
+|-- <a href="#octopus-components">/components</a>
+|      |-- <a href="#led">led</a>
+|      |-- <a href="#rgb">rgb</a>
+|      |-- <a href="#analog">analog</a>
+|      |-- <a href="#button">button</a>
+|      |-- <a href="#display7">display7</a>
+|      |-- <a href="#oled">oled</a>
+|      |-- <a href="#buzzer">buzzer</a>
+|      |-- <a href="#servo">servo</a>
+|      |-- <a href="#dcmotors">dcmotors</a>
 |      |-- [plc]
-|      |-- [iot](#iot)
+|      |-- <a href="#iot">iot</a>
 |            | Relay | PWM | Thermometer
 |
-|-- [/utils](#octopus-utils)
-|      |-- [octopus_lib](#octopus_lib)
-|            | [I2C](#i2c) | [SPI](#spi) | [LCD](#lcd) | [RTC](#rtc)
-|      |-- [WiFiConnect](#wificonnect)
-|      |-- [pinout](#pinout)
-|      |-- [bits](#bits)
-|      |-- [transform](#transform)
-|      |-- [database](#database)
-|      |-- [mqtt](#mqtt)
+|-- <a href="#octopus-utils">/utils</a>
+|      |-- <a href="#octopus_lib">octopus_lib</a>
+|            | <a href="#i2c">I2C</a> | <a href="#spi">SPI</a> | <a href="#lcd">LCD</a> | <a href="#rtc">RTC</a>
+|      |-- <a href="#wificonnect">WiFiConnect</a>
+|      |-- <a href="#pinout">pinout</a>
+|      |-- <a href="#bits">bits</a>
+|      |-- <a href="#transform">transform</a>
+|      |-- <a href="#database">database</a>
+|      |-- <a href="#mqtt">mqtt</a>
 |      |-- octopus
 |      |-- ...
 |      |-- BLE
 |
-|-- [/pinouts](/pinouts)      # nastavení pinů
-|-- [/examples](/examples)      # ukázky
+|-- <a href="/pinouts">/pinouts</a>      # nastavení pinů
+|-- <a href="/examples">/examples</a>      # ukázky
 |      |-- /asyncio
 |      |-- /ble
 |      |-- /param
@@ -101,8 +101,8 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |-- /tests
 |
 |-- /shell
-|      |-- [shell](/upyshell)
-|      |-- [editor](/upyshell/#editor)
+|      |-- <a href="/upyshell">shell</a>
+|      |-- <a href="/upyshell/#editor">editor</a>
 |-- ...
 </pre>
 

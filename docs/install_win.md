@@ -1,6 +1,6 @@
 ## Win
 
-![esp-flash](https://www.octopuslab.cz/wp-content/uploads/2019/08/esp-flash-1.jpg)
+![esp-flash](https://www.octopuslab.cz/wp-content/uploads/2020/10/esp-flash-2020a.png)
 
 *Pro instalaci MicroPythonu na vaše ESP32 je třeba "naflashovat" Micropython na náš kontroler. Podrobněji si rozebereme následující kroky:* 
 

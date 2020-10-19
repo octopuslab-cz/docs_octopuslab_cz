@@ -13,9 +13,11 @@ Po restartu nám ESP32 posílá do našeho počítače na terminál první zprá
 Zeleně jsou systémové informace, které nás v tuto chvíli nezajímají.
 Po stisknutí **CTRL-C** se přeruší běh programu a uvidíme verzi Micropythonu:
 ```
-MicroPython v1.11-180-g8f55a8fab-dirty-build-octopusLAB on 2019-07-29; 
-module with ESP32                                                                                                             
+MicroPython v1.13-7-g5060270c6-build-octopusLAB on 2020-09-05; 
+ESP32 module (spiram) with ESP32
 Type "help()" for more information.
+>>>
+
 ```
 
 !!! hint "Výčet klávesových zkratek pro práci s REPLem"

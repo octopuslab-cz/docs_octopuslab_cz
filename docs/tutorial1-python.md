@@ -3,15 +3,15 @@
 
 ## Pár prvních pokusů s Micropythonem
 
-Většina ukázek z tohoto prvního tutoriálu bude fungovat i na běžném počítači při použití **Pythonu**. Cílem je základní představení, částečné pochopení a procvičení elementárních základů. Pokračování, kde už využijeme ESP32 s Micropythonem, je v samostatném tutoriálu: [Tutorial2](/tutorial2-micropython-esp). Pro ten už si ale musíte [nainstalovat](/install) Micropython na ESP.
+Většina ukázek z tohoto prvního tutoriálu bude fungovat i na běžném počítači při použití **Pythonu** *(verze 3.5+)*. Cílem je základní představení, částečné pochopení a procvičení elementárních základů. Pokračování, kde už využijeme ESP32 s MicroPythonem, je v samostatném tutoriálu: [Tutorial2](/tutorial2-micropython-esp). Pro ten už si ale musíte [nainstalovat](/install) MicroPython na ESP.
 
 ---
 
 ### CTRL-C
 
 Po restartu nám ESP32 posílá do našeho počítače na terminál první zprávy s využitím [REPL](/repl) (Read–eval–print loop).
-Zeleně jsou systémové informace, které nás v tuto chvíli nezajímají.
-Po stisknutí **CTRL-C** se přeruší běh programu a uvidíme verzi Micropythonu:
+*Zeleně jsou systémové informace, které nás v tuto chvíli nezajímají.*
+Po stisknutí **CTRL-C** se přeruší běh programu a uvidíme verzi MicroPythonu:
 ```
 MicroPython v1.13-7-g5060270c6-build-octopusLAB on 2020-09-05; 
 ESP32 module (spiram) with ESP32
@@ -72,7 +72,8 @@ Pro další matematické funkce a konstanty použijeme knihovnu `math`.
 
 ### Help
 
-Zkuste si napsat `help()`
+Zkuste si napsat `help()`. V Pythonu uvidíte asi něco jiného než v obecném MicroPythonu.
+V MicroPythonu pro ESP se vypíše:
 
 ```
 >>> help()
@@ -175,7 +176,7 @@ object <module 'math'> is of type module
 
 ### Blok programu na více řádků a odsazování
 
-Víceřádkové "dočasné definice vlastních funkcí" se provádí pomocí `def název(parametry):` - odsazení za nás udělá REPL `...` nezapomenout na dvojtečku!
+Víceřádkové "dočasné definice vlastních funkcí" se provádí pomocí `def název(parametry):` - odsazení za nás udělá [REPL](/repl) `...` nezapomenout na dvojtečku!
 
 ```
 >>> def suma(x, y):
@@ -270,7 +271,7 @@ v nekonečné smyčce se maximální rychlostí vypisuje obsah zvětšující se
 ---
 
 !!! hint " **Vychytávka [TAB]**"
-    Když chcete v Pythonu nebo Micropythonu něco napsat, naučte se využívat TABulátor (klávesa `TAB`). Když například po promptu `>>>` chcete napsat `octopus_initial.setup()`, zkuste napsat pouze prvních pár písmen a pak zmáčknout `TAB`:
+    Když chcete v Pythonu nebo MicroPythonu něco napsat, naučte se využívat TABulátor (klávesa `TAB`). Když například po promptu `>>>` chcete napsat `octopus_initial.setup()`, zkuste napsat pouze prvních pár písmen a pak zmáčknout `TAB`:
     `>>> oc [TAB]` a systém vám doplní nebo dá vybrat. Stejně tak po tečce: `octopus_initial.` stačí napsat `se` a pak `TAB` - a "našeptávač" automaticky doplní `setup` (nezapomeňte na závorky `()`, je to metoda).
 
 ---

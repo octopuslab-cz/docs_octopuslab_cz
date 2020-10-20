@@ -1,13 +1,13 @@
 # ![logo](img/logo_small.png) Tutorial 2
 
-V předchozím [tutorial 1](/tutorial1-python) jsme se seznámili s úplnými základy. V tomto druhém pokračování už budeme potřebovat ESP32. Předpokládáme, že již máte na svém ESP [nainstalovaný Micropython](/install).
+V předchozím [tutorial 1](/tutorial1-python) jsme se seznámili s úplnými základy Pythonu. V tomto druhém pokračování už budeme potřebovat ESP32. Předpokládáme, že již máte na svém ESP [nainstalovaný Micropython](/install).
 
 ---
 ## ESP32 - DoIt nebo ESP32board
 
 ### REPL
 
-V minulém tutoriálu jsme si ukázali `CTRL-C`, pro zastavení běhu programu v ESP. Pro komunikaci přes **Terminál** se používá tazzvaný [REPL](#repl).
+Už jsme si ukázali `CTRL-C`, pro zastavení běhu programu v ESP. Pro komunikaci přes **Terminál** se používá takzvaný [REPL](/repl).
 
 !!! hint "Výčet nejpoužívanějších zkratek pro práci s REPLem"
 

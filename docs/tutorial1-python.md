@@ -3,13 +3,13 @@
 
 ## Pár prvních pokusů s Micropythonem
 
-Většina ukázek z tohoto tutoriálu bude fungovat i na běžném počítači při použití Pythonu. Cílem je pochopení a procvičení elementárních základů. Pokračování, kde už využijeme ESP32 s Micropythonem, je na samostatné stránce: [Tutorial2](/tutorial2-micropython-esp). Pro ten už si ale musíte [nainstalovat](/install) Micropython na ESP.
+Většina ukázek z tohoto prvního tutoriálu bude fungovat i na běžném počítači při použití **Pythonu**. Cílem je základní představení, částečné pochopení a procvičení elementárních základů. Pokračování, kde už využijeme ESP32 s Micropythonem, je v samostatném tutoriálu: [Tutorial2](/tutorial2-micropython-esp). Pro ten už si ale musíte [nainstalovat](/install) Micropython na ESP.
 
 ---
 
 ### CTRL-C
 
-Po restartu nám ESP32 posílá do našeho počítače na terminál první zprávy.
+Po restartu nám ESP32 posílá do našeho počítače na terminál první zprávy s využitím [REPL](/repl) (Read–eval–print loop).
 Zeleně jsou systémové informace, které nás v tuto chvíli nezajímají.
 Po stisknutí **CTRL-C** se přeruší běh programu a uvidíme verzi Micropythonu:
 ```
@@ -19,17 +19,6 @@ Type "help()" for more information.
 >>>
 
 ```
-
-!!! hint "Výčet klávesových zkratek pro práci s REPLem"
-
-    - CTRL-A  (on a blank line, enter raw REPL mode)
-    - CTRL-B  (on a blank line, enter normal REPL mode)
-    - **CTRL-C**  (interrupt a running program)
-    - **CTRL-D**  (on a blank line, do a soft reset of the board)
-    - CTRL-E  (on a blank line, enter paste mode)
-
-    Nejčastěji potřebujeme CTRL-C (zastavení programu) nebo CTRL-D (reset)
-
 
 ### >>>
 

@@ -212,7 +212,11 @@ V ... vhodné
 
 ```
 
+---
 
+Připravujeme: [deployer](#depolyer)
+
+---
 
 
 *Původní verze tohoto dokumentu je na https://www.octopuslab.cz/micropython-octopus/*

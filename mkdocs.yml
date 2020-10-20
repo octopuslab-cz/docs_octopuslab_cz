@@ -31,14 +31,16 @@ nav:
   - 'Dokumentace':
       - 'Referenční příručka': basicdoc.md
       - 'Pinouts': pinouts.md
-      - 'Class': class.md
       - 'Pubsub': pubsub.md
       - 'UpyShell': upyshell.md
       - 'Examples - ukázky': examples.md
-      - 'Ampy': ampy.md
-      - 'Thony': thony.md
+  - 'Další':
+      - 'Class': class.md
       - 'Github ': github.md
       - 'Popis markdown': tutorials-intro.md
+      - 'REPL': repl.md
+      - 'Ampy': ampy.md
+      - 'Thony': thony.md  
   - 'Projekty':
       - 'EDU-KIT1': proj-edukit1.md
       - 'EDU-KIT2': proj-edukit2.md

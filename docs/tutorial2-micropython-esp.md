@@ -5,6 +5,19 @@ V předchozím [tutorial 1](/tutorial1-python) jsme se seznámili s úplnými z�
 ---
 ## ESP32 - DoIt nebo ESP32board
 
+### REPL
+
+V minulém tutoriálu jsme si ukázali `CTRL-C`, pro zastavení běhu programu v ESP. Pro komunikaci přes **Terminál** se používá tazzvaný [REPL](#repl).
+
+!!! hint "Výčet nejpoužívanějších zkratek pro práci s REPLem"
+
+    - **CTRL-C**  (přerušení běžícího programu)
+    - **CTRL-D**  (soft reset ESP)
+    - CTRL-E  (přepínání "paste mode")
+
+
+---
+
 ### Rozsvítíme LED diodu?
 
 Na velké části ESP modulů máme k dispozici vestavěnou svítivou diodu na PINU 2. *(Což vychází nejspíš z nepsané dohody původem z Arduina)* Nejjednodušší, jak nastavit hodnotu `value()` na pinu `Pin` je následující způsob:

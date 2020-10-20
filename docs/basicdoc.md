@@ -3,7 +3,6 @@
 Toto je hlavní část dokumentace, popisující **co a jak**.
 V dalších částech, především pak v oddíle **Workshopy / tutoriály** se pak dozvíte **jak na to**.
 
-
 Originální dokumentaci k MicroPythonu najdete na stránkách 🡒 [docs.micropython/esp32](http://docs.micropython.org/en/latest/esp32/quickref.html)
 
 ---
@@ -53,12 +52,12 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |-- <a href="#soubory-bootpy-a-mainpy">main.py</a>       # hlavní soubor programu
 |-- /assets       # obrázky, zvuky, tabulky
 |-- <a href="#config">/config</a>       # kofigurační soubory (.json)
-|-- [/lib]
+|-- <a href="#octopus-lib">/lib</a>          # obecně dostupná knihovna (lib)
 |      |-- <a href="#pubsub">pubsub</a>
 |      |-- <a href="#BLE">/blesync_uart</a>
 |      |-- ...
-|      |-- /bmp280
-|      |-- /bh1750 # i2c light sensor
+|      |-- /bmp280   # i2c Atmospheric pressure sensor
+|      |-- /bh1750   # i2c Light sensor
 |      |-- <a href="#st7735">st7735.py</a> # TFT128*166 color display
 |      |-- colors_rgb.py
 |      |-- <a href="#hcsr04">hcsr04.py</a> # ultrasonic

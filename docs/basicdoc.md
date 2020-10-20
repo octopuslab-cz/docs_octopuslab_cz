@@ -3,6 +3,9 @@
 Toto je hlavní část dokumentace, popisující **co a jak**.
 V dalších částech, především pak v oddíle **Workshopy / tutoriály** se pak dozvíte **jak na to**.
 
+
+Originální dokumentaci k MicroPythonu najdete na stránkách 🡒 [docs.micropython/esp32](http://docs.micropython.org/en/latest/esp32/quickref.html)
+
 ---
 
 ## Moduly, třídy, funkce

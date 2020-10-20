@@ -64,6 +64,6 @@ for installation, upip does not support arbitrary code in setup.py.
 
 ---
 
-Připravujeme: [deployer](#depolyer)
+Připravujeme: [deployer](/deployer)
 
 ---

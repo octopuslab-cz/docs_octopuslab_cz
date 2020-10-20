@@ -62,3 +62,9 @@ ampy -p /COM6 put ./lib/ssd1306.py lib/ssd1306.py
 
 ...
 ```
+
+---
+
+Připravujeme: [deployer](/deployer)
+
+---

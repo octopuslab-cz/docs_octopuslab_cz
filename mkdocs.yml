@@ -40,7 +40,9 @@ nav:
       - 'Popis markdown': tutorials-intro.md
       - 'REPL': repl.md
       - 'Ampy': ampy.md
-      - 'Thony': thony.md  
+      - 'rshell': rshell.md
+      - 'Thony': thony.md
+      - 'MQTT': mqtt.md
   - 'Projekty':
       - 'EDU-KIT1': proj-edukit1.md
       - 'EDU-KIT2': proj-edukit2.md

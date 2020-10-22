@@ -27,6 +27,7 @@ nav:
       - 'Micropython workshop IoT': ws-iot.md
       - 'Micropython workshop Robot': ws-robot.md
       - 'Upyshell workshop ': ws-upyshell.md
+      - 'workshop GAME': ws-game.md
       - 'Python data': ws-python-data.md
   - 'Dokumentace':
       - 'Referenční příručka': basicdoc.md

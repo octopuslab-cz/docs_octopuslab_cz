@@ -277,7 +277,14 @@ v nekonečné smyčce se maximální rychlostí vypisuje obsah zvětšující se
 ---
 
 Python umožňuje i složitější "konstrukce" typu:
+
 ```
+# vyfiltruj sudá čísla do desítky:
+>>> list(filter(lambda x: x%2 == 0, range(10)))
+
+[0, 2, 4, 6, 8]
+
+# do listu (pole) specifické trojice:
 >>> list(5 * x + y for x in range(5) for y in [3, 2, 1])
 
 [3, 2, 1, 8, 7, 6, 13, 12, 11, 18, 17, 16, 23, 22, 21]

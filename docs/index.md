@@ -26,6 +26,8 @@ Přesnější název je **mikrokontrolér**, což je obvod, který kromě proces
 
 ![uPy](img/upy.jpg){: style="width:90px;float:left;" } Micropython je "odlehčená" verze populárního programovacího jazyka **Python**. *Je to přesněji softwarová implementace vyššího programovacího jazkyka kompatibilního s Python 3.x. Je napsaný v C a optimalizovaný pro použití v mikrokontrolérech.*
 
+*Includes: complete parser, compiler, virtual machine, runtime system and garbage collector. (snad ani nepřekládat)*
+
 !!! note
       Toto není výuka programování – ale jen ukázky a experimenty s přihlédnutím na sadu knihoven a modulů **octopusLab** pro práci s vybraným HW.
 

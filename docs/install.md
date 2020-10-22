@@ -194,21 +194,27 @@ Aplikace **Thonny** v posledních verzích prošla řadou změn a tak si jistě 
 Velmi zjednodušeně: Instalce Micropythonu nebo forku OctopusLAB Micropythonu `uPy` je úvodní částí. 
 Dále chceme instalovat soubor knihoven `lib` - a nakonec pracovat s hlavním programem `main.py`.
 
+---
+
+| [Ampy](/ampy) | [rshell](/rshell) | [upip](/pip) | [thony](/thony) | [upyshell](/upyshell) |
 
 ```
-             |  uPy  |  lib  |"main.py"
---------------------------------------------
-esptool      |   V   |   ~   |   -   |
-ampy         |   -   |   V   |   V   |
-upip         |   -   |   V   |   ~   |
+             |  uPy  |  lib  | *.py  | Terminal  IDE
+-------------------------------------------------------
+esptool      |   V   |   ~   |   -   |    -    |   -
+ampy         |   -   |   V   |   V   |    -    |   -
+rshell       |   -   |   V   |   V   |    V    |   ~
+upip         |   -   |   V   |   ~   |    -    |   -
              |       |       |       |
-web_server   |   -   |   ~   |   V   |
-thonny       |   -   |   ~   |   V   |
-shell editor |   -   |   -   |   V   |
---------------------------------------------
+web_server   |   -   |   ~   |   V   |    V    |   V
+thonny       |   V   |   ~   |   V   |    V    |   V
+mu           |   ~   |   ~   |   V   |    V    |   V
+shell editor |   -   |   -   |   V   |    -    |   ~
+-------------------------------------------------------
 V ... vhodné
 ~ ... použitelné
 - ... nevhodné
+(lib  | *.py - přesun celých knihoven nebo jen dílčí přesun souborů)
 
 ```
 

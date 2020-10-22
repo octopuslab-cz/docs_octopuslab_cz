@@ -28,6 +28,11 @@ Podbné Linuxu: ls (list) a cp (copy file).
 ```
 > ls /pyboard
 > cp myfile.py /pyboard
+> cd 
+...
+> edit /pyboard/main.py
+...
+> rsync . /pyboard
 ...
 > exit
 ```

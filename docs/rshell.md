@@ -1,6 +1,6 @@
 # ![logo](img/logo_small.png){: style="width:39px" } Rshell
 
-Alternativa k [ampy](/ampy) nebo [Thony](/thony) se sériovým terminálem (screen) pro Linux (běží i na Raspberry Pi).
+Alternativa k [ampy](/ampy) nebo [Thony](/thony) se sériovým terminálem [screen](/install_linux/#terminal) pro Linux (běží i na Raspberry Pi).
 
 Ke stažení 🡒 [github.com/dhylands/rshell](https://github.com/dhylands/rshell).
 
@@ -29,14 +29,17 @@ Podbné Linuxu: ls (list) a cp (copy file).
 > ls /pyboard
 > cp myfile.py /pyboard
 ...
+> exit
 ```
 
 ## Terminál + REPL
+
+Plnohodnotný a stablnější sériový terminál pro [REPL](/repl) se pustí snadno:
 
 ```
 > repl
 ```
 
-(exit: `CTRL+X`)
+Pro ukončení práce s terminálem (exit: `CTRL+X`) - zpět do rshellu.
 
 ---

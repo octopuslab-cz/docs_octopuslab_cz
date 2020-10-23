@@ -196,7 +196,7 @@ Dále chceme instalovat soubor knihoven `lib` - a nakonec pracovat s hlavním pr
 
 ---
 
-| [Ampy](/ampy) | [rshell](/rshell) | [upip](/pip) | [thony](/thony) | [upyshell](/upyshell) |
+| [Ampy](/ampy) | [rshell](/rshell) | [upip](/pip) | [FTP](/ftp) | [thony](/thony) | [upyshell](/upyshell) |
 
 ```
              |  uPy  |  lib  | *.py  | Terminal  IDE
@@ -205,7 +205,7 @@ esptool      |   V   |   ~   |   -   |    -    |   -
 ampy         |   -   |   V   |   V   |    -    |   -
 rshell       |   -   |   V   |   V   |    V    |   ~
 upip         |   -   |   V   |   ~   |    -    |   -
-             |       |       |       |
+FTP          |   -   |   V   |   V   |    -    |   -
 web_server   |   -   |   ~   |   V   |    V    |   V
 thonny       |   V   |   ~   |   V   |    V    |   V
 mu           |   ~   |   ~   |   V   |    V    |   V

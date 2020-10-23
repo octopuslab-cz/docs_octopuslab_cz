@@ -1,11 +1,13 @@
 # ![logo](img/logo_small.png) FTP
 
+
 **FTP** (File transfer protocol) - protokol pro přenos souborů mezi počítači pomocí počítačové sítě.
 
 Původní knihovna pro ESP8266 i ESP32 v základu funguje. 
 Používáme například FTP plugin **Total Commanderu** (testováno ve Win 10).
 
-Jednoduchá verze - na ESP běží samostatně "pouze" FTP:
+Jednoduchá verze - na ESP běží samostatně "pouze" FTP. Po připojení k lokální síti se spustí FTP a vypíše IP adresu.
+
 
 ```python
 >>> from utils.octopus import w
@@ -38,7 +40,7 @@ ftp> prompt
 
 Zdrojová knihovna 🡒 [github.com/robert-hh/FTP-Server...](https://github.com/robert-hh/FTP-Server-for-ESP8266-ESP32-and-PYBD)
 
-Možnost i běhu v threadu a pod., zatím netestováno.
+Možnost běhu i v threadu a pod., zatím netestováno.
 
 ```python
 import uftpd
@@ -50,3 +52,5 @@ uftpd.start()
 
 Hezká ukázka použití:
 https://www.youtube.com/watch?v=a7DrFqqu-78&t=369s
+
+---

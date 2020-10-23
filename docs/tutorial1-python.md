@@ -75,8 +75,9 @@ Pro další matematické funkce a konstanty použijeme knihovnu `math`.
 Zkuste si napsat `help()`. V Pythonu uvidíte asi něco jiného než v obecném MicroPythonu.
 V MicroPythonu pro ESP se vypíše:
 
-```
->>> help()
+<details>
+  <summary><code>>>> help()</code></summary>
+  <pre><code>>>> help()
 Welcome to MicroPython on the ESP32!
 
 For generic online docs please visit http://docs.micropython.org/
@@ -109,8 +110,10 @@ Control commands:
   CTRL-E        -- on a blank line, enter paste mode
 
 For further help on a specific object, type help(obj)
-For a list of available modules, type help('modules')
-```
+For a list of available modules, type help('modules')</code></pre>
+</details>
+<p></p>
+  
 
 ### Výpis dostupných modulů
 ```

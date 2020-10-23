@@ -44,6 +44,7 @@ nav:
       - 'Ampy': ampy.md
       - 'rshell': rshell.md
       - 'Thony': thony.md
+      - 'Mu': mu.md
       - 'webserver': webserver.md
       - 'MQTT': mqtt.md
   - 'Projekty':

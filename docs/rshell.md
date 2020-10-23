@@ -19,6 +19,7 @@ rshell --buffer -size=30 -p /dev/ttyUSB0
 ```
 
 Výchozí cesta k připojené desce je `/pyboard`.
+Možnost nastavení editoru dalším parametrem: `- e nano`, **nano** je i výchozí (Linux).
 
 
 ## Základní příkazy

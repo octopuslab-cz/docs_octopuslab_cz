@@ -54,6 +54,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |-- <a href="#config">/config</a>       # kofigurační soubory (.json)
 |-- <a href="#octopus-lib">/lib</a>          # obecně dostupná knihovna (lib)
 |      |-- <a href="#pubsub">pubsub</a>
+|      |-- <a href="/ftp">FTP</a>
 |      |-- <a href="#BLE">/blesync_uart</a>
 |      |-- ...
 |      |-- /bmp280   # i2c Atmospheric pressure sensor

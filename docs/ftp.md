@@ -1,8 +1,11 @@
 # ![logo](img/logo_small.png) FTP
 
-File transfer protocol - pro ESP8266 i ESP32.
-Základ funguje i v FTP pluginu **Total Comanderu** (testováno ve Win 10).
-Jednoduchá verze - běží samostatně "pouze" FTP:
+**FTP** (File transfer protocol) - protokol pro přenos souborů mezi počítači pomocí počítačové sítě.
+
+Původní knihovna pro ESP8266 i ESP32 v základu funguje. 
+Používáme například FTP plugin **Total Commanderu** (testováno ve Win 10).
+
+Jednoduchá verze - na ESP běží samostatně "pouze" FTP:
 
 ```python
 >>> from utils.octopus import w

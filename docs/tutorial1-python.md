@@ -1,7 +1,7 @@
 # ![logo](img/logo_small.png) Tutorial 1
 
 
-## Pár prvních pokusů s Micropythonem
+## Pár prvních pokusů s Pythonem
 
 Většina ukázek z tohoto prvního tutoriálu bude fungovat i na běžném počítači při použití **Pythonu** *(verze 3.5+)*. Cílem je základní představení, částečné pochopení a procvičení elementárních základů. Pokračování, kde už využijeme ESP32 s MicroPythonem, je v samostatném tutoriálu: [Tutorial2](/tutorial2-micropython-esp). Pro ten už si ale musíte [nainstalovat](/install) MicroPython na ESP.
 
@@ -73,11 +73,11 @@ Pro další matematické funkce a konstanty použijeme knihovnu `math`.
 ### Help
 
 Zkuste si napsat `help()`. V Pythonu uvidíte asi něco jiného než v obecném MicroPythonu.
-V MicroPythonu pro ESP se vypíše:
 
 <details>
-  <summary><code>>>> help()</code></summary>
-  <pre><code>>>> help()
+<summary><b>více... </b><br />
+(klikněte pro obsah) V MicroPythonu pro ESP se po <code>help()</code> vypíše:</summary>
+<pre><code>>>> help()
 Welcome to MicroPython on the ESP32!
 
 For generic online docs please visit http://docs.micropython.org/
@@ -112,16 +112,22 @@ Control commands:
 For further help on a specific object, type help(obj)
 For a list of available modules, type help('modules')</code></pre>
 </details>
-<p></p>
-  
+<p><hr /></p>
+
+
 
 ### Výpis dostupných modulů
 ```
 >>> help("modules")
 ```
-Pokud vás zajímá, které "moduly" jsou aktuálně v Micropythonu dostupné 
+
+<details>
+<summary><b>více... </b><br />
+(klikněte pro obsah), Které "moduly" jsou aktuálně v Micropythonu dostupné <code>help("modules")</code></summary>
+<pre><code>>>> help()
+ 
 *(Verze 1.13)*:
-```
+
 __main__          inisetup          ubluetooth        ure
 _boot             machine           ucollections      urequests
 _onewire          math              ucryptolib        uselect
@@ -140,8 +146,10 @@ flashbdev         uasyncio/lock     upip_utarfile     webrepl_setup
 framebuf          uasyncio/stream   upysh             websocket_helper
 gc                ubinascii         urandom
 Plus any modules on the filesystem
+</code></pre>
+</details>
+<p><hr /></p>
 
-```
 
 A po importu se můžete dotázat na každý modul samostatně (podobně i `math.` + TAB):
 ```

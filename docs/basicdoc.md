@@ -635,6 +635,22 @@ V případě "závažnějšího problému" s připojením někdy pomůže až "t
 reset()
 ```
 
+Využití **FrameWorku Octopus** na maximum - k připojení k některé z uložených WiFi postačí příkaz `w()`:
+
+```python
+from utils.octopus import w
+w()
+```
+
+A opačný extrém - klasické připojení k síti s předáním parametrů `ssid` (název) a `password` (heslo):
+
+```python
+import network
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+wlan.connect('ssid', 'password')
+```
+
 ---
 
 

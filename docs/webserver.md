@@ -53,6 +53,3 @@ Novější verze využívá knihovnu 🡒 [MicroWebSrv2](https://github.com/jczi
 p ř i p r a v u j e m e 
 
 ---
-
-
-

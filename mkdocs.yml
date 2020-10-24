@@ -45,7 +45,7 @@ nav:
       - 'rshell': rshell.md
       - 'Thony': thony.md
       - 'Mu': mu.md
-      - 'webserver': webserver.md
+      - 'WebServer': webserver.md
       - 'MQTT': mqtt.md
   - 'Projekty':
       - 'EDU-KIT1': proj-edukit1.md

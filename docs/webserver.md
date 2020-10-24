@@ -1,17 +1,15 @@
-# ![logo](img/logo_small.png){: style="width:39px" } Webserver
+# ![logo](img/logo_small.png){: style="width:39px" } WebServer
 
 
-Naše verze robustnějšího systému je součástí OctopusLAB FrameWorku:
-https://docs.octopuslab.cz/basicdoc/#web-server
-
+Naše verze robustnějšího systému je součástí OctopusLAB FrameWorku [micropython-web-ide](https://www.octopuslab.cz/micropython-web-ide/)
 
 ---
 
 ## MicroWebSrv
 
-Jedna z variant 🡒 https://github.com/jczic/MicroWebSrv
+Jedna z prvních variant (verze 1) 🡒 https://github.com/jczic/MicroWebSrv
 
-Nejjednodušší implementace:
+A její nejjednodušší **implementace**:
 
 ```python
 >>> from utils.octopus import w
@@ -50,6 +48,9 @@ Další ukázky (například ovládání RGB Ledky) 🡒 [github.com/.../webserv
 ## MicroWebSrv2
 
 Novější verze využívá knihovnu 🡒 [MicroWebSrv2](https://github.com/jczic/MicroWebSrv2)
+
+
+p ř i p r a v u j e m e 
 
 ---
 

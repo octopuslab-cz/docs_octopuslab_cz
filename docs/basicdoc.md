@@ -88,7 +88,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- <a href="#transform">transform</a>
 |      |-- <a href="#database">database</a>
 |      |-- <a href="#mqtt">mqtt</a>
-|      |-- octopus
+|      |-- octopus # WorkFrame with WebServer
 |      |-- ...
 |      |-- BLE
 |

@@ -50,7 +50,45 @@ uftpd.start()
 
 ---
 
-Hezká ukázka použití:
+
+# Použití v projektech
+Po *boot* se stiskem tlačítka `BOOT` (EN) vyvolá `fpt()`, pokud tlačítko stiknuto není, poběží standardní program.
+
+```python
+from time import sleep
+from machine import Pin
+from utils.octopus_lib import w
+
+btnum = 0
+button = Pin(0, Pin.IN)
+print("press button / CTRL+C or continue")
+sleep(1)
+
+for i in range(12):
+    print("-",end="")
+    btnum += button.value()
+    sleep(0.2)
+
+w()
+print()
+
+if (btnum > 0):
+    print("button1 -> start FTP")
+    import ftp 
+    
+else:
+    print("button0 -> continue")
+    # ...
+
+# your code: ...
+    
+```
+
+
+
+---
+
+Další inspirace:
 https://www.youtube.com/watch?v=a7DrFqqu-78&t=369s
 
 ---

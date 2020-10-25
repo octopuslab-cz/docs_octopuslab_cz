@@ -10,7 +10,7 @@ Jednoduchá verze - na ESP běží samostatně "pouze" FTP. Po připojení k lok
 
 
 ```python
->>> from utils.octopus import w
+>>> from utils.octopus_lib import w
 >>> w() # wifi connect
 
 >>> import ftp

@@ -12,7 +12,7 @@ Jedna z prvních variant (verze 1) 🡒 https://github.com/jczic/MicroWebSrv
 A její nejjednodušší **implementace**:
 
 ```python
->>> from utils.octopus import w
+>>> from utils.octopus_lib import w
 >>> w() # wifi connect
 
 >>> from microWebSrv import MicroWebSrv

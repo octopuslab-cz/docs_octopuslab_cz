@@ -81,7 +81,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |
 |-- <a href="#octopus-utils">/utils</a>
 |      |-- <a href="#octopus_lib">octopus_lib</a>
-|            | <a href="#i2c">I2C</a> | <a href="#spi">SPI</a> | <a href="#lcd">LCD</a> | <a href="#rtc">RTC</a>
+|            | <a href="#i2c">I2C</a> | <a href="#spi">SPI</a> | <a href="#lcd">LCD</a> | <a href="#rtc">RTC</a> | ...
 |      |-- <a href="#wificonnect">WiFiConnect</a>
 |      |-- <a href="#pinout">pinout</a>
 |      |-- <a href="#bits">bits</a>
@@ -638,7 +638,7 @@ reset()
 Využití **FrameWorku Octopus** na maximum - k připojení k některé z uložených WiFi postačí příkaz `w()`:
 
 ```python
-from utils.octopus import w
+from utils.octopus_lib import w
 w()
 ```
 
@@ -1185,8 +1185,8 @@ Především metoda `settime()`, pomocí které získáme přesný čas ze serve
 ```python
 from ntptime import settime
 from machine import RTC
-from utils.octopus import w
-from utils.octopus_lib import get_hhmm, setlocal
+from utils.octopus_lib import w, get_hhmm, setlocal
+
 
 rtc = RTC()
 w() # připojení k internetu
@@ -1361,7 +1361,7 @@ Jsme vyčlenili samostatně - zatím zde: [micropython-web-ide](https://www.octo
 ESP32 má dostatečný výkon, aby na něm mohl běžet jednoduchý **webový server** (server s jednoduchými "html" stránkami, k kterému se v lokální síti připojíme přes IP ESPčka)
 
 ```python
->>> from utils.octopus import w, web_server
+>>> from utils.octopus_lib import w, web_server
 >>> w()
 >>> web_server() 
 

@@ -52,7 +52,8 @@ uftpd.start()
 
 
 # Použití v projektech
-Po *boot* se stiskem tlačítka `BOOT` (EN) vyvolá `fpt()`, pokud tlačítko stiknuto není, poběží standardní program.
+
+Po *boot* se stiskem tlačítka `BOOT`/`EN` spustí **ftp server**, pokud tlačítko stiknuto není, bude pokračovat standardní program.
 
 ```python
 from time import sleep
@@ -84,7 +85,7 @@ else:
     
 ```
 
-
+Využili jsme například v ukázce [WiFi RGB lampičky](https://github.com/octopusengine/octopuslab/blob/master/projects/webserver1/main-www-rgb.py), kde se dodatečně mohou modifikovat parametry.
 
 ---
 

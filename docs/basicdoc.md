@@ -592,11 +592,9 @@ re1.value(1)
 re2 = Relay(26)
 
 
-
 from components.iot import Pwm
 pwm_led = Pwm(33)
 pwm_led.duty(300)
-
 
 
 from components.iot import Thermometer
@@ -640,6 +638,15 @@ Využití **FrameWorku Octopus** na maximum - k připojení k některé z ulože
 ```python
 from utils.octopus_lib import w
 w()
+```
+
+Variantně s dostupnými metodami:
+
+```python
+wc = w()
+ip = wc.sta_if.ifconfig()[0]
+...
+wc.isconnected()
 ```
 
 A opačný extrém - klasické připojení k síti s předáním parametrů `ssid` (název) a `password` (heslo):

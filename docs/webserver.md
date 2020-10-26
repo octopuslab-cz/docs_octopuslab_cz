@@ -41,7 +41,14 @@ Na ESP uložená stránka `/www/test.htm`:
 </html>
 ```
 
-Další ukázky (například ovládání RGB Ledky) 🡒 [github.com/.../webserver1](https://github.com/octopusengine/octopuslab/tree/master/projects/webserver1)
+
+**Hlavní projekt**:
+Led (on/off) PWM nebo RGB 🡒 [github.com/...//esp32-micropython-webserver-control](https://github.com/octopuslab-cz/esp32-micropython-webserver-control)
+
+HTML + CSS s využitím Java Scriptu, data se předávají v JSON.
+
+
+Další ukázky (například opět "jen" ovládání RGB Ledky) 🡒 [github.com/.../webserver1](https://github.com/octopusengine/octopuslab/tree/master/projects/webserver1)
 
 ---
 

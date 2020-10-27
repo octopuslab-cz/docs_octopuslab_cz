@@ -18,6 +18,7 @@ nav:
       - 'Linux ': install_linux.md
       - 'Mac ': install_mac.md
       - 'uPip ': pip.md
+      - 'Setup (nastavení)': setup.md
   - 'Tutoriály':
       - 'Tutorial 1 Python ': tutorial1-python.md
       - 'Tutorial 2 Micropython ESP': tutorial2-micropython-esp.md

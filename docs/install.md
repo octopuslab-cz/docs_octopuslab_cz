@@ -126,51 +126,7 @@ Více o ukázkách se dozvíte v dokumentaci: [/basicdoc/#octopus-examples](/bas
 
 Pro některé projekty a ukázky musíme mít správně nastavenou platformu (desku) a některé další periferie. Příkazem `setup()` nastavujeme i další WiFi sítě. 
 
-
-!!! hint "**octopus_initial.setup() | setup()**"
-    Z prostředí Micropythonu `>>>` spouštíme úplně poprvé inicializační `octopus_initial.setup()`, který je součástí našeho forku Micropythonu. Pak se nám stáhne aktální verze *octopus framework* a pro další nastavování už používáme pouze `setup()`, který je rozšířenou verzí *octopus_initial.setup()*.
-
-Rozšířené možnosti nastavení:
-
-```bash
->>> setup()
-      ,'''`.
-     /      \
-     |(@)(@)|
-     )      (
-    /,'))((`.\
-   (( ((  )) ))
-   )  \ `)(' / (
-
-Hello, this will help you initialize your ESP
-ver: 0.68 / 30.6.2020 (c)octopusLAB
-Press Ctrl+C to abort
-
-==============================
-        S E T U P
-==============================
-[w]   - wifi submenu
-[cw]  - connect wifi
-[cl]  - connect LAN
-[sd]  - system download > stable octopus modules from URL
-[sde] - system download > examples (from URL) /[sdh] hydroponics
-[sdp] - system download > petrkr (Beta octopus modules from URL)
-[sdo] - system download > octopus (Alfa octopus modules from URL)
-[ds]  - device setting
-[ios] - I/O setting submenu
-[mq]  - mqtt() and sending data setup
-[si]  - system info
-[wr]  - run web repl
-[q]   - quit setup
-==============================
-select:
-```
-
-### Základní nastavení: 
-
-- První nastavení desky - `ds` *(device setting)* - nejčastěji se používá `5` pro [ROBOTboard](https://www.octopuslab.cz/vyvojove-desky/robot-board/) nebo `9` pro [ESP32board](https://www.octopuslab.cz/esp32-board/) - i na "prázdném" ESP je vhodné zvolit alespoň jednu z variant (až podle konkrétních periferíí a především pak podle druhu sběrnic, se řeší, co dál)
-- `ios` - nastavení periférií, není nezbytné, kromě oled(I2c) nebo disp7 (SPI) - pokud chcete využít "chytré" [pinouty](/basicdoc/#pinout) "octopus frameworku".
-- `w`/ `cw`, `sd`/ `sde` - pro update
+Celý popis `setup()` je na samostatné stránce 🡒 [setup](/setup).
 
 ---
   

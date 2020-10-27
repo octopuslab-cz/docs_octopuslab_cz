@@ -80,6 +80,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |            | Relay | PWM | Thermometer
 |
 |-- <a href="#octopus-utils">/utils</a>
+|      |-- <a href="/setup">setup</a>
 |      |-- <a href="#octopus_lib">octopus_lib</a>
 |            | <a href="#i2c">I2C</a> | <a href="#spi">SPI</a> | <a href="#lcd">LCD</a> | <a href="#rtc">RTC</a> | ...
 |      |-- <a href="#wificonnect">WiFiConnect</a>

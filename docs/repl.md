@@ -36,4 +36,6 @@ import webrepl
 webrepl.start()
 ```
 
+Heslo do WebReplu je v **OctopusLAB Frame Work** přednastaveno na `octopus`.
 
+---

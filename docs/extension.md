@@ -39,11 +39,11 @@ import itertools as it
 players = ["John", "Alice", "Bob"]
 player_choice = it.cycle(players)
 
-print(next(Plyyer_choice)) # John
-print(next(Plyyer_choice)) # Alice
-print(next(Plyyer_choice)) # Bob
-print(next(Plyyer_choice)) # John
-print(next(Plyyer_choice)) # Alice
+print(next(player_choice)) # John
+print(next(player_choice)) # Alice
+print(next(player_choice)) # Bob
+print(next(player_choice)) # John
+print(next(player_choice)) # Alice
 ...
 ```
 

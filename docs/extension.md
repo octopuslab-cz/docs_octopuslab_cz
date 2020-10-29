@@ -63,4 +63,44 @@ Installing micropython-itertools 0.2.3 from https://micropython.org/pi/itertools
 
 ---
 
+## Některé další moduly
 
+- https://libraries.io/pypi/micropython-sqlite3
+
+- https://pypi.org/project/micropython-itertools/
+
+- https://libraries.io/pypi/micropython-vec vectors
+
+- https://pypi.org/project/micropython-wifimanager/
+
+- https://pypi.org/project/micropython-wifi-setup/
+
+- https://pypi.org/project/micropython-mailbox/
+
+- https://pypi.org/project/micropython-email.utils/
+
+- https://pypi.org/project/micropython-mqtt/
+
+- https://pypi.org/project/micropython-umqtt.simple/
+
+- https://pypi.org/project/micropython-mqtt-async/
+
+- https://pypi.org/project/micropython-umqtt.robust/
+
+- https://pypi.org/project/micropython-uaiohttpclient/
+
+- https://pypi.org/project/micropython-bme280/
+
+- https://pypi.org/project/micropython-dht12/ sensor
+
+- https://pypi.org/project/micropython-pcf8591/ i2c (4x A/D, 1x D/A)
+
+- https://pypi.org/project/micropython-mpu6886/ gyroskop
+
+- https://pypi.org/project/micropython-ssd1306/ oled
+
+- https://pypi.org/project/micropython-pcd8544/ nokia displ.
+
+- https://libraries.io/pypi/micropython-rfsocket
+
+---

@@ -1,8 +1,6 @@
 # ![logo](img/logo_small.png) PIP | upip | pypi
 
-Pracujeme na vlastních "instalčních balíčcích" (packages), které budeme distribuovat pomocí `pip` (package installer for Python), přesněji `upip` (pro Micropython). Chceme používat `pypi` (the Python Package Index) na stránkách 
-
-🡒 [pypi.org/](https://pypi.org/).
+Pracujeme na vlastních "instalačních balíčcích" (packages) pro [Rozšíření MicroPythonu](/extension). Tyto balíčky se nejčastěji instalují pomocí `pip` (**package installer for Python**), přesněji `upip` (pro Micropython). Chceme používat `pypi` (**the Python Package Index**) na stránkách 🡒 [pypi.org/](https://pypi.org/).
 
 
 Prvním balíčkem je `micropython-octopus-installer`, nahrazující [octopus_initial.setup()](../install/#octopus_initialsetup) v "lite" verzi.
@@ -65,5 +63,9 @@ for installation, upip does not support arbitrary code in setup.py.
 ---
 
 Připravujeme: [deployer](/deployer)
+
+---
+
+Možnosti instalace dalších "balíčků" uvádíme v samostatné kapitole [Rozšíření MicroPythonu](/extension).
 
 ---

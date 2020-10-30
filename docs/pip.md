@@ -9,7 +9,7 @@ Prvním balíčkem je `micropython-octopus-installer`, nahrazující [octopus_in
 
 🡒 [github.com/octopuslab-installer](https://github.com/octopusengine/octopuslab-installer)
 
-↠[Micropython](http://micropython.org/download/esp32/) pro ESP32. (Používáme zatím lépe otestovanou verzi `ESP-IDF v3.x`)
+🡒[Micropython](http://micropython.org/download/esp32/) pro ESP32. (Používáme zatím lépe otestovanou verzi `ESP-IDF v3.x`)
 V této základní (vanilla) verzi Micropythonu stačí provést dva následující kroky:
 
 
@@ -40,7 +40,7 @@ octopuslab_installer.deploy()
 
 ## uPip
 
-↠ [micropython/packages](https://docs.micropython.org/en/latest/reference/packages.html)
+🡒 [micropython/packages](https://docs.micropython.org/en/latest/reference/packages.html)
 
 
 ```python

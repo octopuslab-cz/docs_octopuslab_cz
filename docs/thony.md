@@ -14,7 +14,7 @@ Pak v levém sloupci vidíte i soubory dostupné v ESP, které můžete v hlavn�
 
 ---
 
-Tato speciální aplikace *Thonny - Python IDE for beginners*, je ke stažení zde: ↠ https://thonny.org/
+Tato speciální aplikace *Thonny - Python IDE for beginners*, je ke stažení zde: 🡒 https://thonny.org/
 
 ---
 

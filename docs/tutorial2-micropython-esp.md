@@ -42,7 +42,7 @@ Třídu `Pin` jsme rozšířili o další metody, které by mohla mít LED dioda
 ```
 
 Popis třídy Led 🡒 [components/led](/basicdoc/#led)
-A zdrojový kód knihovny ↠ [github//components/led](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/led/__init__.py)
+A zdrojový kód knihovny 🡒 [github//components/led](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/led/__init__.py)
 
 --- 
 
@@ -65,7 +65,7 @@ A zdrojový kód knihovny ↠ [github//components/led](https://github.com/octopu
 976 # po přiložení magnetu 
 ```
 
-Ostatní metody **knihovny ESP32** v originální anglické dokumentaci ↠ [library/esp32](https://docs.micropython.org/en/latest/library/esp32.html)
+Ostatní metody **knihovny ESP32** v originální anglické dokumentaci 🡒 [library/esp32](https://docs.micropython.org/en/latest/library/esp32.html)
 
 ### Piezzo
 
@@ -149,8 +149,8 @@ Opět se používá stejná konstrukce s dvojtečkou za výrazem podmínky `if`:
 >>>
 ```
 
-Více podrobností na ↠ [naucse.python.cz/../comparisons](https://naucse.python.cz/course/pyladies/beginners/comparisons/) (porovnávání)
- ↠ [naucse.python.cz/../expressions](https://naucse.python.cz/course/pyladies/beginners/expressions/) (vyhodnocování výrazů)
+Více podrobností na 🡒 [naucse.python.cz/../comparisons](https://naucse.python.cz/course/pyladies/beginners/comparisons/) (porovnávání)
+ 🡒 [naucse.python.cz/../expressions](https://naucse.python.cz/course/pyladies/beginners/expressions/) (vyhodnocování výrazů)
 
 ---
 
@@ -178,6 +178,8 @@ Podobně pak i `for` cyklus:
 012345>>>
 ```
 
-Více na ↠ [naucse.python.cz/../while](https://naucse.python.cz/course/pyladies/beginners/while/) (cyklus while)
+Více na 🡒 [naucse.python.cz/../while](https://naucse.python.cz/course/pyladies/beginners/while/) (cyklus while)
+
+Inspirace u jiných 🡒 [mithru/MicroPython-Examples](https://github.com/mithru/MicroPython-Examples).
 
 ---

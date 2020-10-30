@@ -246,7 +246,7 @@ Vypíše:
 3
 ```
 
-S "dospělým" Pythonem si můžete vyzkoušet více ↠ [naucse.python/cykly](https://naucse.python.cz/course/pyladies/sessions/loops/)
+S "dospělým" Pythonem si můžete vyzkoušet více 🡒 [naucse.python/cykly](https://naucse.python.cz/course/pyladies/sessions/loops/)
 
 ### Podmínky
 
@@ -259,7 +259,7 @@ if (num < 100):
 
 Povšimněte si konstrukce `format`, kdy můžeme do řetězce vložit proměnnou, aniž bychom ho postupně "slepovali".
 
-S "dospělým" Pythonem si můžete vyzkoušet více ↠ [naucse.python/podminky](https://naucse.python.cz/course/pyladies/beginners/comparisons/)
+S "dospělým" Pythonem si můžete vyzkoušet více 🡒 [naucse.python/podminky](https://naucse.python.cz/course/pyladies/beginners/comparisons/)
 
 
 ### Nekonečný cyklus

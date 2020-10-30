@@ -103,4 +103,7 @@ Installing micropython-itertools 0.2.3 from https://micropython.org/pi/itertools
 
 - https://libraries.io/pypi/micropython-rfsocket
 
+
+Část knihoven má zdroj na githubu v 🡒 [micropython/micropython-lib](https://github.com/micropython/micropython-lib), ostatní jsou dílem "třetích stran".
+
 ---

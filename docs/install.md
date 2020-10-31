@@ -147,8 +147,8 @@ Aplikace **Thonny** v posledních verzích prošla řadou změn a tak si jistě 
 
 ## Shrnutí
 
-Velmi zjednodušeně: Instalce Micropythonu nebo forku OctopusLAB Micropythonu `uPy` je úvodní částí. 
-Dále chceme instalovat soubor knihoven `lib` - a nakonec pracovat s hlavním programem `main.py` nebo dalšími moduly.
+Velmi zjednodušeně: Instalace *vanilla* [Micropythonu](http://micropython.org/download/esp32/) nebo forku [OctopusLAB Micropythonu](https://octopusengine.org/download/micropython/micropython-octopus.bin) `uPy` je úvodní částí. 
+Dále chceme instalovat **Octopus LAB Work Frame**, což je soubor knihoven `lib` (modulů). A pak chceme pracovat s hlavním programem `main.py` nebo dalšími knihovnami a moduly.
 
 ---
 

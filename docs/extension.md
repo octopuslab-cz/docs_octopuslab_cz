@@ -65,11 +65,13 @@ Installing micropython-itertools 0.2.3 from https://micropython.org/pi/itertools
 
 ## Některé další moduly
 
-- https://libraries.io/pypi/micropython-sqlite3
+(ok) testováno a zdá se funkční | (+) zkoušeno a něco tam nefunguje
 
-- https://pypi.org/project/micropython-itertools/
+- https://libraries.io/pypi/micropython-sqlite3 (+)
 
-- https://libraries.io/pypi/micropython-vec vectors
+- https://pypi.org/project/micropython-itertools/ (ok)
+
+- https://libraries.io/pypi/micropython-vec vectors (ok)
 
 - https://pypi.org/project/micropython-wifimanager/
 
@@ -89,7 +91,7 @@ Installing micropython-itertools 0.2.3 from https://micropython.org/pi/itertools
 
 - https://pypi.org/project/micropython-uaiohttpclient/
 
-- https://pypi.org/project/micropython-bme280/
+- https://pypi.org/project/micropython-bme280/ (ok)
 
 - https://pypi.org/project/micropython-dht12/ sensor
 

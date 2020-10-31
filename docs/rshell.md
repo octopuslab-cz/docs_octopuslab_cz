@@ -15,7 +15,7 @@ sudo pip3 install rshell
 ## Připojení a spuštění
 
 ```
-rshell --buffer -size=30 -p /dev/ttyUSB0
+rshell --buffer-size=30 -p /dev/ttyUSB0
 ```
 
 Výchozí cesta k připojené desce je `/pyboard`.
@@ -24,7 +24,7 @@ Možnost nastavení editoru dalším parametrem: `- e nano`, **nano** je i vých
 
 ## Základní příkazy
 
-Podbné Linuxu: ls (list) a cp (copy file).
+Podbné Linuxu: `ls` (list) a `cp` (copy file).
 
 ```
 > ls /pyboard
@@ -40,7 +40,7 @@ Podbné Linuxu: ls (list) a cp (copy file).
 
 ## Terminál + REPL
 
-Plnohodnotný a stablnější sériový terminál pro [REPL](/repl) se pustí snadno:
+Plnohodnotný a stabilnější sériový terminál pro [REPL](/repl) se pustí snadno příkazem `repl`:
 
 ```
 > repl

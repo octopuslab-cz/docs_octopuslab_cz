@@ -148,32 +148,29 @@ Aplikace **Thonny** v posledních verzích prošla řadou změn a tak si jistě 
 ## Shrnutí
 
 Velmi zjednodušeně: Instalce Micropythonu nebo forku OctopusLAB Micropythonu `uPy` je úvodní částí. 
-Dále chceme instalovat soubor knihoven `lib` - a nakonec pracovat s hlavním programem `main.py`.
+Dále chceme instalovat soubor knihoven `lib` - a nakonec pracovat s hlavním programem `main.py` nebo dalšími moduly.
 
 ---
 
-| [Ampy](/ampy) | [rshell](/rshell) | [upip](/pip) | [FTP](/ftp) | [Thony](/thony) | [EsPy](/espy) | [Mu](/mu) | [upyshell](/upyshell) |
-
-```
+<pre>
              |  uPy  |  lib  | *.py  | Terminal  IDE
 -------------------------------------------------------
-esptool      |   V   |   ~   |   -   |    -    |   -
-ampy         |   -   |   V   |   V   |    -    |   -
-rshell       |   -   |   V   |   V   |    V    |   ~
-upip         |   -   |   V   |   ~   |    -    |   -
-FTP          |   -   |   V   |   V   |    -    |   -
-web_server   |   -   |   ~   |   V   |    V    |   V
-Thonny       |   V   |   ~   |   V   |    V    |   V
-EsPy         |   ~   |   ~   |   V   |    V    |   V
-mu           |   ~   |   ~   |   V   |    V    |   V
-shell editor |   -   |   -   |   V   |    -    |   ~
+<a href="/install_win/#2-instalace-micropythonu-do-esp">esptool</a>      |   V   |   ~   |   -   |    -    |   -
+<a href="/ampy">ampy</a>         |   -   |   V   |   V   |    -    |   -
+<a href="/rshell">rshell</a>       |   -   |   V   |   V   |    V    |   ~
+<a href="/pip">upip</a>         |   -   |   V   |   ~   |    -    |   -
+<a href="/ftp">FTP</a>          |   -   |   V   |   V   |    -    |   -
+<a href="">web_server</a>   |   -   |   ~   |   V   |    V    |   V
+<a href="/thony">Thonny</a>       |   V   |   ~   |   V   |    V    |   V
+<a href="/espy">EsPy</a>         |   ~   |   ~   |   V   |    V    |   V
+<a href="/mu">Mu</a>           |   ~   |   ~   |   V   |    V    |   V
+<a href="/upyshell">shell editor</a> |   -   |   -   |   V   |    -    |   ~
 -------------------------------------------------------
 V ... vhodné
 ~ ... použitelné
 - ... nevhodné
 (lib  | *.py - přesun celých knihoven nebo jen dílčí přesun souborů)
-
-```
+</pre>
 
 ---
 

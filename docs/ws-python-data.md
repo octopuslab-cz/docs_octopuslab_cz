@@ -87,6 +87,13 @@ Slovníkový tahák  🡒 [/dicts-cs.pdf](https://pyvec.github.io/cheatsheets/di
 
 ---
 
+## Rozšíření
+
+Micropython neobsahuje vše, co plnohodnotný Python, ale praktické věci můžeme řešit dodatečnou instalací rozšířujícího modulu.
+Například pro práci s **iterátory** [itertools](/extension/#itertools).
+
+---
+
 ## Struktury
 
 Pro složitější struktury využíváme objektové vlastnosti při definici tříd. Můžeme vytvářet libovolnou složitost, propojování a vnořování. 

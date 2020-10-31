@@ -18,6 +18,7 @@ nav:
       - 'Linux ': install_linux.md
       - 'Mac ': install_mac.md
       - 'uPip ': pip.md
+      - 'Rozšíření ': extension.md
       - 'Setup (nastavení)': setup.md
   - 'Tutoriály':
       - 'Tutorial 1 Python ': tutorial1-python.md

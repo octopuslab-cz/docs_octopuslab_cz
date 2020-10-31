@@ -42,10 +42,13 @@ Na ESP uložená stránka `/www/test.htm`:
 ```
 
 
-**Ukázkový projekt**:
+**Ukázkový projekt: WebServer control**
 Led (on/off) PWM nebo RGB 🡒 [github.com/...//esp32-micropython-webserver-control](https://github.com/octopuslab-cz/esp32-micropython-webserver-control)
 
 HTML + CSS s využitím Java Scriptu, data se předávají v JSON.
+
+![webserver20](https://www.octopuslab.cz/wp-content/uploads/2020/10/webserv-control20-1200x649.png)
+
 
 ```
 {Info} ESP32 UID & RAM Free

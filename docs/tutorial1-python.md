@@ -259,6 +259,22 @@ if (num < 100):
 
 Povšimněte si konstrukce `format`, kdy můžeme do řetězce vložit proměnnou, aniž bychom ho postupně "slepovali".
 
+
+**Ternární operátor** (if na jenom řádku):
+
+```python
+fruit = 'Apple'
+isApple = True if fruit == 'Apple' else False
+```
+
+```python
+a, b = 10, 20  
+# Copy value of a in min if a < b else copy b 
+min = a if a < b else b
+print(min)
+# 10
+```
+
 S "dospělým" Pythonem si můžete vyzkoušet více 🡒 [naucse.python/podminky](https://naucse.python.cz/course/pyladies/beginners/comparisons/)
 
 

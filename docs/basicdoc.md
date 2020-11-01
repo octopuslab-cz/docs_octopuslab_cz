@@ -813,7 +813,7 @@ Více o vytváření a editaci konfiguračních souborů 🡒 [Config](#config)
 Knihovna třetí strany pro ovládání dvou nebo čtyř-řádkového LCD displeje připojeného k `i2c` expandéru, byla původně určena pro starší ESP8266, ale funguje nám bez úprav i pro ESP32 (protože komunikační protokol na i2c se nemění).
 
 Základem v nastavení je: počet řádků `rows` - 1/2/4, a počet "sloupců" `col` odpovídá počtu znaků na řádku.
-Ukauka pro displej `2x16`: 
+Ukázka pro displej `2x16` - s hlavní metodou `putstr(STRING)`.
 
 ```python
 # from machine import I2C , Pin
@@ -826,6 +826,19 @@ lcd = I2cLcd(i2c, 39, 2, 16) # addr, rows, col
 lcd.putstr("octopusLab") # write text
 ...
 ```
+
+Nastavení kurzoru `move_to()` a ukázka zobrazení hodin s blikající dvojtečku:
+
+```python
+def clock():
+    lcd.move_to(5,1)
+    lcd.putstr(get_hhmm(":"))
+    sleep(0.5)
+    lcd.move_to(5,1)
+    lcd.putstr(get_hhmm(" "))
+    sleep(1)
+```
+
 
 V našem podadresáři `/assets` máme v souboru `lcd_chars.py` tabulky některých znaků pro LCD:
 

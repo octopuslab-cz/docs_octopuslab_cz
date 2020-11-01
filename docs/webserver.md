@@ -41,6 +41,7 @@ Na ESP uložená stránka `/www/test.htm`:
 </html>
 ```
 
+---
 
 **Ukázkový projekt: WebServer control**
 Led (on/off) PWM nebo RGB 🡒 [github.com/...//esp32-micropython-webserver-control](https://github.com/octopuslab-cz/esp32-micropython-webserver-control)

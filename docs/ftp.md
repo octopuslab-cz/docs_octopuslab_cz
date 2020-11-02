@@ -41,8 +41,6 @@ ftp> mput *.py
 ftp> prompt
 ```
 
-
-
 ---
 
 Zdrojová knihovna 🡒 [github.com/robert-hh/FTP-Server...](https://github.com/robert-hh/FTP-Server-for-ESP8266-ESP32-and-PYBD)
@@ -58,7 +56,7 @@ uftpd.start()
 ---
 
 
-# Použití v projektech
+## Použití v projektech
 
 Po *boot* se stiskem tlačítka `BOOT`/`EN` spustí **ftp server**, pokud tlačítko stiknuto není, bude pokračovat standardní program.
 

@@ -15,26 +15,33 @@ Jednoduchá verze - na ESP běží samostatně "pouze" FTP. Po připojení k lok
 
 >>> import ftp
 >>> ftp
-FTP Server started on  192.168.x.x # -> IP
+FTP Server started on  192.168.x.y # -> IP
 
 ```
 
 ---
 
-V Total Commanderu (přes `CTRL+F` stačí zadat IP a zbytek "proklikat").
+## Použití z Total commanderu
 
-## Použití v terminálu Linuxu:
+`CTRL-F` se otevře FTP okno, kde se zvolí `Nové připojení` a vyplní do `Hostilel [port]` IP adresa, kterou vám ESP oználilo.
+(Nejčastěji 192.168.x.x, kde x y jsou konkrétní čísla)
+
+---
+
+## Použití v terminálu Linuxu
 
 ```bash
 $ sudo apt-get install ftp
 
-$ ftp 192.168.x.x
+$ ftp 192.168.x.y
 ftp> ls
 ...
 ftp> mput *.py
 ...
 ftp> prompt
 ```
+
+
 
 ---
 

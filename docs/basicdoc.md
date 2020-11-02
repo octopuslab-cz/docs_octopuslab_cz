@@ -827,6 +827,12 @@ lcd.putstr("octopusLab") # write text
 ...
 ```
 
+Pomocí speciálních znaků (už implementovaných) lze vykreslit například stupně Celsia (pro zobrazování teploty):
+
+```python
+lcd.putstr(chr(223))
+```
+
 Nastavení kurzoru `move_to()` a ukázka zobrazení hodin s blikající dvojtečku:
 
 ```python
@@ -840,7 +846,7 @@ def clock():
 ```
 
 
-V našem podadresáři `/assets` máme v souboru `lcd_chars.py` tabulky některých znaků pro LCD:
+V našem podadresáři `/assets` máme v souboru `lcd_chars.py` tabulky některých "nově definovaných" znaků pro LCD:
 
 ```python
 import assets.lcd_chars as ch

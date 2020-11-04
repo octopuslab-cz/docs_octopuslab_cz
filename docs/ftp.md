@@ -23,7 +23,7 @@ FTP Server started on  192.168.x.y # -> IP
 
 ## Použití z Total commanderu
 
-V menu `Síť` se zvolí `Protokol FTP - připojit kserveru` (nebo přímo: `CTRL-F`), což vyvolá FTP okno, kde se zvolí `Nové připojení` a vyplní do `Hostilel [port]` IP adresa, kterou vám ESP oználilo. (Nejčastěji 192.168.x.x, kde x y jsou konkrétní čísla). Toto nastavení si uložíme v poli `Název relace` například pod názvem "ESP32".
+V menu `Síť` se zvolí `Protokol FTP - připojit kserveru` (nebo přímo: `CTRL-F`), což vyvolá FTP okno, kde se zvolí `Nové připojení` a vyplní do `Hostilel [port]` IP adresa, kterou vám ESP oználilo. (Nejčastěji 192.168.*x.y*, kde *x y* jsou konkrétní čísla). Toto nastavení si uložíme v poli `Název relace` například pod názvem "ESP32".
 
 Pro jednorázové připojení stačí v menu `Síť` zvolit `Protokol FTP - nové připojení` (nebo přímo: `CTRL-N`) a zadat IP adresu.
 

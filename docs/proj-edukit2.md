@@ -1,5 +1,9 @@
 # ![logo](img/logo_small.png) EDU-KIT2
 
+Hlavní repozitář na Githubu: [octopuslab-cz/octopuslab-edu-kit2](https://github.com/octopuslab-cz/octopuslab-edu-kit2)
+
+---
+
 **ESP32board** ve spojení s **EDUshield1** (dvě tlačítka s OLED displejem) tvoří základ stavebnice EDU-KIT2.
 
 ---

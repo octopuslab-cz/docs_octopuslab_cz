@@ -9,6 +9,35 @@
 
 Základem je `import pubsub` a pak dekorátor `@pubsub.subscriber("value")` pro **subscribe** a `pubsub.publish('value', value)` pro **publish**.
 
+## V jednom programu
+
+Tato jednoduchá ukázka pouze naznačuje možnost funkčního použití. Její univerzálnost a robustnost oceníte až při rozsáhlejších projektech.
+
+```python
+from time import sleep
+from os import urandom
+import pubsub
+from utils.octopus import disp7_init
+
+print("display7 init")
+d7 = disp7_init()  # 8 x 7segment display init
+
+@pubsub.subscriber("value")
+def display_num(value):
+    d7.show(value)
+    
+
+print("start ps_random")
+
+while True:
+    value =  int(urandom(1)[0])
+    print("rnd.: ", value)
+    pubsub.publish('value', value)
+    sleep(1)
+```
+
+## Samostatné programy / thready / moduly
+
 *Jeden program nebo dva thready. Možnost testovat jako dva v threadu spustitelné programy:*
 
 ```python

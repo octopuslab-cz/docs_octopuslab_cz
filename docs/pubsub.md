@@ -67,3 +67,14 @@ while True:
     sleep(1)
 
 ```
+---
+
+## Zjednodušení na maximum
+
+Jak použití pub sub zjednoduší program? Chceme v pravidelném intervalu zobrazovat náhodná čísla na displeji.
+Jde to jednodušeji?
+
+```python
+import octopus.ps_display7
+import octopus.ps_timer_rnd
+```

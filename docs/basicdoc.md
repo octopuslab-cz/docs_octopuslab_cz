@@ -1370,12 +1370,21 @@ def test3_viper():
         xx=i
 
 
-test1()
-test2_native()
+
+>>> test1()
+=== function name:  test1
+=== duration (sec.) ---> 41
+
+...
+
+>>> test2_native()
+=== function name:  test2
+=== duration (sec.) ---> 6
+
+...
+
 test3_viper()
 ```
-
-
 
 ---
 

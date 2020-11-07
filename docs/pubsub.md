@@ -81,8 +81,7 @@ import octopus.ps_timer_rnd
 
 Zdrojové kódy k použitým **octopus pub sub modulům** také nejsou složité:
 
-[octopus.ps_display7](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/octopus/ps_disp7.py)
-
-[octopus.ps_timer_rnd](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/octopus/ps_timer_rnd.py)
+- [octopus.ps_display7](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/octopus/ps_disp7.py)
+- [octopus.ps_timer_rnd](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/octopus/ps_timer_rnd.py)
 
 ---

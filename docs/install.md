@@ -17,7 +17,7 @@
     Zelená a oranžová:  Pomocí terminálu (`screen` nebo `Putty`) dokončíme instalaci dalších knihoven *"octopus framework"*
 
 
-## 1. 2. Instalace Micropythonu a octopus "workframe"
+## 1. Instalace Micropythonu 
 
 První dva body se liší podle použité platformy (operačního systému):
 
@@ -28,7 +28,7 @@ První dva body se liší podle použité platformy (operačního systému):
 
 Pokud je na Vašem **ESP32** úspěšně nahrán **Micropython**, můžete pokračovat dalším krokem tři:
 
-## 3. První spuštění a instalace "octopusLAB FrameWork"
+## 2. První spuštění a instalace "octopusLAB FrameWork"
 
 Posledními kroky jsou:
 

@@ -13,7 +13,7 @@
     2. ###### Instalace Micropythonu do ESP
     Fialové šipky: Do počítače stáhneme `Micropython.bin` (binární soubor) a pomocí esptool ho nahrajeme do ESP
 
-    3. ###### Instalace "workframe" octopus do ESP
+    3. ###### Instalace "framework" octopus do ESP
     Zelená a oranžová:  Pomocí terminálu (`screen` nebo `Putty`) dokončíme instalaci dalších knihoven *"octopus framework"*
 
 
@@ -28,13 +28,13 @@ První dva body se liší podle použité platformy (operačního systému):
 
 Pokud je na Vašem **ESP32** úspěšně nahrán **Micropython**, můžete pokračovat dalším krokem tři:
 
-## 3. První spuštění a instalace "workframe" octopus
+## 3. První spuštění a instalace "octopusLAB FrameWork"
 
 Posledními kroky jsou:
 
 - **připojit se** USB kabelem k zařízení - *už v tomto kroku je možno projít si základní* [Tutorial1-python](/tutorial1-python)
 - **spustit setup** - z prostředí Micropythonu nastavit wifi, připojit se na wifi. 
-- **stáhnout poslední verzi** "workframe" Octopus pomocí *octopus_initial.setup*. (Celý systém se stahuje z Internetu přímo do ESP32 přes WiFi.)
+- **stáhnout poslední verzi** "framework" Octopus pomocí *octopus_initial.setup*. (Celý systém se stahuje z Internetu přímo do ESP32 přes WiFi.)
 
 ### • octopus_initial.setup()
 
@@ -148,7 +148,7 @@ Aplikace **Thonny** v posledních verzích prošla řadou změn a tak si jistě 
 ## Shrnutí
 
 Velmi zjednodušeně: Instalace *vanilla* [Micropythonu](http://micropython.org/download/esp32/) nebo forku [OctopusLAB Micropythonu](https://octopusengine.org/download/micropython/micropython-octopus.bin) `uPy` je úvodní částí. 
-Dále chceme instalovat **Octopus LAB Work Frame**, což je soubor knihoven `lib` (modulů). A pak chceme pracovat s hlavním programem `main.py` nebo dalšími knihovnami a moduly.
+Dále chceme instalovat **Octopus LAB Frame Work**, což je soubor knihoven `lib` (modulů). A pak chceme pracovat s hlavním programem `main.py` nebo dalšími knihovnami a moduly.
 
 ---
 

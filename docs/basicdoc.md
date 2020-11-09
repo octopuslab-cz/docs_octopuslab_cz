@@ -1340,9 +1340,7 @@ funkce = dekorator(funkce)
 
 ### Zrychlení práce procesoru
 
-Zkoušíme dekorátory `@micropython.native` nebo `@micropython.viper` - podrobněji popsáno:
-
-- [speed_python](http://docs.micropython.org/en/v1.9.3/pyboard/reference/speed_python.html)
+Zkoušíme dekorátory `@micropython.native` nebo `@micropython.viper` - podrobněji popsáno přímo na stránkách 🡒 [micropython/reference/..speed_python](http://docs.micropython.org/en/v1.9.3/pyboard/reference/speed_python.html)
 
 
 Jak se dá rychlost testovat (je použit další dekorátor `@octopus_debug` - ten vrací čas běhu funkce):

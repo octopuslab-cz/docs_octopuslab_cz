@@ -152,28 +152,38 @@ Dále chceme instalovat **Octopus LAB Frame Work**, což je soubor knihoven `lib
 
 ---
 
-<pre>
-             |  uPy  |  lib  | *.py  | Terminal  IDE
--------------------------------------------------------
-<a href="/install_win/#2-instalace-micropythonu-do-esp">esptool</a>      |   V   |   ~   |   -   |    -    |   -
-<a href="/ampy">ampy</a>         |   -   |   V   |   V   |    -    |   -
-<a href="/rshell">rshell</a>       |   -   |   V   |   V   |    V    |   ~
-<a href="/pip">upip</a>         |   -   |   V   |   ~   |    -    |   -
-<a href="/ftp">FTP</a>          |   -   |   V   |   V   |    -    |   -
-<a href="">web_server</a>   |   -   |   ~   |   V   |    V    |   V
-<a href="/thony">Thonny</a>       |   V   |   ~   |   V   |    V    |   V
-<a href="/espy">EsPy</a>         |   ~   |   ~   |   V   |    V    |   V
-<a href="/mu">Mu</a>           |   ~   |   ~   |   V   |    V    |   V
-<a href="/upyshell">shell editor</a> |   -   |   -   |   V   |    -    |   ~
--------------------------------------------------------
-V ... vhodné
-~ ... použitelné
-- ... nevhodné
+## Tabulka nástrojů pro práci s ESP
+
+- flash uPy - *"Flashování" Micropythonu*
+- copy lib - *kopírování knihoven z externího zdroje*
+- deploy /.py - *celé "setavení" konkrétního projektu*
+- Terminal - *sériový terminál pro práci s ESP / REPL*
+- IDE - *pokročilejší editor kódu*
+
 (lib  | *.py - přesun celých knihoven nebo jen dílčí přesun souborů)
-</pre>
+
+
+|             | - flash uPy - | - copy lib - | - deploy *.py - | - Terminal - | - IDE - |
+| ----------- | :----: | :----: | :----: | :----: | :----: |
+|<a href="/install_win/#2-instalace-micropythonu-do-esp">esptool</a>      |   ✅✅   |   ~   |   ❌   |    ❌    |   ❌  |
+|<a href="/ampy">ampy</a>             |   ❌   |   ✅   |   ✅   |    ❌    |   ❌  |
+|<a href="/rshell">rshell</a>         |   ❌   |   ✅   |   ✅   |    ✅✅    |   ~  |
+|<a href="/pip">upip</a>              |   ❌   |   ✅   |   ✅✅   |    ❌    |   ❌  |
+|<a href="/ftp">FTP</a>               |   ❌   |   ✅✅   |   ✅   |    ❌    |   ❌  |
+|<a href="">web_server</a>            |   ❌   |   ~   |   ✅   |    ✅    |   ✅  |
+|<a href="/thony">Thonny</a>          |   ✅   |   ~   |   ✅   |    ✅    |   ✅  |
+|<a href="/espy">EsPy</a>             |   ~   |   ~   |   ✅   |    ✅    |   ✅  |
+|<a href="/mu">Mu</a>                 |   ~   |   ~   |   ✅   |    ✅    |   ✅  |
+|<a href="/upyshell">shell / editor</a> |   ❌   |   ❌   |   ✅   |    ~    |   ~  |
+
+
+*Legenda:*
+
+✅✅  ideální | ✅  vhodné | **~**  použitelné | ❌  nevhodné
+
+
 
 ---
-
 
 *Původní verze tohoto dokumentu je na https://www.octopuslab.cz/micropython-octopus/*
 

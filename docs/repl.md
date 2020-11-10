@@ -22,6 +22,18 @@ V originální dokumentaci [docs.micropython.org/repl](https://docs.micropython.
 Vzdálené připojení se provádí přes "webovou aplikaci" [micropython.org/webrepl](https://micropython.org/webrepl/).
 
 Pokud ESP připojejí k wifi a následně se spustí `webrepl.start()`, zařízení je na adrese `ws://192.168.4.1:8266/` (port `8266` zatím zůstává historicky z éry ESP8266).
+*S ESP připojenému v lokální síti pak můžete pracovat v terminálu `>>>` jako by bylo spojeno kabelem.*
+
+`main.py` - Octopus LAB krátká varianta - je na pár řádek:
+
+```python
+from utils.octopus_lib import w
+w()
+import webrepl
+webrepl.start()
+```
+
+Tradiční verze:
 
 ```python
 import network

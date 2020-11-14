@@ -13,6 +13,27 @@ print('str[3:-2] = ', str[3:-2]) #-> op (od-do odzadu)
 ...
 ```
 
+Vybrané metody:
+
+
+```python
+>>> 'octopus'.upper() # převede na velká písmena
+'OCTOPUS'
+
+>>> 'hledej slovo jablko'.find("jablko") # pozice výskytu hledaného řetězce
+13
+
+>>> 'hledej slovo jablko'.find("meloun") # nenalezeno: -1
+-1
+
+>>> 'zamena slova jablko'.replace('jablko', 'meloun')
+'zamena slova meloun'
+
+>>> ...
+
+```
+
+
 
 Řetězcový tahák 🡒 [/strings-cs.pdf](https://pyvec.github.io/cheatsheets/strings/strings-cs.pdf)
 
@@ -26,7 +47,8 @@ print('str[3:-2] = ', str[3:-2]) #-> op (od-do odzadu)
 >>> list(s)
 ```
 
-Zjednodušně můžeme navázat na řetězec, který je vlastně seznamem znaků a proto některé operace budou velmi podobné. Například spojení `+`,
+Seznamy podporují, podobně jako řetězce, mnoho operací. Namátkou jmenujme spojování, násobení celým číslem, indexování, operace s podsekvencemi (slice) a další.
+Zjednodušně tedy můžeme navázat na řetězec, který je vlastně seznamem znaků a proto některé operace budou obdobné. Například spojení `+`,
 opakování `*`, přístup k prvku `[index]`... a více dalších. Seznamy a řetězce mají své speciální příkazy `split` a `join`.
 
 ```python
@@ -39,6 +61,47 @@ opakování `*`, přístup k prvku `[index]`... a více dalších. Seznamy a ře
 >>> ''.join(['o', 'c', 't','o', 'p', 'u', 's'])  #Spojí s do jednoho řetězce
 ...
 ```
+
+Rovnež lze přiřadit hodnotu urcité subsekvenci. Takto dokonce můžeme změnit i počet prvků seznamu:
+
+```python
+>>>  a = ["x", "y", 123, 567]
+
+>>> # Změna prvků:
+... a[0:2] = [11, 22]
+>>> a
+[11, 22, 123, 567]
+>>> # Jejich odstranění:
+... a[0:2] = []
+>>> a
+[123, 567]
+>>> # Vložení nových:
+... a[1:1] = ["abc", "octopus"]
+>>> a
+[123, ’abc’, ’octopus’, 567]
+>>> a[:0] = a # Vložení kopie seznamu do sebe sama (stejně tak: a * 2)
+>>> a
+[123, ’abc’, ’octopus’, 567, 123, ’abc’, ’octopus’, 567]
+...
+
+```
+
+*Je-li třeba iterovat přes prvky aritmetické posloupnosti, využijeme interní funkci `range()`, která vrací tuto
+posloupnost jako klasický seznam. Funkci `range()` předáme konečnou hodnotu posloupnosti. Pro všechny prvky pak bude platit, že jsou menší než tato hodnota:*
+
+```python
+>>> range(7) # [0, 1, 2, 3, 4, 5, 6]
+>>> range(5, 10) # [5, 6, 7, 8, 9]
+>>> range(0, 15, 3) # [0, 3, 6, 9, 12]
+>>> range(-10, -100, -30) # [-10, -40, -70]
+
+for i in range(7):
+     print(1,end="")
+
+123456
+```
+
+
 
 Tahák na seznamy 🡒 [/lists-cs.pdf](https://pyvec.github.io/cheatsheets/lists/lists-cs.pdf)
 

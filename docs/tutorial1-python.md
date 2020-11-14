@@ -7,11 +7,11 @@ Většina ukázek z tohoto prvního tutoriálu bude fungovat i na běžném poč
 
 ---
 
-### CTRL-C
+## CTRL-C
 
 Po restartu nám ESP32 posílá do našeho počítače na terminál první zprávy s využitím [REPL](/repl) (Read–eval–print loop).
 *Zeleně jsou systémové informace, které nás v tuto chvíli nezajímají.*
-Po stisknutí **CTRL-C** se přeruší běh programu a uvidíme verzi MicroPythonu:
+Po stisknutí `CTRL-C` se přeruší běh programu a uvidíme verzi MicroPythonu:
 ```
 MicroPython v1.13-7-g5060270c6-build-octopusLAB on 2020-09-05; 
 ESP32 module (spiram) with ESP32
@@ -20,12 +20,15 @@ Type "help()" for more information.
 
 ```
 
-### >>>
+*Samozřejmě platí i pro **Python**, že `CTRL-C` přeruší běh programu.*
+
+
+## >>>
 
 `>>>` toto je takzvaný "prompt", terminálová výzva, abychom tam něco napsali - příkaz nebo "posloupnost příkazů".
 
-```
->>> a = 123      # do proměnné se uložila hodnota (číslo 123)
+```python
+>>> a = 123      # do proměnné s názvem "a" se uložila hodnota (číslo 123)
 >>> a            # vytiskne / zobrazí hodnotu proměnné 
 123              # nebo print(a) 
                 
@@ -33,12 +36,24 @@ Type "help()" for more information.
 133              # zobrazí vypočtenou hodnotu (jako kalkulačka)
 ```
 
+
 *Python zde běží v takzvaném interaktivním módu. Po každém vložení řádku (nebo bloku řádků) se okamžitě napsaný příkaz (nebo skupina příkazů) provede a čeká na další výzvu zobrazením `>>>`. 
 Je to výhodné pro testování jednotlivých příkazů, pro výuku nebo průběžné modifikace.*
 
+
+```python
+>>> x = y = z = 123 # přiřazení pro více proměnných najednou
+>>> z
+123
+
+>>> x, y = 123, 567 # přiřazení více hodnot
+>>> y
+567
+```
+
 ---
 
-### Math
+## Math
 
 Někdy chceme použít i složitější matematické výrazy, než je 
 `+` sčítání | `-` odčítání | `*` násobení | `/` dělení
@@ -70,7 +85,7 @@ Pro další matematické funkce a konstanty použijeme knihovnu `math`.
 >>> print(math.pi)      # > 3.141593
 ```
 
-### Help
+## Help
 
 Zkuste si napsat `help()`. V Pythonu uvidíte asi něco jiného než v obecném MicroPythonu.
 
@@ -115,8 +130,52 @@ For a list of available modules, type help('modules')</code></pre>
 <p><hr /></p>
 
 
+## Operátory
 
-### Výpis dostupných modulů
+Sem patří například `+` pro sčítání, `-` pro odčítání, `*` násobení a `/` dělení.
+*A je jich mnohem více.*
+
+
+<details>
+<summary><b>více... </b><br />
+(klikněte pro obsah) Informativní <b>výčet operátorů</b> v MicroPythonu: </summary>
+<pre><code>
+
+        Operator                  Description
+    ========================  ==================
+    lambda                    Lambda expression
+    or                        Boolean OR
+    and                       Boolean AND
+    not x                     Boolean NOT
+    in, not in                Membership tests
+    is, is not                Identity tests
+    <, <=, >, >=, <>, !=, ==  Comparisons
+    |                         Bitwise OR
+    ^                         Bitwise XOR
+    &                         Bitwise AND
+    <<, >>                    Shifts
+    +, -­                      Addition and subtraction
+    *, /, %                   Multiplication, division, 
+    remainder
+    +x, ­-x                    Positive, negative
+    ~x                        Bitwise not
+    **                        Exponentiation
+    x.attribute               Attribute reference
+    x[index]                  Subscription
+    x[index:index]            Slicing
+    f(arguments...)           Function call
+    (expressions...)          Binding or tuple display
+    [expressions...]          List display
+    {key:datum...}            Dictionary display
+    `expressions...`          String conversion
+    ...
+
+</code></pre>
+</details>
+<p><hr /></p>
+
+
+## Výpis dostupných modulů
 ```
 >>> help("modules")
 ```
@@ -157,23 +216,23 @@ A po importu se můžete dotázat na každý modul samostatně (podobně i `math
 >>> help(math)
 object <module 'math'> is of type module
   __name__ -- math
-  e -- 2.718282
-  pi -- 3.141593
-  sqrt -- <function>
-  pow -- <function>
-  exp -- <function>
+  e   -- 2.718282
+  pi  -- 3.141593
+  sqrt  -- <function>
+  pow   -- <function>
+  exp   -- <function>
   expm1 -- <function>
-  log -- <function>
-  log2 -- <function>
+  log   -- <function>
+  log2  -- <function>
   log10 -- <function>
-  cosh -- <function>
-  sinh -- <function>
-  tanh -- <function>
+  cosh  -- <function>
+  sinh  -- <function>
+  tanh  -- <function>
   acosh -- <function>
   asinh -- <function>
   atanh -- <function>
-  cos -- <function>
-  sin -- <function>
+  cos   -- <function>
+  sin   -- <function>
 ...
 ```
 
@@ -185,7 +244,7 @@ object <module 'math'> is of type module
 
 ---
 
-### Blok programu na více řádků a odsazování
+## Blok programu na více řádků a odsazování
 
 Víceřádkové "dočasné definice vlastních funkcí" se provádí pomocí `def název(parametry):` - odsazení za nás udělá [REPL](/repl) `...` nezapomenout na dvojtečku!
 
@@ -209,7 +268,7 @@ Víceřádkové "dočasné definice vlastních funkcí" se provádí pomocí `de
 
 ---
 
-### Čekací prodlevy
+## Čekací prodlevy
 
 - program bude pokračovat až po uplynutí dané doby:
 ```
@@ -220,7 +279,7 @@ sleep_ms(100)      # 100 milisekund pauza
 sleep_us(50)       # 50 mikrosekund pauza
 ```
 
-### Generátor náhodných čísel
+## Generátor náhodných čísel
 
 Občas se nám v programu hodí vygenerovat **pseudonáhodné** číslo (pro testování, jednoduché hry nebo speciální efekty).
 
@@ -231,7 +290,7 @@ Občas se nám v programu hodí vygenerovat **pseudonáhodné** číslo (pro tes
 ```
 
 
-### Smyčky | Cykly 
+## Smyčky | Cykly 
 
 ```python
 i = 0
@@ -248,7 +307,10 @@ Vypíše:
 
 S "dospělým" Pythonem si můžete vyzkoušet více 🡒 [naucse.python/cykly](https://naucse.python.cz/course/pyladies/sessions/loops/)
 
-### Podmínky
+## Podmínky
+
+Příkazy pro řízení toku programu (`if`, `for`, `break`, `continue`...)
+`if` - vyhodnotí podmínku a podle toho něco vykoná nebo pokračuje (dochází k větvení "toku" programu).
 
 ```python
 from os import urandom
@@ -278,7 +340,7 @@ print(min)
 S "dospělým" Pythonem si můžete vyzkoušet více 🡒 [naucse.python/podminky](https://naucse.python.cz/course/pyladies/beginners/comparisons/)
 
 
-### Nekonečný cyklus
+## Nekonečný cyklus
 Ještě drobná vsuvka - cykly a podmínky jsme zmínili v předchozí části, nyní použijeme jednu základní formu: "nekonečný cyklus":
 ```
 >>> while podmínka:
@@ -303,6 +365,8 @@ v nekonečné smyčce se maximální rychlostí vypisuje obsah zvětšující se
 
 ---
 
+## Stojí za zmínku
+
 Python umožňuje i složitější "konstrukce" typu:
 
 ```
@@ -310,6 +374,7 @@ Python umožňuje i složitější "konstrukce" typu:
 >>> list(filter(lambda x: x%2 == 0, range(10)))
 
 [0, 2, 4, 6, 8]
+
 
 # do listu (pole) specifické trojice:
 >>> list(5 * x + y for x in range(5) for y in [3, 2, 1])

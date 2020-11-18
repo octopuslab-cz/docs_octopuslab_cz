@@ -59,7 +59,7 @@ Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několik
 |      |-- ...
 |      |-- /bmp280   # i2c Atmospheric pressure sensor
 |      |-- /bh1750   # i2c Light sensor
-|      |-- <a href="#st7735">st7735.py</a> # TFT128*166 color display
+|      |-- <a href="#st7735">ST7735.py</a> # TFT128*166 color display
 |      |-- colors_rgb.py
 |      |-- <a href="#hcsr04">hcsr04.py</a> # ultrasonic
 |      |-- <a href="#lcd">lcd</a>
@@ -865,7 +865,7 @@ lcd.putchar(chr(1))
 ---
 
 
-### St7735
+### ST7735
 
 Barevný displej TFT 128x160, který ale vyžaduje při práci s Micropythonem větší paměť.
 
@@ -873,16 +873,56 @@ Doporučené připojení k `ESP32board`:
 ```
 Display | ESP32board
 ------------------------
-1-RST   | PWM2     (16)
-2-CS    | SCE0     (5)
-3-D/C   | PWM1     (17)
-4-DIN   | SPI_MOSI
-5-CLK   | SPI_CLK
+1-RST   | PWM2 (16)
+2-CS    | SCE0 (5)
+3-D/C   | PWM1 (17)
+4-DIN   | SPI_MOSI (23)
+5-CLK   | SPI_CLK (18)
 6-UCC   | 5V
 7-BL    | 3V3
 8-GND   | GND
 ```
 
+**Nová verze**
+
+```python
+from ST7735 import TFT, TFTColor
+from sysfont import sysfont
+from machine import SPI, Pin
+from time import sleep_ms, ticks_ms
+from math import pi
+from utils.octopus_lib import w # need connection for FTP
+
+SPI_SCLK = 18
+SPI_MISO = 19
+SPI_MOSI = 23
+
+DC = 17   # PWM1
+RST = 16  # PWM2
+CS = 5    # SCE0
+
+print("--- TFT 128x160px test ---")
+
+spi = SPI(2, baudrate=20000000, polarity=0, phase=0, sck=Pin(SPI_SCLK), mosi=Pin(SPI_MOSI), miso=Pin(SPI_MISO))
+tft=TFT(spi, DC, RST, CS)
+tft.initr()
+tft.rgb(True)
+
+tft.fill(TFT.BLACK)
+v = 30
+tft.text((0, v), "octopus LAB (1)", TFT.RED, sysfont, 1, nowrap=True)
+v += sysfont["Height"]
+
+tft.fill(TFT.BLACK)
+tft.rotation(1)
+tft.text((0, 0), "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur adipiscing ante sed nibh tincidunt feugiat. Maecenas enim massa, fringilla sed malesuada et, malesuada sit amet turpis. Sed porttitor neque ut ante pretium vitae malesuada nunc bibendum. ", TFT.WHITE, sysfont, 1)
+sleep_ms(2000)
+
+...
+
+```
+
+**Původní starší verze**
 
 ```python
 from machine import Pin, SPI, SDCard

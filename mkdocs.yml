@@ -12,6 +12,7 @@ nav:
   - 'Úvod': 
       - 'OctopusLAB': index.md
       - 'ESP32': esp32.md
+      - 'Octopus Framework': framework.md
   - 'Instalace':
       - 'Společná část': install.md
       - 'Windows ': install_win.md

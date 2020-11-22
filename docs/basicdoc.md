@@ -303,7 +303,7 @@ Zdrojový kód knihovny: [components/button](https://github.com/octopusengine/oc
 
 ```python
 from machine import Pin
-from button import Button
+from components.button import Button
 
 boot_pin = Pin(0, Pin.IN)
 boot_button = Button(boot_pin, release_value=1)
@@ -634,7 +634,7 @@ V případě "závažnějšího problému" s připojením někdy pomůže až "t
 reset()
 ```
 
-Využití **FrameWorku Octopus** na maximum - k připojení k některé z uložených WiFi postačí příkaz `w()`:
+Využití [Octopus FrameWork](/framework) na maximum - k připojení k některé z uložených WiFi postačí příkaz `w()`:
 
 ```python
 from utils.octopus_lib import w

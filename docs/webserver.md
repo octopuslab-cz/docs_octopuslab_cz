@@ -1,7 +1,7 @@
 # ![logo](img/logo_small.png){: style="width:39px" } WebServer
 
 
-Naše verze robustnějšího systému je součástí OctopusLAB FrameWorku [micropython-web-ide](https://www.octopuslab.cz/micropython-web-ide/)
+Naše verze robustnějšího systému je součástí [Octopus FrameWork](/framework) - [micropython-web-ide](https://www.octopuslab.cz/micropython-web-ide/)
 
 ---
 

@@ -168,7 +168,7 @@ Pro složitější struktury využíváme objektové vlastnosti při definici t�
 
 Micropython má implementovánu jednoduchou "databázi" `btree`.
 Tuto jsme trochu rozšířili a zpřístupnili pro práci s našimi projekty.
-Stručně v octopusLAB frameworku 🡒 [/docs/database](/basicdoc/#database)
+Stručně v [Octopus FrameWork](/framework) 🡒 [/docs/database](/basicdoc/#database)
 
 ---
 

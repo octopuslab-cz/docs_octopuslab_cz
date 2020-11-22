@@ -91,7 +91,7 @@ Postupně zvolte:
 
 ### Nastavení vstupů a výstupů
 
-`ios` (**I/O setting submenu**) - nastavení periférií, není nezbytné, kromě oled (I2c) nebo disp7 (SPI) - pokud chcete využít "chytré" [pinouty](/basicdoc/#pinout) "octopus frameworku".
+`ios` (**I/O setting submenu**) - nastavení periférií, není nezbytné, kromě oled (I2c) nebo disp7 (SPI) - pokud chcete využít "chytré" [pinouty](/basicdoc/#pinout) [Octopus FrameWork](/framework).
 
 ![ios](https://www.octopuslab.cz/wp-content/uploads/2019/07/workshop-upy201907-2.jpg)
 

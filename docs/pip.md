@@ -2,8 +2,9 @@
 
 Pracujeme na vlastních "instalačních balíčcích" (packages) pro [Rozšíření MicroPythonu](/extension). Tyto balíčky se nejčastěji instalují pomocí `pip` (**package installer for Python**), přesněji `upip` (pro Micropython). Chceme používat `pypi` (**the Python Package Index**) na stránkách 🡒 [pypi.org/](https://pypi.org/).
 
+## micropython-octopus-installer
 
-Prvním balíčkem je `micropython-octopus-installer`, nahrazující [octopus_initial.setup()](../install/#octopus_initialsetup) v "lite" verzi.
+Základním instalačním balíčkem je `micropython-octopus-installer`, nahrazující [octopus_initial.setup()](../install/#octopus_initialsetup) v "lite" verzi.
 
 🡒 [pipi.org/octopuslab-installer](https://pypi.org/project/micropython-octopuslab-installer/#data)
 

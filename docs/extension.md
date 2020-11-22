@@ -13,7 +13,7 @@ Máme více možností, zmíníme tři základní varianty.
 
 ## octopuslab_installer
 
-Pro instalci  **Octopus FrameWork** využíváme metody `deploy()` z "balíčku" `octopuslab_installer`.
+Pro instalci  [Octopus FrameWork](/framework) využíváme metody `deploy()` z "balíčku" `octopuslab_installer`.
 
 ```python
 ... WiFi conncect

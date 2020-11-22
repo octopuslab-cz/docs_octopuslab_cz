@@ -48,6 +48,8 @@ import webrepl
 webrepl.start()
 ```
 
-Heslo do WebReplu je v **OctopusLAB Frame Work** přednastaveno na `octopus`.
+Heslo do WebReplu je v [Octopus FrameWork](/framework) přednastaveno na `octopus`.
+
+Spustit se dá i ze [setup()](/setup/#setup) - příkazy `cw` -> `ws`.
 
 ---

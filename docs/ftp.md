@@ -19,6 +19,8 @@ FTP Server started on  192.168.x.y # -> IP
 
 ```
 
+Spustit se dá i ze [setup()](/setup/#setup) - příkazy `cw` -> `ftp`.
+
 ---
 
 ## Použití z Total commanderu

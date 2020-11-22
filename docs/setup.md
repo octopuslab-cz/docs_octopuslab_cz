@@ -23,27 +23,27 @@ Rozšířené možnosti nastavení:
    )  \ `)(' / (
 
 Hello, this will help you initialize your ESP
-ver: 0.68 / 30.6.2020 (c)octopusLAB
+ver: 0.71 / 22.11.2020 (c)octopusLAB
 Press Ctrl+C to abort
 
-==============================
-        S E T U P
-==============================
-[w]   - wifi submenu
-[cw]  - connect wifi
-[cl]  - connect LAN
-[sd]  - system download > stable octopus modules from URL
-[sde] - system download > examples (from URL) /[sdh] hydroponics
-[sdp] - system download > petrkr (Beta octopus modules from URL)
-[sdo] - system download > octopus (Alfa octopus modules from URL)
-[ds]  - device setting
-[ios] - I/O setting submenu
-[mq]  - mqtt() and sending data setup
-[si]  - system info
-[wr]  - run web repl
-[q]   - quit setup
-==============================
+================================
+          S E T U P
+================================
+ [w]    - wifi submenu
+ [cw]   - connect wifi
+ [cl]   - connect LAN
+ [sd]   - system download > stable octopus modules from URL
+ [sde]  - system download > examples (from URL) /[sdh] hydroponics
+ [sdo]  - system download > octopus (Alfa octopus modules from URL)
+ [ds]   - device setting
+ [ios]  - I/O setting submenu
+ [si]   - system info
+ [wr]   - run web repl
+ [ftp]  - start FTP
+ [q]    - quit setup
+================================
 select:
+
 ```
 
 ## Základní nastavení: 
@@ -94,5 +94,12 @@ Postupně zvolte:
 `ios` (**I/O setting submenu**) - nastavení periférií, není nezbytné, kromě oled (I2c) nebo disp7 (SPI) - pokud chcete využít "chytré" [pinouty](/basicdoc/#pinout) [Octopus FrameWork](/framework).
 
 ![ios](https://www.octopuslab.cz/wp-content/uploads/2019/07/workshop-upy201907-2.jpg)
+
+---
+
+### Komunikace
+
+- [WebREPL](/repl/) `[wr]`
+- [FTP](/ftp/) `[ftp]`
 
 ---

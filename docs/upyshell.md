@@ -44,7 +44,11 @@ uPyShell:~/$ help
         rm | ReMove F                 | rm test.py
 ```
 
-## Editor
+## Jednoduchý řádkový editor
+
+Tent editor se dá použít pro rychlé úpravy menších souborů (čítajících několik málo řádků).
+Vždy editujeme v jednu chvíli pouze jeden vybraný řádek, což je někdy "lepší než nic".
+
 ![shell-editor](https://www.octopuslab.cz/wp-content/uploads/2020/02/shell2-thread.png)
 
 ## Práce s WiFi

@@ -38,11 +38,11 @@ Podrobnější popis na samostatné stránce [setup](/setup).
 
 Malý modul, které se na první pohled chová jako klasický Linuxový shell (příkazová řádka v terminálu pro práci se soubory a pod.)
 
-Podrobnější popis na samostatné stránce [upyshell](/upyshell).
+Podrobnější popis je na samostatné stránce [upyshell](/upyshell).
 
 ## 4. Editor
 
-Jednoduchý řádkový editor testových souborů (zdrojových kódů)
+Jednoduchý [řádkový editor](/upyshell/#editor) testových souborů (zdrojových kódů).
 
 ---
 
@@ -59,7 +59,7 @@ Jednoduchý řádkový editor testových souborů (zdrojových kódů)
 Ne ESP32 se dá spustit jednoduchý webový server. V lokální síti pak na dané IP adrese spustíte klasickou webovou stránku,
 přes kterou se s ESP dá komunikovat.
 
-Podrobnější popis na samostatné stránce [webserver](/webserver).
+Podrobnější popis je na samostatné stránce [webserver](/webserver).
 
 --- 
 

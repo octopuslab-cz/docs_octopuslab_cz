@@ -90,10 +90,10 @@ Rovnež lze přiřadit hodnotu urcité subsekvenci. Takto dokonce můžeme změn
 posloupnost jako klasický seznam. Funkci `range()` předáme konečnou hodnotu posloupnosti. Pro všechny prvky pak bude platit, že jsou menší než tato hodnota:*
 
 ```python
->>> range(7) # [0, 1, 2, 3, 4, 5, 6]
->>> range(5, 10) # [5, 6, 7, 8, 9]
->>> range(0, 15, 3) # [0, 3, 6, 9, 12]
->>> range(-10, -100, -30) # [-10, -40, -70]
+>>> list(range(7)) # [0, 1, 2, 3, 4, 5, 6]
+>>> list(range(5, 10)) # [5, 6, 7, 8, 9]
+>>> list(range(0, 15, 3)) # [0, 3, 6, 9, 12]
+>>> list(range(-10, -100, -30)) # [-10, -40, -70]
 
 for i in range(7):
      print(1,end="")

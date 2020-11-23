@@ -204,7 +204,7 @@ value       dict        pin         blink
 toggle      state
 ```
 !!! note "**note**"
-    Pro obecnější práci s využitím `set_pinout()` (přednastavených [pinoutů](basicdoc/#pinout)) a `io_config` předpokládáme, že v [Octopus FrameWork](/framework) máte pomocí [setup()](/setup) nastavenu desku `ds` a periférie `ios`.
+    Pro obecnější práci s využitím `set_pinout()` (předdefinovaných [PINů](/#pinout)) a `io_config` předpokládáme, že pro [Octopus FrameWork](/framework) máte pomocí [setup()](/setup) nastavenu desku `ds` a periférie `ios`.
 
 Číslo PINu v ukázce je 2, to je svítivá dioda vestavěná v **DoIt** modulech i v našem ESP32boardu. Ale pro práci s obecným modulem, kde máme možnost si nastavit, kde se Led dioda nachází, použijeme pak variantu základní ukázky z examples, kde `BUILT_IN_LED` je konstanta, ve které je číslo PINu uloženo:
 
@@ -255,7 +255,7 @@ ws.color(rgb.BLUE)       # zobrazení barvy, rgb.RED/rgb.GREEN ...
 ```
 
 !!! note "**note**"
-    Pro obecnější práci s využitím `set_pinout()` (přednastavených [pinoutů](basicdoc/#pinout)) a `io_config` předpokládáme, že v [Octopus FrameWork](/framework) máte pomocí [setup()](/setup) nastavenu desku `ds` a periférie `ios`.
+    Pro obecnější práci s využitím `set_pinout()` (předdefinovaných [PINů](/#pinout)) a `io_config` předpokládáme, že pro [Octopus FrameWork](/framework) máte pomocí [setup()](/setup) nastavenu desku `ds` a periférie `ios`.
 
 Následující ukázka naznačuje komplexnější práci s předkonfigurovanými konstantamy, které určují na kterém pinu `pinout.WS_LED_PIN` a kolik modulů máme `io_conf.get('ws')`. 
 
@@ -1282,7 +1282,7 @@ Zdroj ukázky 🡒 [test_rtc_ntp.py](https://github.com/octopusengine/octopuslab
 
 ### ![hwsoc](img/database.png){: style="width:28px" } pinout
 
-Práci s PINy nám ulehčuje přednastanený **pinout**, který je uložený v konfiguračním souboru. Konfigurační soubory pro jednotlivé hw moduly jsou v samostatném adresáři `/pinouts`. Podle toho, jakou máme HW platformu, máme přesně svázány konstanty (čísla PINů) s jejich názvy.
+Práci s PINy (*"nožičky" kontroleru*) nám ulehčuje přednastanený **pinout**, který je uložený v konfiguračním souboru. Konfigurační soubory pro jednotlivé hw moduly jsou v samostatném adresáři `/pinouts`. Podle toho, jakou máme HW platformu, máme přesně svázány konstanty (čísla PINů) s jejich názvy.
 Vybrané soubory zapojení pinů jsou na samostatné stránce 🡒 [pinouts](/pinouts).
 
 Zdrojový kód knihovny: 🡒 [utils/pinout](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/pinout.py)
@@ -1382,6 +1382,16 @@ def funkce():
 def funkce():
     pass
 funkce = dekorator(funkce)
+```
+
+
+
+Speciální `@octopus_debug` dekorátor 🡒 [/octopus_decor.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/octopus_decor.py) vrací například čas, který trvalo provedení "odekorované" funkce.
+
+```python
+@octopus_debug
+def yourFunc(): 
+    ...
 ```
 
 ---

@@ -204,7 +204,7 @@ value       dict        pin         blink
 toggle      state
 ```
 !!! note "**note**"
-    Pro obecnější práci s využitím `set_pinout()` (předdefinovaných [PINů](/#pinout)) a `io_config` předpokládáme, že pro [Octopus FrameWork](/framework) máte pomocí [setup()](/setup) nastavenu desku `ds` a periférie `ios`.
+    Pro obecnější práci s využitím `set_pinout()` (předdefinovaných [pinů](/#pinout)) a `io_config` předpokládáme, že pro [Octopus FrameWork](/framework) máte pomocí [setup()](/setup) nastavenu desku `ds` a periférie `ios`.
 
 Číslo PINu v ukázce je 2, to je svítivá dioda vestavěná v **DoIt** modulech i v našem ESP32boardu. Ale pro práci s obecným modulem, kde máme možnost si nastavit, kde se Led dioda nachází, použijeme pak variantu základní ukázky z examples, kde `BUILT_IN_LED` je konstanta, ve které je číslo PINu uloženo:
 
@@ -236,7 +236,7 @@ Třída je rozšířena o některé nové metody:
 - `color(color)` # pro jednu LED diodu, color ve formátu (R,G,B), 0-255
 - `color(color, index)` # pro více modulů, indexováno
 - `simpleTest()` # proběhne R, G, B
-- `wheel()` # z čísla vygenerje barvu
+- `wheel()` # z čísla vygeneruje barvu
 - `random_color()` # náhodná barva
 - `rainbow_cycle()` # duha
 
@@ -255,9 +255,9 @@ ws.color(rgb.BLUE)       # zobrazení barvy, rgb.RED/rgb.GREEN ...
 ```
 
 !!! note "**note**"
-    Pro obecnější práci s využitím `set_pinout()` (předdefinovaných [PINů](/#pinout)) a `io_config` předpokládáme, že pro [Octopus FrameWork](/framework) máte pomocí [setup()](/setup) nastavenu desku `ds` a periférie `ios`.
+    Pro obecnější práci s využitím `set_pinout()` (předdefinovaných [pinů](/#pinout)) a `io_config` předpokládáme, že pro [Octopus FrameWork](/framework) máte pomocí [setup()](/setup) nastavenu desku `ds` a periférie `ios`.
 
-Následující ukázka naznačuje komplexnější práci s předkonfigurovanými konstantamy, které určují na kterém pinu `pinout.WS_LED_PIN` a kolik modulů máme `io_conf.get('ws')`. 
+Následující ukázka naznačuje komplexnější práci s předkonfigurovanými konstantamy, které určují na kterém pinu (`pinout.WS_LED_PIN`) a kolik modulů máme (`io_conf.get('ws')`).
 
 ```python
 from components.rgb import Rgb

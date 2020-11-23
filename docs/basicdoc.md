@@ -229,9 +229,9 @@ while True:
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Rgb
 Knihovna pro *plnobarevné* **RGB led** je vytvořena především pro práci s adresovatelým modulem typu **WS2812b** (*proto se používá zkratka WS*). Naše verze je rozšířením vestavěné třídy `NeoPixel`. *Pro řízení klasických R-G-B diod je potřeba na každou barevnou složku samostatný PIN, což využíváme jen ojediněle, jelikož volných PINů na ESP už moc nezbývá.*
 
-Zdrojový kód knihovny Rgb: [components/rgb](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/rgb/__init__.py)
+Zdrojový kód knihovny `Rgb` 🡒 [components/rgb](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/rgb/__init__.py) (*slouží i jako ukázka, jak lze třídu rozšířit*)
 
-Rozšířeno o metody:
+Třída je rozšířena o některé nové metody:
 
 - `color(color)` # pro jednu LED diodu, color ve formátu (R,G,B), 0-255
 - `color(color, index)` # pro více modulů, indexováno

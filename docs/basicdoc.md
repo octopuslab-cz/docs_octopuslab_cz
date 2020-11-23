@@ -203,8 +203,11 @@ class       init        module      qualname
 value       dict        pin         blink
 toggle      state
 ```
+!!! note "**note**"
+    Pro obecnější práci s využitím `set_pinout()` (přednastavených [pinoutů](basicdoc/#pinout)) a `io_config` předpokládáme, že v [Octopus FrameWork](/framework) máte pomocí [setup()](/setup) nastavenu desku `ds` a periférie `ios`.
 
 Číslo PINu v ukázce je 2, to je svítivá dioda vestavěná v **DoIt** modulech i v našem ESP32boardu. Ale pro práci s obecným modulem, kde máme možnost si nastavit, kde se Led dioda nachází, použijeme pak variantu základní ukázky z examples, kde `BUILT_IN_LED` je konstanta, ve které je číslo PINu uloženo:
+
 ```python
 from components.led import Led
 from utils.pinout import set_pinout
@@ -224,14 +227,14 @@ while True:
 ---
 
 ### ![hwsoc](img/hwsoc.png){: style="width:28px" } Rgb
-Modul pro **adresovatelnou RGB led** je vytvořen především pro práci s **RGB svítivými diodami typu WS2812b** - *proto zkratka WS*. Knihovna je pak rozšířením vestavěné `NeoPixel`. *Pro řízení klasické RGB je potřeba na každou barevnou složku samostatný PIN, což využíváme jen ojediněle.*
+Knihovna pro *plnobarevné* **RGB led** je vytvořena především pro práci s adresovatelým modulem typu **WS2812b** (*proto se používá zkratka WS*). Naše verze je rozšířením vestavěné třídy `NeoPixel`. *Pro řízení klasických R-G-B diod je potřeba na každou barevnou složku samostatný PIN, což využíváme jen ojediněle, jelikož volných PINů na ESP už moc nezbývá.*
 
-Zdrojový kód knihovny: [components/rgb](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/rgb/__init__.py)
+Zdrojový kód knihovny Rgb: [components/rgb](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/rgb/__init__.py)
 
 Rozšířeno o metody:
 
 - `color(color)` # pro jednu LED diodu, color ve formátu (R,G,B), 0-255
-- `color(color, index)` # pro více, indexováno
+- `color(color, index)` # pro více modulů, indexováno
 - `simpleTest()` # proběhne R, G, B
 - `wheel()` # z čísla vygenerje barvu
 - `random_color()` # náhodná barva
@@ -251,7 +254,10 @@ ws.color(rgb.BLUE)       # zobrazení barvy, rgb.RED/rgb.GREEN ...
 
 ```
 
-Obecnější s využitím set_pinout() a io_config:
+!!! note "**note**"
+    Pro obecnější práci s využitím `set_pinout()` (přednastavených [pinoutů](basicdoc/#pinout)) a `io_config` předpokládáme, že v [Octopus FrameWork](/framework) máte pomocí [setup()](/setup) nastavenu desku `ds` a periférie `ios`.
+
+Následující ukázka naznačuje komplexnější práci s předkonfigurovanými konstantamy, které určují na kterém pinu `pinout.WS_LED_PIN` a kolik modulů máme `io_conf.get('ws')`. 
 
 ```python
 from components.rgb import Rgb
@@ -267,7 +273,10 @@ ws = Rgb(pinout.WS_LED_PIN,io_conf.get('ws'))
 print("---examples/rgb_blink.py---")
 ws.simpleTest()
 ```
+
 Zdrojový kód ukázky: [examples/rgb_blink.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/rgb_blink.py)
+
+Pro běžnou práci je v první fázi snadnější použít předchozí variantu, ale pro rozsáhlejší projekty a práci v týmu se musí zdokumentovat použití "magické konstanty" **15** v definici `ws = Rgb(15)`.
 
 🡒 [pinout](#pinout)
 

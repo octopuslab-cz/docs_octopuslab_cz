@@ -11,20 +11,24 @@
 
 <pre>
 +-------------+
-| MicroPython |
+| [MicroPython]() |
 +----+--------+
      |
-     +--- Vanilla ---> <a href="/pip/#micropython-octopus-installer">micropython-octopus-installer</a> -+
+     +--- <a href="http://micropython.org/download/esp32/">Vanilla</a> ---> <a href="/pip/#micropython-octopus-installer">micropython-octopus-installer</a> -+
      |                                                | 
      +--- Octopus ------+-----------------------------+
                         |
                         |
-         <a href="/install/#octopus_initialsetup">octopus_initial.setup()</a>
+     >>> <a href="/install/#octopus_initialsetup">octopus_initial.setup()</a>
 </pre>
 
 ---
 
 ## 2. Setup
+
+```python
+>>> setup()
+```
 
 - WiFi
 - FTP
@@ -36,11 +40,20 @@ Podrobnější popis na samostatné stránce [setup](/setup).
 
 ## 3. UpyShell
 
+```python
+>>> shell()
+uPyShell:~/$
+```
+
 Malý modul, které se na první pohled chová jako klasický Linuxový shell (příkazová řádka v terminálu pro práci se soubory a pod.)
 
 Podrobnější popis je na samostatné stránce [upyshell](/upyshell).
 
 ## 4. Editor
+
+```
+uPyShell:~/$ edit examples/file.py
+```
 
 Jednoduchý [řádkový editor](/upyshell/#editor) testových souborů (zdrojových kódů).
 

@@ -40,7 +40,7 @@ Podrobnější popis na samostatné stránce [setup](/setup).
 
 ## 3. UpyShell
 
-```python
+```
 >>> shell()
 uPyShell:~/$
 ```
@@ -55,7 +55,7 @@ Podrobnější popis je na samostatné stránce [upyshell](/upyshell).
 uPyShell:~/$ edit examples/file.py
 ```
 
-Jednoduchý [řádkový editor](/upyshell/#editor) testových souborů (zdrojových kódů).
+Jednoduchý [řádkový editor](/upyshell/#jednoduchy-radkovy-editor) testových souborů (zdrojových kódů).
 
 ---
 
@@ -74,6 +74,4 @@ přes kterou se s ESP dá komunikovat.
 
 Podrobnější popis je na samostatné stránce [webserver](/webserver).
 
---- 
-
-
+---

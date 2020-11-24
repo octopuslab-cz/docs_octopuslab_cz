@@ -1227,10 +1227,22 @@ tslLight = 0x39
 # 110 - 0x26 (38)   0x3E (62)
 # 111 - 0x27 (39)   0x3F (63)
 # * ROBOTboard
+```
+
+```python
+# některé další základní metody
+ADDR = 42
+i2c.writeto(ADDR, b'123')  # write 3 bytes to slave with 7-bit address 42
+i2c.readfrom(ADDR, 8)      # read 8 bytes from slave with 7-bit address 42
+
+i2c.readfrom_mem(ADDR, 8, 3) # ...
 
 ```
 
+Odkaz na originální Micropython dokumentaci k **I2C** 🡒  https://docs.micropython.org/en/latest/library/machine.I2C.html
 
+---
+ 
 #### SPI
 `spi_init()`
 
@@ -1249,6 +1261,20 @@ ss = Pin(pinout.SPI_CS0_PIN, Pin.OUT)
 ...
 ```
 
+```python
+# některé další základní metody
+SPI.deinit()
+SPI.read(nbytes, write=0)
+SPI.readinto(buf, write=0)
+SPI.write(buf)
+SPI.write_readinto(write_buf, read_buf)
+...
+
+```
+
+Odkaz na originální Micropython dokumentaci k **SPI** 🡒 https://docs.micropython.org/en/latest/library/machine.SPI.html
+
+---
 
 #### RTC
 
@@ -1276,6 +1302,9 @@ print(get_hhmm(rtc))
 ```
 
 Zdroj ukázky 🡒 [test_rtc_ntp.py](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/test_rtc_ntp.py)
+
+
+Odkaz na originální Micropython dokumentaci k **RTC** 🡒 https://docs.micropython.org/en/latest/library/machine.RTC.html
 
 ---
 

@@ -12,6 +12,6 @@ Hlavní repozitář na Githubu: [octopuslab-cz/octopuslab-edu-kit1](https://gith
 
 - Základní 3D modely, umožňující mechanické propojování dalších modulů [thingiverse/.../esp32_EDU_KIT1](https://www.thingiverse.com/thing:4643657)
 
-Úvodní seznámení je popsáno v samostatném [Tutoriálu (EDU_KIT1)](/tutorial3-edukit1)
+Úvodní seznámení je popsáno v samostatném [Tutoriálu (EDU_KIT1)](/tutorial-edukit1/)
 
 ---

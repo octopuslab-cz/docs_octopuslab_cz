@@ -11,7 +11,7 @@
 
 <pre>
 +-------------+
-| [MicroPython]() |
+| <b>MicroPython</b> |
 +----+--------+
      |
      +--- <a href="http://micropython.org/download/esp32/">Vanilla</a> ---> <a href="/pip/#micropython-octopus-installer">micropython-octopus-installer</a> -+

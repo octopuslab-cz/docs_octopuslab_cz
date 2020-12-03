@@ -167,12 +167,13 @@ Dále chceme instalovat **Octopus LAB Frame Work**, což je soubor knihoven `lib
 | ----------- | :----: | :----: | :----: | :----: | :----: |
 |<a href="/install_win/#2-instalace-micropythonu-do-esp">esptool</a>      |   ✅✅   |   ~   |   ❌   |    ❌    |   ❌  |
 |<a href="/ampy">ampy</a>             |   ❌   |   ✅   |   ✅   |    ❌    |   ❌  |
+|<a href="/install_win/#terminal-putty">putty</a>             |   ❌   |   ❌   |   ❌   |    ✅    |   ❌  |
 |<a href="/rshell">rshell</a>         |   ❌   |   ✅   |   ✅   |    ✅✅    |   ~  |
 |<a href="/pip">upip</a>              |   ❌   |   ✅   |   ✅✅   |    ❌    |   ❌  |
 |<a href="/ftp">FTP</a>               |   ❌   |   ✅✅   |   ✅   |    ❌    |   ❌  |
 |<a href="">web_server</a>            |   ❌   |   ~   |   ✅   |    ✅    |   ✅  |
 |<a href="/thony">Thonny</a>          |   ✅   |   ~   |   ✅   |    ✅    |   ✅  |
-|<a href="/">uPyCraft</a>          |   ✅   |   ~   |   ✅   |    ✅    |   ✅  |
+|<a href="/upycraft">uPyCraft</a>          |   ✅   |   ~   |   ✅   |    ✅    |   ✅  |
 |<a href="/espy">EsPy</a>             |   ~   |   ~   |   ✅   |    ✅    |   ✅  |
 |<a href="/mu">Mu</a>                 |   ~   |   ~   |   ✅   |    ✅    |   ✅  |
 |<a href="/upyshell">shell / editor</a> |   ❌   |   ❌   |   ✅   |    ~    |   ~  |

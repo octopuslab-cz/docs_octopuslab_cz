@@ -172,6 +172,7 @@ Dále chceme instalovat **Octopus LAB Frame Work**, což je soubor knihoven `lib
 |<a href="/ftp">FTP</a>               |   ❌   |   ✅✅   |   ✅   |    ❌    |   ❌  |
 |<a href="">web_server</a>            |   ❌   |   ~   |   ✅   |    ✅    |   ✅  |
 |<a href="/thony">Thonny</a>          |   ✅   |   ~   |   ✅   |    ✅    |   ✅  |
+|<a href="/">uPyCraft</a>          |   ✅   |   ~   |   ✅   |    ✅    |   ✅  |
 |<a href="/espy">EsPy</a>             |   ~   |   ~   |   ✅   |    ✅    |   ✅  |
 |<a href="/mu">Mu</a>                 |   ~   |   ~   |   ✅   |    ✅    |   ✅  |
 |<a href="/upyshell">shell / editor</a> |   ❌   |   ❌   |   ✅   |    ~    |   ~  |

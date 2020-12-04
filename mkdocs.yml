@@ -21,6 +21,12 @@ nav:
       - 'uPip ': pip.md
       - 'Rozšíření ': extension.md
       - 'Setup (nastavení)': setup.md
+  - 'Dokumentace':
+      - 'Referenční příručka': basicdoc.md
+      - 'Pinouts': pinouts.md
+      - 'Pubsub': pubsub.md
+      - 'UpyShell': upyshell.md
+      - 'Examples - ukázky': examples.md
   - 'Tutoriály':
       - 'Tutorial 1 Python ': tutorial1-python.md
       - 'Tutorial 2 Micropython ESP': tutorial2-micropython-esp.md
@@ -32,12 +38,6 @@ nav:
       - 'Upyshell workshop ': ws-upyshell.md
       - 'workshop GAME': ws-games.md
       - 'Python data': ws-python-data.md
-  - 'Dokumentace':
-      - 'Referenční příručka': basicdoc.md
-      - 'Pinouts': pinouts.md
-      - 'Pubsub': pubsub.md
-      - 'UpyShell': upyshell.md
-      - 'Examples - ukázky': examples.md
   - 'Další':
       - 'Class': class.md
       - 'Github ': github.md
@@ -46,7 +46,8 @@ nav:
       - 'FTP': ftp.md
       - 'Ampy': ampy.md
       - 'rshell': rshell.md
-      - 'Thony': thony.md
+      - 'Thonny': thonny.md
+      - 'uPyCraft': upycraft.md
       - 'EsPy': espy.md
       - 'Mu': mu.md
       - 'WebServer': webserver.md

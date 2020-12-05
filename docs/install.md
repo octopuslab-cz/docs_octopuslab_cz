@@ -150,40 +150,6 @@ Aplikace **Thonny** v posledních verzích prošla řadou změn a tak si jistě 
 Velmi zjednodušeně: Instalace *vanilla* [Micropythonu](http://micropython.org/download/esp32/) nebo forku [OctopusLAB Micropythonu](https://octopusengine.org/download/micropython/micropython-octopus.bin) `uPy` je úvodní částí. 
 Dále chceme instalovat **Octopus LAB Frame Work**, což je soubor knihoven `lib` (modulů). A pak chceme pracovat s hlavním programem `main.py` nebo dalšími knihovnami a moduly.
 
----
-
-## Tabulka nástrojů pro práci s ESP
-
-- flash uPy - *"Flashování" Micropythonu*
-- copy lib - *kopírování knihoven z externího zdroje*
-- deploy /.py - *celé "setavení" konkrétního projektu*
-- Terminal - *sériový terminál pro práci s ESP / REPL*
-- IDE - *pokročilejší editor kódu*
-
-(lib  | *.py - přesun celých knihoven nebo jen dílčí přesun souborů)
-
-
-|             | - flash uPy - | - copy lib - | - deploy *.py - | - Terminal - | - IDE - |
-| ----------- | :----: | :----: | :----: | :----: | :----: |
-|<a href="/install_win/#2-instalace-micropythonu-do-esp">esptool</a>      |   ✅✅   |   ~   |   ❌   |    ❌    |   ❌  |
-|<a href="/ampy">ampy</a>             |   ❌   |   ✅   |   ✅   |    ❌    |   ❌  |
-|<a href="/install_win/#terminal-putty">putty</a>             |   ❌   |   ❌   |   ❌   |    ✅    |   ❌  |
-|<a href="/rshell">rshell</a>         |   ❌   |   ✅   |   ✅   |    ✅✅    |   ~  |
-|<a href="/pip">upip</a>              |   ❌   |   ✅   |   ✅✅   |    ❌    |   ❌  |
-|<a href="/ftp">FTP</a>               |   ❌   |   ✅✅   |   ✅   |    ❌    |   ❌  |
-|<a href="">web_server</a>            |   ❌   |   ~   |   ✅   |    ✅    |   ✅  |
-|<a href="/thonny">Thonny</a>          |   ✅   |   ~   |   ✅   |    ✅    |   ✅  |
-|<a href="/upycraft">uPyCraft</a>          |   ✅   |   ~   |   ✅   |    ✅    |   ✅  |
-|<a href="/espy">EsPy</a>             |   ~   |   ~   |   ✅   |    ✅    |   ✅  |
-|<a href="/mu">Mu</a>                 |   ~   |   ~   |   ✅   |    ✅    |   ✅  |
-|<a href="/upyshell">shell / editor</a> |   ❌   |   ❌   |   ✅   |    ~    |   ~  |
-
-
-*Legenda:*
-
-✅✅  ideální | ✅  vhodné | **~**  použitelné | ❌  nevhodné
-
-
 
 ---
 

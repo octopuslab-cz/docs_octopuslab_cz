@@ -3,7 +3,7 @@ site_url: https://docs.octopuslab.cz
 repo_url: https://github.com/octopuslab-cz/docs_octopuslab_cz
 repo_name: GitHub
 edit_uri: blob/master/docs/
-site_description: 'Python, IoT, roboti a já'
+site_description: 'ESP32, MicroPython - IoT, roboti a já'
 site_author: 'OctopusLAB'
 copyright: 'CC-BY'
 google_analytics: ['UA-171553408-2', 'docs.octopuslab.cz']
@@ -18,8 +18,6 @@ nav:
       - 'Windows ': install_win.md
       - 'Linux ': install_linux.md
       - 'Mac ': install_mac.md
-      - 'uPip ': pip.md
-      - 'Rozšíření ': extension.md
       - 'Setup (nastavení)': setup.md
   - 'Dokumentace':
       - 'Referenční příručka': basicdoc.md
@@ -27,6 +25,7 @@ nav:
       - 'Pubsub': pubsub.md
       - 'UpyShell': upyshell.md
       - 'Examples - ukázky': examples.md
+      - 'Class': class.md
   - 'Tutoriály':
       - 'Tutorial 1 Python ': tutorial1-python.md
       - 'Tutorial 2 Micropython ESP': tutorial2-micropython-esp.md
@@ -39,27 +38,14 @@ nav:
       - 'workshop GAME': ws-games.md
       - 'Python data': ws-python-data.md
   - 'Další':
-      - 'Class': class.md
+      - 'Práce s ESP': esp-ide.md
       - 'Github ': github.md
-      - 'Popis markdown': tutorials-intro.md
+      - 'Rozšíření ': extension.md
       - 'REPL': repl.md
-      - 'FTP': ftp.md
-      - 'Ampy': ampy.md
-      - 'rshell': rshell.md
-      - 'Thonny': thonny.md
-      - 'uPyCraft': upycraft.md
-      - 'EsPy': espy.md
-      - 'Mu': mu.md
       - 'WebServer': webserver.md
       - 'MQTT': mqtt.md
-  - 'Projekty':
-      - 'EDU-KIT1': proj-edukit1.md
-      - 'EDU-KIT2': proj-edukit2.md
-      - 'Displeje': displays.md
-      - 'IoT': proj-iot.md
-      - 'Robot 01': proj-robot01.md
-      - 'Hydroponie': proj-hydro.md
-      - 'Ostatní projekty': projects.md
+      - 'Popis markdown': tutorials-intro.md
+
 
 theme: readthedocs
 

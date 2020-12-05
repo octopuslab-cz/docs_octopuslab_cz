@@ -566,7 +566,7 @@ Elementární základ práce s více servy pomocí I2C expandéru pca9685:
 
 ```python
 from pca9685.servo import Servos
-from utils.octopus import i2c_init
+from utils.octopus_lib import i2c_init
 from time import sleep_ms
 from utils.transform import * # include all - only for example
 
@@ -603,21 +603,13 @@ def sweeptest():
     sweep(1,180,30)
     
 sweeptest()
-
-
 ```
 
+Zdrojový kód ukázky:
+https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/pca9685.py
 
-
-
-
-
-
-
-
-
-
-
+Pro tranformace a kompletnější práci s více servy vyvíjíme knihovnu `transform`:
+https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/transform.py
 
 
 🡒 [pinout](#pinout)

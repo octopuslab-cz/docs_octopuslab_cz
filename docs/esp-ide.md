@@ -34,7 +34,7 @@
 
 ---
 
-## Ampy
+## ![hwsoc](img/mchtr.png){: style="width:28px" } Ampy
 
 S programem **ampy** pracujeme v příkazové řádce svého počítače. Slouží pro "vzdálenou" práci s ESP po sériové lince, kdy nám umožňuje především přesouvat soubory **do** ESP `put`/ **z** ESP `get`, vytvářet adresáře `mkdir` a podobně.
 
@@ -101,7 +101,7 @@ ampy -p /COM6 put ./lib/ssd1306.py lib/ssd1306.py
 
 ---
 
-## rshell 
+## ![hwsoc](img/mchtr.png){: style="width:28px" } rshell 
 
 Alternativa k [ampy](/ampy) nebo [Thony](/thony) se sériovým terminálem [screen](/install_linux/#terminal) pro Linux (běží i na Raspberry Pi).
 
@@ -154,7 +154,7 @@ Pro ukončení práce s terminálem (exit: `CTRL+X`) - zpět do rshellu.
 
 ---
 
-## PIP 
+## ![hwsoc](img/mchtr.png){: style="width:28px" } PIP 
 
 Hesla: PIP| upip | pypi
 
@@ -222,7 +222,7 @@ Možnosti instalace dalších "balíčků" uvádíme v samostatné kapitole [Roz
 
 ---
 
-## FTP
+## ![hwsoc](img/mchtr.png){: style="width:28px" } FTP
 
 
 **FTP** (File transfer protocol) - protokol pro přenos souborů mezi počítači pomocí počítačové sítě.
@@ -325,7 +325,7 @@ https://www.youtube.com/watch?v=a7DrFqqu-78&t=369s
 
 ---
 
-## Thonny
+## ![hwsoc](img/mchtr.png){: style="width:28px" } Thonny
 
 Alternativou k IDE + [Ampy](https://docs.octopuslab.cz/ampy/) (i [esptool](https://github.com/espressif/esptool)) je tento jednoduchý nástroj (program běžící na PC). V prvním vydání byl takřka nepoužitelný (až na pár tutoriálových výjimek), ale novější verze, po odstranění řady zásadních nedostatků, už běží mnohem lépe. **Pro velmi jednoduché a paměťově nenáročné pokusy** funguje podle očekávání, ale když chcete připojení k WiFi a zároveň BlueTooth, tak nejspíš narazíte. Občas i běžící program znemožní korektní start `Thonny`, a jelikož se tluče komunikace na sériovém portu, **musíte si osvojit specifické rutiny, jak to provozovat. Pomáhají opakované restarty jak ESP tak Aplikace Thony, což není úplně komfortní**, ale za zkoušku to stojí.
 
@@ -354,7 +354,7 @@ Pár (anglických) odkazů (ale nebojte se použít [google](https://www.google.
 
 ---
 
-## uPyCraft
+## ![hwsoc](img/mchtr.png){: style="width:28px" } uPyCraft
 
 
 https://randomnerdtutorials.com/uPyCraftWindows
@@ -362,14 +362,14 @@ https://randomnerdtutorials.com/uPyCraftWindows
 
 ---
 
-## Mu
+## ![hwsoc](img/mchtr.png){: style="width:28px" } Mu
 
 Další alternativní IDE:
 
 https://codewith.mu/en/download
 
 ---
-## EsPy
+## ![hwsoc](img/mchtr.png){: style="width:28px" } EsPy
 
 
 https://github.com/jungervin/EsPy
@@ -382,12 +382,4 @@ Připravujeme: [deployer](/deployer)
 
 ---
 
-
-
-
-
-
-
-
 ---
-

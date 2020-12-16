@@ -29,7 +29,11 @@ Pro rychlý start práce s knihovnami OctopusLab si stáhněte do pracovního ad
 
 #### Detekce portu, kde je ESP
 
-Po připojení ESP modulu přes kabel USB (microUSB) musíme zjistit, na kterém `COM` portu ho máme. Typicky stačí zmáčknout symbol Windows a X -> `WIN + X` a v menu `Správce zařízení / Porty (COM a Lpt)` najdeme zařízení **Silicon Labs  CP210x USB to UART**. A tam bývá `COM + číslo` (COM3, COM6...). *Zkuste si ESP kabelem střídavě připojovat a odpojovat - COM port by se měl zobrazovat a pak mizet, podle stavu připojení.*
+Po připojení ESP modulu přes kabel USB (microUSB) musíme zjistit, na kterém `COM` portu ho máme. Typicky stačí zmáčknout symbol Windows a X -> `WIN + X` a v menu `Správce zařízení / Porty (COM a Lpt)` najdeme zařízení **Silicon Labs  CP210x USB to UART**. A tam bývá `COM + číslo` (COM3, COM6...). 
+
+Abyste viděli skci `Porty` ve `Správci zařízení` na Windows 10 musíte v menu "Zobrazení" zvolit "Zobrazit skrytá zařízení".
+
+*Zkuste si ESP kabelem střídavě připojovat a odpojovat - COM port by se měl zobrazovat a pak mizet, podle stavu připojení.*
 
 ---
 

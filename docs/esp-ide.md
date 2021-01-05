@@ -26,6 +26,7 @@
 |<a href="#espy">EsPy</a>             |   ~   |   ~   |   ✅   |    ✅    |   ✅  |
 |<a href="#mu">Mu</a>                 |   ~   |   ~   |   ✅   |    ✅    |   ✅  |
 |<a href="/upyshell">shell / editor</a> |   ❌   |   ❌   |   ✅   |    ~    |   ~  |
+|<a href="/deployer">deployer</a> |   ❌   |   ✅   |   ✅   |    ~    |   ~  |
 
 
 *Legenda:*

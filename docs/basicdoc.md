@@ -173,7 +173,13 @@ Přidali jsme k základní metodě `value()` dalších několik metod: `toggle()
 Zdrojový kód knihovny:
 [./components/led](https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/led/__init__.py)
 
-Nejkratší varianta použití:
+Nejkratší varianta použití je sice s využítím `utils`:
+```python
+from utils.octopus import led
+led.value(1)
+```
+
+Ale pro projekt lepší verze je s `components` (šetří paměť, protože nanačítá "celý octopus"):
 ```python
 from components.led import Led
 led = Led(2)

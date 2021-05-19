@@ -1542,8 +1542,9 @@ Jsme vyčlenili samostatně - zatím zde: [micropython-web-ide](https://www.octo
 ESP32 má dostatečný výkon, aby na něm mohl běžet jednoduchý **webový server** (server s jednoduchými "html" stránkami, k kterému se v lokální síti připojíme přes IP ESPčka)
 
 ```python
->>> from utils.octopus_lib import w, web_server
+>>> from utils.octopus_lib import w
+>>> from utils.octopus import web_server
 >>> w()
->>> web_server() 
+>>> web_server()
 
 ```

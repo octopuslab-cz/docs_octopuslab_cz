@@ -116,3 +116,21 @@ Jak docílíme toho, aby se blikání Ledky samo spouštělo hned po startu? Pro
 `$ cp examples/blink.py main.py`
 
 ---
+
+### • RAMdisk
+
+Někdy je vhodné použít (nejen v shellu) pro opakovaný zápis do souboru na místo disku (Flash) prostor v opereční paměti a jen "občas" soubor přehrát na disk. Přepisovatelnost paměťových buněk FLASH disku má totiž jistá omezení. 
+
+Jedna z možností je použít knihovnu `ramdisk` z `utils`:
+
+```python
+import os
+from utils.ramdisk import RAMBlockDev
+
+bdev = RAMBlockDev(512, 50)
+os.VfsLfs2.mkfs(bdev)
+# os.VfsFat.mkfs(bdev)
+os.mount(bdev, '/ramdisk')
+```
+
+---

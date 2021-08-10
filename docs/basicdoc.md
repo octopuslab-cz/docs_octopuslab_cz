@@ -735,6 +735,8 @@ for i in llan:
     print(i[0],i[2])
 ```
 
+Originální dokumentace [wlan()](https://docs.micropython.org/en/latest/library/network.WLAN.html)
+
 ---
 
 

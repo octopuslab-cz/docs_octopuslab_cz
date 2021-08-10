@@ -727,6 +727,14 @@ wlan.active(True)
 wlan.connect('ssid', 'password')
 ```
 
+Umožní nám (od verze v1.16 on 2021-08-09) skenovat celu síť:
+
+```python
+llan = wlan.scan() # list
+for i in llan:
+    print(i[0],i[2])
+```
+
 ---
 
 

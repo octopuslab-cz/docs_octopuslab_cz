@@ -133,7 +133,7 @@ Celý popis `setup()` je na samostatné stránce 🡒 [setup](/setup).
 ## Práce se soubory - uPyshell | Ampy | Thonny
 
 Pro přesouvání souborů do ESP máme víc možností. Jednoduché úpravy a přímé kopírování se dají rovnou provádět v ESP pomocí emulátoru [uPyShell](/upyshell). Tam se dá využít příkaz `edit` a pak `cp`. Ještě je tu i možnost `wget` pro stažení libovolného souboru z internetu.
-(pro `wget` musí být vytvořen adresář `download`)
+(pro `wget` musí být vytvořen adresář `download` - pomocí příkazu `mkdir`)
 
 
 Další  varianta, kterou jsme dříve využívali i pro `deploy` (sestavení systému) je program `ampy`, přímo určený pro vzdálenou práci se soubory na ESP. Tomu se věnujeme obšírněji na samostatné stránce 🡒 [ampy](/ampy).

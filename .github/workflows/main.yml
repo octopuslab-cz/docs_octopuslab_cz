@@ -21,23 +21,14 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
       with:
-        python-version: '3.8'
+        python-version: '3.11'
 
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Deploy
       run: |
         cd $GITHUB_WORKSPACE
-        pip install -r requirements.txt
-        mkdocs build
-        mv ./site ./docs_prod
-
-      # scp -r ./site/. '${{ secrets.SCP_USER }}:${{ secrets.SCP_PASSWORD }}@docs.octopuslab.cz:${{ secrets.SCP_PATH }}'
-    - name: copy file via ssh password
-      uses: appleboy/scp-action@master
-      with:
-        host: ${{ secrets.SCP_HOST }}
-        username: ${{ secrets.SCP_USER }}
-        password: '${{ secrets.SCP_PASSWORD }}'
-        port: 22
-        source: "./docs_prod"
-        target: "~/"
+        mkdocs gh-deploy

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="OctopusLAB" /><link rel="canonical" href="https://docs.octopuslab.cz/setup/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Setup (nastavení) - OctopusLab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Setup (nastaven\u00ed)";
+        var mkdocs_page_input_path = "setup.md";
+        var mkdocs_page_url = "/setup/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-171553408-2", "docs.octopuslab.cz");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OctopusLab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Úvod</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">OctopusLAB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp32/">ESP32</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../framework/">Octopus Framework</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Instalace</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Společná část</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_win/">Windows </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_linux/">Linux </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_mac/">Mac </a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Setup (nastavení)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#zakladni-nastaveni">Základní nastavení:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#nastaveni-desky">Nastavení desky</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nastaveni-wifi">Nastavení WiFi</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update">Update</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ukazkove-programy">Ukázkové programy</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nastaveni-vstupu-a-vystupu">Nastavení vstupů a výstupů</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#komunikace">Komunikace</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dokumentace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basicdoc/">Referenční příručka</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pinouts/">Pinouts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pubsub/">Pubsub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upyshell/">UpyShell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/">Examples - ukázky</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class/">Class</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriály</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial1-python/">Tutorial 1 Python </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial2-micropython-esp/">Tutorial 2 Micropython ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit1/">Tutorial EDUkit1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit2/">Tutorial EDUkit2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-robot/">Tutorial Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-iot/">Micropython workshop IoT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-robot/">Micropython workshop Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-upyshell/">Upyshell workshop </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-games/">workshop GAME</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-python-data/">Python data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Další</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp-ide/">Práce s ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Github </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../extension/">Rozšíření </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../repl/">REPL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../webserver/">WebServer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials-intro/">Popis markdown</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OctopusLab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Instalace</li>
+      <li class="breadcrumb-item active">Setup (nastavení)</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz/blob/master/docs/setup.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="setup"><img alt="logo" src="../img/logo_small.png" /> Setup</h1>
+<p>Pokud píšeme vlastní programy, což se bude týkat i většiny našich ukázek v <code>/examples</code> (adresář v ESP), základ <strong>nastavení</strong> bývá zahrnut v nich. Testovací a prototypovací systém umožní mít konkrétní nastavení i někde uloženo – a k tomu slouží konfigurační soubor <code>config/ios.json</code> – input output setup (<a href="#nastaveni-vstupu-a-vystupu">nastavení vstupů a výstupů</a>).
+Nastavení se provádí v základním Micropythonu, kde akci vyvoláme pomocí metody setup:</p>
+<pre><code class="language-microprython">&gt;&gt;&gt; setup()
+</code></pre>
+<div class="admonition hint">
+<p class="admonition-title"><strong>octopus_initial.setup() | setup()</strong></p>
+<p>Z prostředí Micropythonu <code>&gt;&gt;&gt;</code> spouštíme <strong>úplně napoprvé</strong> inicializační <code>octopus_initial.setup()</code>, který je součástí našeho forku Micropythonu. Pak se nám stáhne aktuální verze <em>Octopus Framework</em> a pro další nastavování už používáme pouze <code>setup()</code>, který je rozšířenou verzí <code>octopus_initial.setup()</code>.</p>
+</div>
+<p>Rozšířené možnosti nastavení:</p>
+<pre><code class="language-bash">&gt;&gt;&gt; setup()
+      ,'''`.
+     /      \
+     |(@)(@)|
+     )      (
+    /,'))((`.\
+   (( ((  )) ))
+   )  \ `)(' / (
+
+Hello, this will help you initialize your ESP
+ver: 0.71 / 22.11.2020 (c)octopusLAB
+Press Ctrl+C to abort
+
+================================
+          S E T U P
+================================
+ [w]    - wifi submenu
+ [cw]   - connect wifi
+ [cl]   - connect LAN
+ [sd]   - system download &gt; stable octopus modules from URL
+ [sde]  - system download &gt; examples (from URL) /[sdh] hydroponics
+ [sdo]  - system download &gt; octopus (Alfa octopus modules from URL)
+ [ds]   - device setting
+ [ios]  - I/O setting submenu
+ [si]   - system info
+ [wr]   - run web repl
+ [ftp]  - start FTP
+ [q]    - quit setup
+================================
+select:
+
+</code></pre>
+<h2 id="zakladni-nastaveni">Základní nastavení:</h2>
+<h3 id="nastaveni-desky">Nastavení desky</h3>
+<p>V prvním kroku nejdříve napíšeme <code>ds</code> (<strong>device setting</strong>) nastavení desky - (deskou rozumíme jeden z HW modulů pro ESP)
+Pro naše ukázky budeme používat nejvíce variantu <code>5</code> pro <a href="https://www.octopuslab.cz/vyvojove-desky/robot-board/">ROBOTboard</a> nebo <code>9</code> pro <a href="https://www.octopuslab.cz/esp32-board/">ESP32board</a>.
+Pro jiné desky nebo moduly se mění nastavení <a href="/basicdoc/#pinout">pinouty</a>.</p>
+<hr />
+<h3 id="nastaveni-wifi">Nastavení WiFi</h3>
+<p><strong>Wifi submenu</strong> umožní nastavit další Wifi síť. Nastavení WiFi se uloží do flash ESP (v <strong>config/wifi.json</strong>) a je uchováno i pro další použití. Po zvolení <code>w</code> s ukáže toto menu nižší úrovně:</p>
+<pre><code class="language-bash">==============================
+      S E T U P - W I F I
+==============================
+ [a]  - Add wifi network
+ [r]  - Remove wifi network
+ [s]  - Show configuration  
+==============================
+select:
+</code></pre>
+<p>Zvolte <code>a</code> (<strong>add wifi</strong>) a stiskněte [enter] pro přidání vaší WiFi sítě do zařízení a vyplňte správně:</p>
+<p><strong>SSID:</strong> název Vaší wifi | <strong>PASSWORD:</strong> a heslo do ní. Nastavení WiFi se uloží do flash ESP (v <em>config/wifi.json</em>) a <strong>je uchováno</strong> i pro další použití.</p>
+<hr />
+<h3 id="update">Update</h3>
+<p><code>w</code>/ <code>cw</code>, <code>sd</code>/ <code>sde</code></p>
+<h3 id="ukazkove-programy">Ukázkové programy</h3>
+<p>Můžeme si z cloudu také stáhnout ukázkové programy (budou pak v adresáři /examples)
+Postupně zvolte:
+<code>cw</code> Wifi by se měla připojit, nastaveno už máme od minula) a následně <code>sde</code> (system download examples) stáhne opět několik desítek ukázkových souborů.</p>
+<hr />
+<h3 id="nastaveni-vstupu-a-vystupu">Nastavení vstupů a výstupů</h3>
+<p><code>ios</code> (<strong>I/O setting submenu</strong>) - nastavení periférií, není nezbytné, kromě oled (I2c) nebo disp7 (SPI) - pokud chcete využít "chytré" <a href="/basicdoc/#pinout">pinouty</a> <a href="/framework">Octopus FrameWork</a>.</p>
+<p><img alt="ios" src="https://www.octopuslab.cz/wp-content/uploads/2019/07/workshop-upy201907-2.jpg" /></p>
+<hr />
+<h3 id="komunikace">Komunikace</h3>
+<ul>
+<li><a href="/repl/">WebREPL</a> <code>[wr]</code></li>
+<li><a href="/ftp/">FTP</a> <code>[ftp]</code></li>
+</ul>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../install_mac/" class="btn btn-neutral float-left" title="Mac "><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../basicdoc/" class="btn btn-neutral float-right" title="Referenční příručka">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC-BY</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../install_mac/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../basicdoc/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

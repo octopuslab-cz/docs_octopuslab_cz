@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="OctopusLAB" /><link rel="canonical" href="https://docs.octopuslab.cz/ws-python-data/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Python data - OctopusLab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Python data";
+        var mkdocs_page_input_path = "ws-python-data.md";
+        var mkdocs_page_url = "/ws-python-data/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-171553408-2", "docs.octopuslab.cz");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OctopusLab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Úvod</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">OctopusLAB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp32/">ESP32</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../framework/">Octopus Framework</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Instalace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Společná část</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_win/">Windows </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_linux/">Linux </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_mac/">Mac </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup (nastavení)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dokumentace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basicdoc/">Referenční příručka</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pinouts/">Pinouts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pubsub/">Pubsub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upyshell/">UpyShell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/">Examples - ukázky</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class/">Class</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriály</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial1-python/">Tutorial 1 Python </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial2-micropython-esp/">Tutorial 2 Micropython ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit1/">Tutorial EDUkit1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit2/">Tutorial EDUkit2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-robot/">Tutorial Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-iot/">Micropython workshop IoT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-robot/">Micropython workshop Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-upyshell/">Upyshell workshop </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-games/">workshop GAME</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Python data</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#retezce">Řetězce</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pole-seznamy">Pole / seznamy</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#slovniky">Slovníky</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rozsireni">Rozšíření</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#struktury">Struktury</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#databaze">Databáze</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#config">Config</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Další</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp-ide/">Práce s ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Github </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../extension/">Rozšíření </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../repl/">REPL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../webserver/">WebServer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials-intro/">Popis markdown</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OctopusLab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tutoriály</li>
+      <li class="breadcrumb-item active">Python data</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz/blob/master/docs/ws-python-data.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="workshop-python-data"><img alt="logo" src="../img/logo_small.png" /> Workshop Python DATA</h1>
+<h2 id="retezce">Řetězce</h2>
+<pre><code class="language-python">#Accessing string characters in Python
+str = 'octopus'
+print('str = ', str)             #-&gt; str = octopus
+print('str[0] = ', str[0])       #-&gt; o (první znak - s indexem [0])
+print('str[-1] = ', str[-1])     #-&gt; s (poslední znak)
+print('str[1:5] = ', str[1:5])   #-&gt; ctop (&quot;substring&quot; od-do)
+print('str[3:-2] = ', str[3:-2]) #-&gt; op (od-do odzadu)
+...
+</code></pre>
+<p>Vybrané metody:</p>
+<pre><code class="language-python">&gt;&gt;&gt; 'octopus'.upper() # převede na velká písmena
+'OCTOPUS'
+
+&gt;&gt;&gt; 'hledej slovo jablko'.find(&quot;jablko&quot;) # pozice výskytu hledaného řetězce
+13
+
+&gt;&gt;&gt; 'hledej slovo jablko'.find(&quot;meloun&quot;) # nenalezeno: -1
+-1
+
+&gt;&gt;&gt; 'zamena slova jablko'.replace('jablko', 'meloun')
+'zamena slova meloun'
+
+&gt;&gt;&gt; ...
+
+</code></pre>
+<p>Řetězcový tahák 🡒 <a href="https://pyvec.github.io/cheatsheets/strings/strings-cs.pdf">/strings-cs.pdf</a></p>
+<hr />
+<h2 id="pole-seznamy">Pole / seznamy</h2>
+<pre><code class="language-python"># definice seznamu
+&gt;&gt;&gt; s = [3, 1, 2]
+&gt;&gt;&gt; list(s)
+</code></pre>
+<p>Seznamy podporují, podobně jako řetězce, mnoho operací. Namátkou jmenujme spojování, násobení celým číslem, indexování, operace s podsekvencemi (slice) a další.
+Zjednodušně tedy můžeme navázat na řetězec, který je vlastně seznamem znaků a proto některé operace budou obdobné. Například spojení <code>+</code>,
+opakování <code>*</code>, přístup k prvku <code>[index]</code>... a více dalších. Seznamy a řetězce mají své speciální příkazy <code>split</code> a <code>join</code>.</p>
+<pre><code class="language-python">&gt;&gt;&gt; slova = &quot;první druhé třetí&quot;
+&gt;&gt;&gt; slova.split()    #Rozdělí řetězec na slova
+
+&gt;&gt;&gt; data = &quot;123,42,66&quot;
+&gt;&gt;&gt; data.split(&quot;,&quot;)  #Rozdělí &quot;vstup&quot; daným oddělovačem (zde čárka)
+
+&gt;&gt;&gt; ''.join(['o', 'c', 't','o', 'p', 'u', 's'])  #Spojí s do jednoho řetězce
+...
+</code></pre>
+<p>Rovnež lze přiřadit hodnotu urcité subsekvenci. Takto dokonce můžeme změnit i počet prvků seznamu:</p>
+<pre><code class="language-python">&gt;&gt;&gt;  a = [&quot;x&quot;, &quot;y&quot;, 123, 567]
+
+&gt;&gt;&gt; # Změna prvků:
+... a[0:2] = [11, 22]
+&gt;&gt;&gt; a
+[11, 22, 123, 567]
+&gt;&gt;&gt; # Jejich odstranění:
+... a[0:2] = []
+&gt;&gt;&gt; a
+[123, 567]
+&gt;&gt;&gt; # Vložení nových:
+... a[1:1] = [&quot;abc&quot;, &quot;octopus&quot;]
+&gt;&gt;&gt; a
+[123, ’abc’, ’octopus’, 567]
+&gt;&gt;&gt; a[:0] = a # Vložení kopie seznamu do sebe sama (stejně tak: a * 2)
+&gt;&gt;&gt; a
+[123, ’abc’, ’octopus’, 567, 123, ’abc’, ’octopus’, 567]
+...
+
+</code></pre>
+<p><em>Je-li třeba iterovat přes prvky aritmetické posloupnosti, využijeme interní funkci <code>range()</code>, která vrací tuto
+posloupnost jako klasický seznam. Funkci <code>range()</code> předáme konečnou hodnotu posloupnosti. Pro všechny prvky pak bude platit, že jsou menší než tato hodnota:</em></p>
+<pre><code class="language-python">&gt;&gt;&gt; list(range(7)) # [0, 1, 2, 3, 4, 5, 6]
+&gt;&gt;&gt; list(range(5, 10)) # [5, 6, 7, 8, 9]
+&gt;&gt;&gt; list(range(0, 15, 3)) # [0, 3, 6, 9, 12]
+&gt;&gt;&gt; list(range(-10, -100, -30)) # [-10, -40, -70]
+
+for i in range(7):
+     print(1,end=&quot;&quot;)
+
+123456
+</code></pre>
+<p>Tahák na seznamy 🡒 <a href="https://pyvec.github.io/cheatsheets/lists/lists-cs.pdf">/lists-cs.pdf</a></p>
+<hr />
+<h2 id="slovniky">Slovníky</h2>
+<p>Uspořádané dvojice klíč <code>key</code> a hodnota <code>value</code> mají skvělé využití v mnoha algoritmizačních "problémech"
+a často slouží jako základ jednoduchých databázových struktur.</p>
+<pre><code>dict = {&quot;key&quot;,&quot;value&quot;}
+</code></pre>
+<pre><code class="language-python"># vytvoření slovníku
+&gt;&gt;&gt; barvy = {'jablko': 'cervena', 'hruska': 'zelena'} # Micropython bez diakritiky
+&gt;&gt;&gt; barvy['boruvka'] = 'modra'                        # nový záznam
+&gt;&gt;&gt; barva = barvy['jablko']
+
+&gt;&gt;&gt; hodnoty = dict(a=1, b=2) # z pojmenovaných argumentů
+&gt;&gt;&gt; hodnota = hodnoty['b']
+
+# d.get(k)
+# d.pop(k)
+...
+
+</code></pre>
+<pre><code class="language-python"># iterace: d.keys() d.values() d.items()
+for ovoce, barva in barvy.items():
+    print('{}: {}'.format(
+    ovoce, barva))
+</code></pre>
+<pre><code class="language-python"># json
+import json
+json.loads(s)
+json.dumps(d)
+json.dumps(d, indent=2, ensure_ascii=False) # : odsazení o 2 mezery, nekódovat diakritiku
+</code></pre>
+<p>Slovníkový tahák  🡒 <a href="https://pyvec.github.io/cheatsheets/dicts/dicts-cs.pdf">/dicts-cs.pdf</a></p>
+<hr />
+<h2 id="rozsireni">Rozšíření</h2>
+<p>Micropython neobsahuje vše, co plnohodnotný Python, ale praktické věci můžeme řešit dodatečnou instalací rozšířujícího modulu.
+Například pro práci s <strong>iterátory</strong> <a href="/extension/#itertools">itertools</a>.</p>
+<hr />
+<h2 id="struktury">Struktury</h2>
+<p>Pro složitější struktury využíváme objektové vlastnosti při definici tříd. Můžeme vytvářet libovolnou složitost, propojování a vnořování. 
+<em>Klidně se může jednat i o "pole objektů tvořených slovníky a dalšími objekty".</em></p>
+<hr />
+<h2 id="databaze">Databáze</h2>
+<p>Micropython má implementovánu jednoduchou "databázi" <code>btree</code>.
+Tuto jsme trochu rozšířili a zpřístupnili pro práci s našimi projekty.
+Stručně v <a href="/framework">Octopus FrameWork</a> 🡒 <a href="/basicdoc/#database">/docs/database</a></p>
+<hr />
+<h2 id="config">Config</h2>
+<p>Framework Octopus má třídu <code>Config</code>, která usnadní práci s externím nastavováním.
+V adresáři config je uložen <code>json</code> soubor, do (ze) kterého se ukládají (načítají) data (hodnoty nastavení).</p>
+<p>Podrobněji na 🡒 <a href="/basicdoc/#config">/basicdoc/config</a>.</p>
+<p>Modifikovaná ukázka práce s Configem s využitím práce se seznamy a slovníky:</p>
+<pre><code class="language-python">&gt;&gt;&gt; from config import Config
+&gt;&gt;&gt; promenne = &quot;tempMax tempMin&quot; # slova oddělená mezerami
+&gt;&gt;&gt; keys = promenne.split()      # keys = [&quot;tempMax&quot;,&quot;tempMin&quot;]
+&gt;&gt;&gt; conf = Config(&quot;termostat&quot;, keys) # &gt; config/termostat.json
+&gt;&gt;&gt; conf.setup()
+
+==================================================
+        S E T U P - config/termostat.json
+==================================================
+[ 1] -          tempMax - 23
+[ 2] -          tempMin - 18
+[q] - Quit from json setup
+==================================================
+...
+
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ws-games/" class="btn btn-neutral float-left" title="workshop GAME"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../esp-ide/" class="btn btn-neutral float-right" title="Práce s ESP">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC-BY</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../ws-games/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../esp-ide/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

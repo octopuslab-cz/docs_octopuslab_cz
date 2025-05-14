@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="OctopusLAB" /><link rel="canonical" href="https://docs.octopuslab.cz/tutorial1-python/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Tutorial 1 Python  - OctopusLab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Tutorial 1 Python ";
+        var mkdocs_page_input_path = "tutorial1-python.md";
+        var mkdocs_page_url = "/tutorial1-python/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-171553408-2", "docs.octopuslab.cz");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OctopusLab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Úvod</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">OctopusLAB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp32/">ESP32</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../framework/">Octopus Framework</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Instalace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Společná část</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_win/">Windows </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_linux/">Linux </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_mac/">Mac </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup (nastavení)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dokumentace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basicdoc/">Referenční příručka</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pinouts/">Pinouts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pubsub/">Pubsub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upyshell/">UpyShell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/">Examples - ukázky</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class/">Class</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriály</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Tutorial 1 Python </a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#par-prvnich-pokusu-s-pythonem">Pár prvních pokusů s Pythonem</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ctrl-c">CTRL-C</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_1">&gt;&gt;&gt;</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#math">Math</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#help">Help</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#operatory">Operátory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vypis-dostupnych-modulu">Výpis dostupných modulů</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#blok-programu-na-vice-radku-a-odsazovani">Blok programu na více řádků a odsazování</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cekaci-prodlevy">Čekací prodlevy</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#generator-nahodnych-cisel">Generátor náhodných čísel</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#smycky-cykly">Smyčky | Cykly</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#podminky">Podmínky</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nekonecny-cyklus">Nekonečný cyklus</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stoji-za-zminku">Stojí za zmínku</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial2-micropython-esp/">Tutorial 2 Micropython ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit1/">Tutorial EDUkit1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit2/">Tutorial EDUkit2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-robot/">Tutorial Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-iot/">Micropython workshop IoT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-robot/">Micropython workshop Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-upyshell/">Upyshell workshop </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-games/">workshop GAME</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-python-data/">Python data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Další</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp-ide/">Práce s ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Github </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../extension/">Rozšíření </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../repl/">REPL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../webserver/">WebServer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials-intro/">Popis markdown</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OctopusLab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tutoriály</li>
+      <li class="breadcrumb-item active">Tutorial 1 Python </li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz/blob/master/docs/tutorial1-python.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tutorial-1"><img alt="logo" src="../img/logo_small.png" /> Tutorial 1</h1>
+<h2 id="par-prvnich-pokusu-s-pythonem">Pár prvních pokusů s Pythonem</h2>
+<p>Většina ukázek z tohoto prvního tutoriálu bude fungovat i na běžném počítači při použití <strong>Pythonu</strong> <em>(verze 3.5+)</em>. Cílem je základní představení, částečné pochopení a procvičení elementárních základů. Pokračování, kde už využijeme ESP32 s MicroPythonem, je v samostatném tutoriálu: <a href="/tutorial2-micropython-esp">Tutorial2</a>. Pro ten už si ale musíte <a href="/install">nainstalovat</a> MicroPython na ESP.</p>
+<hr />
+<h2 id="ctrl-c">CTRL-C</h2>
+<p>Po restartu nám ESP32 posílá do našeho počítače na terminál první zprávy s využitím <a href="/repl">REPL</a> (Read–eval–print loop).
+<em>Zeleně jsou systémové informace, které nás v tuto chvíli nezajímají.</em>
+Po stisknutí <code>CTRL-C</code> se přeruší běh programu a uvidíme verzi MicroPythonu:</p>
+<pre><code>MicroPython v1.13-7-g5060270c6-build-octopusLAB on 2020-09-05; 
+ESP32 module (spiram) with ESP32
+Type &quot;help()&quot; for more information.
+&gt;&gt;&gt;
+
+</code></pre>
+<p><em>Samozřejmě platí i pro <strong>Python</strong>, že <code>CTRL-C</code> přeruší běh programu.</em></p>
+<h2 id="_1">&gt;&gt;&gt;</h2>
+<p><code>&gt;&gt;&gt;</code> toto je takzvaný "prompt", terminálová výzva, abychom tam něco napsali - příkaz nebo "posloupnost příkazů".</p>
+<pre><code class="language-python">&gt;&gt;&gt; a = 123      # do proměnné s názvem &quot;a&quot; se uložila hodnota (číslo 123)
+&gt;&gt;&gt; a            # vytiskne / zobrazí hodnotu proměnné 
+123              # nebo print(a) 
+
+&gt;&gt;&gt; a + 10
+133              # zobrazí vypočtenou hodnotu (jako kalkulačka)
+</code></pre>
+<p><em>Python zde běží v takzvaném interaktivním módu. Po každém vložení řádku (nebo bloku řádků) se okamžitě napsaný příkaz (nebo skupina příkazů) provede a čeká na další výzvu zobrazením <code>&gt;&gt;&gt;</code>. 
+Je to výhodné pro testování jednotlivých příkazů, pro výuku nebo průběžné modifikace.</em></p>
+<pre><code class="language-python">&gt;&gt;&gt; x = y = z = 123 # přiřazení pro více proměnných najednou
+&gt;&gt;&gt; z
+123
+
+&gt;&gt;&gt; x, y = 123, 567 # přiřazení více hodnot
+&gt;&gt;&gt; y
+567
+</code></pre>
+<hr />
+<h2 id="math">Math</h2>
+<p>Někdy chceme použít i složitější matematické výrazy, než je 
+<code>+</code> sčítání | <code>-</code> odčítání | <code>*</code> násobení | <code>/</code> dělení</p>
+<p>Pro další matematické funkce a konstanty použijeme knihovnu <code>math</code>.</p>
+<pre><code>&gt;&gt;&gt; import math        # knihovnu importujeme, až když ji potřebujeme,
+                       # jinak nám zbytečně blokuje operační paměť
+
+&gt;&gt;&gt; math.log10(1000)   # funkce logaritmus o základu deset je jednou z metod knihovny math
+3.0
+
+&gt;&gt;&gt; math.pi            # konstanta Pí (není to metoda!)
+3.141593               # a počet desetinných míst je omezený
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Toto není výuka programování – ale jen ukázky a experimenty s přihlédnutím na sadu knihoven a modulů <strong>octopusLab</strong> pro práci s vybraným hardware. Pro podrobnější proniknutí do tajů programování v Pythonu doporučujeme: </p>
+<ul>
+<li><a href="https://naucse.python.cz/">naucse.python.cz</a></li>
+<li><a href="https://naucse.python.cz/course/mi-pyt/intro/micropython/">naucse.python.cz/course/mi-pyt/intro/micropython</a></li>
+<li><a href="http://howto.py.cz/index.htm">howto.py.cz</a></li>
+</ul>
+</div>
+<pre><code>&gt;&gt;&gt; hodnota = 123
+&gt;&gt;&gt; print(hodnota)      # &gt; 123 | vypíše obsah proměnné s názvem hodnota (korektně)
+&gt;&gt;&gt; print(math.pi)      # &gt; 3.141593
+</code></pre>
+<h2 id="help">Help</h2>
+<p>Zkuste si napsat <code>help()</code>. V Pythonu uvidíte asi něco jiného než v obecném MicroPythonu.</p>
+<details>
+<summary><b>více... </b><br />
+(klikněte pro obsah) V MicroPythonu pro ESP se po <code>help()</code> vypíše:</summary>
+<pre><code>>>> help()
+Welcome to MicroPython on the ESP32!
+
+For generic online docs please visit http://docs.micropython.org/
+
+For access to the hardware use the 'machine' module:
+
+import machine
+pin12 = machine.Pin(12, machine.Pin.OUT)
+pin12.value(1)
+pin13 = machine.Pin(13, machine.Pin.IN, machine.Pin.PULL_UP)
+print(pin13.value())
+i2c = machine.I2C(scl=machine.Pin(21), sda=machine.Pin(22))
+i2c.scan()
+i2c.writeto(addr, b'1234')
+i2c.readfrom(addr, 4)
+
+Basic WiFi configuration:
+
+import network
+sta_if = network.WLAN(network.STA_IF); sta_if.active(True)
+sta_if.scan()                             # Scan for available access points
+sta_if.connect("<AP_name>", "<password>") # Connect to an AP
+sta_if.isconnected()                      # Check for successful connection
+
+Control commands:
+  CTRL-A        -- on a blank line, enter raw REPL mode
+  CTRL-B        -- on a blank line, enter normal REPL mode
+  CTRL-C        -- interrupt a running program
+  CTRL-D        -- on a blank line, do a soft reset of the board
+  CTRL-E        -- on a blank line, enter paste mode
+
+For further help on a specific object, type help(obj)
+For a list of available modules, type help('modules')</code></pre>
+</details>
+<p><hr /></p>
+
+<h2 id="operatory">Operátory</h2>
+<p>Sem patří například <code>+</code> pro sčítání, <code>-</code> pro odčítání, <code>*</code> násobení a <code>/</code> dělení.
+<em>A je jich mnohem více.</em></p>
+<details>
+<summary><b>více... </b><br />
+(klikněte pro obsah) Informativní <b>výčet operátorů</b> v MicroPythonu: </summary>
+<pre><code>
+
+        Operator                  Description
+    ========================  ==================
+    lambda                    Lambda expression
+    or                        Boolean OR
+    and                       Boolean AND
+    not x                     Boolean NOT
+    in, not in                Membership tests
+    is, is not                Identity tests
+    <, <=, >, >=, <>, !=, ==  Comparisons
+    |                         Bitwise OR
+    ^                         Bitwise XOR
+    &                         Bitwise AND
+    <<, >>                    Shifts
+    +, -­                      Addition and subtraction
+    *, /, %                   Multiplication, division, 
+    remainder
+    +x, ­-x                    Positive, negative
+    ~x                        Bitwise not
+    **                        Exponentiation
+    x.attribute               Attribute reference
+    x[index]                  Subscription
+    x[index:index]            Slicing
+    f(arguments...)           Function call
+    (expressions...)          Binding or tuple display
+    [expressions...]          List display
+    {key:datum...}            Dictionary display
+    `expressions...`          String conversion
+    ...
+
+</code></pre>
+</details>
+<p><hr /></p>
+
+<h2 id="vypis-dostupnych-modulu">Výpis dostupných modulů</h2>
+<pre><code>&gt;&gt;&gt; help(&quot;modules&quot;)
+</code></pre>
+<details>
+<summary><b>více... </b><br />
+(klikněte pro obsah), Které "moduly" jsou aktuálně v Micropythonu dostupné <code>help("modules")</code></summary>
+<pre><code>>>> help()
+
+*(Verze 1.13)*:
+
+__main__          inisetup          ubluetooth        ure
+_boot             machine           ucollections      urequests
+_onewire          math              ucryptolib        uselect
+_thread           micropython       uctypes           usocket
+_uasyncio         neopixel          uerrno            ussl
+_webrepl          network           uhashlib          ustruct
+apa106            ntptime           uhashlib          usys
+btree             onewire           uheapq            utils/octopus_initial
+builtins          ssd1306           uio               utils/wifi_connect
+cmath             uarray            ujson             utime
+dht               uasyncio/__init__ umqtt/robust      utimeq
+ds18x20           uasyncio/core     umqtt/simple      uwebsocket
+esp               uasyncio/event    uos               uzlib
+esp32             uasyncio/funcs    upip              webrepl
+flashbdev         uasyncio/lock     upip_utarfile     webrepl_setup
+framebuf          uasyncio/stream   upysh             websocket_helper
+gc                ubinascii         urandom
+Plus any modules on the filesystem
+</code></pre>
+</details>
+<p><hr /></p>
+
+<p>A po importu se můžete dotázat na každý modul samostatně (podobně i <code>math.</code> + TAB):</p>
+<pre><code>&gt;&gt;&gt; import math
+&gt;&gt;&gt; help(math)
+object &lt;module 'math'&gt; is of type module
+  __name__ -- math
+  e   -- 2.718282
+  pi  -- 3.141593
+  sqrt  -- &lt;function&gt;
+  pow   -- &lt;function&gt;
+  exp   -- &lt;function&gt;
+  expm1 -- &lt;function&gt;
+  log   -- &lt;function&gt;
+  log2  -- &lt;function&gt;
+  log10 -- &lt;function&gt;
+  cosh  -- &lt;function&gt;
+  sinh  -- &lt;function&gt;
+  tanh  -- &lt;function&gt;
+  acosh -- &lt;function&gt;
+  asinh -- &lt;function&gt;
+  atanh -- &lt;function&gt;
+  cos   -- &lt;function&gt;
+  sin   -- &lt;function&gt;
+...
+</code></pre>
+<div class="admonition hint">
+<p class="admonition-title"><strong>Python je jednoduchý</strong></p>
+<ul>
+<li>logické členění se provádí pomocí striktního odsazování bloků</li>
+<li>pozor na závorky u metod a funkcí <code>print("řetězec")</code> a uvozovky pro takzvané <em>řetězce (shluky písmen, co nejsou číslo)</em></li>
+<li>pozor na dvojtečku za deklarací funkce, cyklu nebo podmínky: def funkce(parametr)<code>:</code></li>
+</ul>
+</div>
+<hr />
+<h2 id="blok-programu-na-vice-radku-a-odsazovani">Blok programu na více řádků a odsazování</h2>
+<p>Víceřádkové "dočasné definice vlastních funkcí" se provádí pomocí <code>def název(parametry):</code> - odsazení za nás udělá <a href="/repl">REPL</a> <code>...</code> nezapomenout na dvojtečku!</p>
+<pre><code>&gt;&gt;&gt; def suma(x, y):
+...    return x + y
+
+&gt;&gt;&gt; suma (1, 2)
+3
+</code></pre>
+<div class="admonition error">
+<p class="admonition-title"><strong>Odsazování</strong></p>
+<ul>
+<li>zmínili jsme už, že logické členění se provádí pomocí striktního <strong>odsazování</strong> bloků</li>
+<li>při psaní jednořádkových pokusů v terminálu (po <code>&gt;&gt;&gt;</code>) Vám po řádku končícím dvojtečkou Python sám předvyplní 
+symbolické tři tečky <code>...</code> jako odsazení <em>viz předchozí ukázka</em>, ale pozor! Při psaní programu do souboru se odsazuje pomocí mezer 
+(doporučeno 3 nebo 4) nebo TABulátorem. 
+A musí to být stále stejně! Kombinace mezer a TAB je také <strong>syntaktická chyba</strong>.</li>
+</ul>
+</div>
+<p><em>Píšeme-li postupně řádek po řádku - příkaz po příkaze, odsazování není potřeba. Až v definování procedur, v cyklech nebo podmínkách - tedy "po dvojtečce" <code>:</code></em></p>
+<hr />
+<h2 id="cekaci-prodlevy">Čekací prodlevy</h2>
+<ul>
+<li>program bude pokračovat až po uplynutí dané doby:</li>
+</ul>
+<pre><code>from time import sleep, sleep_ms # importujeme jen potřebné knihovny
+
+sleep(1)           # 1 sekunda pauza
+sleep_ms(100)      # 100 milisekund pauza
+sleep_us(50)       # 50 mikrosekund pauza
+</code></pre>
+<h2 id="generator-nahodnych-cisel">Generátor náhodných čísel</h2>
+<p>Občas se nám v programu hodí vygenerovat <strong>pseudonáhodné</strong> číslo (pro testování, jednoduché hry nebo speciální efekty).</p>
+<pre><code class="language-python">&gt;&gt;&gt; from os import urandom
+&gt;&gt;&gt; urandom(1)[0]
+42
+</code></pre>
+<h2 id="smycky-cykly">Smyčky | Cykly</h2>
+<pre><code class="language-python">i = 0
+while (i &lt; 3):
+    print(i)
+    i += 1
+</code></pre>
+<p>Vypíše:</p>
+<pre><code>1
+2
+3
+</code></pre>
+<p>S "dospělým" Pythonem si můžete vyzkoušet více 🡒 <a href="https://naucse.python.cz/course/pyladies/sessions/loops/">naucse.python/cykly</a></p>
+<h2 id="podminky">Podmínky</h2>
+<p>Příkazy pro řízení toku programu (<code>if</code>, <code>for</code>, <code>break</code>, <code>continue</code>...)
+<code>if</code> - vyhodnotí podmínku a podle toho něco vykoná nebo pokračuje (dochází k větvení "toku" programu).</p>
+<pre><code class="language-python">from os import urandom
+num = urandom(1)[0]
+if (num &lt; 100):
+   print(&quot;number {0} &lt; 100&quot;.format(num))
+</code></pre>
+<p>Povšimněte si konstrukce <code>format</code>, kdy můžeme do řetězce vložit proměnnou, aniž bychom ho postupně "slepovali".</p>
+<p><strong>Ternární operátor</strong> (if na jenom řádku):</p>
+<pre><code class="language-python">fruit = 'Apple'
+isApple = True if fruit == 'Apple' else False
+</code></pre>
+<pre><code class="language-python">a, b = 10, 20  
+# Copy value of a in min if a &lt; b else copy b 
+min = a if a &lt; b else b
+print(min)
+# 10
+</code></pre>
+<p>S "dospělým" Pythonem si můžete vyzkoušet více 🡒 <a href="https://naucse.python.cz/course/pyladies/beginners/comparisons/">naucse.python/podminky</a></p>
+<h2 id="nekonecny-cyklus">Nekonečný cyklus</h2>
+<p>Ještě drobná vsuvka - cykly a podmínky jsme zmínili v předchozí části, nyní použijeme jednu základní formu: "nekonečný cyklus":</p>
+<pre><code>&gt;&gt;&gt; while podmínka:
+...    prováděj_pokud_je_splněná_podmínka()
+</code></pre>
+<pre><code>&gt;&gt;&gt; a = 0
+&gt;&gt;&gt; while True: 
+...    a += 1
+...    print(a)
+</code></pre>
+<p>v nekonečné smyčce se maximální rychlostí vypisuje obsah zvětšující se proměnné "a".</p>
+<hr />
+<div class="admonition hint">
+<p class="admonition-title"> <strong>Vychytávka [TAB]</strong></p>
+<p>Když chcete v Pythonu nebo MicroPythonu něco napsat, naučte se využívat TABulátor (klávesa <code>TAB</code>). Když například po promptu <code>&gt;&gt;&gt;</code> chcete napsat <code>octopus_initial.setup()</code>, zkuste napsat pouze prvních pár písmen a pak zmáčknout <code>TAB</code>:
+<code>&gt;&gt;&gt; oc [TAB]</code> a systém vám doplní nebo dá vybrat. Stejně tak po tečce: <code>octopus_initial.</code> stačí napsat <code>se</code> a pak <code>TAB</code> - a "našeptávač" automaticky doplní <code>setup</code> (nezapomeňte na závorky <code>()</code>, je to metoda).</p>
+</div>
+<hr />
+<h2 id="stoji-za-zminku">Stojí za zmínku</h2>
+<p>Python umožňuje i složitější "konstrukce" typu:</p>
+<pre><code># vyfiltruj sudá čísla do desítky:
+&gt;&gt;&gt; list(filter(lambda x: x%2 == 0, range(10)))
+
+[0, 2, 4, 6, 8]
+
+
+# do listu (pole) specifické trojice:
+&gt;&gt;&gt; list(5 * x + y for x in range(5) for y in [3, 2, 1])
+
+[3, 2, 1, 8, 7, 6, 13, 12, 11, 18, 17, 16, 23, 22, 21]
+
+</code></pre>
+<p>Zkuste se obeznámit s některými "datovými strukturami" typu: řetězec, pole, seznam, slovník nebo pokročilejší databáze.
+Tomuto tématu se podrobněji věnujeme v samostatném workshopu:
+<a href="/ws-python-data">ws-python-data</a> </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../class/" class="btn btn-neutral float-left" title="Class"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tutorial2-micropython-esp/" class="btn btn-neutral float-right" title="Tutorial 2 Micropython ESP">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC-BY</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../class/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tutorial2-micropython-esp/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

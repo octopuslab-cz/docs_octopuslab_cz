@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="OctopusLAB" /><link rel="canonical" href="https://docs.octopuslab.cz/tutorial2-micropython-esp/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Tutorial 2 Micropython ESP - OctopusLab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Tutorial 2 Micropython ESP";
+        var mkdocs_page_input_path = "tutorial2-micropython-esp.md";
+        var mkdocs_page_url = "/tutorial2-micropython-esp/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-171553408-2", "docs.octopuslab.cz");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OctopusLab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Úvod</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">OctopusLAB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp32/">ESP32</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../framework/">Octopus Framework</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Instalace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Společná část</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_win/">Windows </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_linux/">Linux </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_mac/">Mac </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup (nastavení)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dokumentace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basicdoc/">Referenční příručka</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pinouts/">Pinouts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pubsub/">Pubsub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upyshell/">UpyShell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/">Examples - ukázky</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class/">Class</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriály</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial1-python/">Tutorial 1 Python </a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Tutorial 2 Micropython ESP</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#esp32-doit-nebo-esp32board">ESP32 - DoIt nebo ESP32board</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#repl">REPL</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rozsvitime-led-diodu">Rozsvítíme LED diodu?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#teplota-u-procesoru">Teplota u procesoru</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hallova-sonda-magnetickeho-pole">Hallova sonda - magnetického pole</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#piezzo">Piezzo</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#viceradkove-programy-funkce-podminky-a-cykly">Víceřádkové programy - funkce, podmínky a cykly</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#obycejna-sekvence-prikazu">Obyčejná sekvence příkazů</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#funkce">Funkce</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#definovani-vlastni-funkce-def">Definování vlastní funkce - def</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#podminka">Podmínka</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cyklus-while-nebo-for">Cyklus while nebo for</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit1/">Tutorial EDUkit1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit2/">Tutorial EDUkit2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-robot/">Tutorial Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-iot/">Micropython workshop IoT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-robot/">Micropython workshop Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-upyshell/">Upyshell workshop </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-games/">workshop GAME</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-python-data/">Python data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Další</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp-ide/">Práce s ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Github </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../extension/">Rozšíření </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../repl/">REPL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../webserver/">WebServer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials-intro/">Popis markdown</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OctopusLab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tutoriály</li>
+      <li class="breadcrumb-item active">Tutorial 2 Micropython ESP</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz/blob/master/docs/tutorial2-micropython-esp.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tutorial-2"><img alt="logo" src="../img/logo_small.png" /> Tutorial 2</h1>
+<p>V předchozím <a href="/tutorial1-python">tutorial 1</a> jsme se seznámili s úplnými základy Pythonu. V tomto druhém pokračování už budeme potřebovat ESP32. Předpokládáme, že již máte na svém ESP <a href="/install">nainstalovaný Micropython</a>.</p>
+<hr />
+<h2 id="esp32-doit-nebo-esp32board">ESP32 - DoIt nebo ESP32board</h2>
+<h3 id="repl">REPL</h3>
+<p>Už jsme si ukázali <code>CTRL-C</code>, pro zastavení běhu programu v ESP. Pro komunikaci přes <strong>Terminál</strong> se používá takzvaný <a href="/repl">REPL</a>.</p>
+<div class="admonition hint">
+<p class="admonition-title">Výčet nejpoužívanějších zkratek pro práci s REPLem</p>
+<ul>
+<li><strong>CTRL-C</strong>  (přerušení běžícího programu)</li>
+<li><strong>CTRL-D</strong>  (soft reset ESP)</li>
+<li>CTRL-E  (přepínání "paste mode")</li>
+</ul>
+</div>
+<hr />
+<h3 id="rozsvitime-led-diodu">Rozsvítíme LED diodu?</h3>
+<p>Na velké části ESP modulů máme k dispozici vestavěnou svítivou diodu na PINU 2. <em>(Což vychází nejspíš z nepsané dohody původem z Arduina)</em> Nejjednodušší, jak nastavit hodnotu <code>value()</code> na pinu <code>Pin</code> je následující způsob:</p>
+<pre><code class="language-python">&gt;&gt;&gt; from machine import Pin
+&gt;&gt;&gt; led = Pin(2, Pin.OUT)
+&gt;&gt;&gt; led.value(1)
+</code></pre>
+<p><em>(Změnou stavu / hodnoty (value) z <code>0</code> na <code>1</code> se rozsvítí LED dioda)</em></p>
+<p>Třídu <code>Pin</code> jsme rozšířili o další metody, které by mohla mít LED dioda a vznikla tak třída <code>Led</code> v adreasáři <code>components</code>. Není to nic světoborného, ale u složitějších rozšíření se hodí vědět, jak na to. Každopádně se nám použití trochu zjednoduší:</p>
+<pre><code class="language-python">&gt;&gt;&gt; from components.led import Led
+&gt;&gt;&gt; led = Led(2)
+&gt;&gt;&gt; led.value(1) # není potřeba Pin.OUT - je obsaženo ve třídě Led
+
+&gt;&gt;&gt; led.blink() # nová metoda
+&gt;&gt;&gt; led.toggle()
+</code></pre>
+<p>Popis třídy Led 🡒 <a href="/basicdoc/#led">components/led</a>
+A zdrojový kód knihovny 🡒 <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/led/__init__.py">github//components/led</a></p>
+<hr />
+<h3 id="teplota-u-procesoru">Teplota u procesoru</h3>
+<pre><code class="language-python">&gt;&gt;&gt; import esp32
+&gt;&gt;&gt; esp32.raw_temperature()
+127
+</code></pre>
+<h3 id="hallova-sonda-magnetickeho-pole">Hallova sonda - magnetického pole</h3>
+<pre><code class="language-python">&gt;&gt;&gt; import esp32
+&gt;&gt;&gt; esp32.hall_sensor()
+129 # cca standard hodnota
+</code></pre>
+<pre><code class="language-python">&gt;&gt;&gt; esp32.hall_sensor() 
+976 # po přiložení magnetu 
+</code></pre>
+<p>Ostatní metody <strong>knihovny ESP32</strong> v originální anglické dokumentaci 🡒 <a href="https://docs.micropython.org/en/latest/library/esp32.html">library/esp32</a></p>
+<h3 id="piezzo">Piezzo</h3>
+<p>Pro další pokus je vhodné mít už kromě modulu i nějakou možnost připojid další LED diodu nebo například malý piezzo "pípák":</p>
+<p><img alt="breadboard" src="https://www.octopuslab.cz/wp-content/uploads/2019/08/Sn%C3%ADmek-obrazovky-22-768x525.png" /></p>
+<pre><code class="language-python">from components.buzzer import Buzzer
+piezzo = Buzzer(18)
+piezzo.beep()
+
+# napřímo přes octopus():
+beep()                   
+# základní pípnutí (1000,50) &gt; 1kHz na 50ms
+
+beep(440,500)            
+# komorní a 440Hz na 0.5s 
+
+&gt;&gt;&gt; from components.buzzer import notes 
+&gt;&gt;&gt; Notes.A4                
+440    
+#k dispozici jsou tóny C3-C7 
+&gt;&gt;&gt; buzzer.play_tone(Notes.A4)   # = tone(440) 
+</code></pre>
+<hr />
+<h2 id="viceradkove-programy-funkce-podminky-a-cykly">Víceřádkové programy - funkce, podmínky a cykly</h2>
+<p><em>Opakování a shrnutí.</em></p>
+<hr />
+<h3 id="obycejna-sekvence-prikazu">Obyčejná sekvence příkazů</h3>
+<p>Zatím jsme používali terminál a většinou nám stačil jeden příkaz nebo postupná sekvence příkazů na několika málo řádcích: </p>
+<pre><code class="language-python">&gt;&gt;&gt; from machine import Pin
+&gt;&gt;&gt; led = Pin(2, Pin.OUT)
+&gt;&gt;&gt; led.value(1)
+</code></pre>
+<p>Už jsem se o tom zmínili několikrát a už byste to mohli mít i zažité. Po odeslání (ENTRem) mikrokontrolér příkazy na řádku vykoná 
+a opět nám oznámí své <em>další očekávání pro nové pokyny</em> promptem <code>&gt;&gt;&gt;</code>.
+Končí-li však řádek dvojtečkou <code>:</code>, Python to vyhodnotí jako "blok" a vyzve nás pro pokračování třemi tečkami <code>...</code>:</p>
+<h3 id="funkce">Funkce</h3>
+<p>Funkce v Pythonu je spíše podprogram, přesněji "metoda", jakou se dají zpracovat různé vstupní veličiny.
+Podrobněji na 🡒 <a href="https://naucse.python.cz/course/pyladies/beginners/functions/">naucse.python.cz/../functions</a>
+A stáhněte si také 🡒 <a href="https://pyvec.github.io/cheatsheets/basic-functions/basic-functions-cs.pdf">tahák s užitečnými funkcemi</a></p>
+<h3 id="definovani-vlastni-funkce-def">Definování vlastní funkce - def</h3>
+<p>Vlastní funkce je "podprogram", který si vytvoříme sami pro opakující se bloky kódu nebo pro zpřehlednění rozsáhlejších programů.
+Podle příkazu  <code>def</code> a dvojtečky <code>:</code> na konci řádku pozná Python, že uživatel definuje svou vlastní funkci, třeba pro součet dvou vstupních čísel:</p>
+<pre><code class="language-python">&gt;&gt;&gt; def suma(x, y):
+...    return x + y
+
+&gt;&gt;&gt; suma(1, 2)
+3
+</code></pre>
+<p><em>Ani v příkazovém řádku/promptu <code>&gt;&gt;&gt;</code> nezapomínejte na odsazení. Po <code>...</code> je nutno udělat TAB nebo "pár mezer" (doporučeno 4).</em></p>
+<hr />
+<h3 id="podminka">Podmínka</h3>
+<p><strong>Program</strong> - to ale není jen obyčejná posloupnost příkazů. Často se používá <em>podmíněné větvení</em> - což znamená, že na základě vyhodnocení nějakého výrazu se program může chovat různým způsobem a může i pokračovat různým "směrem".
+Opět se používá stejná konstrukce s dvojtečkou za výrazem podmínky <code>if</code>:</p>
+<pre><code class="language-python">&gt;&gt;&gt; cislo = 10
+&gt;&gt;&gt; if cislo &lt; 0:
+...    print(&quot;cislo je zaporne&quot;)
+...
+&gt;&gt;&gt;
+</code></pre>
+<p>Více podrobností na 🡒 <a href="https://naucse.python.cz/course/pyladies/beginners/comparisons/">naucse.python.cz/../comparisons</a> (porovnávání)
+ 🡒 <a href="https://naucse.python.cz/course/pyladies/beginners/expressions/">naucse.python.cz/../expressions</a> (vyhodnocování výrazů)</p>
+<hr />
+<h3 id="cyklus-while-nebo-for">Cyklus while nebo for</h3>
+<p>Dvojtečka je i ve <code>while</code> cyklu:</p>
+<pre><code class="language-python">&gt;&gt;&gt; cislo = 0
+&gt;&gt;&gt; while cislo &lt; 2:
+...    print(cislo)
+...    cislo = cislo + 1
+...
+0
+1
+2
+&gt;&gt;&gt;
+</code></pre>
+<p>Podobně pak i <code>for</code> cyklus:</p>
+<pre><code class="language-python">&gt;&gt;&gt; for cislo in range(6):
+...    print(cislo, end=&quot;&quot;)
+...
+012345&gt;&gt;&gt;
+</code></pre>
+<p>Více na 🡒 <a href="https://naucse.python.cz/course/pyladies/beginners/while/">naucse.python.cz/../while</a> (cyklus while)</p>
+<p>Inspirace u jiných 🡒 <a href="https://github.com/mithru/MicroPython-Examples">mithru/MicroPython-Examples</a>.</p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../tutorial1-python/" class="btn btn-neutral float-left" title="Tutorial 1 Python "><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tutorial-edukit1/" class="btn btn-neutral float-right" title="Tutorial EDUkit1">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC-BY</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../tutorial1-python/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tutorial-edukit1/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

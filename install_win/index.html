@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="OctopusLAB" /><link rel="canonical" href="https://docs.octopuslab.cz/install_win/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Windows  - OctopusLab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Windows ";
+        var mkdocs_page_input_path = "install_win.md";
+        var mkdocs_page_url = "/install_win/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-171553408-2", "docs.octopuslab.cz");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OctopusLab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Úvod</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">OctopusLAB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp32/">ESP32</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../framework/">Octopus Framework</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Instalace</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Společná část</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Windows </a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-priprava-pocitace">1. Příprava počítače</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#detekce-portu-kde-je-esp">Detekce portu, kde je ESP</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-instalace-micropythonu-do-esp">2. Instalace Micropythonu do ESP</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#terminal-putty">Terminál (putty)</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_linux/">Linux </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_mac/">Mac </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup (nastavení)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dokumentace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basicdoc/">Referenční příručka</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pinouts/">Pinouts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pubsub/">Pubsub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upyshell/">UpyShell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/">Examples - ukázky</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class/">Class</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriály</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial1-python/">Tutorial 1 Python </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial2-micropython-esp/">Tutorial 2 Micropython ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit1/">Tutorial EDUkit1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit2/">Tutorial EDUkit2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-robot/">Tutorial Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-iot/">Micropython workshop IoT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-robot/">Micropython workshop Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-upyshell/">Upyshell workshop </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-games/">workshop GAME</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-python-data/">Python data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Další</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp-ide/">Práce s ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Github </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../extension/">Rozšíření </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../repl/">REPL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../webserver/">WebServer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials-intro/">Popis markdown</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OctopusLab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Instalace</li>
+      <li class="breadcrumb-item active">Windows </li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz/blob/master/docs/install_win.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="win">Win</h2>
+<p><img alt="esp-flash" src="https://www.octopuslab.cz/wp-content/uploads/2020/10/esp-flash-2020a.png" /></p>
+<p><em>Pro instalaci MicroPythonu na vaše ESP32 je třeba "naflashovat" Micropython na náš kontroler. Podrobněji si rozebereme následující kroky:</em> </p>
+<div class="admonition attention">
+<p class="admonition-title"><strong>Stručně:</strong></p>
+<ul>
+<li>pracujeme stále v jednom podadresáři, do kterého musíme:</li>
+<li>stáhnout a <em>rozzipovat</em> <a href="https://dl.espressif.com/dl/esptool-2.6.1-windows.zip">esptool.exe</a></li>
+<li>stáhnout <a href="https://octopusengine.org/download/micropython/micropython-octopus.bin">Octopus Micropython pro ESP32</a> nebo vanilla <a href="http://micropython.org/download/esp32/">Micropython</a></li>
+<li>připojit ESP a <em>detekovat</em> <strong>COM</strong> port</li>
+<li>pomocí <code>esptool</code> přehrát Micropython na ESP</li>
+<li>stáhnout si <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">putty.exe</a></li>
+<li>spustit putty a nastavit "serial", baudrate <code>115200</code>, a <strong>COM</strong> port</li>
+<li>reset ESP (možno jen CTRL+C) a měli bychom v terminálu putty vidět <code>&gt;&gt;&gt;</code></li>
+</ul>
+<p>a teď jednotlivé kroky podrobněji:</p>
+</div>
+<h3 id="1-priprava-pocitace">1. Příprava počítače</h3>
+<p>Ve všech případech (Linux i Mac) budeme pracovat v příkazovém řádku. <em>Terminálové okno</em> se vyvolá příkazem <code>cmd</code>.
+Po kliknutí na ikonu Windows (<code>WIN</code>) napíšeme <code>cmd</code> a měl by se nám nabídnout "program" <strong>Příkazový řádek</strong>.</p>
+<p>Pracujte v novém, prázdném adresáři, např. <code>projects/esp32</code>. <em>Takže byste měli mít osvojeny základy <code>mkdir</code>, <code>cd</code>, <code>dir</code> a pod.</em></p>
+<p>Pro rychlý start práce s knihovnami OctopusLab si stáhněte do pracovního adresáře binárku Micropythonu z <a href="https://octopusengine.org/download/micropython/micropython-octopus.bin">Octopus Micropython pro ESP32</a> <code>https://octopusengine.org/download/micropython/micropython-octopus.bin</code> - náš fork <a href="https://micropython.org/download/esp32/">oficiálního MicroPythonu</a></p>
+<h4 id="detekce-portu-kde-je-esp">Detekce portu, kde je ESP</h4>
+<p>Po připojení ESP modulu přes kabel USB (microUSB) musíme zjistit, na kterém <code>COM</code> portu ho máme. Typicky stačí zmáčknout symbol Windows a X -&gt; <code>WIN + X</code> a v menu <code>Správce zařízení / Porty (COM a Lpt)</code> najdeme zařízení <strong>Silicon Labs  CP210x USB to UART</strong>. A tam bývá <code>COM + číslo</code> (COM3, COM6...). </p>
+<p>Abyste viděli skci <code>Porty</code> ve <code>Správci zařízení</code> na Windows 10 musíte v menu "Zobrazení" zvolit "Zobrazit skrytá zařízení".</p>
+<p><em>Zkuste si ESP kabelem střídavě připojovat a odpojovat - COM port by se měl zobrazovat a pak mizet, podle stavu připojení.</em></p>
+<hr />
+<h3 id="2-instalace-micropythonu-do-esp">2. Instalace Micropythonu do ESP</h3>
+<p>Nyní půjde o zprovoznění sériové linky do zařízení a nainstalování nástroje <code>esptool</code> pro nahrávání <code>.bin</code> souborů. 
+Pro klasický <code>esptool</code> je třeba mít <a href="https://naucse.python.cz/lessons/beginners/install/">nainstalovaný Python3</a>, ale je i varianta stáhnout si spustitelný program <code>esptool.exe</code>,  který si stáhnete zde: <a href="https://dl.espressif.com/dl/esptool-2.6.1-windows.zip">https://dl.espressif.com/dl/esptool-2.6.1-windows.zip</a></p>
+<p>Pak v příkazovém řádku zadáme postupně:</p>
+<pre><code class="language-bash">esptool.exe --chip esp32 -p COM6 erase_flash 
+esptool.exe --chip esp32 -p COM6 write_flash -z 0x1000 ./micropython-octopus.bin
+</code></pre>
+<p><em>(pozor, staré win10- rozlišují <code>/</code> a  <code>\</code>)</em></p>
+<p>První část instalace Micropythonu <code>erase_flash</code>, kdy se po spuštění esptool vypisuje sekvence 
+<code>Connecting........_____....._____....._____....._____....._____.....</code></p>
+<p>někdy je nutno v tuto chvíli na ESP zmáčknout <code>BOOT</code>. Více je o tom zde: <a href="https://www.esp32.com/viewtopic.php?t=5682">https://www.esp32.com/viewtopic.php?t=5682</a></p>
+<hr />
+<h3 id="terminal-putty">Terminál (putty)</h3>
+<p>Tato část je také součástí přípravy počítače. Předpokládáme, že již víte, na kterém portu je ESP připojeno:
+🡒 <a href="/install_win/#detekce-portu-kde-je-esp">Detekce portu, kde je ESP</a></p>
+<p>Jako <strong>komunikační terminál</strong> používáme program <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">putty.exe</a> a nastavením: <code>Serial, rychlost 115200, váš COMport</code>. Po nastavení zavoláme <code>Open</code>, ukáže se nové okno terminálu. Doporučujeme si nastavení uložit, například jako v naší ukázce: <code>esp32-COM6</code> (pro port COM6) pomocí příkazu <code>Save</code>. K opětovnému nahrání pak slouží <code>Load</code>.</p>
+<p><img alt="putty" src="https://www.octopuslab.cz/wp-content/uploads/2019/11/putty1.png" /></p>
+<p>Pokud se na obrazovce nic nezobrazuje zmáčněte <kdb>ENTER</kdb> a měl by se vám zobrazit prompt interaktivního Pythonu <code>&gt;&gt;&gt;</code>. Gratulujeme, máte funkční MicroPython!</p>
+<p>Dále můžete pokračovat podkapitolou <a href="/install/#3-prvni-spusteni-a-instalace-workframe-octopus">první spuštění a instalace octopus workframe</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../install/" class="btn btn-neutral float-left" title="Společná část"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../install_linux/" class="btn btn-neutral float-right" title="Linux ">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC-BY</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../install/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../install_linux/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

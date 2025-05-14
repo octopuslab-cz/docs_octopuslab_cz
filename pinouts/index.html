@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="OctopusLAB" /><link rel="canonical" href="https://docs.octopuslab.cz/pinouts/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Pinouts - OctopusLab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Pinouts";
+        var mkdocs_page_input_path = "pinouts.md";
+        var mkdocs_page_url = "/pinouts/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-171553408-2", "docs.octopuslab.cz");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OctopusLab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Úvod</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">OctopusLAB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp32/">ESP32</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../framework/">Octopus Framework</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Instalace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Společná část</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_win/">Windows </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_linux/">Linux </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_mac/">Mac </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup (nastavení)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dokumentace</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../basicdoc/">Referenční příručka</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Pinouts</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#hlavni-moduly">Hlavní moduly</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#modul-esp32-doit-2x15">Modul ESP32 DoIt 2x15</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#modul-octopuslab-esp32board">Modul OctopusLAB ESP32board</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pinouts-files-zapojeni-pinu">Pinouts files - zapojení PINů</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#basepy">base.py</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#olab_esp32_robot_board1py">olab_esp32_robot_board1.py</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#olab_esp32_esp32_board1py">olab_esp32_esp32_board1.py</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pubsub/">Pubsub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upyshell/">UpyShell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/">Examples - ukázky</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class/">Class</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriály</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial1-python/">Tutorial 1 Python </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial2-micropython-esp/">Tutorial 2 Micropython ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit1/">Tutorial EDUkit1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit2/">Tutorial EDUkit2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-robot/">Tutorial Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-iot/">Micropython workshop IoT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-robot/">Micropython workshop Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-upyshell/">Upyshell workshop </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-games/">workshop GAME</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-python-data/">Python data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Další</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp-ide/">Práce s ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Github </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../extension/">Rozšíření </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../repl/">REPL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../webserver/">WebServer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials-intro/">Popis markdown</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OctopusLab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Dokumentace</li>
+      <li class="breadcrumb-item active">Pinouts</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz/blob/master/docs/pinouts.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="pinouts"><img alt="logo" src="../img/logo_small.png" /> Pinouts</h1>
+<h2 id="hlavni-moduly">Hlavní moduly</h2>
+<p>Nejčastěji budeme používat dva zákldaní moduly, s ESP32:</p>
+<h3 id="modul-esp32-doit-2x15">Modul ESP32 DoIt 2x15</h3>
+<p><img alt="DoIt" src="https://www.octopuslab.cz/wp-content/uploads/2020/06/ESP32-doit-2x15-1.png" /></p>
+<h3 id="modul-octopuslab-esp32board">Modul OctopusLAB ESP32board</h3>
+<p><img alt="ESP32board" src="https://www.octopuslab.cz/wp-content/uploads/2020/06/esp32board-a-1024x683.png" /></p>
+<hr />
+<h3 id="pinouts-files-zapojeni-pinu">Pinouts files - zapojení PINů</h3>
+<p>Celý komplet souborů <a href="https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/pinouts">pinouts</a> je na Githubu.
+Zaměříme se proto jen na některé hlavní části:</p>
+<h3 id="basepy"><img alt="hwsoc" src="../img/hwsoc.png" style="width:28px" /> base.py</h3>
+<pre><code># Base abstract pinouts without any, this base can be replaced by any board specific settings
+# Here should be definiton of every pins used in Octopus library
+
+BUILT_IN_LED = None
+HALL_SENSOR  = None
+
+# I2C
+I2C_SCL_PIN = None
+I2C_SDA_PIN = None
+
+# SPI
+SPI_CLK_PIN  = None
+SPI_MISO_PIN = None
+SPI_MOSI_PIN = None
+SPI_CS0_PIN  = None
+
+# Default basic pins
+ANALOG_PIN   = None
+BUTT1_PIN    = None
+PIEZZO_PIN   = None
+WS_LED_PIN   = None
+ONE_WIRE_PIN = None
+
+# Input pins
+I39_PIN = None
+I34_PIN = None
+I35_PIN = None
+
+# IoT Specific pins
+RELAY_PIN = None
+MFET_PIN  = None
+
+BUTT1_PIN = None
+BUTT2_PIN = None
+BUTT3_PIN = None
+
+# PWM pins
+PWM1_PIN = None
+PWM2_PIN = None
+PWM3_PIN = None
+
+# DEV pins
+DEV1_PIN = None
+DEV2_PIN = None
+DEV3_PIN = None
+
+# DC motors
+MOTOR_12EN = None
+MOTOR_34EN = None
+MOTOR_1A = None
+MOTOR_2A = None
+MOTOR_3A = None
+MOTOR_4A = None
+
+# Witty specifiv
+LED_RED = None
+LED_GRE = None
+LED_BLU = None
+
+# UART
+RXD0 = None # Used for REPL
+TXD0 = None # Used for REPL
+RXD1 = None
+TXD1 = None
+
+</code></pre>
+<h3 id="olab_esp32_robot_board1py"><img alt="hwsoc" src="../img/hwsoc.png" style="width:28px" /> olab_esp32_robot_board1.py</h3>
+<pre><code>&quot;&quot;&quot;
+This is octopusLab basic library for robotBoard PCB and esp32 soc
+I2C / SPI / MOTORs / SERVO / PWM...
+Edition: --- 2.12.2018 ---
+&quot;&quot;&quot;
+from micropython import const
+from pinouts.olab_esp32_base import *
+
+##WS_LED_PIN 13          # Robot Board v1
+WS_LED_PIN = const(15)   # Robot Board v2 - WS RGB ledi diode
+ONE_WIRE_PIN = const(32)  #one wire (for Dallas temperature sensor)
+PIEZZO_PIN = const(27)
+
+# DC motors
+MOTOR_12EN = const(25)
+# Select version of robot board
+##MOTOR_34EN 15          # Robot Board v1
+MOTOR_34EN = const(13)   # Robot Board v2
+MOTOR_1A = const(26)
+MOTOR_2A = const(12)
+MOTOR_3A = const(14)
+MOTOR_4A = const(27)
+
+#main analog input (for power management)
+ANALOG_PIN = const(36)
+
+#PWM/servo:
+PWM1_PIN = const(17)
+PWM2_PIN = const(16)
+PWM3_PIN = const(4)
+#pwm duty for servo:
+SERVO_MIN = const(38)
+SERVO_MAX= const(130)
+
+#inputs:
+I39_PIN = const(39)
+I34_PIN = const(34)
+I35_PIN = const(35)
+
+#temp
+MFET_PIN = const(17) # PWM1
+RELAY_PIN = const(16) # PWM2
+
+# DEV pins
+DEV1_PIN = const(32)
+DEV2_PIN = const(33)
+</code></pre>
+<h3 id="olab_esp32_esp32_board1py"><img alt="hwsoc" src="../img/hwsoc.png" style="width:28px" /> olab_esp32_esp32_board1.py</h3>
+<p>Toto bude postupem času hlavní OctopusLAB modul:</p>
+<pre><code>&quot;&quot;&quot;
+This is octopusLab basic library for ESP32 board PCB and esp32 soc
+Edition: --- 10.8.2019 ---
+&quot;&quot;&quot;
+from micropython import const
+from pinouts.olab_esp32_base import *
+
+BUTT1_PIN = const(0)
+
+PWM1_PIN = const(17)
+PWM2_PIN = const(16)
+PWM3_PIN = const(25)
+
+DEV1_PIN = const(32)  # RAM
+DEV2_PIN = const(33)  # RAM
+DEV3_PIN = const(27)
+
+#inputs:
+I34_PIN = const(34)
+I39_PIN = const(39)
+I35_PIN = const(35)
+
+# UART 1
+RXD1 = const(36)
+TXD1 = const(4)
+
+PIEZZO_PIN = const(27) # hack on DEV3
+
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../basicdoc/" class="btn btn-neutral float-left" title="Referenční příručka"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../pubsub/" class="btn btn-neutral float-right" title="Pubsub">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC-BY</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../basicdoc/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../pubsub/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

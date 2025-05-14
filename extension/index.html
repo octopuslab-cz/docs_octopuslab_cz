@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="OctopusLAB" /><link rel="canonical" href="https://docs.octopuslab.cz/extension/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Rozšíření  - OctopusLab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Roz\u0161\u00ed\u0159en\u00ed ";
+        var mkdocs_page_input_path = "extension.md";
+        var mkdocs_page_url = "/extension/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-171553408-2", "docs.octopuslab.cz");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OctopusLab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Úvod</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">OctopusLAB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp32/">ESP32</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../framework/">Octopus Framework</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Instalace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Společná část</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_win/">Windows </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_linux/">Linux </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_mac/">Mac </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup (nastavení)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dokumentace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basicdoc/">Referenční příručka</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pinouts/">Pinouts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pubsub/">Pubsub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upyshell/">UpyShell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/">Examples - ukázky</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class/">Class</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriály</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial1-python/">Tutorial 1 Python </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial2-micropython-esp/">Tutorial 2 Micropython ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit1/">Tutorial EDUkit1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit2/">Tutorial EDUkit2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-robot/">Tutorial Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-iot/">Micropython workshop IoT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-robot/">Micropython workshop Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-upyshell/">Upyshell workshop </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-games/">workshop GAME</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-python-data/">Python data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Další</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../esp-ide/">Práce s ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Github </a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Rozšíření </a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#octopuslab_installer">octopuslab_installer</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#itertools">itertools</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nektere-dalsi-moduly">Některé další moduly</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../repl/">REPL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../webserver/">WebServer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials-intro/">Popis markdown</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OctopusLab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Další</li>
+      <li class="breadcrumb-item active">Rozšíření </li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz/blob/master/docs/extension.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="rozsireni-micropythonu"><img alt="logo" src="../img/logo_small.png" style="width:39px" /> Rozšíření Micropythonu</h1>
+<p>Možnost rozšíření Micropythonu o vlastní moduly jsme si již zmínili u <a href="/install/#octopus_initialsetup">octopus_initial.setup()</a>.
+Máme více možností, zmíníme tři základní varianty.</p>
+<ol>
+<li>
+<p>Rozšíření je implementováno do samotného Mictopythonu (což využíváme ve forku micropython-octopus).</p>
+</li>
+<li>
+<p>Máme možnost si přihrát vlastní modul (například do adresáře <code>/lib</code>), což je například celý <strong>Octopus FrameWork</strong>.</p>
+</li>
+<li>
+<p>Varianta, na kterou se zaměříme je využití <code>pip</code> (package installer for Python) v případě Micropythonu <a href="/pip">upip</a>.</p>
+</li>
+</ol>
+<hr />
+<h2 id="octopuslab_installer">octopuslab_installer</h2>
+<p>Pro instalci  <a href="/framework">Octopus FrameWork</a> využíváme metody <code>deploy()</code> z "balíčku" <code>octopuslab_installer</code>.</p>
+<pre><code class="language-python">... WiFi conncect
+
+import upip
+upip.install('micropython-octopuslab-installer')
+
+# wait for install
+from lib import octopuslab_installer
+octopuslab_installer.deploy()
+</code></pre>
+<hr />
+<h2 id="itertools">itertools</h2>
+<p>V "dospělém" Pythonu existuje "modul" itertools, který umožní pokročilejší práci s "iterátory".
+Například podle následující ukázky využíváme metodu <code>cycle()</code> s možností <code>next()</code>:</p>
+<pre><code class="language-python">import itertools as it
+
+players = [&quot;John&quot;, &quot;Alice&quot;, &quot;Bob&quot;]
+player_choice = it.cycle(players)
+
+print(next(player_choice)) # John
+print(next(player_choice)) # Alice
+print(next(player_choice)) # Bob
+print(next(player_choice)) # John
+print(next(player_choice)) # Alice
+...
+</code></pre>
+<p>V Micropythonu itertools nenajdeme, ale naštěstí existuje možnost snadné instalace <code>upip.install("micropython-???")</code>:</p>
+<pre><code class="language-python">... WiFi conncect
+
+&gt;&gt;&gt; import upip
+&gt;&gt;&gt; upip.install('micropython-itertools')
+
+Installing to: /lib/
+Warning: micropython.org SSL certificate is not validated
+Installing micropython-itertools 0.2.3 from https://micropython.org/pi/itertools/itertools-0.2.3.tar.gz
+
+</code></pre>
+<hr />
+<h2 id="nektere-dalsi-moduly">Některé další moduly</h2>
+<p>(ok) testováno a zdá se funkční | (+) zkoušeno a něco tam nefunguje</p>
+<ul>
+<li>
+<p><a href="https://libraries.io/pypi/micropython-sqlite3">https://libraries.io/pypi/micropython-sqlite3</a> (+)</p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-itertools/">https://pypi.org/project/micropython-itertools/</a> (ok)</p>
+</li>
+<li>
+<p><a href="https://libraries.io/pypi/micropython-vec">https://libraries.io/pypi/micropython-vec</a> vectors (ok)</p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-wifimanager/">https://pypi.org/project/micropython-wifimanager/</a></p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-wifi-setup/">https://pypi.org/project/micropython-wifi-setup/</a></p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-mailbox/">https://pypi.org/project/micropython-mailbox/</a></p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-email.utils/">https://pypi.org/project/micropython-email.utils/</a></p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-mqtt/">https://pypi.org/project/micropython-mqtt/</a></p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-umqtt.simple/">https://pypi.org/project/micropython-umqtt.simple/</a></p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-mqtt-async/">https://pypi.org/project/micropython-mqtt-async/</a></p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-umqtt.robust/">https://pypi.org/project/micropython-umqtt.robust/</a></p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-uaiohttpclient/">https://pypi.org/project/micropython-uaiohttpclient/</a></p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-bme280/">https://pypi.org/project/micropython-bme280/</a> (ok)</p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-dht12/">https://pypi.org/project/micropython-dht12/</a> sensor</p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-pcf8591/">https://pypi.org/project/micropython-pcf8591/</a> i2c (4x A/D, 1x D/A)</p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-mpu6886/">https://pypi.org/project/micropython-mpu6886/</a> gyroskop</p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-ssd1306/">https://pypi.org/project/micropython-ssd1306/</a> oled</p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/micropython-pcd8544/">https://pypi.org/project/micropython-pcd8544/</a> nokia displ.</p>
+</li>
+<li>
+<p><a href="https://libraries.io/pypi/micropython-rfsocket">https://libraries.io/pypi/micropython-rfsocket</a></p>
+</li>
+</ul>
+<p>Část knihoven má zdroj na githubu v 🡒 <a href="https://github.com/micropython/micropython-lib">micropython/micropython-lib</a>, ostatní jsou dílem "třetích stran".</p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../github/" class="btn btn-neutral float-left" title="Github "><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../repl/" class="btn btn-neutral float-right" title="REPL">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC-BY</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../github/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../repl/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

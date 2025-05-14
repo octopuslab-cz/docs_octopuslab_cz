@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="OctopusLAB" /><link rel="canonical" href="https://docs.octopuslab.cz/tutorial-edukit1/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Tutorial EDUkit1 - OctopusLab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Tutorial EDUkit1";
+        var mkdocs_page_input_path = "tutorial-edukit1.md";
+        var mkdocs_page_url = "/tutorial-edukit1/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-171553408-2", "docs.octopuslab.cz");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OctopusLab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Úvod</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">OctopusLAB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp32/">ESP32</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../framework/">Octopus Framework</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Instalace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Společná část</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_win/">Windows </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_linux/">Linux </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_mac/">Mac </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup (nastavení)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dokumentace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basicdoc/">Referenční příručka</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pinouts/">Pinouts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pubsub/">Pubsub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upyshell/">UpyShell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/">Examples - ukázky</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class/">Class</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriály</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial1-python/">Tutorial 1 Python </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial2-micropython-esp/">Tutorial 2 Micropython ESP</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Tutorial EDUkit1</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#led">• Led</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rgb-led">• RGB Led</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#display7">• Display7</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#servo">• Servo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#senzory">• Senzory</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#moznosti-rozsireni">• Možnosti rozšíření</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#mechatronika">Mechatronika</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#dc-motory">DC motory</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#expander-i2c">Expandér I2C</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit2/">Tutorial EDUkit2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-robot/">Tutorial Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-iot/">Micropython workshop IoT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-robot/">Micropython workshop Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-upyshell/">Upyshell workshop </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-games/">workshop GAME</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-python-data/">Python data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Další</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp-ide/">Práce s ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Github </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../extension/">Rozšíření </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../repl/">REPL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../webserver/">WebServer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials-intro/">Popis markdown</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OctopusLab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tutoriály</li>
+      <li class="breadcrumb-item active">Tutorial EDUkit1</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz/blob/master/docs/tutorial-edukit1.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tutorial-edu_kit1"><img alt="logo" src="../img/logo_small.png" /> Tutorial - EDU_KIT1</h1>
+<p>Samostatná stránka, která podrobněji popisuje EDU_KIT1: <a href="https://www.octopuslab.cz/edu-kit1/">https://www.octopuslab.cz/edu-kit1/</a></p>
+<hr />
+<p>Předpokládáme, že již máte na svém <a href="/esp32/#modul-esp32-doit-2x15">ESP32 Do-It</a> nainstalovaný <a href="/install">Micropython</a>. V úvodních <a href="/tutorial1-python">tutorial 1 (Python)</a> a <a href="/tutorial2-micropython-esp">tutorial 2 (Micropython | ESP)</a> jsme se seznámili s úplnými základy. V tomto dalším pokračování už budeme potřebovat <strong>ESP32</strong>. </p>
+<h2 id="led">• Led</h2>
+<p>Led dioda osazená na <a href="/esp32/#modul-esp32-doit-2x15">ESP32 Do-It</a> modulu je na Pinu 2.</p>
+<p>Pár ukázek - "blikáme LEDkou" hned několika způsoby:</p>
+<pre><code class="language-python">from time import sleep
+from components.led import Led
+led = Led(2)
+
+# 1
+&gt;&gt;&gt; while True:
+...   led.value(1) 
+...   sleep(1)
+...   led.value(0)
+...   sleep(1) 
+
+# 2
+&gt;&gt;&gt; while True:
+...   led.value(not led.value())
+...   sleep(0.5)
+
+# 3
+for _ in range(10):
+…    blink(led,1000,1000)
+…
+</code></pre>
+<blockquote>
+<p>ctrl+C (pro přerušení běhu programu)</p>
+</blockquote>
+<p>🡒 <a href="/basicdoc/#led">referenční příručka / led</a></p>
+<hr />
+<h2 id="rgb-led">• RGB Led</h2>
+<p>RGB barevná dioda je na WS konektoru. Tento typ se dá připojit i na další konektor a diod WS se může řadit víc z sebou. (Až 127, na to je ale potřeba posílit napájení napětí 5V) Používáme častěji <strong>pásek</strong> 8-mi diod, <strong>kroužek</strong> 12 nebo 18, také <strong>matice</strong> 4x4 a spojované do většího bloku.</p>
+<pre><code class="language-python">&gt;&gt;&gt; from components.rgb import Rgb 
+&gt;&gt;&gt; ws = Rgb(32)
+&gt;&gt;&gt; ws.test()                # problikne R G B cca - default 500ms
+&gt;&gt;&gt; ws.test(100)             # s parametrem 100ms
+
+&gt;&gt;&gt; import colors_rgb as rgb # definice barev v /lib &gt; RED, GREEN, BLUE, ORANGE, BLACK (nesvítí)
+&gt;&gt;&gt; ws.color(rgb.BLUE)       # zobrazení barvy, rgb.RED/rgb.GREEN ...
+&gt;&gt;&gt; ws.color((128,0,0))      # parametr color je (128,0,0) 
+&gt;&gt;&gt; ws.rainbow_cycle()       # &quot;projedou barvy&quot; duhy 
+
+# ws2 = Rgb(pin,num)    #  &gt; číslo pinu a počet LEDek
+&gt;&gt;&gt; ws2 = Rgb(32,8)
+
+&gt;&gt;&gt; ws.color(5,rgb.RED)      &gt; při LED pásku  &gt; nastavení páté na RED 
+</code></pre>
+<p>🡒 <a href="/basicdoc/#rgb">referenční příručka / rgb</a></p>
+<hr />
+<h2 id="display7">• Display7</h2>
+<p>Oblíbený modul s obvodem MAX na sběrnici SPI přímo připojitelný na OCTOBUS-display sběrnici.</p>
+<p>🡒 <a href="/basicdoc/#led">referenční příručka / display7</a></p>
+<h2 id="servo">• Servo</h2>
+<p>🡒 <a href="/basicdoc/#servo">referenční příručka / servo</a></p>
+<h2 id="senzory">• Senzory</h2>
+<h2 id="moznosti-rozsireni">• Možnosti rozšíření</h2>
+<h3 id="mechatronika">Mechatronika</h3>
+<p>Modul ROBOT board se dá v jedné verzi zapojení osadit "H-můstkem" L293, kterým se dají ovládat dva DC motory. Používáme "levné čínské" žluté, na 5-9V (doporučeno 7)</p>
+<h4 id="dc-motory">DC motory</h4>
+<h3 id="expander-i2c">Expandér I2C</h3>
+<p>PCF 8 bit + výkonový budič ULN. </p>
+<hr />
+<p>Pro pokračování - materiály k některým Workshopům:</p>
+<p>Práce s daty a databáze 🡒 <a href="/ws-python-data">Workshop Python DATA</a></p>
+<p>Tvoření jednoduché hry 🡒 <a href="/ws-edushield1">Workshop EDUshield1)</a></p>
+<hr />
+<h1 id="jednoduche-ukazky">Jednoduché ukázky</h1>
+<h2 id="nahodne-blikajici-ledka">Náhodně blikajíci ledka</h2>
+<pre><code class="language-python">from utils.octopus_lib import randint
+from components.led import Led
+
+led = Led(2)
+
+# random blink
+def randblink(n):
+    for _ in range(n):
+       delay = randint(100,500)
+       print(delay)
+       led.blink(delay)
+
+
+&gt;&gt;&gt; randblink(10)
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../tutorial2-micropython-esp/" class="btn btn-neutral float-left" title="Tutorial 2 Micropython ESP"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tutorial-edukit2/" class="btn btn-neutral float-right" title="Tutorial EDUkit2">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC-BY</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../tutorial2-micropython-esp/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tutorial-edukit2/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

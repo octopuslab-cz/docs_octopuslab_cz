@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="OctopusLAB" /><link rel="canonical" href="https://docs.octopuslab.cz/esp-ide/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Práce s ESP - OctopusLab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Pr\u00e1ce s ESP";
+        var mkdocs_page_input_path = "esp-ide.md";
+        var mkdocs_page_url = "/esp-ide/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-171553408-2", "docs.octopuslab.cz");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OctopusLab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Úvod</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">OctopusLAB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp32/">ESP32</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../framework/">Octopus Framework</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Instalace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Společná část</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_win/">Windows </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_linux/">Linux </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_mac/">Mac </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup (nastavení)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dokumentace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basicdoc/">Referenční příručka</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pinouts/">Pinouts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pubsub/">Pubsub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upyshell/">UpyShell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/">Examples - ukázky</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class/">Class</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriály</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial1-python/">Tutorial 1 Python </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial2-micropython-esp/">Tutorial 2 Micropython ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit1/">Tutorial EDUkit1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit2/">Tutorial EDUkit2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-robot/">Tutorial Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-iot/">Micropython workshop IoT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-robot/">Micropython workshop Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-upyshell/">Upyshell workshop </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-games/">workshop GAME</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-python-data/">Python data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Další</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Práce s ESP</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#tabulka-nastroju-pro-praci-s-esp">Tabulka nástrojů pro práci s ESP</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ampy">Ampy</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#instalace">Instalace</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#prikazy">Příkazy</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hlavni-prikaz-put">Hlavní příkaz put</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rshell">rshell</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#instalace_1">Instalace</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pripojeni-a-spusteni">Připojení a spuštění</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zakladni-prikazy">Základní příkazy</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#terminal-repl">Terminál + REPL</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pip">PIP</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#micropython-octopus-installer">micropython-octopus-installer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#upip">uPip</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ftp">FTP</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#pouziti-z-total-commanderu">Použití z Total commanderu</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pouziti-v-terminalu-linuxu">Použití v terminálu Linuxu</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pouziti-v-projektech">Použití v projektech</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#thonny">Thonny</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#upycraft">uPyCraft</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mu">Mu</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#espy">EsPy</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Github </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../extension/">Rozšíření </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../repl/">REPL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../webserver/">WebServer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials-intro/">Popis markdown</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OctopusLab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Další</li>
+      <li class="breadcrumb-item active">Práce s ESP</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz/blob/master/docs/esp-ide.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="esp-ide"><img alt="logo" src="../img/logo_small.png" /> ESP - IDE</h1>
+<h2 id="tabulka-nastroju-pro-praci-s-esp">Tabulka nástrojů pro práci s ESP</h2>
+<ul>
+<li>flash uPy - <em>"Flashování" Micropythonu</em></li>
+<li>copy lib - <em>kopírování knihoven z externího zdroje</em></li>
+<li>deploy /.py - <em>celé "setavení" konkrétního projektu</em></li>
+<li>Terminal - <em>sériový terminál pro práci s ESP / REPL</em></li>
+<li>IDE - <em>pokročilejší editor kódu</em></li>
+</ul>
+<p>(lib  | *.py - přesun celých knihoven nebo jen dílčí přesun souborů)</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: center;">- flash uPy -</th>
+<th style="text-align: center;">- copy lib -</th>
+<th style="text-align: center;">- deploy *.py -</th>
+<th style="text-align: center;">- Terminal -</th>
+<th style="text-align: center;">- IDE -</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/install_win/#2-instalace-micropythonu-do-esp">esptool</a></td>
+<td style="text-align: center;">✅✅</td>
+<td style="text-align: center;">~</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td><a href="#ampy">ampy</a></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td><a href="/install_win/#terminal-putty">putty</a></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td><a href="#rshell">rshell</a></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅✅</td>
+<td style="text-align: center;">~</td>
+</tr>
+<tr>
+<td><a href="#pip">pip</a></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td><a href="#ftp">FTP</a></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td><a href="">web_server</a></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">~</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="#thonny">Thonny</a></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">~</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="#upycraft">uPyCraft</a></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">~</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="#espy">EsPy</a></td>
+<td style="text-align: center;">~</td>
+<td style="text-align: center;">~</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="#mu">Mu</a></td>
+<td style="text-align: center;">~</td>
+<td style="text-align: center;">~</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td><a href="/upyshell">shell / editor</a></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">~</td>
+<td style="text-align: center;">~</td>
+</tr>
+<tr>
+<td><a href="/deployer">deployer</a></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">~</td>
+<td style="text-align: center;">~</td>
+</tr>
+</tbody>
+</table>
+<p><em>Legenda:</em></p>
+<p>✅✅  ideální | ✅  vhodné | <strong>~</strong>  použitelné | ❌  nevhodné</p>
+<hr />
+<h2 id="ampy"><img alt="hwsoc" src="../img/mchtr.png" style="width:28px" /> Ampy</h2>
+<p>S programem <strong>ampy</strong> pracujeme v příkazové řádce svého počítače. Slouží pro "vzdálenou" práci s ESP po sériové lince, kdy nám umožňuje především přesouvat soubory <strong>do</strong> ESP <code>put</code>/ <strong>z</strong> ESP <code>get</code>, vytvářet adresáře <code>mkdir</code> a podobně.</p>
+<p>Pozor na kolize portu - <strong>ampy</strong> nesmí být blokováno sériovým terminálem (screen nebo <a href="../install_win/#terminal-putty">putty</a>).</p>
+<h3 id="instalace">Instalace</h3>
+<p>Pro používání <strong>ampy</strong> musíte mít nainstalován Python3.</p>
+<p><strong>Windows:</strong>
+Instalace Pythonu – hezky popsáno na <a href="https://naucse.python.cz/course/pyladies/beginners/install/">https://naucse.python.cz/course/pyladies/beginners/install/</a></p>
+<p><strong>Linux:</strong>
+Python bývá už součástí základní instalace</p>
+<p>Instalace <code>ampy</code> přes <code>pip</code>:</p>
+<pre><code class="language-bash">pip install adafruit-ampy 
+pip install adafruit-ampy --upgrade  
+</code></pre>
+<h3 id="prikazy">Příkazy</h3>
+<pre><code class="language-bash">ampy --help
+ampy --version
+¨
+</code></pre>
+<p>Klasickému shellu podobné:</p>
+<ul>
+<li>get</li>
+<li>ls</li>
+<li>mkdir</li>
+<li>put</li>
+<li>reset</li>
+<li>rm</li>
+<li>rmdir</li>
+<li>run</li>
+</ul>
+<hr />
+<h3 id="hlavni-prikaz-put">Hlavní příkaz put</h3>
+<div class="admonition attention">
+<p class="admonition-title"><strong>Pozor</strong></p>
+<p>Následující ukázky jsou pro Win, kde jsme detekovali port <code>COM6</code>. Stejně tak by to mohl být jiný port nebo na jiných operačních systémech to bude obdobně. Třeba pro Linux to bývá <code>/dev/ttyUSB0</code>.</p>
+</div>
+<pre><code class="language-bash">ampy -p /COM6 ls
+ampy -p /COM6 put main.py
+
+ampy -p /COM6 mkdir config
+ampy -p /COM6 mkdir utils
+ampy -p /COM6 put ./shell/__init__.py shell/__init__.py
+
+ampy -p /COM6 mkdir lib
+ampy -p /COM6 put ./lib/max7219_8digit.py lib/max7219_8digit.py
+ampy -p /COM6 put ./lib/ssd1306.py lib/ssd1306.py
+
+...
+</code></pre>
+<hr />
+<h2 id="rshell"><img alt="hwsoc" src="../img/mchtr.png" style="width:28px" /> rshell</h2>
+<p>Alternativa k <a href="/ampy">ampy</a> nebo <a href="/thony">Thony</a> se sériovým terminálem <a href="/install_linux/#terminal">screen</a> pro Linux (běží i na Raspberry Pi).</p>
+<p>Ke stažení 🡒 <a href="https://github.com/dhylands/rshell">github.com/dhylands/rshell</a>.</p>
+<hr />
+<h3 id="instalace_1">Instalace</h3>
+<pre><code>sudo pip3 install rshell
+</code></pre>
+<h3 id="pripojeni-a-spusteni">Připojení a spuštění</h3>
+<pre><code>rshell --buffer-size=30 -p /dev/ttyUSB0
+</code></pre>
+<p>Výchozí cesta k připojené desce je <code>/pyboard</code>.
+Možnost nastavení editoru dalším parametrem: <code>- e nano</code>, <strong>nano</strong> je i výchozí (Linux).</p>
+<h3 id="zakladni-prikazy">Základní příkazy</h3>
+<p>Podbné Linuxu: <code>ls</code> (list) a <code>cp</code> (copy file).</p>
+<pre><code>&gt; ls /pyboard
+&gt; cp myfile.py /pyboard
+&gt; cd 
+...
+&gt; edit /pyboard/main.py
+...
+&gt; rsync . /pyboard
+...
+&gt; exit
+</code></pre>
+<h3 id="terminal-repl">Terminál + REPL</h3>
+<p>Plnohodnotný a stabilnější sériový terminál pro <a href="/repl">REPL</a> se pustí snadno příkazem <code>repl</code>:</p>
+<pre><code>&gt; repl
+</code></pre>
+<p>Pro ukončení práce s terminálem (exit: <code>CTRL+X</code>) - zpět do rshellu.</p>
+<hr />
+<h2 id="pip"><img alt="hwsoc" src="../img/mchtr.png" style="width:28px" /> PIP</h2>
+<p>Hesla: PIP| upip | pypi</p>
+<p>Pracujeme na vlastních "instalačních balíčcích" (packages) pro <a href="/extension">Rozšíření MicroPythonu</a>. Tyto balíčky se nejčastěji instalují pomocí <code>pip</code> (<strong>package installer for Python</strong>), přesněji <code>upip</code> (pro Micropython). Chceme používat <code>pypi</code> (<strong>the Python Package Index</strong>) na stránkách 🡒 <a href="https://pypi.org/">pypi.org/</a>.</p>
+<h3 id="micropython-octopus-installer">micropython-octopus-installer</h3>
+<p>Základním instalačním balíčkem je <code>micropython-octopus-installer</code>, nahrazující <a href="../install/#octopus_initialsetup">octopus_initial.setup()</a> v "lite" verzi.</p>
+<p>🡒 <a href="https://pypi.org/project/micropython-octopuslab-installer/#data">pipi.org/octopuslab-installer</a></p>
+<p>🡒 <a href="https://github.com/octopusengine/octopuslab-installer">github.com/octopuslab-installer</a></p>
+<p>🡒<a href="http://micropython.org/download/esp32/">Micropython</a> pro ESP32. (Používáme zatím lépe otestovanou verzi <code>ESP-IDF v3.x</code>)
+V této základní (vanilla) verzi Micropythonu stačí provést dva následující kroky:</p>
+<p><strong>Připojení k WiFi</strong></p>
+<p>Můžete použít copy&amp;paste celého bloku popmocí <code>CTRL+E</code>
+(nezapomeňte si vyplnit svoje ssid a heslo).</p>
+<pre><code class="language-python">import network
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+wlan.connect('ssid', 'password')
+</code></pre>
+<p><strong>Instalace metody deploy() z octopuslab_installer</strong></p>
+<pre><code class="language-python">import upip
+upip.install('micropython-octopuslab-installer')
+
+# wait for install
+
+from lib import octopuslab_installer
+octopuslab_installer.deploy()
+</code></pre>
+<hr />
+<h3 id="upip">uPip</h3>
+<p>🡒 <a href="https://docs.micropython.org/en/latest/reference/packages.html">micropython/packages</a></p>
+<pre><code class="language-python">&gt;&gt;&gt; import upip
+&gt;&gt;&gt; upip.help()
+upip - Simple PyPI package manager for MicroPython
+Usage: micropython -m upip install [-p &lt;path&gt;] &lt;package&gt;... | -r &lt;requirements.txt&gt;
+import upip; upip.install(package_or_list, [&lt;path&gt;])
+
+If &lt;path&gt; is not given, packages will be installed into sys.path[1]
+(can be set from MICROPYPATH environment variable, if current system
+supports that).
+Current value of sys.path[1]: /lib
+
+Note: only MicroPython packages (usually, named micropython-*) are supported
+for installation, upip does not support arbitrary code in setup.py.
+</code></pre>
+<p>Možnosti instalace dalších "balíčků" uvádíme v samostatné kapitole <a href="/extension">Rozšíření MicroPythonu</a>.</p>
+<hr />
+<h2 id="ftp"><img alt="hwsoc" src="../img/mchtr.png" style="width:28px" /> FTP</h2>
+<p><strong>FTP</strong> (File transfer protocol) - protokol pro přenos souborů mezi počítači pomocí počítačové sítě.</p>
+<p>Původní knihovna pro ESP8266 i ESP32 v základu funguje. 
+Používáme například FTP plugin <strong>Total Commanderu</strong> (testováno ve Win 10).</p>
+<p>Jednoduchá verze - na ESP běží samostatně "pouze" FTP. Po připojení k lokální síti se spustí FTP a vypíše IP adresu.</p>
+<pre><code class="language-python">&gt;&gt;&gt; from utils.octopus_lib import w
+&gt;&gt;&gt; w() # wifi connect
+
+&gt;&gt;&gt; import ftp
+&gt;&gt;&gt; ftp
+FTP Server started on  192.168.x.y # -&gt; IP
+
+</code></pre>
+<p>Spustit se dá i ze <a href="/setup/#setup">setup()</a> - příkazy <code>cw</code> -&gt; <code>ftp</code>.</p>
+<hr />
+<h3 id="pouziti-z-total-commanderu">Použití z Total commanderu</h3>
+<p>V menu <code>Síť</code> se zvolí <code>Protokol FTP - připojit kserveru</code> (nebo přímo: <code>CTRL-F</code>), což vyvolá FTP okno, kde se zvolí <code>Nové připojení</code> a vyplní do <code>Hostilel [port]</code> IP adresa, kterou vám ESP oználilo. (Nejčastěji 192.168.<em>x.y</em>, kde <em>x y</em> jsou konkrétní čísla). Toto nastavení si uložíme v poli <code>Název relace</code> například pod názvem "ESP32".</p>
+<p>Pro jednorázové připojení stačí v menu <code>Síť</code> zvolit <code>Protokol FTP - nové připojení</code> (nebo přímo: <code>CTRL-N</code>) a zadat IP adresu.</p>
+<hr />
+<h3 id="pouziti-v-terminalu-linuxu">Použití v terminálu Linuxu</h3>
+<pre><code class="language-bash">$ sudo apt-get install ftp
+
+$ ftp 192.168.x.y
+ftp&gt; ls
+...
+ftp&gt; mput *.py
+...
+ftp&gt; prompt
+</code></pre>
+<hr />
+<p>Zdrojová knihovna 🡒 <a href="https://github.com/robert-hh/FTP-Server-for-ESP8266-ESP32-and-PYBD">github.com/robert-hh/FTP-Server...</a></p>
+<p>Možnost běhu i v threadu a pod., zatím netestováno.</p>
+<pre><code class="language-python">import uftpd
+uftpd.start()
+# uftpd.start([port = 21][, verbose = level])
+</code></pre>
+<hr />
+<h3 id="pouziti-v-projektech">Použití v projektech</h3>
+<p>Po <em>boot</em> se stiskem tlačítka <code>BOOT</code>/<code>EN</code> spustí <strong>ftp server</strong>, pokud tlačítko stiknuto není, bude pokračovat standardní program.</p>
+<pre><code class="language-python">from time import sleep
+from machine import Pin
+from utils.octopus_lib import w
+
+btnum = 0
+button = Pin(0, Pin.IN)
+print(&quot;press button / CTRL+C or continue&quot;)
+sleep(1)
+
+for i in range(12):
+    print(&quot;-&quot;,end=&quot;&quot;)
+    btnum += button.value()
+    sleep(0.2)
+
+w()
+print()
+
+if (btnum &gt; 0):
+    print(&quot;button1 -&gt; start FTP&quot;)
+    import ftp 
+
+else:
+    print(&quot;button0 -&gt; continue&quot;)
+    # ...
+
+# your code: ...
+
+</code></pre>
+<p>Využili jsme například v ukázce <a href="https://github.com/octopusengine/octopuslab/blob/master/projects/webserver1/main-www-rgb.py">WiFi RGB lampičky</a>, kde se dodatečně mohou modifikovat parametry.</p>
+<p>Další inspirace:
+<a href="https://www.youtube.com/watch?v=a7DrFqqu-78&amp;t=369s">https://www.youtube.com/watch?v=a7DrFqqu-78&amp;t=369s</a></p>
+<hr />
+<h2 id="thonny"><img alt="hwsoc" src="../img/mchtr.png" style="width:28px" /> Thonny</h2>
+<p>Alternativou k IDE + <a href="https://docs.octopuslab.cz/ampy/">Ampy</a> (i <a href="https://github.com/espressif/esptool">esptool</a>) je tento jednoduchý nástroj (program běžící na PC). V prvním vydání byl takřka nepoužitelný (až na pár tutoriálových výjimek), ale novější verze, po odstranění řady zásadních nedostatků, už běží mnohem lépe. <strong>Pro velmi jednoduché a paměťově nenáročné pokusy</strong> funguje podle očekávání, ale když chcete připojení k WiFi a zároveň BlueTooth, tak nejspíš narazíte. Občas i běžící program znemožní korektní start <code>Thonny</code>, a jelikož se tluče komunikace na sériovém portu, <strong>musíte si osvojit specifické rutiny, jak to provozovat. Pomáhají opakované restarty jak ESP tak Aplikace Thony, což není úplně komfortní</strong>, ale za zkoušku to stojí.</p>
+<p>Nastavení v <code>Tools/Options/Interpreter</code>, by mělo být zvoleno v <strong>Interpreter</strong> <code>MicroPython (ESP32)</code>
+a v <strong>Port</strong> Vaše USB připojení k ESP - například <code>Silicon Labs CP210x USB to UART Bridge (COM6)</code>.</p>
+<hr />
+<p><img alt="thony1" src="https://www.octopuslab.cz/wp-content/uploads/2020/10/thony1-1200x765.png" /></p>
+<p>Pak v levém sloupci vidíte i soubory dostupné v ESP, které můžete v hlavním okně (horní) editovat, v okně dolním pak bývá přednastaven terminál (shell).</p>
+<hr />
+<p>Tato speciální aplikace <em>Thonny - Python IDE for beginners</em>, je ke stažení zde: 🡒 <a href="https://thonny.org/">https://thonny.org/</a></p>
+<hr />
+<p>Pár (anglických) odkazů (ale nebojte se použít <a href="https://www.google.com/search?sxsrf=ALeKk024xpsufvjOrJskDFK_Od76pAVBvg%3A1602843167094&amp;ei=H3KJX8OiBaSzgwe_7qaoAw&amp;q=thony+esp32&amp;oq=thony+esp32&amp;gs_lcp=CgZwc3ktYWIQAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwAzIHCAAQRxCwA1AAWABgokhoAXAAeACAAQCIAQCSAQCYAQCqAQdnd3Mtd2l6yAEIwAEB&amp;sclient=psy-ab&amp;ved=0ahUKEwiDruuM8LjsAhWk2eAKHT-3CTUQ4dUDCA0&amp;uact=5">google</a>):</p>
+<ul>
+<li>
+<p><a href="https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/">randomnerdtutorials.com/getting-started-thonny-micropython</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=lvmNLuHj25o">youtube.com/Saravanan...</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="upycraft"><img alt="hwsoc" src="../img/mchtr.png" style="width:28px" /> uPyCraft</h2>
+<p><a href="https://randomnerdtutorials.com/uPyCraftWindows">https://randomnerdtutorials.com/uPyCraftWindows</a></p>
+<hr />
+<h2 id="mu"><img alt="hwsoc" src="../img/mchtr.png" style="width:28px" /> Mu</h2>
+<p>Další alternativní IDE:</p>
+<p><a href="https://codewith.mu/en/download">https://codewith.mu/en/download</a></p>
+<hr />
+<h2 id="espy"><img alt="hwsoc" src="../img/mchtr.png" style="width:28px" /> EsPy</h2>
+<p><a href="https://github.com/jungervin/EsPy">https://github.com/jungervin/EsPy</a></p>
+<hr />
+<p>Připravujeme: <a href="/deployer">deployer</a></p>
+<hr />
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ws-python-data/" class="btn btn-neutral float-left" title="Python data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../github/" class="btn btn-neutral float-right" title="Github ">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC-BY</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../ws-python-data/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../github/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="OctopusLAB" /><link rel="canonical" href="https://docs.octopuslab.cz/basicdoc/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Referenční příručka - OctopusLab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Referen\u010dn\u00ed p\u0159\u00edru\u010dka";
+        var mkdocs_page_input_path = "basicdoc.md";
+        var mkdocs_page_url = "/basicdoc/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-171553408-2", "docs.octopuslab.cz");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OctopusLab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Úvod</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">OctopusLAB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp32/">ESP32</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../framework/">Octopus Framework</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Instalace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Společná část</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_win/">Windows </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_linux/">Linux </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_mac/">Mac </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup (nastavení)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dokumentace</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Referenční příručka</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#moduly-tridy-funkce">Moduly, třídy, funkce</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#knihovny-components-utils-lib">Knihovny (components | utils | lib)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#adresarova-strukrura-na-esp32">Adresářová strukrura na ESP32</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#soubory-bootpy-a-mainpy">Soubory boot.py a main.py</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#bootpy">• boot.py</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mainpy">• main.py</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#octopus-components">OCTOPUS Components</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#led">Led</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rgb">Rgb</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#analog">Analog</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#button">Button</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#display7">Display7</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#oled">Oled</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#buzzer">Buzzer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#servo">Servo</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#pca9685">pca9685</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dcmotors">DCmotors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#iot">IoT</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#octopus-utils">OCTOPUS Utils</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#wificonnect">WiFiConnect</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bits">Bits</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transform">Transform</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#database">Database</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mqtt">MQTT</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#influxdb">InfluxDB</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#octopus-lib">OCTOPUS Lib</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#lcd">LCD</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#st7735">ST7735</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hcsr04">hcsr04</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pubsub">pubsub</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ble">BLE</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#mobilni-aplikace-pro-ble">Mobilní aplikace pro BLE</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ostatni-podpurne-moduly">Ostatní podpůrné moduly</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#config">Config</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#jednotlive-metody-pro-zakladni-varianty-pouzivani">Jednotlivé metody pro základní varianty používání:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#octopus_lib">octopus_lib</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#i2c">I2C</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#spi">SPI</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rtc">RTC</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pinout">pinout</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#dekorator">Dekorátor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#zrychleni-prace-procesoru">Zrychlení práce procesoru</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#web-server-ide-jednoduche-ovladani">Web server - IDE - jednoduché ovládání</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#web-server">Web server</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pinouts/">Pinouts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pubsub/">Pubsub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upyshell/">UpyShell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/">Examples - ukázky</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class/">Class</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriály</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial1-python/">Tutorial 1 Python </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial2-micropython-esp/">Tutorial 2 Micropython ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit1/">Tutorial EDUkit1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit2/">Tutorial EDUkit2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-robot/">Tutorial Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-iot/">Micropython workshop IoT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-robot/">Micropython workshop Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-upyshell/">Upyshell workshop </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-games/">workshop GAME</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-python-data/">Python data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Další</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp-ide/">Práce s ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Github </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../extension/">Rozšíření </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../repl/">REPL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../webserver/">WebServer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials-intro/">Popis markdown</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OctopusLab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Dokumentace</li>
+      <li class="breadcrumb-item active">Referenční příručka</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz/blob/master/docs/basicdoc.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="dokumentace"><img alt="logo" src="../img/logo_small.png" style="width:39px" /> Dokumentace</h1>
+<p>Toto je hlavní část dokumentace, popisující <strong>co a jak</strong>.
+V dalších částech, především pak v oddíle <strong>Workshopy / tutoriály</strong> se pak dozvíte <strong>jak na to</strong>.</p>
+<p>Originální dokumentaci k MicroPythonu najdete na stránkách 🡒 <a href="http://docs.micropython.org/en/latest/esp32/quickref.html">docs.micropython/esp32</a></p>
+<hr />
+<h2 id="moduly-tridy-funkce">Moduly, třídy, funkce</h2>
+<div class="admonition attention">
+<p class="admonition-title">Základ pro další pochopení (Micro)Pythonu</p>
+<p>Téměř vše v Pythonu je objekt. <strong>Objekt</strong> je kolekce dat (proměnných) a <strong>metod</strong> (funkcí), které s danými daty pracují. Prototypem objektů jsou <strong>třídy</strong>, z nichž jsou všechny <strong>objekty</strong> (čísla, řetězce, funkce, moduly, metody, atp) odvozeny coby <strong>instance</strong>.
+Pokud vám to není jasné, trochu podrobněji se o tom rozepisujeme na samostatné stránce: <a href="/class">class()</a>.
+Pro správné pochopení a především v kontextu práce s hardware začátečníkům doporučujeme zmíněný odkaz alespoň letmo navštívit.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Toto není výuka programování – ale jen ukázky a experimenty s přihlédnutím na sadu knihoven a modulů <strong>octopusLab</strong> pro práci s vybraným HW.</p>
+<p>Pro podrobnější proniknutí do tajů programování v Pythonu doporučujeme: </p>
+<ul>
+<li><a href="https://naucse.python.cz/">naucse.python.cz</a></li>
+<li><a href="https://naucse.python.cz/course/mi-pyt/intro/micropython/">naucse.python.cz/course/mi-pyt/intro/micropython</a></li>
+<li><a href="http://howto.py.cz/index.htm">howto.py.cz</a></li>
+</ul>
+</div>
+<hr />
+<h3 id="knihovny-components-utils-lib">Knihovny (components | utils | lib)</h3>
+<p>Jednotlivé moduly - knihovny (podprogramy, třídy) jsme rozdělili do několika základních adresářů:</p>
+<ul>
+<li>
+<p><a href="#octopus-components">/components</a>, kam postupně přidáváme jednotlivé "osamostatnělé" komponenty.</p>
+</li>
+<li>
+<p><a href="#octopus-lib">/lib</a>, kde jsou převážně knihovny třetích stran, a malé fragmenty, které mají výhodu, že se při importu v adresáři lib hledají, <strong>Micropython</strong> je nalezne bez udání cesty k nim.</p>
+</li>
+<li>
+<p><a href="#octopus-utils">/utils</a>, (utility) moduly octopusLAB, a třídy pro práci s periferiemi.</p>
+</li>
+</ul>
+<p><em>Uživatele vlastně nemusí zajímat, kde to je uloženo, a tak na to důraz neklademe, jen je vhodné si to pohlídat při sestavování větších projektů.</em></p>
+<div class="admonition hint">
+<p class="admonition-title"><strong>Zdroje programového kódu</strong></p>
+<p><code>Github</code> =&gt; <code>stable.tar</code> =&gt; <code>docs</code></p>
+<p>Naší snahou je udržet v souladu zdroj z githubu: <a href="https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython">github.com/octopusengine/octopuslab</a>, který se po <em>kompilaci a komprimaci</em> stane <a href="/install/#system-download-deploy">stable.tar</a> a k němu udržovat aktuální <strong>dokumentaci</strong>.</p>
+</div>
+<hr />
+<h3 id="adresarova-strukrura-na-esp32">Adresářová strukrura na ESP32</h3>
+<pre>
+|-- <a href="#soubory-bootpy-a-mainpy">boot.py</a>       # inicializace po startu
+|      |-- <a href="#reset">reset</a>
+|-- <a href="#soubory-bootpy-a-mainpy">main.py</a>       # hlavní soubor programu
+|-- /assets       # obrázky, zvuky, tabulky
+|-- <a href="#config">/config</a>       # kofigurační soubory (.json)
+|-- <a href="#octopus-lib">/lib</a>          # obecně dostupná knihovna (lib)
+|      |-- <a href="#pubsub">pubsub</a>
+|      |-- <a href="/ftp">FTP</a>
+|      |-- <a href="#BLE">/blesync_uart</a>
+|      |-- ...
+|      |-- /bmp280   # i2c Atmospheric pressure sensor
+|      |-- /bh1750   # i2c Light sensor
+|      |-- <a href="#st7735">ST7735.py</a> # TFT128*166 color display
+|      |-- colors_rgb.py
+|      |-- <a href="#hcsr04">hcsr04.py</a> # ultrasonic
+|      |-- <a href="#lcd">lcd</a>
+|      |-- ...
+|
+|-- <a href="#octopus-components">/components</a>
+|      |-- <a href="#led">led</a>
+|      |-- <a href="#rgb">rgb</a>
+|      |-- <a href="#analog">analog</a>
+|      |-- <a href="#button">button</a>
+|      |-- <a href="#display7">display7</a>
+|      |-- <a href="#oled">oled</a>
+|      |-- <a href="#buzzer">buzzer</a>
+|      |-- <a href="#servo">servo</a>
+|      |-- <a href="#dcmotors">dcmotors</a>
+|      |-- [plc]
+|      |-- <a href="#iot">iot</a>
+|            | Relay | PWM | Thermometer
+|
+|-- <a href="#octopus-utils">/utils</a>
+|      |-- <a href="/setup">setup</a>
+|      |-- <a href="#octopus_lib">octopus_lib</a>
+|            | <a href="#i2c">I2C</a> | <a href="#spi">SPI</a> | <a href="#lcd">LCD</a> | <a href="#rtc">RTC</a> | ...
+|      |-- <a href="#wificonnect">WiFiConnect</a>
+|      |-- <a href="#pinout">pinout</a>
+|      |-- <a href="#bits">bits</a>
+|      |-- <a href="#transform">transform</a>
+|      |-- <a href="#database">database</a>
+|      |-- <a href="#mqtt">mqtt</a>
+|      |-- octopus # WorkFrame with WebServer
+|      |-- ...
+|      |-- BLE
+|
+|-- <a href="/pinouts">/pinouts</a>      # nastavení pinů
+|-- <a href="/examples">/examples</a>      # ukázky
+|      |-- /asyncio
+|      |-- /ble
+|      |-- /param
+|      |-- /pubsub
+|      |-- blink.py
+|      |-- ...
+|
+|-- /tests
+|
+|-- /shell
+|      |-- <a href="/upyshell">shell</a>
+|      |-- <a href="/upyshell/#editor">editor</a>
+|-- ...
+</pre>
+
+<div class="admonition warning">
+<p class="admonition-title"><strong>Pozor</strong></p>
+<p><strong>Pokud jste používali náš systém už v roce 2019</strong>, přeinstalujte si na novou verzi. Velká část systému by vám už nefungovala. Od té doby došlo totiž k řadě změn. Především byly tři zásadní verze Micropythonu, kde se měnil i formát "kompilovaných" souborů <code>.mpy</code>, které jsou základem naší distribuce. Také se doplnilo <code>BLE</code> pro práci s <strong>BlueTooth low energy</strong>.
+A další změnou byla velká <code>refaktorizace</code> systému <strong>octopus</strong>, kde podardesář <code>util</code> byl rozdělen na <code>utils</code> (pro SW utility a hlavní framework) a <code>components</code> (kde jsou převážně knihovny pro hw komponenty a periferie.) Také <code>shell</code> byl přesunut z <code>util/shell</code> do rootu.</p>
+</div>
+<h3 id="soubory-bootpy-a-mainpy">Soubory boot.py a main.py</h3>
+<h4 id="bootpy">• boot.py</h4>
+<p>je soubor, který se spouští jako první po bezprostřením startu nebo po resetu ESP. Zpravidla ho neměníme. Měl by obsahovat základní obecnou inicializaci. My tam máme především definice cest k modulům:</p>
+<pre><code class="language-python"># boot.py
+def setup():
+    import utils.setup
+    utils.setup.setup()
+
+def octopus():
+    import utils.octopus
+    utils.octopus.octopus()
+    return utils.octopus
+
+def reset():
+    from machine import reset
+    reset()
+
+def shell():
+    import shell
+    shell.shell()
+</code></pre>
+<h5 id="reset">Reset</h5>
+<p>Pro zjednodušené použití resetu pomocí příkazu <code>reset()</code> je v <code>boot.py</code> přednastaveno:</p>
+<pre><code class="language-python">def reset():
+    from machine import reset
+    reset()
+</code></pre>
+<hr />
+<h4 id="mainpy">• main.py</h4>
+<p>je hlavní soubor uživatelského programu, který budeme využívat pro své projekty. Spustí se (pokud existuje) hned po <code>boot.py</code>.
+Často používáme jednoduché kopírování existujícího programu nebo ukázky (z examples) v prostředí <a href="/upyshell">uPyshell</a>:</p>
+<pre><code class="language-batch">$ cp examples/blink.py main.py
+
+</code></pre>
+<hr />
+<h2 id="octopus-components">OCTOPUS Components</h2>
+<h3 id="led"><img alt="hwsoc" src="../img/hwsoc.png" style="width:28px" /> Led</h3>
+<p>Třída <code>Led</code> je vlastně jen jednoduchým rozšířením třídy <code>Pin</code>.
+Parametr při vytváření instance je číslo pinu. <code>led = Led(2)</code>
+Přidali jsme k základní metodě <code>value()</code> dalších několik metod: <code>toggle()</code>, <code>blink()</code> </p>
+<p>Zdrojový kód knihovny:
+<a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/led/__init__.py">./components/led</a></p>
+<p>Nejkratší varianta použití je sice s využítím <code>utils</code>:</p>
+<pre><code class="language-python">from utils.octopus import led
+led.value(1)
+</code></pre>
+<p>Ale pro projekt lepší verze je s <code>components</code> (šetří paměť, protože nanačítá "celý octopus"):</p>
+<pre><code class="language-python">from components.led import Led
+led = Led(2)
+
+while True:
+    led.blink()
+</code></pre>
+<pre><code class="language-python">dir(led)
+['class', 'init', 'module', 'qualname', 'value', 'dict', 'pin', 'blink', 'toggle', 'state']
+
+&gt;&gt;&gt; led.pin
+&gt; Pin(2)
+&gt;&gt;&gt; led.state
+&gt; False
+&gt;&gt;&gt; led.value(1) # svítí
+&gt;&gt;&gt; led.state    # info o stavu
+1
+</code></pre>
+<p><strong>. TAB nabídka metod:</strong> 
+Micropython má obrovskou výhodu v tom, že běží jako interpret: když uživatel napíše název proměnné nebo instance objektu, skoro všechno se o nich můžeme dozvědět. Napište <code>led</code> pak <code>.</code> (tečka) a stiskněte <code>TAB</code>:</p>
+<pre><code>led.
+class       init        module      qualname
+value       dict        pin         blink
+toggle      state
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title"><strong>note</strong></p>
+<p>Pro obecnější práci s využitím <code>set_pinout()</code> (předdefinovaných <a href="/#pinout">pinů</a>) a <code>io_config</code> předpokládáme, že pro <a href="/framework">Octopus FrameWork</a> máte pomocí <a href="/setup">setup()</a> nastavenu desku <code>ds</code> a periférie <code>ios</code>.</p>
+</div>
+<p>Číslo PINu v ukázce je 2, to je svítivá dioda vestavěná v <strong>DoIt</strong> modulech i v našem ESP32boardu. Ale pro práci s obecným modulem, kde máme možnost si nastavit, kde se Led dioda nachází, použijeme pak variantu základní ukázky z examples, kde <code>BUILT_IN_LED</code> je konstanta, ve které je číslo PINu uloženo:</p>
+<pre><code class="language-python">from components.led import Led
+from utils.pinout import set_pinout
+
+pinout = set_pinout()           # set board pinout
+led = Led(pinout.BUILT_IN_LED)  # BUILT_IN_LED = 2
+
+print(&quot;---examples/blink.py---&quot;)
+# start main loop
+
+while True:
+    led.blink()
+</code></pre>
+<p>🡒 <a href="#pinout">pinout</a></p>
+<hr />
+<h3 id="rgb"><img alt="hwsoc" src="../img/hwsoc.png" style="width:28px" /> Rgb</h3>
+<p>Knihovna pro <em>plnobarevné</em> <strong>RGB led</strong> je vytvořena především pro práci s adresovatelým modulem typu <strong>WS2812b</strong> (<em>proto se používá zkratka WS</em>). Naše verze je rozšířením vestavěné třídy <code>NeoPixel</code>. <em>Pro řízení klasických R-G-B diod je potřeba na každou barevnou složku samostatný PIN, což využíváme jen ojediněle, jelikož volných PINů na ESP už moc nezbývá.</em></p>
+<p>Zdrojový kód knihovny <code>Rgb</code> 🡒 <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/rgb/__init__.py">components/rgb</a> (<em>slouží i jako ukázka, jak lze třídu rozšířit</em>)</p>
+<p>Třída je rozšířena o některé nové metody:</p>
+<ul>
+<li><code>color(color)</code> # pro jednu LED diodu, color ve formátu (R,G,B), 0-255</li>
+<li><code>color(color, index)</code> # pro více modulů, indexováno</li>
+<li><code>simpleTest()</code> # proběhne R, G, B</li>
+<li><code>wheel()</code> # z čísla vygeneruje barvu</li>
+<li><code>random_color()</code> # náhodná barva</li>
+<li><code>rainbow_cycle()</code> # duha</li>
+</ul>
+<pre><code class="language-python">from components.rgb import Rgb
+ws = Rgb(15) # BUILT_IN_RGB (WS) ROBOTboard
+ws.color((255,0,0)) # R G B =&gt; RED
+
+ws.simpleTest()
+
+import colors_rgb as rgb # definice barev v /lib - BLACK (nesvítí)
+ws.color(rgb.BLUE)       # zobrazení barvy, rgb.RED/rgb.GREEN ...
+
+
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title"><strong>note</strong></p>
+<p>Pro obecnější práci s využitím <code>set_pinout()</code> (předdefinovaných <a href="/#pinout">pinů</a>) a <code>io_config</code> předpokládáme, že pro <a href="/framework">Octopus FrameWork</a> máte pomocí <a href="/setup">setup()</a> nastavenu desku <code>ds</code> a periférie <code>ios</code>.</p>
+</div>
+<p>Následující ukázka naznačuje komplexnější práci s předkonfigurovanými konstantamy, které určují na kterém pinu (<code>pinout.WS_LED_PIN</code>) a kolik modulů máme (<code>io_conf.get('ws')</code>).</p>
+<pre><code class="language-python">from components.rgb import Rgb
+
+from utils.pinout import set_pinout
+pinout = set_pinout()   # set board pinout
+
+from utils.io_config import get_from_file
+io_conf = get_from_file()
+
+ws = Rgb(pinout.WS_LED_PIN,io_conf.get('ws'))
+
+print(&quot;---examples/rgb_blink.py---&quot;)
+ws.simpleTest()
+</code></pre>
+<p>Zdrojový kód ukázky: <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/rgb_blink.py">examples/rgb_blink.py</a></p>
+<p>Pro běžnou práci je v první fázi snadnější použít předchozí variantu, ale pro rozsáhlejší projekty a práci v týmu se musí zdokumentovat použití "magické konstanty" <strong>15</strong> v definici <code>ws = Rgb(15)</code>.</p>
+<p>🡒 <a href="#pinout">pinout</a></p>
+<hr />
+<h3 id="analog"><img alt="hwsoc" src="../img/hwsoc.png" style="width:28px" /> Analog</h3>
+<p>Tento modul je pro práci s analogovým vstupem pomocí DAC převodníku. Opět se jedná o rozšíření základní třídy <code>ADC</code>, kde vytvořením instance s parametrem vstupního PINu zjednodušujeme celou inicializaci na <code>an = Analog(33)</code>. Základní metodu <code>read()</code> jsme rozšířili o <code>get_adc_aver(num)</code>, kde počítáme průměr z <em>num</em> neměřených hodnot.</p>
+<p>Zdrojový kód knihovny: <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/analog/__init__.py">components/analog</a></p>
+<pre><code class="language-python">from time import sleep
+from components.analog import Analog
+
+an2 = Analog(33)
+
+while True:
+    data =  an2.get_adc_aver(8)
+    print(data)
+    sleep(5)
+</code></pre>
+<hr />
+<h3 id="button"><img alt="hwsoc" src="../img/hwsoc.png" style="width:28px" /> Button</h3>
+<p>Pro základní práci s tlačítky. Původně jsme používali samostatný blok s přerušením, ale knihovna pak byla přepsána tak, že využívá dekorátor <code>@led_button.on_press</code>, kterým uvedeme (odekorujeme) vlastní funkci <code>on_press_top_button()</code>, která se vyvolá vždy, když se zmáčkne tlačítko. Celá funkce pak běží na pozadí, je neblokující, a snadno i spolehlivě se dá použít i pro více tlačítek.</p>
+<p>Zdrojový kód knihovny: <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/button/__init__.py">components/button</a></p>
+<pre><code class="language-python">from machine import Pin
+from components.button import Button
+
+boot_pin = Pin(0, Pin.IN)
+boot_button = Button(boot_pin, release_value=1)
+
+
+@boot_button.on_press
+def boot_button_on_press():
+    print('boot_button_on_press')
+
+
+@boot_button.on_long_press
+def boot_button_on_long_press():
+    print('boot_button_on_long_press')
+
+
+@boot_button.on_release
+def boot_button_on_release():
+    print('boot_button_on_release')
+
+</code></pre>
+<p>Stará verze 1.0 měla v konstruktoru číslo PINu.
+Nová verze 2.0 má přímo instanci PINu.</p>
+<pre><code class="language-python">from time import sleep
+from machine import Pin
+from components.button import Button
+
+led_button = Button(0, release_value=1)
+built_in_led = Pin(2, Pin.OUT)
+
+built_in_led.on()
+sleep(1)
+built_in_led.off()
+
+@led_button.on_press
+def on_press_top_button():
+    print(&quot;on_press_top_button&quot;)
+    built_in_led.on()
+    sleep(3)
+    built_in_led.off()
+</code></pre>
+<p>🡒 <a href="#led">Led</a> | <a href="#dekorator">@Dekorátor</a></p>
+<p>Práce se čtyřmi tlačítky (na ESP32board) - v ukázce je zakomentována spolupráce s displejem <code>tft</code> 🡒 <a href="#st7735">st7735</a></p>
+<pre><code class="language-python">from utils.pinout import set_pinout
+pinout = set_pinout()
+
+from components.button import Button
+from utils.transform import Point2D
+
+print(&quot;buttons init&gt;&quot;)
+button_dwn = Button(34, release_value=1)
+button_top = Button(36, release_value=1)
+button_lef = Button(35, release_value=1)
+button_rig = Button(39, release_value=1)
+
+# size = 3
+cursor = Point2D(63,81) # center TFT128*166 dispaly (mod 3)
+
+def position(dx,dy):
+    global mx # cursor, fb, tft
+    cursor.x = cursor.x + dx*3
+    cursor.y = cursor.y + dy*3
+
+    print(cursor.x,cursor.y)
+    # fb.fill(color565(*BLACK))
+    # tft.blit_buffer(fb, 0, 0, tft.width, tft.height)
+    # tft.fill_rectangle(cursor.x,cursor.y, 6, 6, color565(*RED))
+
+
+@button_dwn.on_press
+def on_press_dwn():
+    print(&quot;down&quot;)
+    position(0,1)
+
+@button_top.on_press
+def on_press_top():
+    print(&quot;top&quot;)
+    position(0,-1)
+
+@button_lef.on_press
+def on_press_lef():
+    print(&quot;left&quot;)
+    position(-1,0)
+
+@button_rig.on_press
+def on_press_rig():
+    print(&quot;right&quot;)
+    position(1,0)
+
+</code></pre>
+<hr />
+<h3 id="display7"><img alt="hwsoc" src="../img/hwsoc.png" style="width:28px" /> Display7</h3>
+<p>Osm sedmisegmentovek s obvodem MAX na sběrnici <code>SPI</code> je do začátku ideální displej pro základy práce s mikrokontrolérem. Má "retro" sedm segmentů pro zobrazení čísel - proto <code>disp7</code>. Obdobný modul se shodným ovladačem je matice 8x8 svítivých diod, ten jsme pojmenovali <code>disp8</code>.</p>
+<p>Zdrojový kód <a href="https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/components/display7">components/display7</a></p>
+<p>Před inicializací se musí nejdříve připojit <code>SPI</code>. V následující ukázce je "dvojitě" zakomentovaná <code>##</code> obecnější metoda a použitá je <code>spi_init()</code> z knihovny <code>octopus_lib</code>.</p>
+<pre><code class="language-python">from machine import Pin, SPI
+from components.display7 import Display7
+## from utils.pinout import set_pinout
+from utils.octopus_lib import spi_init
+
+print(&quot;this is simple Micropython example | octopusLAB &amp; ESP32&quot;)
+
+print(&quot;--- spi-init ---&quot;)
+## pinout = set_pinout()
+## spi = SPI(1, baudrate=10000000, polarity=1, phase=0, sck=Pin(pinout.SPI_CLK_PIN), mosi=Pin(pinout.SPI_MOSI_PIN))
+spi = spi_init()
+
+ss = Pin(pinout.SPI_CS0_PIN, Pin.OUT)
+#spi.deinit() #print(&quot;spi &gt; close&quot;)
+
+print(&quot;--- display7-init ---&quot;)
+d7 = Display7(spi, ss) # 8 x 7segment display init
+d7.write_to_buffer('octopus')
+d7.display()
+
+</code></pre>
+<p>Nejkratší variantou je <strong>octopus framework</strong> verze, kde je ale nutno mít přes <code>setup()</code> a <code>ds</code> nastavenu desku (nějčastěji ROBOTboard nebo ESP32board) a dále pomocí <code>ios</code> nastaveno <code>disp7</code> (4 | 1)</p>
+<pre><code class="language-python">from time import sleep
+from utils.octopus import disp7_init
+
+print(&quot;this is simple Micropython example | ESP32 &amp; octopusLAB&quot;)
+print()
+
+d7 = disp7_init()   # 8 x 7segment display init
+
+for i in range(999):
+    d7.show(1000-i)
+    sleep(1)
+</code></pre>
+<hr />
+<h3 id="oled"><img alt="hwsoc" src="../img/hwsoc.png" style="width:28px" /> Oled</h3>
+<p>Oblíbili jsme si také malý 128x64px monochromatický OLED displej. Jeho přímé použítí vyžaduje už i inicializaci I2C a další drobnosti, proto jsme většinou využívali knihovny octopus.
+Ale ukázalo se, že pro vlastní projekty je lepší umět spouštět displej i "samostatně", což je v ukázce:
+<a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/test_oled.py">examples/test_oled.py</a></p>
+<p>Zjednodušené ovládání je pak tradičně:</p>
+<pre><code class="language-python">from utils.octopus import oled_init
+oled = oled_init()
+...
+</code></pre>
+<p>Základ ale vychází z knihovny <code>ssd1306</code>, která je už součástí Micropythonu:</p>
+<pre><code class="language-python">def oled_init():
+
+    from utils.pinout import set_pinout
+    from machine import Pin, I2C
+    import ssd1306
+
+    # pinout = set_pinout()
+    # i2c = I2C(0, scl=Pin(pinout.I2C_SCL_PIN), sda=Pin(pinout.I2C_SDA_PIN), freq=100000)
+    from utils.octopus_lib import i2c_init
+    i2c = i2c_init()
+
+    oled = ssd1306.SSD1306_I2C(128, 64, i2c, 0x3c)
+    return oled
+
+oled = oled_init()
+oled.text(&quot;octopusLAB&quot;, 0, 0)
+oled.show()
+
+oled.draw_image() # default /assets/octopus_image.pbm
+oled.invert(0)
+...
+</code></pre>
+<pre><code class="language-python">&gt;&gt;&gt; from assets.icons9x9 import ICON_clr, ICON_heart
+&gt;&gt;&gt; oled.draw_icon(ICON_heart,115,15) 
+
+&gt;&gt;&gt; def heartBeat()               
+...    oled.draw_icon(ICON_heart,115,15)
+...    sleep(1)
+...    oled.draw_icon(ICON_clr,115,15)
+...    sleep(1)
+...
+</code></pre>
+<hr />
+<h3 id="buzzer"><img alt="hwsoc" src="../img/hwsoc.png" style="width:28px" /> Buzzer</h3>
+<p>Pasivní piezo "pípák" slouží pro akustická upozornění, ale umí přehrát i velmi jednoduché "retro" melodie.</p>
+<p>Zdrojový kód knihovny: <a href="https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/components/buzzer">components/buzzer</a></p>
+<p>Základ práce:</p>
+<pre><code class="language-python">from components.buzzer import Buzzer
+piezzo = Buzzer(33)
+piezzo.beep()
+</code></pre>
+<p>Doplňující třída <code>melody</code> jako přidání další části kódu:</p>
+<pre><code class="language-python">from components.buzzer.melody import jingle1
+piezzo.play_melody(jingle1)
+</code></pre>
+<hr />
+<h3 id="servo"><img alt="hwsoc" src="../img/mchtr.png" style="width:28px" /> Servo</h3>
+<p>Modul pro práci se servem, opět vytvořením instance na daném PINu (musí být PWM).
+Hlavní metodou je pak pootočení na daný úhel:  <code>set_degree()</code>.</p>
+<p>Zdrojový kód knihovny: <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/servo/__init__.py">components/servo</a></p>
+<pre><code class="language-python">from time import sleep
+from utils.pinout import set_pinout
+
+from components.servo import Servo
+pinout = set_pinout()
+
+# s1 = Servo(pinout.PWM1_PIN)
+# s2 = Servo(pinout.PWM2_PIN)
+s3 = Servo(pinout.PWM3_PIN)
+
+angles = [0, 20, 50, 70, 90]
+
+while True:
+    for a in angles:
+        s3.set_degree(a)
+        sleep(1)
+</code></pre>
+<h4 id="pca9685">pca9685</h4>
+<p>Elementární základ práce s více servy pomocí I2C expandéru pca9685: </p>
+<pre><code class="language-python">from pca9685.servo import Servos
+from utils.octopus_lib import i2c_init
+from time import sleep_ms
+from utils.transform import * # include all - only for example
+
+
+# blocking - simple test
+def sweep(s, start, stop, delay=5, step=1):
+   ang = start
+   servo.position(s, ang)
+   sleep_ms(delay)
+
+   if start &lt; stop:
+      print(&quot;a&quot;)
+      while ang &lt; stop:
+         ang = ang + step
+         servo.position(s, ang)
+         sleep_ms(delay)
+
+   if start &gt; stop:
+      print(&quot;b&quot;)
+      while ang &gt; stop:
+         ang = ang - step
+         servo.position(s, ang)
+         sleep_ms(delay)
+
+
+i2c = i2c_init(1)
+servo = Servos(i2c)
+
+
+def sweeptest():
+    sweep(0,30,160)
+    sweep(1,30,180)
+    sweep(0,160,30)
+    sweep(1,180,30)
+
+sweeptest()
+</code></pre>
+<p>Zdrojový kód ukázky:
+<a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/pca9685.py">https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/pca9685.py</a></p>
+<p>Pro tranformace a kompletnější práci s více servy vyvíjíme knihovnu <code>transform</code>:
+<a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/transform.py">https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/transform.py</a></p>
+<p>🡒 <a href="#pinout">pinout</a></p>
+<hr />
+<h3 id="dcmotors"><img alt="hwsoc" src="../img/mchtr.png" style="width:28px" /> DCmotors</h3>
+<p>Zdrojový kód knihovny: <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/components/dcmotors/__init__.py">components/dcmotors</a></p>
+<pre><code class="language-python">from utils.pinout import set_pinout
+pinout = set_pinout()
+
+from components.dcmotors import Motor, Steering
+
+motor_r = Motor(pinout.MOTOR_1A, pinout.MOTOR_2A, pinout.MOTOR_12EN)
+motor_l = Motor(pinout.MOTOR_3A, pinout.MOTOR_4A, pinout.MOTOR_34EN)
+steering = Steering(motor_l, motor_r)
+speed = 800
+
+steering.center(0)
+steering.center(-speed)
+steering.right(speed)
+steering.left(speed)
+</code></pre>
+<hr />
+<h3 id="iot"><img alt="hwsoc" src="../img/wsetup.png" style="width:28px" /> IoT</h3>
+<p>Třída, která původně sloužila jako modul pro IoTboard, ale samostatná zahrnuje relé a PWM MOS-FET řízení.</p>
+<p>Zdrojový kód knihovny: <a href="https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/components/iot">components/iot</a></p>
+<p>Ukázka: </p>
+<pre><code class="language-python">from components.iot import Relay
+re1 = Relay() # default IoTboard pin 
+re1.value(1)
+re2 = Relay(26)
+
+
+from components.iot import Pwm
+pwm_led = Pwm(33)
+pwm_led.duty(300)
+
+
+from components.iot import Thermometer
+tt = Thermometer(32)  # DEV1 pin (ROBOTboard)
+tx = tt.ds.scan()  # get list of all Dallas sensors
+tt.get_temp()  # default index 0 -&gt; first sensor
+tt.get_temp(0)  # first sensor explicitly
+</code></pre>
+<hr />
+<h2 id="octopus-utils">OCTOPUS Utils</h2>
+<h3 id="wificonnect"><img alt="hwsoc" src="../img/bits.png" style="width:28px" /> WiFiConnect</h3>
+<p>Hlavní výhodou našeho rozšíření pro připojení k WiFi je používání uloženého nastavení (v <code>config/wifi.json</code>).
+Nastavení WiFi se provádí pomocí <a href="../install/#setup-nastaveni-systemu">setup()</a></p>
+<pre><code class="language-python">from utils.wifi_connect import WiFiConnect
+
+net = WiFiConnect()
+net.connect()
+</code></pre>
+<pre><code class="language-python">if not net.isconnected()
+    # hard reconect
+    net.sta_if.disconnect()
+    net.connect()
+</code></pre>
+<p>V případě "závažnějšího problému" s připojením někdy pomůže až "tvrdý" <a href="#reset">reset</a>.</p>
+<pre><code class="language-python"># hard reset
+reset()
+</code></pre>
+<p>Využití <a href="/framework">Octopus FrameWork</a> na maximum - k připojení k některé z uložených WiFi postačí příkaz <code>w()</code>:</p>
+<pre><code class="language-python">from utils.octopus_lib import w
+w()
+</code></pre>
+<p>Variantně s dostupnými metodami:</p>
+<pre><code class="language-python">wc = w()
+ip = wc.sta_if.ifconfig()[0]
+...
+wc.isconnected()
+</code></pre>
+<p>A opačný extrém - klasické připojení k síti s předáním parametrů <code>ssid</code> (název) a <code>password</code> (heslo):</p>
+<pre><code class="language-python">import network
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+wlan.connect('ssid', 'password')
+</code></pre>
+<p>Umožní nám (od verze v1.16 on 2021-08-09) skenovat celu síť:</p>
+<pre><code class="language-python">llan = wlan.scan() # list
+for i in llan:
+    print(i[0],i[2])
+</code></pre>
+<p>Originální dokumentace <a href="https://docs.micropython.org/en/latest/library/network.WLAN.html">wlan()</a></p>
+<hr />
+<h3 id="bits"><img alt="hwsoc" src="../img/bits.png" style="width:28px" /> Bits</h3>
+<p>Pro práci s jednotlivými <strong>bity</strong>. <code>B1 = 0b11111001</code>. Bitové operace jsme si museli do Pythonu trochu doladit, aby se s nimi pracovalo lépe a intuitivně. <strong>Používané metody:</strong></p>
+<ul>
+<li><code>neg(B1)</code> pro negaci - vrací <em>0b00000110</em></li>
+<li><code>reverse()</code> obrácení pořadí bitů - vrací <em>0b1001111</em></li>
+<li><code>get_bit(B1,1)</code> pro získání stavu jednoho bitu &gt; 0</li>
+<li><code>set_bit(B1,1)</code> pro nastavení stavu jednoho bitu</li>
+<li><code>int2bin()</code> pomocná funkce pro převod čísla na binární</li>
+</ul>
+<p>Zdrojový kód knihovny: <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/bits/__init__.py">utils/bits</a></p>
+<pre><code class="language-python">from components.bits import neg
+B1 = 0b11111001
+neg(B1) # &gt; 0b00000110
+
+</code></pre>
+<hr />
+<h3 id="transform"><img alt="hwsoc" src="../img/mchtr.png" style="width:28px" /> Transform</h3>
+<p>Pomocné funkce pro mechatroniku, zaměřené na transformace souřadnicových systémů a základy inversní kinematiky.</p>
+<ul>
+<li><code>Point2D()</code> class p2 = (x,y) | p2.x, p2.y</li>
+<li><code>distance2D(p1, p2, rr = 3)</code> vzdálenost dvou bodů v rovině</li>
+<li><em>využívá se round - zaokrouhlení na určitý počet míst:</em> <code>rr</code> = 3 </li>
+<li><code>polar2cart(r, alfa, rr = 3)</code></li>
+<li><code>cart2polar(point)</code></li>
+<li><code>def cosangle(opp, adj1, adj2)</code></li>
+<li><code>move_2d_line(p_start, p_stop, steps = 300, max_dist = 100)</code></li>
+<li><code>invkin2_1(point2d, rr = 6)</code> inversní kinematika 1</li>
+<li><code>invkin2(point2d, angleMode=DEGREES)</code></li>
+<li><code>Point3D()</code> class p3 = [x,y,z]</li>
+<li><code>invkin3(point3d, angleMode=DEGREES)</code></li>
+<li><code>distance3()</code> vzdálenost dvou bodů v prostoru</li>
+<li>...</li>
+</ul>
+<pre><code class="language-python">from utils.transform import Point2D, polar2cart, cosangle
+p1 = Point2D(1,3)
+print(p1)   # (1,3)
+print(p1.x) # 1
+print(p1.y) # 3
+p1.x, p1.y = polar2cart(10, 0)
+print(p1)
+...
+</code></pre>
+<pre><code class="language-python">from utils.transform import move_servo2, cosangle
+
+...
+def move_servo2(p1, p2, delay = delay):
+    steps = move_2d_line(p1, p2)
+    for step in steps:
+        alfa = cosangle(step[0], dist, dist)[0]
+        beta = cosangle(step[1], dist, dist)[0]
+        print(step, alfa, beta)
+
+        s1.set_degree(alfa)
+        s2.set_degree(beta)
+        sleep_ms(delay)
+
+p1 = 0, 0 # strart point
+p2 = 50, 50 # stop point
+move_servo2(p1, p2)
+
+</code></pre>
+<p>Více plánujeme v samostatné sekci <a href="/inv_kinematics">inversní kinematika</a></p>
+<hr />
+<h3 id="database"><img alt="hwsoc" src="../img/database.png" style="width:28px" /> Database</h3>
+<p>ESP díky paměti umožňuje bez nadsázky i základní práci s databází.
+Zaměříme se na dvě základní: lokální <code>btree</code> a vzdálené <code>MySQL</code>, <code>InfluxDB</code>.</p>
+<pre><code class="language-python">from utils.database.btreedb import BTreeDB
+db = BTreeDB(&quot;test&quot;)
+db.addOne(&quot;one&quot;,&quot;1&quot;)
+db.listAll()
+</code></pre>
+<p>Zvídavějším doporučujeme odkaz na práci s daty a databáze 🡒 <a href="/ws-python-data">Workshop Python DATA</a></p>
+<hr />
+<h3 id="mqtt"><img alt="hwsoc" src="../img/database.png" style="width:28px" /> MQTT</h3>
+<ul>
+<li>MQTT - jako pub-sub</li>
+<li>MQTT broker - na RPi</li>
+<li>orchestrátor NodeJS</li>
+<li>využití v IoT</li>
+</ul>
+<hr />
+<h3 id="influxdb"><img alt="hwsoc" src="../img/database.png" style="width:28px" /> InfluxDB</h3>
+<p>Pro zobrazování dat v <strong>Grafaně</strong> průběžně posíláme údaje na vzdálený server, který je ukládá do databáze <strong>InfluxDB</strong>.
+Jednoduchý příklad jednorázového odeslání jedné hodnoty (<strong>timestamp</strong> - datum a čas se přidají při ukládání automaticky):</p>
+<pre><code class="language-python">from utils.database.influxdb import InfluxDB
+
+influx = InfluxDB(&quot;https://your.server.com/grafana/influx/user...&quot;, &quot;user_db&quot;, &quot;i_usr&quot;, &quot;i_psw&quot;, &quot;i_measurement&quot;)
+
+value = 25.6  # zde je treba cist hodnotu z nejakeho senzoru, napr. teplomeru
+influx.write(temperature=value)
+...
+</code></pre>
+<p>Metoda <code>write</code> musí dostat pojmenované parametry (key word arguments - tzv. kwargs), které se v Influxu použijí, jako jednotlivé fieldy. V příkladu nahoře je to <code>temperature</code>, kam ukládáme hodnotu ze sensoru.</p>
+<p>Funkční ukázka např: <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/influxdb_disp7_therm.py">examples/influxdb_disp7_therm.py</a></p>
+<hr />
+<p>Abychom mohli použít identický program s minimem změn,
+využijeme konfigurační soubor, načteme pomocí <code>fromconfig()</code>. A také nechceme mít <strong>přístupové údaje ve zdrojovém kódu</strong>! </p>
+<pre><code class="language-python">from utils.database.influxdb import InfluxDB
+
+influx = InfluxDB.fromconfig()
+
+temp = ...
+influx.write(temperature=temp)
+</code></pre>
+<p><code>fromconfig()</code> bere volitelně jako první parametr, název konfiguračního souboru, default je <code>"influxdb"</code>, tedy soubor <code>config/influxdb.json</code>.</p>
+<p>Příklad obsahu je:</p>
+<pre><code class="language-json">{&quot;influxdb_url&quot;: &quot;https://parallelgarden.surikata.info:8086&quot;, &quot;influxdb_pass&quot;: &quot;heslo&quot;, &quot;influxdb_name&quot;: &quot;nazev_db&quot;, &quot;influxdb_user&quot;: &quot;uzivatel&quot;, &quot;influxdb_measurement&quot;: &quot;meteo&quot;, &quot;influxdb_tags&quot;: {&quot;location&quot;: &quot;balkon&quot;}}
+</code></pre>
+<p>Více o vytváření a editaci konfiguračních souborů 🡒 <a href="#config">Config</a></p>
+<hr />
+<h2 id="octopus-lib">OCTOPUS Lib</h2>
+<h3 id="lcd">LCD</h3>
+<p>Knihovna třetí strany pro ovládání dvou nebo čtyř-řádkového LCD displeje připojeného k <code>i2c</code> expandéru, byla původně určena pro starší ESP8266, ale funguje nám bez úprav i pro ESP32 (protože komunikační protokol na i2c se nemění).</p>
+<p>Základem v nastavení je: počet řádků <code>rows</code> - &frac12;/4, a počet "sloupců" <code>col</code> odpovídá počtu znaků na řádku.
+Ukázka pro displej <code>2x16</code> - s hlavní metodou <code>putstr(STRING)</code>.</p>
+<pre><code class="language-python"># from machine import I2C , Pin
+# i = I2C(scl=Pin(22), sda=Pin(21), freq=100000)
+from utils.octopus_lib import i2c_init
+i2c = i2c_init()
+# i2c.scan() # &gt; [39]
+from lib.esp8266_i2c_lcd import I2cLcd
+lcd = I2cLcd(i2c, 39, 2, 16) # addr, rows, col
+lcd.putstr(&quot;octopusLab&quot;) # write text
+...
+</code></pre>
+<p>Pomocí speciálních znaků (už implementovaných) lze vykreslit například stupně Celsia (pro zobrazování teploty):</p>
+<pre><code class="language-python">lcd.putstr(chr(223))
+</code></pre>
+<p>Nastavení kurzoru <code>move_to()</code> a ukázka zobrazení hodin s blikající dvojtečku:</p>
+<pre><code class="language-python">def clock():
+    lcd.move_to(5,1)
+    lcd.putstr(get_hhmm(&quot;:&quot;))
+    sleep(0.5)
+    lcd.move_to(5,1)
+    lcd.putstr(get_hhmm(&quot; &quot;))
+    sleep(1)
+</code></pre>
+<p>V našem podadresáři <code>/assets</code> máme v souboru <code>lcd_chars.py</code> tabulky některých "nově definovaných" znaků pro LCD:</p>
+<pre><code class="language-python">import assets.lcd_chars as ch
+
+from utils.octopus import lcd2_init
+lcd = lcd2_init()
+
+lcd.custom_char(0, ch.happy)
+lcd.putchar(chr(0))
+
+lcd.custom_char(1, ch.clock)
+lcd.putchar(chr(1))
+
+...
+</code></pre>
+<hr />
+<h3 id="st7735">ST7735</h3>
+<p>Barevný displej TFT 128x160, který ale vyžaduje při práci s Micropythonem větší paměť.</p>
+<p>Doporučené připojení k <code>ESP32board</code>:</p>
+<pre><code>Display | ESP32board
+------------------------
+1-RST   | PWM2 (16)
+2-CS    | SCE0 (5)
+3-D/C   | PWM1 (17)
+4-DIN   | SPI_MOSI (23)
+5-CLK   | SPI_CLK (18)
+6-UCC   | 5V
+7-BL    | 3V3
+8-GND   | GND
+</code></pre>
+<p><strong>Nová verze</strong></p>
+<pre><code class="language-python">from ST7735 import TFT, TFTColor
+from sysfont import sysfont
+from machine import SPI, Pin
+from time import sleep_ms, ticks_ms
+from math import pi
+from utils.octopus_lib import w # need connection for FTP
+
+SPI_SCLK = 18
+SPI_MISO = 19
+SPI_MOSI = 23
+
+DC = 17   # PWM1
+RST = 16  # PWM2
+CS = 5    # SCE0
+
+print(&quot;--- TFT 128x160px test ---&quot;)
+
+spi = SPI(2, baudrate=20000000, polarity=0, phase=0, sck=Pin(SPI_SCLK), mosi=Pin(SPI_MOSI), miso=Pin(SPI_MISO))
+tft=TFT(spi, DC, RST, CS)
+tft.initr()
+tft.rgb(True)
+
+tft.fill(TFT.BLACK)
+v = 30
+tft.text((0, v), &quot;octopus LAB (1)&quot;, TFT.RED, sysfont, 1, nowrap=True)
+v += sysfont[&quot;Height&quot;]
+
+tft.fill(TFT.BLACK)
+tft.rotation(1)
+tft.text((0, 0), &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur adipiscing ante sed nibh tincidunt feugiat. Maecenas enim massa, fringilla sed malesuada et, malesuada sit amet turpis. Sed porttitor neque ut ante pretium vitae malesuada nunc bibendum. &quot;, TFT.WHITE, sysfont, 1)
+sleep_ms(2000)
+
+...
+
+</code></pre>
+<p><strong>Původní starší verze</strong></p>
+<pre><code class="language-python">from machine import Pin, SPI, SDCard
+from time import sleep, sleep_ms
+
+from utils.pinout import set_pinout
+pinout = set_pinout()
+
+import framebuf
+from lib import st7735
+from lib.rgb import color565
+
+print(&quot;spi.TFT 128x160 init &gt;&quot;)
+spi = SPI(1, baudrate=10000000, polarity=1, phase=0, sck=Pin(pinout.SPI_CLK_PIN), mosi=Pin(pinout.SPI_MOSI_PIN))
+ss = Pin(pinout.SPI_CS0_PIN, Pin.OUT)
+
+rst = Pin(16, Pin.OUT) #PWM2 (16) / DEv3(27)
+cs = Pin(5, Pin.OUT)   #SCE0 (5)
+dc = Pin(26, Pin.OUT)  #PWM1 (17) /  IO26
+
+tft = st7735.ST7735R(spi, cs = cs, dc = dc, rst = rst)
+
+print(&quot;spi.TFT framebufer &gt;&quot;)
+fb = framebuf.FrameBuffer(bytearray(tft.width*tft.height*2), tft.width, tft.height, framebuf.RGB565)
+fbp = fb.pixel
+
+fb.line(128,0,0,166,color565(0,255,0))
+tft.blit_buffer(fb, 0, 0, tft.width, tft.height)
+...
+</code></pre>
+<p>🡒 <a href="#pinout">pinout</a></p>
+<p><a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/test_tft128x160.py">examples/test_tft128x160.py</a></p>
+<hr />
+<h3 id="hcsr04">hcsr04</h3>
+<p>Ultrazvukový měřič vzdálenosti.</p>
+<pre><code class="language-python">from time import sleep
+from util.pinout import set_pinout
+
+pinout = set_pinout()
+
+from hcsr04 import HCSR04
+print(&quot;ulrasonic distance sensor&quot;)
+echo = HCSR04(trigger_pin=pinout.PWM2_PIN, echo_pin=pinout.PWM1_PIN)
+
+while True:
+    echo_cm = echo.distance_cm()
+    print(echo_cm)
+    sleep(1)
+
+</code></pre>
+<p>🡒 <a href="#pinout">pinout</a></p>
+<p><a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/ultrasonic.py">examples/ultrasonic.py</a></p>
+<hr />
+<h3 id="pubsub"><img alt="hwsoc" src="../img/database.png" style="width:28px" /> pubsub</h3>
+<p>Nástroj pro předávání hodnot mezi nezávislými komponenty v rámci projektu a to i v samostatně běžících vláknech. Pracuje na principu <strong>publish and subscribe</strong>. Fork z <a href="https://github.com/basecue/micropython-pubsub">basecue/micropython-pubsub</a>.</p>
+<p>Zdrojový kód knihovny: <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/lib/pubsub.py">./lib/pubsub.py</a></p>
+<p>Základ práce: jedno vlákno (nebo část programu) publikuje získané hodnoty metodou <code>publish</code> kde parametrem je <code>topic</code> a hodnota <code>value</code>. Například<code>pubsub.publish('topic', value)</code>. (value může být libovolný objekt). V jednoduché ukázce  jednou za vteřinu generujeme náhodná čísla, která "publikujeme". (pozor, používáme <code>while True:</code> - je to blokující, lepší je použít <code>timer</code>)</p>
+<pre><code class="language-python">from time import sleep
+from os import urandom
+import pubsub
+
+
+print(&quot;start: ps_random.py&quot;)
+
+while True:
+    value =  int(urandom(1)[0])
+    print(&quot;rnd.: &quot;, value)
+    pubsub.publish('value', value)
+    sleep(1)
+</code></pre>
+<p>Protistrana je odebírá / naslouchá.
+A může je třeba zobrazovat na displeji:</p>
+<pre><code class="language-python">import pubsub
+from utils.octopus import disp7_init
+
+d7 = disp7_init()  # 8 x 7segment display init
+
+
+@pubsub.subscriber(&quot;value&quot;)
+def display_num(value):
+    d7.show(value)
+</code></pre>
+<p>🡒 <a href="#disp7">Disp7</a></p>
+<p>Ukázky jsou z vybraných příkladů pro pubsub: 
+<a href="https://github.com/octopusengine/octopuslab/tree/master/esp32-micropython/examples/pubsub">examples/pubsub</a></p>
+<hr />
+<h3 id="ble"><img alt="hwsoc" src="../img/bt.png" style="width:28px" /> BLE</h3>
+<p>Jelikož obecná problematika BLE (Bluetooth low energy) je poměrně obsáhlá, tak i modul BLE je dost robustní. Zahrnuje několik částí: <code>blesync</code>, <code>blesync_client</code>, <code>blesync_server</code> a samostatný modul <code>blesync_uart</code>. Každopádně funguje velmi dobře a snahou bylo, aby práce s ním byla srozumitelná a přitom umožnila využít všechny možné výhody, které BLE obecně přináší.
+Projekt má svůj vlastní repozitář: <a href="https://github.com/blesync">/blesync</a>.</p>
+<p>Následující příklad umožní z mobilní aplikace nalézt ESP zařízení jako <code>octopus-led-UID</code>, kde UID je čás unikátního ID, které má každé ESP.
+Pomocí mobilní aplikace šipkami nahoru (Up) a dolů (DOWN) pak ovládáme vestavěnou Led diodu.</p>
+<pre><code class="language-python">import blesync_server
+import blesync_uart.server
+import utils.ble.bluefruit as bf
+
+from shell.terminal import getUid
+uID5 = getUid(short=5)
+
+from time import sleep
+from components.led import Led
+led = Led(2)
+
+
+@blesync_uart.server.UARTService.on_message
+def on_message(service, conn_handle, message):
+    if message == bf.UP:
+        led.value(1)
+    if message == bf.DOWN:
+        led.value(0)
+    if message == bf.RIGHT:
+        led.toggle()
+
+    service.send(conn_handle, message)
+
+_connections = []
+
+
+devName = 'octopus-led-'+uID5
+print(&quot;BLE ESP32 device name: &quot; + devName)
+
+server = blesync_server.Server(devName, blesync_uart.server.UARTService)
+server.start()
+
+</code></pre>
+<h4 id="mobilni-aplikace-pro-ble"><img alt="hwsoc" src="../img/mobplg.png" style="width:28px" /> Mobilní aplikace pro BLE</h4>
+<p>Používáme <strong>Bluefruit connect</strong> od společnosti Adafruit. Jeden z odkazů na <a href="https://play.google.com/store/apps/details?id=com.adafruit.bluefruit.le.connect&amp;hl=cs">play.google.com/store/apps</a></p>
+<p>Vytvořili jsme si pomocnou knihovnu pro "překládání" jimi definovaných kódů, která je zatím zde <code>./utils/ble/blefruit.py</code>:</p>
+<pre><code class="language-python">UP =   b'!B516'
+DOWN = b'!B615'
+LEFT = b'!B714'
+RIGHT = b'!B813'
+...
+</code></pre>
+<p>S touto knihovnou pak pracujeme takto:</p>
+<pre><code class="language-python">import utils.ble.bluefruit as bf
+...
+    if message == bf.UP:
+        led.value(1)
+    if message == bf.DOWN:
+        led.value(0)
+</code></pre>
+<hr />
+<h2 id="ostatni-podpurne-moduly">Ostatní podpůrné moduly</h2>
+<h3 id="config"><img alt="hwsoc" src="../img/database.png" style="width:28px" /> Config</h3>
+<p>Micropython má elegantně propacovanou práci se soubory (nahrávání a čtení) a i s <code>json</code> formátem, proto jsme toho využili pro externí konfigurační soubory. V adresáři <code>/config</code> jsou nahrány jednotlivé "jsony", které v sobě obsahují nějaké konstanty, nastavení a podobně. Proto můžeme daný projekt dynamicky konfigurovat. Využíváme to i v nastavení PINů jednotivých zařízení <code>device.json</code> nebo pro uložení přístupů k WiFi <code>wifi.json</code>.</p>
+<p>Zdrojový kód knihovny: <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/config/__init__.py">./config/<strong>init</strong>.py</a></p>
+<h4 id="jednotlive-metody-pro-zakladni-varianty-pouzivani">Jednotlivé <strong>metody</strong> pro základní varianty používání:</h4>
+<p>1) Vytvořením pomocí konstruktoru: <code>myConfig = Config("myConfigFile",keys)</code>      <br />
+Vyžaduje předefinici klíčových "metrik": <code>keys = ["tempMax","tempMin"]</code></p>
+<ul>
+<li><code>setup()</code></li>
+<li><code>print()</code> # for keys</li>
+</ul>
+<p>Mějme ukázkový projekt <strong>termostat</strong>, který na základě změřené teploty pustí buď topení, nebo chlazení (ventilátor). Volitelně si můžeme v programu definovat <code>keys</code>, kde máme uloženy názvy podstatných konstant. Instanci pak vytváříme <code>conf = Config("your_file", keys)</code>, kde "your_file" je název - nejčastěji shodný s názvem projektu. Například "termostat". Se souborem se pak dá pracovat několika metodami, například: <code>setup()</code> (interaktivní mód - používáme nejčastěji), <code>create_from_query()</code>, <code>set()</code>, <code>save()</code> ... </p>
+<pre><code class="language-python">&gt;&gt;&gt; from config import Config
+&gt;&gt;&gt; keys = [&quot;tempMax&quot;,&quot;tempMin&quot;]
+&gt;&gt;&gt; conf = Config(&quot;termostat&quot;, keys) # &gt; config/termostat.json
+&gt;&gt;&gt; conf.setup()
+
+==================================================
+        S E T U P - config/termostat.json
+==================================================
+[ 1] -          tempMax -
+[ 2] -          tempMin -
+[q] - Quit from json setup
+==================================================
+select:
+
+</code></pre>
+<p>Vidíme, že nastavení <code>config</code> je snadné. Stačí vyplnit nebo modifikovat interaktivní tabulku.</p>
+<p>2) Vytvořením pomocí konstruktoru bez <code>keys</code>: <code>myConfig = Config("myConfigFile")</code></p>
+<ul>
+<li><code>print_all()</code></li>
+<li><code>get("key")</code></li>
+<li><code>set("key",value)</code></li>
+<li><code>create_from_query("a=1&amp;b=2")</code> # key1 = "a", value1 = 1 ...</li>
+<li><code>save()</code></li>
+</ul>
+<pre><code class="language-python"># vytvoření konfigu: a = 1, b = 2
+&gt;&gt;&gt; conf = Config(&quot;your_config&quot;)
+&gt;&gt;&gt; conf.create_from_query(&quot;a=1&amp;b=2&quot;)
+{'a': '1', 'b': '2'}
+&gt;&gt;&gt; conf.set(&quot;c&quot;,3)
+&gt;&gt;&gt; conf.save()
+Writing new config item to file config/your_config.json
+&gt;&gt;&gt; conf.print_all()
+-----------------------------------------
+                  a - 1
+                  c - 3
+                  b - 2
+-----------------------------------------
+&gt;&gt;&gt;
+</code></pre>
+<hr />
+<p>Ve svém programu pak <code>config</code> použijeme následovně:</p>
+<pre><code class="language-python">from config import Config
+conf = Config(&quot;your_config&quot;)
+a =  conf.get(&quot;a&quot;) # 1
+b =  conf.get(&quot;b&quot;) # 2
+
+</code></pre>
+<p>Pro lepší pochopení datových struktur nastudujte 🡒 <a href="../ws-python-data/">/ws-python-data</a></p>
+<hr />
+<h3 id="octopus_lib"><img alt="hwsoc" src="../img/database.png" style="width:28px" /> octopus_lib</h3>
+<h4 id="i2c">I2C</h4>
+<p><code>i2c_init()</code></p>
+<pre><code class="language-python">&gt;&gt;&gt; from utils.octopus_lib import i2c_init
+&gt;&gt;&gt; i2c = i2c_init()
+&gt;&gt;&gt; i2c.scan()
+</code></pre>
+<pre><code class="language-python"># I2C address:
+OLED_ADDR = 0x3c
+LCD_ADDR = 0x27
+bhLight = 0x23
+bh2Light = 0x5c
+tslLight = 0x39
+
+# PCF8574           PCF8574A
+# AAA - hex (dec)
+# 210
+# 000 - 0x20 (32)   0x38 (56)
+# 001 - 0x21 (33) * 0x39 (57)
+# 010 - 0x22 (34)   0x3A (58)
+# 011 - 0x23 (35) * 0x3B (59)
+# 100 - 0x24 (36)   0x3C (60)
+# 101 - 0x25 (37)   0x3D (61)
+# 110 - 0x26 (38)   0x3E (62)
+# 111 - 0x27 (39)   0x3F (63)
+# * ROBOTboard
+</code></pre>
+<pre><code class="language-python"># některé další základní metody
+ADDR = 42
+i2c.writeto(ADDR, b'123')  # write 3 bytes to slave with 7-bit address 42
+i2c.readfrom(ADDR, 8)      # read 8 bytes from slave with 7-bit address 42
+
+i2c.readfrom_mem(ADDR, 8, 3) # ...
+
+</code></pre>
+<p>Odkaz na originální Micropython dokumentaci k <strong>I2C</strong> 🡒  <a href="https://docs.micropython.org/en/latest/library/machine.I2C.html">https://docs.micropython.org/en/latest/library/machine.I2C.html</a></p>
+<hr />
+<h4 id="spi">SPI</h4>
+<p><code>spi_init()</code></p>
+<pre><code class="language-python">from machine import Pin, SPI
+from components.display7 import Display7
+## from utils.pinout import set_pinout
+from utils.octopus_lib import spi_init
+
+print(&quot;--- spi-init ---&quot;)
+## spi = SPI(1, baudrate=10000000, polarity=1, phase=0, sck=Pin(pinout.SPI_CLK_PIN), mosi=Pin(pinout.SPI_MOSI_PIN))
+spi = spi_init()
+
+ss = Pin(pinout.SPI_CS0_PIN, Pin.OUT)
+#spi.deinit() #print(&quot;spi &gt; close&quot;)
+...
+</code></pre>
+<pre><code class="language-python"># některé další základní metody
+SPI.deinit()
+SPI.read(nbytes, write=0)
+SPI.readinto(buf, write=0)
+SPI.write(buf)
+SPI.write_readinto(write_buf, read_buf)
+...
+
+</code></pre>
+<p>Odkaz na originální Micropython dokumentaci k <strong>SPI</strong> 🡒 <a href="https://docs.micropython.org/en/latest/library/machine.SPI.html">https://docs.micropython.org/en/latest/library/machine.SPI.html</a></p>
+<hr />
+<h4 id="rtc">RTC</h4>
+<p>Modul reálného času má Micropython v poslední verzi doplněn i o ntp modulem <code>ntptime</code>.</p>
+<p>Co se skrývá v 🡒 <a href="https://github.com/micropython/micropython/blob/master/ports/esp8266/modules/ntptime.py">ntptime</a>?
+Především metoda <code>settime()</code>, pomocí které získáme přesný čas ze serveru <code>pool.ntp.org</code>.</p>
+<pre><code class="language-python">from ntptime import settime
+from machine import RTC
+from utils.octopus_lib import w, get_hhmm, setlocal
+
+
+rtc = RTC()
+w() # připojení k internetu
+settime()
+print(get_hhmm(rtc))
+
+# + 2 h.
+setlocal(2)
+print(get_hhmm(rtc))
+
+</code></pre>
+<p>Zdroj ukázky 🡒 <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/test_rtc_ntp.py">test_rtc_ntp.py</a></p>
+<p>Odkaz na originální Micropython dokumentaci k <strong>RTC</strong> 🡒 <a href="https://docs.micropython.org/en/latest/library/machine.RTC.html">https://docs.micropython.org/en/latest/library/machine.RTC.html</a></p>
+<hr />
+<h3 id="pinout"><img alt="hwsoc" src="../img/database.png" style="width:28px" /> pinout</h3>
+<p>Práci s PINy (<em>"nožičky" kontroleru</em>) nám ulehčuje přednastanený <strong>pinout</strong>, který je uložený v konfiguračním souboru. Konfigurační soubory pro jednotlivé hw moduly jsou v samostatném adresáři <code>/pinouts</code>. Podle toho, jakou máme HW platformu, máme přesně svázány konstanty (čísla PINů) s jejich názvy.
+Vybrané soubory zapojení pinů jsou na samostatné stránce 🡒 <a href="/pinouts">pinouts</a>.</p>
+<p>Zdrojový kód knihovny: 🡒 <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/pinout.py">utils/pinout</a></p>
+<p><strong>Princip je jednoduchý:</strong>
+máme definovány číselné konstanty (v programu se neměnící čísla), například pro vestavěnou Led diodu: <code>BUILT_IN_LED = const(číslo)</code>. <strong>Číslo</strong> je zde číslo PINu a může se lišit podle dané desky (deska je nastavena příkazem <code>&gt;&gt;&gt; setup()</code>).
+Tato konstanta je uložena v souborech <code>pinouts/file_name</code>. Pro ROBOTboart je to <code>2</code>, takže v souboru pro definici pinů najdete řádek <code>BUILT_IN_LED = const(2)</code>. Výchozí společné piny jsou v <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/pinouts/olab_esp32_base.py">/pinouts/olab_esp32_base.py</a> a ROBOTboard je přebírá.</p>
+<p>Jak se s modulem pinout pracuje? Můžete si zkusit z terminálu Micropythonu: <code>&gt;&gt;&gt;</code></p>
+<pre><code class="language-python">&gt;&gt;&gt; from utils.pinout import set_pinout
+&gt;&gt;&gt; pinout = set_pinout()
+</code></pre>
+<p>A už máme dostupné piny na <code>pinout.NAZEV_PINU</code>, dají se zjistit i osatní PINy, po <code>pinout</code> tečka <code>TAB</code>:</p>
+<pre><code class="language-python">&gt;&gt;&gt; pinout.
+__class__       __name__        const           __file__
+WS_LED_PIN      ONE_WIRE_PIN    PIEZZO_PIN      MOTOR_12EN
+MOTOR_34EN      MOTOR_1A        MOTOR_2A        MOTOR_3A
+MOTOR_4A        ANALOG_PIN      PWM1_PIN        PWM2_PIN
+PWM3_PIN        SERVO_MIN       SERVO_MAX       I39_PIN
+DEV1_PIN        DEV2_PIN        BUILT_IN_LED    HALL_SENSOR
+I2C_SCL_PIN     I2C_SDA_PIN     SPI_CLK_PIN     SPI_MISO_PIN
+SPI_MOSI_PIN    SPI_CS0_PIN     RXD0            TXD0
+BUTT1_PIN       BUTT2_PIN       BUTT3_PIN       DEV3_PIN
+...
+
+&gt;&gt;&gt; pinout.BUILT_IN_LED
+2
+</code></pre>
+<p>Vidíme, že pro <code>BUILT_IN_LED</code> nám "dohledá" číslo deklarované <code>2</code>, takže se to dá použít:</p>
+<pre><code class="language-python">led = Led(pinout.BUILT_IN_LED)      # BUILT_IN_LED = 2
+</code></pre>
+<p>je shodné s:</p>
+<pre><code class="language-python">led = Led(2)
+</code></pre>
+<p>ale číslo <code>2</code> si nemusíme pamatovat, navíc u různých modulů se může lišit.</p>
+<p><em>Celá ukázka pro blikání vestavěné Ledky na různých modulech - může být na PINu <code>2</code> nebo také na <code>15</code>... nebo úplně jiném.
+A my toto číslo při správné konfiguraci modulu (desky) nemusíme řešit a k vestavěné Ledce přistupujeme názvem PINu: <code>BUILT_IN_LED</code>.</em></p>
+<pre><code class="language-python">from components.led import Led
+from utils.pinout import set_pinout   # import library
+
+pinout = set_pinout()   # set board pinout
+
+led = Led(pinout.BUILT_IN_LED)
+
+# start main loop
+while True:
+    led.blink()
+</code></pre>
+<p>🡒 <a href="#led">Led</a></p>
+<hr />
+<h3 id="dekorator"><img alt="hwsoc" src="../img/database.png" style="width:28px" /> Dekorátor</h3>
+<p>Možná jste si v některých našich ukázkách všimnuli speciálního použití <code>@</code> před definicí funkce, například v 🡒 <a href="#pubsub">pubsub</a></p>
+<pre><code class="language-python">@pubsub.subscriber(&quot;value&quot;)
+def display_num(value):
+    d7.show(value)
+</code></pre>
+<p>nebo v 🡒 <a href="#button">button</a></p>
+<pre><code class="language-python">@led_button.on_press
+def on_press_top_button():
+    print(&quot;on_press_top_button&quot;)
+    built_in_led.on()
+</code></pre>
+<p>Dekorátor v Pythonu je <strong>funkce</strong>, která dostane jeden argument (funkci) a vrátí jednu hodnotu - opět funkci, která je modifikovanou verzí funkce původní. <em>Původní funkce ja takzvaně "odekorovaná".</em></p>
+<p>Použití dekorátorů velmi zjednoduší a zpřehlení váš kód. Používá se na registraci, modifikaci a podobně. </p>
+<pre><code class="language-python">@dekorator
+def funkce():
+    pass
+
+# je stejné jako:
+
+def funkce():
+    pass
+funkce = dekorator(funkce)
+</code></pre>
+<p>Speciální <code>@octopus_debug</code> dekorátor 🡒 <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/utils/octopus_decor.py">/octopus_decor.py</a> vrací například čas, který trvalo provedení "odekorované" funkce.</p>
+<pre><code class="language-python">@octopus_debug
+def yourFunc(): 
+    ...
+</code></pre>
+<hr />
+<h3 id="zrychleni-prace-procesoru">Zrychlení práce procesoru</h3>
+<p>Zkoušíme dekorátory <code>@micropython.native</code> nebo <code>@micropython.viper</code> - podrobněji popsáno přímo na stránkách 🡒 <a href="http://docs.micropython.org/en/v1.9.3/pyboard/reference/speed_python.html">micropython/reference/..speed_python</a></p>
+<p>Jak se dá rychlost testovat (je použit další dekorátor <code>@octopus_debug</code> - ten vrací čas běhu funkce):</p>
+<pre><code class="language-python">from utils.octopus_decor import octopus_debug
+
+
+@octopus_debug
+def test1():
+    for i in range(10000000):
+        xx=i
+
+@octopus_debug
+@micropython.native
+def test2_native():
+    for i in range(10000000):
+        xx=i
+
+@octopus_debug
+@micropython.viper
+def test3_viper():
+    for i in range(10000000):
+        xx=i
+
+
+
+&gt;&gt;&gt; test1()
+=== function name:  test1
+=== duration (sec.) ---&gt; 41
+
+...
+
+&gt;&gt;&gt; test2_native()
+=== function name:  test2
+=== duration (sec.) ---&gt; 6
+
+...
+
+test3_viper()
+</code></pre>
+<hr />
+<h2 id="web-server-ide-jednoduche-ovladani">Web server - IDE - jednoduché ovládání</h2>
+<p>Jsme vyčlenili samostatně - zatím zde: <a href="https://www.octopuslab.cz/micropython-web-ide/">micropython-web-ide</a></p>
+<h3 id="web-server">Web server</h3>
+<p>ESP32 má dostatečný výkon, aby na něm mohl běžet jednoduchý <strong>webový server</strong> (server s jednoduchými "html" stránkami, k kterému se v lokální síti připojíme přes IP ESPčka)</p>
+<pre><code class="language-python">&gt;&gt;&gt; from utils.octopus_lib import w
+&gt;&gt;&gt; from utils.octopus import web_server
+&gt;&gt;&gt; w()
+&gt;&gt;&gt; web_server()
+
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../setup/" class="btn btn-neutral float-left" title="Setup (nastavení)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../pinouts/" class="btn btn-neutral float-right" title="Pinouts">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC-BY</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../setup/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../pinouts/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="OctopusLAB" /><link rel="canonical" href="https://docs.octopuslab.cz/ws-upyshell/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Upyshell workshop  - OctopusLab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Upyshell workshop ";
+        var mkdocs_page_input_path = "ws-upyshell.md";
+        var mkdocs_page_url = "/ws-upyshell/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-171553408-2", "docs.octopuslab.cz");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OctopusLab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Úvod</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">OctopusLAB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp32/">ESP32</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../framework/">Octopus Framework</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Instalace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Společná část</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_win/">Windows </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_linux/">Linux </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_mac/">Mac </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup (nastavení)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dokumentace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basicdoc/">Referenční příručka</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pinouts/">Pinouts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pubsub/">Pubsub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upyshell/">UpyShell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/">Examples - ukázky</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class/">Class</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriály</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial1-python/">Tutorial 1 Python </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial2-micropython-esp/">Tutorial 2 Micropython ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit1/">Tutorial EDUkit1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit2/">Tutorial EDUkit2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-robot/">Tutorial Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-iot/">Micropython workshop IoT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-robot/">Micropython workshop Robot</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Upyshell workshop </a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#popis">Popis:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#help">• help</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#prace-se-soubory">• práce se soubory</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wifi">• wifi</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#editor">• editor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#spousteni-procesu">• spouštění procesů</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ramdisk">• RAMdisk</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-games/">workshop GAME</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-python-data/">Python data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Další</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp-ide/">Práce s ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Github </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../extension/">Rozšíření </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../repl/">REPL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../webserver/">WebServer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials-intro/">Popis markdown</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OctopusLab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Tutoriály</li>
+      <li class="breadcrumb-item active">Upyshell workshop </li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz/blob/master/docs/ws-upyshell.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="workshop-upyshell"><img alt="logo" src="../img/logo_small.png" /> Workshop upyshell</h1>
+<p>Emulátor Linuxového shellu:</p>
+<p>Samostatné stránky:</p>
+<p><a href="https://www.octopuslab.cz/upyshell/">octopuslab.cz/upyshell</a></p>
+<p><a href="https://www.octopuslab.cz/upyshell2/">octopuslab.cz/upyshell2</a></p>
+<p>Zdrojové kódy:</p>
+<p><a href="https://github.com/octopusengine/micropython-shell">octopusengine/micropython-shell</a></p>
+<h2 id="popis">Popis:</h2>
+<h3 id="help">• help</h3>
+<pre><code class="language-batch">   --------+--------------------------+--------------------
+           | F: file name             |
+           | M: &quot;main.py&quot;             | octopusLAB 2019-20
+  ---------+--------------------------+--------------------
+     clear | clear display            |   
+      free | free RAM (memory)        |
+        df | Disk Free (flash)        |
+        cd | Change Directory         | cd examples / cd ..
+       pwd | Print Working Dir.       |
+        ls | LiSt files and dir.      | ls examples
+     mkdir | make directory           | mkdir newdir
+        cp | CoPy F (default M)       | cp test.py back.py
+        rm | ReMove F                 | rm test.py
+       top | main proces info         | 
+      wifi | wireless &quot;fidelity&quot;      | wifi on / wifi scan
+      ping | Packet InterNet Groper   | ping google.com
+  ifconfig | wifi InterFace conf.     |
+      wget | wget URL subdir download | wget https://my.web/f.py  
+      find | find &quot;text&quot;              | find oled 
+       cat | concatenate F (defaul M) | cat back.py
+       edit| edit (defaul M)          | simple &quot;line editor&quot;
+        ./ | run F                    | ./examples/blink.py
+           | run F &amp; &gt; process/thread | run examples/blink.py &amp;
+      exit | back to uPy              | &gt; Micropython
+  ---------+--------------------------+---------------------
+</code></pre>
+<hr />
+<h3 id="prace-se-soubory">• práce se soubory</h3>
+<pre><code class="language-batch">uPyShell:~/$ ls                            # list = výpis adresářů
+uPyShell:~/$ mkdir test                    # vytvoření podadresáře &quot;test&quot;
+uPyShell:~/$ cd test
+uPyShell:~/$ cp main.py test/main_copy.py  # kopírování souboru
+uPyShell:~/$ cat test/main_copy.py         # prohlížení obsahu souboru
+uPyShell:~/$ rm test/main_copy.py          # smazání souboru
+
+</code></pre>
+<hr />
+<h3 id="wifi">• wifi</h3>
+<pre><code class="language-batch">uPyShell:~/$ wifi scan
+uPyShell:~/$ wifi off
+uPyShell:~/$ wifi on
+uPyShell:~/$ ifconfig
+uPyShell:~/$ ping
+uPyShell:~/$ wget https://your_url.path/file.py
+</code></pre>
+<hr />
+<h3 id="editor">• editor</h3>
+<p>Občas je potřeba udělat jen malou úpravu v krátkém programu. Nejčastěji je to postupné měnění nějakých parametrů, kterým si chceme ověřit funkčnost programu nebo otestovat různé varianty. To byl důvod, proč jsme se dospěli k na první pohled šílenému nápadu vytvořit alespoň "řádkový" editor v <strong>Micropythonu</strong>.</p>
+<pre><code class="language-batch">uPyShell:~/$ edit main.py
+...
+h 
+</code></pre>
+<p><code>h</code> jako <em>help</em> vyvolá tuto stručnou nápovědu:</p>
+<pre><code class="language-batch">  h      print this help
+  p      print file (current state in buffer)
+  l      toggle line numbers (copy mode)
+  q      quit
+  q! x   quit without saving changes
+  w      write file (save)
+  wq     write into file and quit
+
+  i&lt;int&gt; [&lt;str&gt;]   insert new line at given position [int], containing [str] or empty
+  a&lt;int&gt; [&lt;str&gt;]   insert new line after given [int], containing [str] or empty
+  e&lt;int&gt; [&lt;str&gt;]   edit line number [int], replace line with [str] or will be prompted
+  d&lt;int&gt;           delete line number [int]
+  c&lt;int&gt;[-&lt;int&gt;]   comment/uncomment line [int] with a #, or multiple lines if a range is provided (does each line separately)
+
+NOTE: New line at the end of every non empty file is enforced.
+
+WARNING: Do not use for editing lines exceeding your terminal width - you may BREAK TOUR FILE!
+</code></pre>
+<hr />
+<h3 id="spousteni-procesu">• spouštění procesů</h3>
+<p>V shellu napíšeme pro spuštění programu:
+<code>$ run examples/blink.led</code>
+a by měla blikat Ledka. Běh programu se přeruší CTRL+C, program blink se zastaví, ledka přestane blikat, ale zůstáváme pořád v shellu.</p>
+<p><em>V tomto popisu dominantně použijeme tradiční „projekt“ blikání ledkou. Je to takový „hello-word“ – základní a nejjednodušší případ, který se dá obvykle aplikovat na většinu další složitějších úloh. Takže když někde uvidíte slovní spojení „blikání ledky“, nemusíte hned nasazovat posměšný úšklebek. Představit si pod tím lze „můj program“ nebo třeba konkrétní „ovládání robotického vozítka“.</em></p>
+<p><strong>Odbočka:</strong>
+Jak docílíme toho, aby se blikání Ledky samo spouštělo hned po startu? Program main.py v kořenovém adresáři, je po boot.py přesně ten, který se po startu spustí. Takže si můžeme v shellu jednoduše blikání zkopírovat:
+<code>$ cp examples/blink.py main.py</code></p>
+<hr />
+<h3 id="ramdisk">• RAMdisk</h3>
+<p>Někdy je vhodné použít (nejen v shellu) pro opakovaný zápis do souboru na místo disku (Flash) prostor v opereční paměti a jen "občas" soubor přehrát na disk. Přepisovatelnost paměťových buněk FLASH disku má totiž jistá omezení. </p>
+<p>Jedna z možností je použít knihovnu <code>ramdisk</code> z <code>utils</code>:</p>
+<pre><code class="language-python">import os
+from utils.ramdisk import RAMBlockDev
+
+bdev = RAMBlockDev(512, 50)
+os.VfsLfs2.mkfs(bdev)
+# os.VfsFat.mkfs(bdev)
+os.mount(bdev, '/ramdisk')
+</code></pre>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ws-robot/" class="btn btn-neutral float-left" title="Micropython workshop Robot"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ws-games/" class="btn btn-neutral float-right" title="workshop GAME">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC-BY</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../ws-robot/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../ws-games/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="OctopusLAB" /><link rel="canonical" href="https://docs.octopuslab.cz/examples/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Examples - ukázky - OctopusLab</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Examples - uk\u00e1zky";
+        var mkdocs_page_input_path = "examples.md";
+        var mkdocs_page_url = "/examples/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-171553408-2", "docs.octopuslab.cz");
+        ga('send', 'pageview');
+      </script>
+    
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> OctopusLab
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Úvod</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">OctopusLAB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp32/">ESP32</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../framework/">Octopus Framework</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Instalace</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../install/">Společná část</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_win/">Windows </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_linux/">Linux </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../install_mac/">Mac </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup (nastavení)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Dokumentace</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../basicdoc/">Referenční příručka</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pinouts/">Pinouts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pubsub/">Pubsub</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../upyshell/">UpyShell</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Examples - ukázky</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examplesxpy">• examples/x.py</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examplesx_basicpy">• examples/x_basic.py</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examplestest_xpy">• examples/test_x.py</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#eaxamplessubdir">• eaxamples/subdir</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../class/">Class</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriály</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial1-python/">Tutorial 1 Python </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial2-micropython-esp/">Tutorial 2 Micropython ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit1/">Tutorial EDUkit1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-edukit2/">Tutorial EDUkit2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorial-robot/">Tutorial Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-iot/">Micropython workshop IoT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-robot/">Micropython workshop Robot</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-upyshell/">Upyshell workshop </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-games/">workshop GAME</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ws-python-data/">Python data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Další</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../esp-ide/">Práce s ESP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../github/">Github </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../extension/">Rozšíření </a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../repl/">REPL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../webserver/">WebServer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mqtt/">MQTT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tutorials-intro/">Popis markdown</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">OctopusLab</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Dokumentace</li>
+      <li class="breadcrumb-item active">Examples - ukázky</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz/blob/master/docs/examples.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="octopus-examples-ukazky"><img alt="logo" src="../img/logo_small.png" style="width:39px" /> OCTOPUS Examples - ukázky</h1>
+<h3 id="examplesxpy">• examples/x.py</h3>
+<p>V souboru s názvem komponenty by měla být základní ukázka, nejčastěji nejjednodušší nebo nejkratší s využitím <strong>octopus workframe</strong></p>
+<ul>
+<li>analog</li>
+<li>button</li>
+<li>dcmotor</li>
+<li>
+<p>display7</p>
+</li>
+<li>
+<p>...</p>
+</li>
+</ul>
+<p>pro mnohé elementární dvouřádkové "návody" ani samostatný soubor ukázky neexistuje. Například pro <strong>led</strong> by vypadal takto:</p>
+<pre><code class="language-python">from components.led import Led
+led = Led(2)
+led.blink()
+</code></pre>
+<p>A dal by se tedy snadno testovat i z příkazové řádky REPLu:</p>
+<pre><code class="language-python">&gt;&gt;&gt; from components.led import Led
+&gt;&gt;&gt; led = Led(2)
+&gt;&gt;&gt; led.blink() # jednou blikne
+</code></pre>
+<p><strong>Travalé blikání LEDkou?</strong> Ukázkový a testovací příklad, který v nekonečné smyčce provádí <code>blink()</code></p>
+<pre><code class="language-python">...
+while True:
+    led.blink()
+</code></pre>
+<p>Celý zdrojový kód je na Githubu <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/blink.py">/examples/blink.py</a>
+a z emulátoru terminálu se dá spustit příkazem <code>run examples/blink.py</code>:</p>
+<pre><code>&gt;&gt;&gt; shell()
+uPyShell:~/$ run examples/blink.py
+</code></pre>
+<p>🡒 <a href="/basicdoc/#led">Led</a> 🡒 <a href="/upyshell">UpyShell</a></p>
+<hr />
+<p>Podobně pak pro <strong>oled</strong> displej, inicializace přímo na displeji něco "napíše":</p>
+<pre><code class="language-python">from utils.octopus import oled_init
+oled = oled_init()
+</code></pre>
+<p>🡒 <a href="/basicdoc/#oled">Oled</a></p>
+<h3 id="examplesx_basicpy">• examples/x_basic.py</h3>
+<p>ukázka, která ale podrobněji vysvětlí použítí obecnějšího přístupu, naopak oproti předchozímu - je zcela bez využití <strong>octopus workframe</strong></p>
+<ul>
+<li><a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/examples/oled_basic.py">oled_basic</a></li>
+<li>... (chystáme další)</li>
+</ul>
+<p>🡒 <a href="/basicdoc/#oled">Oled</a></p>
+<hr />
+<h3 id="examplestest_xpy">• examples/test_x.py</h3>
+<p>Tyto ukázky slouží zároveň i jako soubor "hardwarových" testů jednotlivých komponent, a jsou volány z testovacího adresáře <code>tests</code>. Vyznačují se tím, že vždy <strong>pouze jednou</strong> provedou nějakou akci nebo soubor akcí a pak program skončí, aby se případně mohlo pokračovat dalším.
+Například pro otestování <a href="/proj-edukit1">EDU_KIT1</a>: voláme soubor <a href="https://github.com/octopusengine/octopuslab/blob/master/esp32-micropython/tests/main-test_sw1.py">/tests/main-test_sw1.py</a> který spouští následující ukázka/testy:</p>
+<pre><code class="language-python">import examples.test_esp32
+import examples.test_led
+import examples.test_rgb
+import examples.test_display7
+import examples.test_analog
+</code></pre>
+<h3 id="eaxamplessubdir">• eaxamples/subdir</h3>
+<p>Specifické ukázky jsou v podaresářích:</p>
+<ul>
+<li>eaxamples/ble</li>
+<li>eaxamples/pubsub</li>
+<li>eaxamples/asyncio</li>
+<li>eaxamples/database</li>
+<li>eaxamples/param</li>
+</ul>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../upyshell/" class="btn btn-neutral float-left" title="UpyShell"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../class/" class="btn btn-neutral float-right" title="Class">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>CC-BY</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/octopuslab-cz/docs_octopuslab_cz" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../upyshell/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../class/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

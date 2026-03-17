@@ -4,6 +4,8 @@
 
 *Pro instalaci MicroPythonu na vaše ESP32 je třeba "naflashovat" Micropython na náš kontroler. Podrobněji si rozebereme následující kroky:* 
 
+(od roku 2026 už upřednostňujeme Thonny, které zvládne i základní instalaci)
+
 !!! attention "**Stručně:**"
     - pracujeme stále v jednom podadresáři, do kterého musíme:
     - stáhnout a *rozzipovat* [esptool.exe](https://dl.espressif.com/dl/esptool-2.6.1-windows.zip)
